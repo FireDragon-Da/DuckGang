@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 4187988425319091803}
   - component: {fileID: 5056345848402421107}
   - component: {fileID: 2600553577107731004}
+  - component: {fileID: 7495717710325007669}
   - component: {fileID: 3255766686284108262}
+  - component: {fileID: 2297540820357817334}
   m_Layer: 0
   m_Name: Duck
   m_TagString: Duck
@@ -144,6 +146,21 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &7495717710325007669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3206033706706982381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0861c3eb76c6a3439f8e361c214ba63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnClickDuck
+  sliderPrefab: {fileID: 2441101810079636751, guid: 69babf326f4630b4ca03ca9c43d43160, type: 3}
+  sliderHeight: 50
+  canvas: {fileID: 0}
 --- !u!50 &3255766686284108262
 Rigidbody2D:
   serializedVersion: 5
@@ -171,3 +188,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2297540820357817334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3206033706706982381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47696f20a339f0b46804b6ba2d408d65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DuckStats
+  happiness: 80
+  hunger: 60
+  energy: 70
+  health: 90
