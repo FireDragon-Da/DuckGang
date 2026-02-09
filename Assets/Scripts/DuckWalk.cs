@@ -7,6 +7,7 @@ public class DuckWalk : MonoBehaviour
 {
 
     CircleCollider2D col;
+    SpriteRenderer sprite;
 
     [SerializeField] float speed;
     [SerializeField] Vector2 direction;
@@ -14,6 +15,7 @@ public class DuckWalk : MonoBehaviour
     void Awake()
     {
         col = GetComponent<CircleCollider2D>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     void Start()
@@ -44,6 +46,7 @@ public class DuckWalk : MonoBehaviour
                 transform.Translate(hit.distance * direction);
                 distance -= hit.distance;
                 direction = Vector2.Reflect(direction, hit.normal);
+                sprite.flipX = direction.x > 0;
             }
             else
             {
