@@ -26,7 +26,7 @@ public class OnClickDuck : MonoBehaviour
     private void ShowStatSliders()
     {
         Vector3 screenPos = mainCamera.WorldToScreenPoint(transform.position);
-        Vector3 uiPosition = new Vector3(screenPos.x, screenPos.y, 0);
+        Vector3 uiPosition = new Vector3(0,0,0);
 
         float yOffset = 0;
         CreateStatSlider("Happiness", duckStats.Happiness, uiPosition, yOffset);

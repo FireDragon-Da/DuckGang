@@ -1105,7 +1105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Nest
   Duck: {fileID: 3206033706706982381, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
   DetectionRadius: 5
-  spawnCooldown: 1
+  spawnCooldown: 5
 --- !u!212 &1668568024
 SpriteRenderer:
   serializedVersion: 2
@@ -1273,18 +1273,6 @@ PrefabInstance:
     - target: {fileID: 3206033706706982381, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
       propertyPath: m_Name
       value: Duck
-      objectReference: {fileID: 0}
-    - target: {fileID: 3255766686284108262, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
-      propertyPath: m_BodyType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3255766686284108262, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3255766686284108262, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
-      propertyPath: m_AngularDamping
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4978069936200579180, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
       propertyPath: m_LocalPosition.x

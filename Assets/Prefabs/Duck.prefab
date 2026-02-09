@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0b1387183d75843aa5210c426489fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DuckWalk
-  speed: 6
+  speed: 1.13
   direction: {x: 0.4, y: 0.6}
 --- !u!58 &2600553577107731004
 CircleCollider2D:
@@ -159,8 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OnClickDuck
   sliderPrefab: {fileID: 2441101810079636751, guid: 69babf326f4630b4ca03ca9c43d43160, type: 3}
-  sliderHeight: 50
-  canvas: {fileID: 0}
+  sliderHeight: 20
 --- !u!50 &3255766686284108262
 Rigidbody2D:
   serializedVersion: 5
@@ -175,8 +174,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_AngularDamping: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
