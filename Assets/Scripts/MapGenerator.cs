@@ -33,6 +33,8 @@ public class TestMapGen : MonoBehaviour
     [SerializeField] int hardTileMin;
     [SerializeField] int hardTileCap; //Technically there can be one extra
 
+    bool currentlyGenerating;
+
     int branchLoopCur; //Current index in the branch loop
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -58,7 +60,15 @@ public class TestMapGen : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.G))
         {
-            StartCoroutine(nameof(GenMap));
+            if (!currentlyGenerating)
+            {
+                currentlyGenerating = true;
+                StartCoroutine(nameof(GenMap));
+            } else
+            {
+                Debug.Log("Currently Generating");
+            }
+            
         }
     }
 
@@ -112,7 +122,7 @@ public class TestMapGen : MonoBehaviour
         //Every placed square has a chance to expand itself
         while (coordinateQueue.Count > 0 || branchCoordinateQueue.Count > 0)
         {
-            Debug.Log("Iteration started");
+            //Debug.Log("Iteration started");
             if (totalTilesPlaced >= hardTileCap)
             {
                 break;
@@ -121,7 +131,7 @@ public class TestMapGen : MonoBehaviour
             if (recentLoopsTried > 1000)
             {
                 recentLoopsTried = 0;
-                Debug.Log("oneFrame");
+                //Debug.Log("oneFrame");
                 yield return null;
             }
 
@@ -204,7 +214,7 @@ public class TestMapGen : MonoBehaviour
             ///Check chance to place block
             if (!tilePlaced && RandomTileCheck(totalTilesPlaced))
             {
-                Debug.Log("Random check passed");
+                //Debug.Log("Random check passed");
                 AddTile(curCoords.x,curCoords.y,TileTypes.Land,branchCoordinateQueue,mapArray);
                 totalTilesPlaced++;
                 tilePlaced = true;
@@ -231,7 +241,7 @@ public class TestMapGen : MonoBehaviour
                 }
             } else
             {
-                Debug.Log("Random check failed");
+                //Debug.Log("Random check failed");
             }
 
             recentLoopsTried++;
@@ -259,11 +269,13 @@ public class TestMapGen : MonoBehaviour
             }
         }
 
+        currentlyGenerating = false;
+
     }
 
     void AddTile(int x, int y, TileTypes newType, List<Vector2Int> coordinateQueue, TileTypes[,] mapArray) //Always used with valid position
     {
-        Debug.Log("tile added");
+        //Debug.Log("tile added");
 
         mapArray[x,y] = newType;
 
@@ -275,7 +287,7 @@ public class TestMapGen : MonoBehaviour
                 if (IsTileValid(x+i,y+j) && !IsTileGround(x+i,y+j,mapArray))
                 {
                     coordinateQueue.Add(new(x+i,y+j));
-                    Debug.Log("tile enqueued");
+                    //Debug.Log("tile enqueued");
                 }
             }
         }
@@ -284,7 +296,7 @@ public class TestMapGen : MonoBehaviour
     bool RandomTileCheck(int totalTilesPlaced)
     {
         float randomNum = UnityEngine.Random.Range(0f,1f);
-        print(""+randomNum +">"+(totalTilesPlaced*1f/hardTileCap));
+        //Debug.Log(""+randomNum +">"+(totalTilesPlaced*1f/hardTileCap));
         return totalTilesPlaced < hardTileMin || (randomNum > (totalTilesPlaced*1f/hardTileCap)); //TODO make this
     }
 
