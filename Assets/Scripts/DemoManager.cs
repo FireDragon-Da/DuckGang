@@ -4,6 +4,7 @@ public class DemoManager : MonoBehaviour
 {
     [SerializeField] MapGenerator mapGen;
     [SerializeField] GameObject duckPrefab;
+    [SerializeField] CrumbPlacer crumbPlacer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -13,6 +14,7 @@ public class DemoManager : MonoBehaviour
             if (result)
             {
                 DuckSpawn();
+                crumbPlacer.Activate();
             }            
         }));
     }

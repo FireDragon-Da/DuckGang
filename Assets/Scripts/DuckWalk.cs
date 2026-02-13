@@ -22,7 +22,7 @@ public class DuckWalk : MonoBehaviour
     {
         if (direction == Vector2.zero)
         {
-            direction = Vector2.up;
+            direction = UnityEngine.Random.insideUnitCircle.normalized;
         }
         else
         {

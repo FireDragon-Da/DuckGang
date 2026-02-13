@@ -108,8 +108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0b1387183d75843aa5210c426489fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DuckWalk
-  speed: 1.13
-  direction: {x: 0.4, y: 0.6}
+  speed: 2.5
+  direction: {x: 0, y: 0}
 --- !u!58 &2600553577107731004
 CircleCollider2D:
   m_ObjectHideFlags: 0

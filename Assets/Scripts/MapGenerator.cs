@@ -49,7 +49,7 @@ public class MapGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        /*if (Input.GetKeyDown(KeyCode.Space))
         {
             tilemap.SetTile(RandomTilePos(), good);
         }
@@ -68,14 +68,8 @@ public class MapGenerator : MonoBehaviour
                 Debug.Log("Currently Generating");
             }
             
-        }
+        }*/
     }
-
-    Vector3Int RandomTilePos() //Just for testing
-    {
-        return new Vector3Int(UnityEngine.Random.Range(mapLeft, mapRight), UnityEngine.Random.Range(mapBottom, mapTop), 0);
-    }
-
 
     public IEnumerator GenMap(Action<bool> callbackOnFinish)
     {
