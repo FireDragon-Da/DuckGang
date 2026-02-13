@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
 
-public class TestMapGen : MonoBehaviour
+public class MapGenerator : MonoBehaviour
 {
 
     public Tilemap tilemap;
@@ -62,7 +62,6 @@ public class TestMapGen : MonoBehaviour
         {
             if (!currentlyGenerating)
             {
-                currentlyGenerating = true;
                 StartCoroutine(nameof(GenMap));
             } else
             {
@@ -78,8 +77,9 @@ public class TestMapGen : MonoBehaviour
     }
 
 
-    IEnumerator GenMap()
+    public IEnumerator GenMap(Action<bool> callbackOnFinish)
     {
+        currentlyGenerating = true;
         //Array to represent the map, starts as all water
         TileTypes[,] mapArray = new TileTypes[mapWidth,mapHeight];
         for (int i = 0; i < mapWidth; i++)
@@ -270,6 +270,7 @@ public class TestMapGen : MonoBehaviour
         }
 
         currentlyGenerating = false;
+        callbackOnFinish(true);
 
     }
 
