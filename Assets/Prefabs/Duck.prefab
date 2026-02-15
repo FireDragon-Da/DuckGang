@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5056345848402421107}
   - component: {fileID: 2600553577107731004}
   - component: {fileID: 7495717710325007669}
+  - component: {fileID: 1525496055937217004}
   - component: {fileID: 3255766686284108262}
   - component: {fileID: 2297540820357817334}
   m_Layer: 0
@@ -160,6 +161,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OnClickDuck
   sliderPrefab: {fileID: 2441101810079636751, guid: 69babf326f4630b4ca03ca9c43d43160, type: 3}
   sliderHeight: 20
+--- !u!114 &1525496055937217004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3206033706706982381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 166677314acdf8a47a631cd7dccfe238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DuckSelectable
+  selectedColor: {r: 1, g: 0.8, b: 0.2, a: 1}
 --- !u!50 &3255766686284108262
 Rigidbody2D:
   serializedVersion: 5
