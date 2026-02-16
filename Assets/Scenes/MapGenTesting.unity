@@ -181,7 +181,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 30
+  orthographic size: 110
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -351,15 +351,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestMapGen
   tilemap: {fileID: 1979299568}
-  good: {fileID: 11400000, guid: 9aa9fbcda89e30e4db82b1db9dc9e89c, type: 2}
-  bad: {fileID: 11400000, guid: 3451f53f92445c14c947710a28e08a3c, type: 2}
-  mapWidth: 1000
-  mapHeight: 1000
+  mapWidth: 200
+  mapHeight: 200
+  good: {fileID: 11400000, guid: d2cb840fa92c054469aea84295d1a96d, type: 2}
+  bad: {fileID: 11400000, guid: d2cb840fa92c054469aea84295d1a96d, type: 2}
   branchLoopCount: 100
   branchNumKept: 10
   idealTileCount: 2000
   hardTileMin: 1500
   hardTileCap: 2500
+  sectionWidth: 40
+  sectionWidthVariance: 15
+  sectionHeight: 40
+  sectionHeightVariance: 15
 --- !u!19719996 &1979299564
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -541,31 +545,35 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 0
     m_Data:
-      e00: 1e-45
+      e00: 1.1619663
       e01: 0
-      e02: -4.536465e+35
-      e03: 1.8446772e+20
-      e10: 1e-45
+      e02: 1.1619778
+      e03: -4.294974e+10
+      e10: 2.86e-43
       e11: 0
-      e12: 1.86e-43
-      e13: 7.03e-43
-      e20: 1.4564481e+31
+      e12: 2.86e-43
+      e13: 7.79e-43
+      e20: 5.3561733e+19
       e21: 0
-      e22: -1.610546e+29
-      e23: -1.5931341e-18
-      e30: 4.5916e-41
+      e22: -2.618374e-29
+      e23: 3.176169e-29
+      e30: 4.5908e-41
       e31: 0
-      e32: 7.06e-43
-      e33: 7.03e-43
+      e32: 7.83e-43
+      e33: 7.8e-43
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: 6.8305e-41, g: 6.8305e-41, b: 6.8305e-41, a: 6.8305e-41}
+    m_Data: {r: 6.9353e-41, g: 6.9353e-41, b: 6.9353e-41, a: 6.9353e-41}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
