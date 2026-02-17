@@ -8,7 +8,8 @@ public class MapGenerator : MonoBehaviour
 {
 
     [Header("General")]
-    [SerializeField] Tilemap tilemap;
+    [SerializeField] Tilemap map;
+    [SerializeField] Tilemap sections;
 
     [SerializeField]
     int mapWidth;
@@ -31,6 +32,7 @@ public class MapGenerator : MonoBehaviour
     [Header("Land Gen")]
     [SerializeField] Tile good;
     [SerializeField] Tile bad;
+    [SerializeField] Tile white;
     [SerializeField] int branchLoopCount;
     [SerializeField] int branchNumKept;
     [SerializeField] int idealTileCount;
@@ -98,6 +100,7 @@ public class MapGenerator : MonoBehaviour
                 sectionArray[k,l] = sectionNum+1; //Section number plus 1
                 sectionLists.Add(new List<Vector2Int>());
                 sectionLists[sectionNum].Add(new(k,l));
+                SetTile(sections, k, l, white, (sectionNum+1) / 25f *3 % 1f); //set with color
             }
         }
 
@@ -133,7 +136,7 @@ public class MapGenerator : MonoBehaviour
                             sectionArray[neighbor.x, neighbor.y] = i+1;
                             newDeque.AddLast(neighbor);
                             tilesAdded = true;
-                            //SetTile(neighbor.x, neighbor.y, good, (i+1) / 25f); //set with color
+                            SetTile(sections, neighbor.x, neighbor.y, white, (i+1) / 25f *3 % 1f); //set with color
                         }
                     }
                 }
@@ -162,7 +165,7 @@ public class MapGenerator : MonoBehaviour
                             sectionArray[neighbor.x, neighbor.y] = i+1;
                             newDeque.AddLast(neighbor);
                             tilesAdded = true;
-                            //SetTile(neighbor.x, neighbor.y, good, (i+1) / 25f); //set with color
+                            SetTile(sections, neighbor.x, neighbor.y, white, (i+1) / 25f *3 % 1f); //set with color
                         }
                     }
                 }
@@ -395,11 +398,11 @@ public class MapGenerator : MonoBehaviour
                 switch (mapArray[i,j])
                 {
                     case TileTypes.Land:
-                        SetTile(i,j,good);
+                        SetTile(map, i,j,good);
                         break;
 
                     case TileTypes.Water:
-                        SetTile(i,j,bad);
+                        SetTile(map, i,j,bad);
                         break;
                 }
 
@@ -465,18 +468,18 @@ public class MapGenerator : MonoBehaviour
         return IsTileValid(x,y) && mapArray[x,y] != TileTypes.Water;
     }
 
-    void SetTile(int x, int y, Tile type)
+    void SetTile(Tilemap target, int x, int y, Tile type)
     {
         //y is subtracted since tilemap numbers go upwards as they increase
-        tilemap.SetTile(new(mapLeft+x,mapTop-y-1), type);
+        target.SetTile(new(mapLeft+x,mapTop-y-1), type);
     }
 
-    void SetTile(int x, int y, Tile type, float colorVal)
+    void SetTile(Tilemap target, int x, int y, Tile type, float colorVal)
     {
         //y is subtracted since tilemap numbers go upwards as they increase
-        tilemap.SetTile(new(mapLeft+x,mapTop-y-1), type);
-        tilemap.SetTileFlags(new(mapLeft+x,mapTop-y-1), TileFlags.None);
-        tilemap.SetColor(new(mapLeft+x,mapTop-y-1), Color.HSVToRGB(colorVal, 1, 1));
+        target.SetTile(new(mapLeft+x,mapTop-y-1), type);
+        target.SetTileFlags(new(mapLeft+x,mapTop-y-1), TileFlags.None);
+        target.SetColor(new(mapLeft+x,mapTop-y-1), Color.HSVToRGB(colorVal, 1, 1));
     }
 
     /*
