@@ -45,12 +45,12 @@ public class DuckWalk : MonoBehaviour
         for (int i = 0; i < 100; i++) { //100 attempt limit to prevent infinite loop
 
             //Wall hits
-            RaycastHit2D wallHit = Physics2D.Raycast((Vector2)transform.position+direction, direction, distance, LayerMask.GetMask("Floor"));
+            RaycastHit2D wallHit = Physics2D.Raycast((Vector2)transform.position, direction, col.radius + distance, LayerMask.GetMask("Floor"));
 
             if (wallHit)
             {
-                transform.Translate(wallHit.distance * direction);
-                distance -= wallHit.distance;
+                transform.Translate((wallHit.distance-col.radius) * direction);
+                distance -= wallHit.distance-col.radius;
                 WallBounce(Vector2.Reflect(direction, wallHit.normal));
                 continue;
             }
