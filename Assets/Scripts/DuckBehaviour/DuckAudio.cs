@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using System.Collections;
 
-public class Quack : MonoBehaviour
+public class DuckAudio : MonoBehaviour
 {
 
     [Header("Quack Type:")]
@@ -15,7 +15,10 @@ public class Quack : MonoBehaviour
     [SerializeField] int minSecs;
     [SerializeField] int maxSecs;
     AudioSource audioSource;
+
+    [Header("Sounds")]
     [SerializeField] List<AudioClip> quacks;
+    [SerializeField] AudioClip collideSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,6 +31,12 @@ public class Quack : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        audioSource.clip = collideSound;
+        audioSource.Play();
     }
 
     private void OnMouseDown()
