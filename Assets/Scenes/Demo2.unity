@@ -598,6 +598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Building
   width: 3
   height: 4
+  spriteRenderer: {fileID: 0}
   walkable: 0
   constructionNeeded: 2
   buildCost: 0
@@ -774,10 +775,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7309892685760580731, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
+      propertyPath: m_text
+      value: 'Jill
+
+'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7218913764788759975, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
 --- !u!1001 &1521318298
 PrefabInstance:
@@ -831,10 +841,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7309892685760580731, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
+      propertyPath: m_text
+      value: Jack
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7218913764788759975, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
 --- !u!1 &1979299561
 GameObject:
