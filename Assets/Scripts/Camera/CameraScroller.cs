@@ -14,6 +14,9 @@ public class CameraScroller : MonoBehaviour
     [SerializeField] float maxSize = 10f;
     float targetSize;
 
+    [SerializeField] float xRange;
+    [SerializeField] float yRange;
+
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -24,6 +27,11 @@ public class CameraScroller : MonoBehaviour
     {
         Vector2 moveInput = playerInput.actions["Move"].ReadValue<Vector2>();
         transform.Translate(speed * moveInput * Time.deltaTime);
+
+        Vector3 newPos = transform.position + speed * Time.deltaTime * (Vector3)moveInput;
+        newPos.x = Mathf.Clamp(newPos.x, -xRange, xRange);
+        newPos.y = Mathf.Clamp(newPos.y, -yRange, yRange);
+        transform.position = newPos;
 
         float zoomInput = playerInput.actions["Zoom"].ReadValue<float>();
 
