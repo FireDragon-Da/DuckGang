@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DemoManager : MonoBehaviour
+public class Demo1Manager : MonoBehaviour
 {
     [SerializeField] MapManager mapGen;
     [SerializeField] GameObject duckPrefab;
