@@ -90,4 +90,10 @@ public class BuildingPlacer : MonoBehaviour
         return true;
     }
 
+    //Just for sprint demo2
+    public void TempDemoFarmButton()
+    {
+        active = !active;
+    }
+
 }
