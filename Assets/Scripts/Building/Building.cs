@@ -5,7 +5,7 @@ public class Building : MonoBehaviour
 {
     [SerializeField] int width;
     [SerializeField] int height;
-    SpriteRenderer spriteRenderer;
+    [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] bool walkable;
 
     [Header("Construction")]
@@ -14,11 +14,6 @@ public class Building : MonoBehaviour
     bool built;
     [SerializeField] int buildCost;
     [SerializeField] int placeCost;
-
-    void Awake()
-    {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
 
     void Start()
     {
