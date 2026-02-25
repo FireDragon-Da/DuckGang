@@ -24,8 +24,9 @@ public class TestTBOX : MonoBehaviour
     {
         if (textBox != null)
         {
-            textBox.AddLine(quack);
 
+            textBox.AddLine(quack);
+            textBox.SetText(quack);
         }
     }
 }
