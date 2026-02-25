@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DemoManager : MonoBehaviour
 {
-    [SerializeField] MapGenerator mapGen;
+    [SerializeField] MapManager mapGen;
     [SerializeField] GameObject duckPrefab;
     [SerializeField] CrumbPlacer crumbPlacer;
 

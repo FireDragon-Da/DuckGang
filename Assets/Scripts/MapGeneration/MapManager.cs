@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
 
-public class MapGenerator : MonoBehaviour
+public class MapManager : MonoBehaviour
 {
 
     [Header("General")]
@@ -46,19 +46,32 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] int sectionWidthVariance;
     [SerializeField] int sectionHeight;
     [SerializeField] int sectionHeightVariance;
-        
-    [HideInInspector] List<List<Vector2Int>> sectionLists;
+    
+    [Header("Public Info")]
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [HideInInspector] public List<List<Vector2Int>> sectionLists;
+    [HideInInspector] public int[,] mapArray; //Currently unused
+    [HideInInspector] public Building[,] buildingArray;
+
+    public static MapManager reference;
+
+    void Awake()
+    {
+        reference = this;
+    }
+
     void Start()
     {
         mapLeft = -mapWidth / 2;
         mapRight = mapWidth / 2;
         mapTop = mapHeight / 2;
         mapBottom = -mapHeight / 2;
+
+        //This is only here for testing purposes
+        mapArray = new int[mapWidth,mapHeight];
+        buildingArray = new Building[mapWidth,mapHeight];
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.G))
@@ -73,6 +86,23 @@ public class MapGenerator : MonoBehaviour
             
         }
     }
+
+    public Vector2Int TilemapPosToArrayPos(Vector2Int tilemapPos)
+    {
+        return new(tilemapPos.x - mapLeft, -(tilemapPos.y + 1 - mapTop));
+    }
+
+    public bool IsArrayPosValid(Vector2Int pos)
+    {
+        return (pos.x >= 0 && pos.y >= 0 && pos.x < mapWidth && pos.y < mapHeight);
+    }
+
+    public bool IsBuildingPosEmpty(Vector2Int pos)
+    {
+        return buildingArray[pos.x,pos.y] == null;
+    }
+
+    ///This is all map/section gen stuff
 
     public IEnumerator GenMap(Action<bool> callbackOnFinish)
     {
@@ -352,7 +382,7 @@ public class MapGenerator : MonoBehaviour
             }
 
             ///Check chance to place block
-            if (!tilePlaced && RandomTileCheck(totalTilesPlaced))
+            if (!tilePlaced && RandomTileCanBePlaced(totalTilesPlaced))
             {
                 //Debug.Log("Random check passed");
                 AddTile(curCoords.x,curCoords.y,TileTypes.Land,branchCoordinateQueue,mapArray);
@@ -409,6 +439,9 @@ public class MapGenerator : MonoBehaviour
             }
         }
 
+        this.mapArray = new int[mapWidth,mapHeight];
+        buildingArray = new Building[mapWidth,mapHeight];
+
         currentlyGenerating = false;
         callbackOnFinish(true);
 
@@ -451,7 +484,7 @@ public class MapGenerator : MonoBehaviour
         }
     }
 
-    bool RandomTileCheck(int totalTilesPlaced)
+    bool RandomTileCanBePlaced(int totalTilesPlaced)
     {
         float randomNum = UnityEngine.Random.Range(0f,1f);
         //Debug.Log(""+randomNum +">"+(totalTilesPlaced*1f/hardTileCap));

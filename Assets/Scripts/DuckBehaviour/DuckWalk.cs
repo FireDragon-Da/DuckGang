@@ -99,4 +99,20 @@ public class DuckWalk : MonoBehaviour
         sprite.flipX = direction.x > 0;
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Building"))
+        {
+            Building curBuilding = collision.GetComponent<Building>();
+
+            curBuilding.BuildingInteract();
+
+            if (!curBuilding.CanWalkOver())
+            {
+                ChangeDirection((transform.position - collision.transform.position).normalized);
+            }
+
+        }
+    }
+
 }
