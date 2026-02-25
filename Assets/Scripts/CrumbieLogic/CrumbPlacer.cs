@@ -6,9 +6,11 @@ public class CrumbPlacer : MonoBehaviour
     [SerializeField] GameObject crumbPrefab;
     [SerializeField] float lureRange;
 
+    bool active;
+
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (active && Input.GetMouseButtonDown(1))
         {
             PlaceCrumb(Camera.main.ScreenToWorldPoint(Input.mousePosition));
             print(Camera.main.ScreenToWorldPoint(Input.mousePosition));
@@ -32,6 +34,11 @@ public class CrumbPlacer : MonoBehaviour
         }
 
         Instantiate(crumbPrefab, location, new());
+    }
+
+    public void Activate()
+    {
+        active = true;
     }
 
 }
