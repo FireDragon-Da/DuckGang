@@ -14,14 +14,16 @@ public class Farmland : Building
     {
         if (growTimer > 0)
         {
-            growTimer -= Time.deltaTime;
+            CropGrow(Time.deltaTime);
         }
     }
 
     public override void BuildingInteract()
     {
-        print("yeag");
-        base.BuildingInteract();
+        if (!built) //Doesn't have regular building behavior
+        {
+            return;
+        }
 
         if (curCropCount > 0)
         {
@@ -42,6 +44,13 @@ public class Farmland : Building
         {
             growTimer = totalGrowTime;
         }
+
+        Color tempColor = spriteRenderer.color;
+
+        tempColor.a = Mathf.Clamp((float)curCropCount/cropGrowCount,0f,1f);
+        print(tempColor.a);
+
+        spriteRenderer.color = tempColor;
     }
 
     void WaterCrop()
@@ -51,12 +60,29 @@ public class Farmland : Building
 
     void CropGrow(float amount)
     {
-        growTimer -= cropWaterGain;
+        growTimer -= amount;
         if (growTimer <= 0)
         {
-            growTimer = 0;
-            curCropCount = cropGrowCount;
+            FinishGrow();
         }
+    }
+
+    public void FinishGrow()
+    {
+        growTimer = 0;
+        curCropCount = cropGrowCount;
+
+        Color tempColor = spriteRenderer.color;
+
+        tempColor.a = 1;
+
+        spriteRenderer.color = tempColor;
+    }
+
+    public override void Build()
+    {
+        base.Build();
+        FinishGrow();
     }
 
 }

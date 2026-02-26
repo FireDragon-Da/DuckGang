@@ -26,7 +26,7 @@ public class CrumbManager : MonoBehaviour
 
     public bool ConsumeCrumbs(int amount)
     {
-        if (crumbs > amount)
+        if (crumbs >= amount)
         {
             crumbs -= amount;
             UpdateCrumbCount();

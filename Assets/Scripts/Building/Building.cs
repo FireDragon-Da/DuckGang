@@ -3,17 +3,17 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class Building : MonoBehaviour
 {
-    [SerializeField] int width;
-    [SerializeField] int height;
-    [SerializeField] SpriteRenderer spriteRenderer;
-    [SerializeField] bool walkable;
+    [SerializeField] protected int width;
+    [SerializeField] protected int height;
+    [SerializeField] protected SpriteRenderer spriteRenderer;
+    [SerializeField] protected bool walkable;
 
     [Header("Construction")]
-    [SerializeField] float constructionNeeded;
-    float constructionCount;
-    bool built;
-    [SerializeField] int buildCost;
-    [SerializeField] int placeCost;
+    [SerializeField] protected float constructionNeeded;
+    protected float constructionCount;
+    protected bool built;
+    [SerializeField] protected int buildCost;
+    [SerializeField] protected int placeCost;
 
     void Start()
     {
@@ -81,7 +81,7 @@ public class Building : MonoBehaviour
             AddConstruct();
             if (constructionCount >= constructionNeeded)
             {
-                built = true;
+                Build();
             }
 
             return;
@@ -97,6 +97,11 @@ public class Building : MonoBehaviour
         tempColor.a = Mathf.Clamp(constructionCount/constructionNeeded,0,0.8f)+0.2f;
 
         spriteRenderer.color = tempColor;
+    }
+
+    public virtual void Build()
+    {
+        built = true;
     }
 
 }
