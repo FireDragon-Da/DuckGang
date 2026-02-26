@@ -7,6 +7,7 @@ public class Grass : MonoBehaviour
         if (collision.CompareTag("Duck"))
         {
             CrumbManager.reference.GainCrumbs(1);
+            SoundSystem.instance.PlaySound("grass");
         }
     }
 }

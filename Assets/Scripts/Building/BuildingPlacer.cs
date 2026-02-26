@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.EventSystems;
 
 public class BuildingPlacer : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class BuildingPlacer : MonoBehaviour
 
     void Update()
     {
-        if (active)
+        if (active && !EventSystem.current.IsPointerOverGameObject())
         {
             buildingPreview.SetActive(true);
 
