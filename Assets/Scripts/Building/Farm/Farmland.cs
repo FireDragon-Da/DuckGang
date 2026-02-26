@@ -13,8 +13,20 @@ public class Farmland : Building
     float decayTimer;
     [SerializeField] int cropDecayTime;
 
+    FarmHolder holder;
+
+    void Start()
+    {
+        holder = transform.parent.GetComponent<FarmHolder>();
+    }
+
     void Update()
     {
+        if (!built)
+        {
+            return;
+        }
+
         if (growTimer > 0)
         {
             CropGrow(Time.deltaTime);
@@ -105,6 +117,20 @@ public class Farmland : Building
         Color tempColor = spriteRenderer.color;
         tempColor.a = 0;
         spriteRenderer.color = tempColor;
+    }
+
+    //If this is removed, remove the whole thing
+    public override void Remove()
+    {
+        if (!holder.destroyed) {
+            holder.Remove();
+        }
+    }
+
+    //If this is removed, remove the whole thing
+    public override void StartDeconstruction()
+    {
+        holder.StartDeconstruction();
     }
 
 }

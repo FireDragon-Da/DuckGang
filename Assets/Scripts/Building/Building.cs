@@ -12,6 +12,9 @@ public class Building : MonoBehaviour
     [SerializeField] protected float constructionNeeded;
     protected float constructionCount;
     protected bool built;
+    public bool removing;
+    [SerializeField] int removeHitsRequired = 2;
+    int removeCounter;
     [SerializeField] protected int buildCost;
     [SerializeField] protected int placeCost;
 
@@ -71,6 +74,16 @@ public class Building : MonoBehaviour
 
     public virtual void BuildingInteract()
     {
+        if (removing)
+        {
+            removeCounter++;
+            if (removeCounter >= removeHitsRequired)
+            {
+                Remove();
+            }
+            return;
+        }
+
         if (!built)
         {
             if (!CrumbManager.reference.ConsumeCrumbs(BuildCost))
@@ -102,6 +115,16 @@ public class Building : MonoBehaviour
     public virtual void Build()
     {
         built = true;
+    }
+
+    public virtual void Remove()
+    {
+        Destroy(gameObject);
+    }
+
+    public virtual void StartDeconstruction()
+    {
+        removing = true;
     }
 
 }
