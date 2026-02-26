@@ -116,6 +116,7 @@ MonoBehaviour:
   totalGrowTime: 10
   cropWaterGain: 1
   cropCrumbGain: 5
+  cropDecayTime: 15
 --- !u!61 &5960295229835458662
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -278,6 +279,7 @@ MonoBehaviour:
   totalGrowTime: 10
   cropWaterGain: 1
   cropCrumbGain: 5
+  cropDecayTime: 15
 --- !u!61 &5774881799308605277
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -607,6 +609,7 @@ MonoBehaviour:
   totalGrowTime: 10
   cropWaterGain: 1
   cropCrumbGain: 5
+  cropDecayTime: 15
 --- !u!61 &6264894789045198295
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -769,6 +772,7 @@ MonoBehaviour:
   totalGrowTime: 10
   cropWaterGain: 1
   cropCrumbGain: 5
+  cropDecayTime: 15
 --- !u!61 &5905284892723549917
 BoxCollider2D:
   m_ObjectHideFlags: 0

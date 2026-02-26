@@ -78,8 +78,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 367675887
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7724774858925141430, guid: ae8e1597ef22ae3488f488c3d29b8da2, type: 3}
@@ -219,8 +219,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 367675887
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 8868729072188591806, guid: d3893ffa9b4e9884f823671c6bea4ebe, type: 3}
@@ -245,6 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0b1387183d75843aa5210c426489fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DuckWalk
+  sprite: {fileID: 3935283322215448257}
   speed: 2.5
   direction: {x: 0, y: 0}
   randomBounceOffset: 30
