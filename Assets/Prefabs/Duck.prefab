@@ -371,6 +371,8 @@ MonoBehaviour:
   maxSecs: 40
   quacks:
   - {fileID: 8300000, guid: 3b32453f14bc5af4f871428a196443eb, type: 3}
+  - {fileID: 8300000, guid: e8de7f3e69019134c8c71595dd3b81cd, type: 3}
+  - {fileID: 8300000, guid: 950578b7430fb57438df733b0975f61b, type: 3}
   collideSound: {fileID: 8300000, guid: 062b57ebae25e4c4f8e9e028bc9bd573, type: 3}
 --- !u!82 &8290644685965031241
 AudioSource:
