@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Tilemaps;
 
 [RequireComponent(typeof(PlayerInput))]
 public class CameraScroller : MonoBehaviour
 {
-
     PlayerInput playerInput;
     [SerializeField] Camera cam;
     [SerializeField] float speed;
@@ -13,6 +13,8 @@ public class CameraScroller : MonoBehaviour
     [SerializeField] float minSize = 5f;
     [SerializeField] float maxSize = 10f;
     float targetSize;
+
+    [SerializeField] Tilemap tilemap;
 
     void Start()
     {
@@ -23,7 +25,8 @@ public class CameraScroller : MonoBehaviour
     void Update()
     {
         Vector2 moveInput = playerInput.actions["Move"].ReadValue<Vector2>();
-        transform.Translate(speed * moveInput * Time.deltaTime);
+
+        Vector3 newPos = transform.position + speed * Time.deltaTime * (Vector3)moveInput;
 
         float zoomInput = playerInput.actions["Zoom"].ReadValue<float>();
 
@@ -34,6 +37,24 @@ public class CameraScroller : MonoBehaviour
         }
 
         cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetSize, Time.deltaTime * 10);
+
+        Bounds worldBounds = tilemap.localBounds;
+        Vector3 worldMin = tilemap.transform.TransformPoint(worldBounds.min);
+        Vector3 worldMax = tilemap.transform.TransformPoint(worldBounds.max);
+
+        float verticalExtent = cam.orthographicSize;
+        float horizontalExtent = cam.orthographicSize * cam.aspect;
+
+        float minX = worldMin.x + horizontalExtent;
+        float maxX = worldMax.x - horizontalExtent;
+
+        float minY = worldMin.y + verticalExtent;
+        float maxY = worldMax.y - verticalExtent;
+
+        newPos.x = Mathf.Clamp(newPos.x, minX, maxX);
+        newPos.y = Mathf.Clamp(newPos.y, minY, maxY);
+
+        transform.position = newPos;
 
     }
 }

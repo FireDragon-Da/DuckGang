@@ -3,13 +3,12 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 [RequireComponent(typeof(CircleCollider2D))]
-[RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(Rigidbody2D))]
 public class DuckWalk : MonoBehaviour
 {
 
     CircleCollider2D col;
-    SpriteRenderer sprite;
+    [SerializeField] SpriteRenderer sprite;
     Rigidbody2D rb;
 
     [SerializeField] float speed;
@@ -19,7 +18,6 @@ public class DuckWalk : MonoBehaviour
     void Awake()
     {
         col = GetComponent<CircleCollider2D>();
-        sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
     }
 

@@ -5,6 +5,8 @@ public class Demo2Manager : MonoBehaviour
     [SerializeField] GameObject duckPrefab;
     [SerializeField] CrumbPlacer crumbPlacer;
 
+    //This whole script doesn't do anything, will delete later
+
     void Start()
     {
         

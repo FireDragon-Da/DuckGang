@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.EventSystems;
 
 public class BuildingPlacer : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class BuildingPlacer : MonoBehaviour
     int width;
     int height;
 
+    bool removeToggled;
+
     void Start()
     {
         UpdateBuildingPrefab(curBuildingPrefab);
@@ -19,7 +22,27 @@ public class BuildingPlacer : MonoBehaviour
 
     void Update()
     {
-        if (active)
+        if (removeToggled && !EventSystem.current.IsPointerOverGameObject())
+        {
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D[] hits;
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                hits = Physics2D.RaycastAll(mousePos, Vector2.zero);
+
+                foreach (RaycastHit2D hit in hits)
+                {
+                    if (hit.collider.CompareTag("Building"))
+                    {
+                        hit.collider.GetComponent<Building>().StartDeconstruction();
+                    }
+                }
+
+                
+            }
+        }
+        else if (active && !EventSystem.current.IsPointerOverGameObject())
         {
             buildingPreview.SetActive(true);
 
@@ -88,6 +111,19 @@ public class BuildingPlacer : MonoBehaviour
         }
 
         return true;
+    }
+
+    //Just for sprint demo2
+    public void TempDemoFarmButton()
+    {
+        active = !active;
+        removeToggled = false;
+    }
+
+    public void RemoveToggle()
+    {
+        removeToggled = !removeToggled;
+        active = false;
     }
 
 }
