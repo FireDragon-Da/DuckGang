@@ -1,5 +1,5 @@
-
 using System.Collections;
+using System.Collections.Generic;
 using System.Text;
 using TMPro;
 using UnityEngine;
@@ -13,7 +13,7 @@ public class TextBox : MonoBehaviour
     [SerializeField] private int maxLines = 200;
 
     private readonly StringBuilder _builder = new StringBuilder();
-    private int _lineCount;
+    private readonly List<string> _messages = new List<string>();
 
     private void Awake()
     {
@@ -24,87 +24,143 @@ public class TextBox : MonoBehaviour
             scrollRect = GetComponentInChildren<ScrollRect>(true) ?? GetComponentInParent<ScrollRect>();
 
         if (textComponent == null)
-            Debug.LogWarning("TextBox: no TMP_Text assigned or found in children.");
+            Debug.LogWarning("TBOX: No TMP_Text assigned or found in children.");
 
         if (scrollRect == null)
-            Debug.LogWarning("TextBox: no ScrollRect assigned or found in children/parents.");
+            Debug.LogWarning("TBOX: No ScrollRect assigned or found in children/parents.");
+
+        if (scrollRect != null && textComponent != null)
+        {
+            if (scrollRect.content == null)
+            {
+                scrollRect.content = textComponent.transform.parent as RectTransform;
+            }
+
+            var viewport = scrollRect.viewport;
+            if (viewport != null)
+            {
+                  var mask = viewport.GetComponent<Mask>();
+                if (mask != null)
+                {
+                    DestroyImmediate(mask);
+                    viewport.gameObject.AddComponent<RectMask2D>();
+                }
+
+                var viewportImage = viewport.GetComponent<Image>();
+                if (viewportImage != null)
+                {
+                    viewportImage.raycastTarget = true;
+                    viewportImage.color = Color.clear;
+                }
+            }
+
+                 scrollRect.vertical = true;
+            scrollRect.horizontal = false;
+            scrollRect.scrollSensitivity = 20f;
+        }
+        if (textComponent != null)
+        {
+            var contentsizeFitter = textComponent.gameObject.GetComponent<ContentSizeFitter>();
+            contentsizeFitter.horizontalFit = ContentSizeFitter.FitMode.Unconstrained;
+            contentsizeFitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+            textComponent.enableWordWrapping = true;
+            textComponent.overflowMode = TextOverflowModes.Overflow;
+
+            textComponent.alignment = TextAlignmentOptions.TopLeft;
+        }
     }
 
-    //add a new line to the log
+
     public void AddLine(string line)
     {
         if (line == null)
             return;
 
-        if (maxLines > 0 && _lineCount >= maxLines)
+
+        _messages.Insert(0, line);
+
+        if (maxLines > 0)
         {
-            int firstNewline = _builder.ToString().IndexOf('\n');
-            if (firstNewline >= 0)
+            while (_messages.Count > maxLines)
             {
-                _builder.Remove(0, firstNewline + 1);
-                _lineCount--;
+                _messages.RemoveAt(_messages.Count - 1);
             }
         }
 
-        _builder.AppendLine(line);
-        _lineCount++;
+    
+        _builder.Clear();
+        for (int i = 0; i < _messages.Count; i++)
+        {
+            _builder.AppendLine(_messages[i]);
+        }
 
         if (textComponent != null)
             textComponent.text = _builder.ToString();
 
         if (scrollRect != null)
-            StartCoroutine(ScrollToBottomNextFrame());
+            StartCoroutine(ScrollToTopNextFrame());
     }
 
-//replace the context
     public void SetText(string text)
     {
-        _builder.Clear();
+        _messages.Clear();
+
         if (!string.IsNullOrEmpty(text))
         {
-            _builder.Append(text);
-            //count lines
-            _lineCount = text.Split('\n').Length;
+
+            var lines = text.Split('\n');
+            for (int i = 0; i < lines.Length; i++)
+            {
+                _messages.Add(lines[i]);
+            }
+
+            if (maxLines > 0 && _messages.Count > maxLines)
+            {
+                _messages.RemoveRange(maxLines, _messages.Count - maxLines);
+            }
         }
-        else
+
+
+        _builder.Clear();
+        for (int i = 0; i < _messages.Count; i++)
         {
-            _lineCount = 0;
+            _builder.AppendLine(_messages[i]);
         }
 
         if (textComponent != null)
             textComponent.text = _builder.ToString();
 
         if (scrollRect != null)
-            StartCoroutine(ScrollToBottomNextFrame());
+            StartCoroutine(ScrollToTopNextFrame());
     }
 
-//Clear the Log
     public void Clear()
     {
+        _messages.Clear();
         _builder.Clear();
-        _lineCount = 0;
         if (textComponent != null)
             textComponent.text = string.Empty;
     }
 
-    private IEnumerator ScrollToBottomNextFrame()
+    private IEnumerator ScrollToTopNextFrame()
     {
-        // wait for end of frame so layout has been rebuilt
-        yield return null;
 
-        // Force rebuild to make sure content size is updated
-        if (textComponent != null)
+        yield return new WaitForEndOfFrame();
+
+
+        if (scrollRect == null || textComponent == null)
+        {
+            LayoutRebuilder.ForceRebuildLayoutImmediate(scrollRect.content);
+        }
+        else if (textComponent != null)
         {
             LayoutRebuilder.ForceRebuildLayoutImmediate(textComponent.rectTransform as RectTransform);
         }
 
         if (scrollRect != null)
         {
-            // If the ScrollRect's verticalNormalizedPosition is 1 = top, 0 = bottom
-            // set to 0 to show the latest appended lines at the bottom
-            scrollRect.verticalNormalizedPosition = 0f;
+            scrollRect.verticalNormalizedPosition = 1f;
 
-            // Force canvas update to apply the change immediately
             Canvas.ForceUpdateCanvases();
         }
     }
