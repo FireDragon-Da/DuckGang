@@ -41,7 +41,6 @@ public class QuacxiconSO : ScriptableObject
 {
     public List<LogCategory> categories = new List<LogCategory>();
 
-    // 在右键菜单中点击，将遍历所有分类
     [ContextMenu("Import All Files into Categories")]
     public void ImportAll()
     {
@@ -54,7 +53,6 @@ public class QuacxiconSO : ScriptableObject
                 count++;
             }
         }
-        Debug.Log($"[QuacxiconSO] 成功处理了 {count} 个分类的文本导入。");
 
 #if UNITY_EDITOR
         UnityEditor.EditorUtility.SetDirty(this);
