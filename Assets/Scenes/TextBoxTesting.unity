@@ -1000,6 +1000,7 @@ MonoBehaviour:
   quack: Test Quack
   counter: 0
   gameQuaxicon: {fileID: 11400000, guid: d9affd977097b284db68ee2e6313957e, type: 2}
+  isQuackorderly: 1
 --- !u!1 &1028474218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,22 +1060,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8a99457241fd94fb675ee80dd34cbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestMapGen
-  map: {fileID: 1979299568}
-  sections: {fileID: 76854407}
+  map: {fileID: 0}
+  sections: {fileID: 0}
   mapWidth: 16
   mapHeight: 16
   good: {fileID: 11400000, guid: 9aa9fbcda89e30e4db82b1db9dc9e89c, type: 2}
   bad: {fileID: 11400000, guid: 3451f53f92445c14c947710a28e08a3c, type: 2}
-  white: {fileID: 11400000, guid: d2cb840fa92c054469aea84295d1a96d, type: 2}
+  white: {fileID: 0}
   branchLoopCount: 100
   branchNumKept: 10
   idealTileCount: 2000
   hardTileMin: 1500
   hardTileCap: 2500
-  sectionWidth: 40
-  sectionWidthVariance: 19
-  sectionHeight: 40
-  sectionHeightVariance: 19
+  sectionWidth: 0
+  sectionWidthVariance: 0
+  sectionHeight: 0
+  sectionHeightVariance: 0
 --- !u!1 &1045650750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,7 +1657,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1476765427}
   m_HandleRect: {fileID: 1476765426}
   m_Direction: 2
-  m_Value: 1.0000021
+  m_Value: 1.0000018
   m_Size: 0.6666667
   m_NumberOfSteps: 0
   m_OnValueChanged:

@@ -80,4 +80,15 @@ public class QuacxiconSO : ScriptableObject
         }
         return null;
     }
+
+
+    public int GetCategoryMaxIndex(string name)
+    {
+        var category = categories.Find(c => c.categoryName == name);
+        if (category != null)
+        {
+            return category.contentList.Count;
+        }
+        return 0;
+    }
 }
