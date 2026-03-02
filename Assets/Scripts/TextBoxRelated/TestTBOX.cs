@@ -7,9 +7,9 @@ public class TestTBOX : MonoBehaviour
     public Button button;
     public string quack;
     public int counter = 0;
+    public QuacxiconSO gameQuaxicon;
     private void Awake()
     {
-      quack = "Quack! \n";
     }
     private void Start()
     {
@@ -19,8 +19,7 @@ public class TestTBOX : MonoBehaviour
 
     private void OnButtonClick()
     {
-        counter++;
-        quack = "Quack! " + counter + "\n";
+        quack = gameQuaxicon.GetRandomLogFromCategory("Test");
         if (textBox != null)
         {
             textBox.AddLine(quack);
