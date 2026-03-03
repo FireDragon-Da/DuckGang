@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 3255766686284108262}
   - component: {fileID: 2297540820357817334}
   - component: {fileID: 5534468101817164839}
+  - component: {fileID: 4027241629397649341}
   - component: {fileID: 8290644685965031241}
   - component: {fileID: 8949237019473206240}
   m_Layer: 3
@@ -376,6 +377,21 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e8de7f3e69019134c8c71595dd3b81cd, type: 3}
   - {fileID: 8300000, guid: 950578b7430fb57438df733b0975f61b, type: 3}
   collideSound: {fileID: 8300000, guid: 062b57ebae25e4c4f8e9e028bc9bd573, type: 3}
+--- !u!114 &4027241629397649341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3206033706706982381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947cb203f9211664c9b9e31b270025f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DuckNameGen
+  gameQuaxicon: {fileID: 11400000, guid: 26d247cceab03c446a0c7189b7821d55, type: 2}
+  nameText: {fileID: 7309892685760580731}
+  duckName: John Quackna
 --- !u!82 &8290644685965031241
 AudioSource:
   m_ObjectHideFlags: 0
