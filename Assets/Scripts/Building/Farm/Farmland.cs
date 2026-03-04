@@ -15,7 +15,7 @@ public class Farmland : Building
 
     FarmHolder holder;
 
-    void Start()
+    public override void StartBuild()
     {
         holder = transform.parent.GetComponent<FarmHolder>();
 

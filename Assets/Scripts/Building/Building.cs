@@ -6,6 +6,7 @@ public class Building : MonoBehaviour
     [SerializeField] protected int width;
     [SerializeField] protected int height;
     [SerializeField] protected SpriteRenderer spriteRenderer;
+    [SerializeField] protected SpriteRenderer foundationSpriteRenderer;
     [SerializeField] protected bool walkable;
 
     [Header("Construction")]
@@ -17,15 +18,6 @@ public class Building : MonoBehaviour
     int removeCounter;
     [SerializeField] protected int buildCost;
     [SerializeField] protected int placeCost;
-
-    void Start()
-    {
-        Color tempColor = spriteRenderer.color;
-
-        tempColor.a = Mathf.Clamp(constructionCount/constructionNeeded,0,0.8f)+0.2f;
-
-        spriteRenderer.color = tempColor;
-    }
 
     public int Width
     {
@@ -105,16 +97,19 @@ public class Building : MonoBehaviour
     {
         constructionCount++;
 
-        Color tempColor = spriteRenderer.color;
+        /*Color tempColor = spriteRenderer.color;
 
         tempColor.a = Mathf.Clamp(constructionCount/constructionNeeded,0,0.8f)+0.2f;
 
-        spriteRenderer.color = tempColor;
+        spriteRenderer.color = tempColor;*/
     }
 
     public virtual void Build()
     {
         built = true;
+
+        foundationSpriteRenderer.enabled = false;
+        spriteRenderer.enabled = true;
     }
 
     public virtual void Remove()
@@ -125,6 +120,12 @@ public class Building : MonoBehaviour
     public virtual void StartDeconstruction()
     {
         removing = true;
+    }
+
+    public virtual void StartBuild()
+    {
+        foundationSpriteRenderer.enabled = true;
+        spriteRenderer.enabled = false;
     }
 
 }
