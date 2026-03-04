@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2789616182574228215}
   - component: {fileID: 5722018439423492281}
   m_Layer: 0
-  m_Name: Obstacle Six
+  m_Name: Obstacle Ten
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,13 +106,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db990c128f29774b920e265848ac22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  width: 1
+  width: 2
   height: 2
   spriteRenderer: {fileID: 8441657926999870883}
   walkable: 0
   constructionNeeded: 0
   removing: 0
-  removeHitsRequired: 20
+  removeHitsRequired: 480
   buildCost: 0
   placeCost: 0
 --- !u!61 &5722018439423492281
@@ -159,7 +159,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 6, y: 8}
   m_EdgeRadius: 0
 --- !u!1 &5941844064046680309
 GameObject:
@@ -188,7 +188,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4497072422537156931}
@@ -242,7 +242,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 8658374474967438771, guid: 881e27bcd6388d5409c6aa1b9aaccc57, type: 3}
+  m_Sprite: {fileID: 4894678928974667226, guid: 881e27bcd6388d5409c6aa1b9aaccc57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

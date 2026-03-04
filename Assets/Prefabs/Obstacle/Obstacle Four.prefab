@@ -109,7 +109,7 @@ MonoBehaviour:
   width: 2
   height: 2
   spriteRenderer: {fileID: 8441657926999870883}
-  walkable: 1
+  walkable: 0
   constructionNeeded: 0
   removing: 0
   removeHitsRequired: 40
