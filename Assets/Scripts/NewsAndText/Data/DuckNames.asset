@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: DuckNames
+  m_EditorClassIdentifier: Assembly-CSharp::QuacxiconSO
+  categories:
+  - categoryName: DuckNames
+    contentList:
+    - John
+    - Cena
+    - Bob
+    - Alice
+    - John Quackna
+    - Braz
+    - Borm
+    - Brom
+    - Bram
+    - Breo
+    - Bleo
+    - Bork
+    - Byrm
+    - Ebbe
+    - Floo
+    - Flep
+    - Flem
+    - Flom
+    - Flam
+    - Flim
+    - Grog
+    - Gyoo
+    - Gyaa
+    - Glem
+    - Gleb
+    - Heeb
+    - Jeeb
+    - Morg
+    - Marm
+    - Fergus
+    - Tariff
+    - Torpedo
+    - Pointilism
+    - Accident
+    - Fulcrum
+    - Speck
+    - Mud
+    - Sponge
+    - Lamppost
+    - Tuft
+    - Stick
+    - Rock
+    - Habit
+    - Fork
+    - Spoon
+    - Microplastic
+    - Pangea
+    - Hammer
+    - Mallet
+    - Nail
+    - Brick
+    - Six
+    - Sun
+    - Moon
+    - Seven
+    - Pride
+    - Wrath
+    - Sloth
+    - Lust
+    - Greed
+    - Envy
+    - Gluttony
+    - Chastity
+    - Temperance
+    - Charity
+    - Diligence
+    - Kindness
+    - Patience
+    - Humility
+    - Diesel
+    - Goose
+    - Horse
+    - Salmon
+    - Parmesan
+    - Cheddar
+    - Nugget
+    - Gorp
+    - Noodle
+    - Taffy
+    - Toffee
+    - Lentil
+    - Legume
+    - Daniel
+    - Lily
+    - Rose
+    - Tulip
+    - Jasmine
+    - George
+    - Fred
+    - Roger
+    - Lebron
+    - James
+    - Harambe
+    - John Cena
+    - Kojima
+    - Toby Fox
+    - Messe
+    - Renaldo
+    - "\u201CThe Rock\u201D"
+    - Brady
+    - Brody
+    - Pratt
+    - Clara
+    - Kevin
+    - Andson
+    - Dorisline
+    - Henry
+    - Benjamin
+    - Angelina
+    - Sunil
+    - Iowa
+    - Kansas
+    - Kentucky
+    - Nebraska
+    - Georgia
+    - Alabama
+    sourceTxtFile: {fileID: 4900000, guid: 2014e3731d3b6354d850b9b012aa6b25, type: 3}
+    targetCategoryName: DuckNames
+    clearExistingContent: 0
