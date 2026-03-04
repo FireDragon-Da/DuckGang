@@ -77,8 +77,6 @@ public class BuildingPlacer : MonoBehaviour
         buildingPreview.GetComponent<SpriteRenderer>().sprite = newBuilding.SpriteRenderer.sprite;
         width = newBuilding.Width;
         height = newBuilding.Height;
-
-        buildingPreview.transform.localScale = new(width,height,1);
     }
 
     void UpdateBuildingGrid(Building newBuilding, int startX, int startY)
