@@ -152,6 +152,7 @@ MonoBehaviour:
   removeHitsRequired: 2
   buildCost: 2
   placeCost: 1
+  filledSpots: 010101000100000100
   farmland:
   - {fileID: 4977065885781206318}
   - {fileID: 6852804863708327957}

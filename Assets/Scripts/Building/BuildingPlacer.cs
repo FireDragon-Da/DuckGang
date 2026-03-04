@@ -86,8 +86,10 @@ public class BuildingPlacer : MonoBehaviour
         {
             for (int j = 0; j < newBuilding.Height; j++)
             {
-                Vector2Int arrayPos = MapManager.reference.TilemapPosToArrayPos(new(startX+i,startY+j));
-                MapManager.reference.buildingArray[arrayPos.x,arrayPos.y] = newBuilding;
+                if (newBuilding.GetSpot(i,j)) {
+                    Vector2Int arrayPos = MapManager.reference.TilemapPosToArrayPos(new(startX+i,startY+j));
+                    MapManager.reference.buildingArray[arrayPos.x,arrayPos.y] = newBuilding;
+                }
             }
         }
     }

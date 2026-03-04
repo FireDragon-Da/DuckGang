@@ -19,6 +19,8 @@ public class Building : MonoBehaviour
     [SerializeField] protected int buildCost;
     [SerializeField] protected int placeCost;
 
+    [SerializeField] protected bool[] filledSpots;
+
     public int Width
     {
         get
@@ -126,6 +128,11 @@ public class Building : MonoBehaviour
     {
         foundationSpriteRenderer.enabled = true;
         spriteRenderer.enabled = false;
+    }
+
+    public bool GetSpot(int x, int y)
+    {
+        return filledSpots[x+y * width];
     }
 
 }
