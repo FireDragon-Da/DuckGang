@@ -27,4 +27,13 @@ public class FarmHolder : Building
         base.Remove();
     }
 
+    public override void StartBuild()
+    {
+        base.StartBuild();
+        foreach (Farmland farmPiece in farmland)
+        {
+            farmPiece.StartBuild();   
+        }
+    }
+
 }

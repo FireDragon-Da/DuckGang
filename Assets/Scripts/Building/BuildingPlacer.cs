@@ -64,6 +64,7 @@ public class BuildingPlacer : MonoBehaviour
             {
                 Building newBuilding = Instantiate(curBuildingPrefab, finalPosition, new());
                 UpdateBuildingGrid(newBuilding, startX, startY);
+                newBuilding.StartBuild();
             }
         }
         else
