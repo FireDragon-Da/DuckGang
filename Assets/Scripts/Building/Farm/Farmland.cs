@@ -18,6 +18,12 @@ public class Farmland : Building
     void Start()
     {
         holder = transform.parent.GetComponent<FarmHolder>();
+
+        Color tempColor = spriteRenderer.color;
+
+        tempColor.a = 0;
+
+        spriteRenderer.color = tempColor;
     }
 
     void Update()
