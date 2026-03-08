@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -17,6 +18,12 @@ public class DuckWalk : MonoBehaviour
     [SerializeField] float randomBounceOffset;
 
     List<StatusEffect> statusEffects = new();
+    public IReadOnlyList<StatusEffect> StatusEffects => statusEffects;
+
+    
+    [Header("'Static'")]
+    [SerializeField] StatusEffect loveEffect;
+    [SerializeField] float loveChance;
 
     void Awake()
     {
@@ -99,6 +106,11 @@ public class DuckWalk : MonoBehaviour
     public void DuckBounce(Vector3 other)
     {
         ChangeDirection((transform.position - other).normalized);
+
+        if (PublicInfo.reference.AnyNestEmpty() && UnityEngine.Random.Range(0,1) < loveChance)
+        {
+            GainStatusEffect(Instantiate(loveEffect));
+        }
     }
 
     void WallBounce(Vector2 targetDirection)
@@ -109,7 +121,7 @@ public class DuckWalk : MonoBehaviour
             statusChance += cur.Chance;
         }
 
-        if (statusChance > 1)
+        if (statusChance >= 1)
         {
             float ranNum = UnityEngine.Random.Range(0,statusChance);
 
@@ -119,7 +131,7 @@ public class DuckWalk : MonoBehaviour
                 ranNum -= curEffect.Chance;
                 if (ranNum <= 0)
                 {
-                    curEffect.Activate(gameObject);
+                    ChangeDirection(curEffect.Activate(gameObject));
                     break;
                 }
             }
@@ -142,18 +154,17 @@ public class DuckWalk : MonoBehaviour
             foreach (StatusEffect curEffect in statusEffects)
             {
                 ranNum -= curEffect.Chance;
-                if (ranNum <= 0)
+                if (ranNum < 0)
                 {
-                    curEffect.Activate(gameObject);
+                    ChangeDirection(curEffect.Activate(gameObject));
                     break;
                 }
             }
 
             //Regular movement with random offset
-            if (ranNum > 0)
+            if (ranNum >= 0)
             {
-                Vector2 newDirection = Quaternion.AngleAxis(UnityEngine.Random.Range(-randomBounceOffset,randomBounceOffset),Vector3.forward) * targetDirection;
-                ChangeDirection(newDirection);
+                StandardBounce(targetDirection);
             }
 
             for (int i = statusEffects.Count-1; i >= 0; i--)
@@ -169,6 +180,13 @@ public class DuckWalk : MonoBehaviour
 
     }
 
+    void StandardBounce(Vector2 targetDirection)
+    {
+        Vector2 newDirection = Quaternion.AngleAxis(UnityEngine.Random.Range(-randomBounceOffset,randomBounceOffset),Vector3.forward) * targetDirection;
+
+        ChangeDirection(newDirection);
+    }
+
     void ChangeDirection(Vector2 newDirection)
     {
         direction = newDirection;
@@ -181,7 +199,7 @@ public class DuckWalk : MonoBehaviour
         {
             Building curBuilding = collision.GetComponent<Building>();
 
-            curBuilding.BuildingInteract();
+            curBuilding.BuildingInteract(this);
 
             if (!curBuilding.CanWalkOver())
             {
@@ -207,10 +225,25 @@ public class DuckWalk : MonoBehaviour
             if (newEffect.GetType() == curEffect.GetType())
             {
                 statusEffects.Remove(curEffect);
+                break;
             }
         }
 
         statusEffects.Add(newEffect);
+        newEffect.Added(this);
+    }
+
+    public void RemoveEffect<T>() where T : StatusEffect
+    {
+        foreach (StatusEffect curEffect in statusEffects)
+        {
+            if (curEffect is T)
+            {
+                curEffect.Removed();
+                statusEffects.Remove(curEffect);
+                return;
+            }
+        }
     }
 
 }

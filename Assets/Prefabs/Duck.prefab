@@ -123,9 +123,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4978069936200579180}
+  - component: {fileID: 5056345848402421107}
   - component: {fileID: 8509052136411195652}
   - component: {fileID: 4187988425319091803}
-  - component: {fileID: 5056345848402421107}
   - component: {fileID: 2600553577107731004}
   - component: {fileID: 7495717710325007669}
   - component: {fileID: 1525496055937217004}
@@ -159,6 +159,24 @@ Transform:
   - {fileID: 5295795119699670919}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5056345848402421107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3206033706706982381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f0b1387183d75843aa5210c426489fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DuckWalk
+  sprite: {fileID: 3935283322215448257}
+  speed: 2.5
+  direction: {x: 0, y: 0}
+  randomBounceOffset: 30
+  loveEffect: {fileID: 11400000, guid: 8b08947eb8e9d5040a760478ebbcc528, type: 2}
+  loveChance: 0.2
 --- !u!114 &8509052136411195652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,22 +252,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &5056345848402421107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3206033706706982381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f0b1387183d75843aa5210c426489fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DuckWalk
-  sprite: {fileID: 3935283322215448257}
-  speed: 2.5
-  direction: {x: 0, y: 0}
-  randomBounceOffset: 30
 --- !u!58 &2600553577107731004
 CircleCollider2D:
   m_ObjectHideFlags: 0

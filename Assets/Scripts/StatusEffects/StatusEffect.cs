@@ -4,8 +4,8 @@ using UnityEngine;
 public class StatusEffect : ScriptableObject
 {
 
-    float chance;
-    float duration;
+    [SerializeField] float chance;
+    [SerializeField] float duration;
 
     public float Chance
     {
@@ -44,8 +44,9 @@ public class StatusEffect : ScriptableObject
         return false;
     }
 
-    public virtual void Added()
+    public virtual void Added(DuckWalk duck)
     {
+        
     }
 
     public virtual void Removed()

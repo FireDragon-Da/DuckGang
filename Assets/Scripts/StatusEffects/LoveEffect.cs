@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "LoveEffect", menuName = "StatusEffect/LoveEffect")]
 public class LoveEffect : StatusEffect
 {
 
@@ -20,12 +21,21 @@ public class LoveEffect : StatusEffect
             }
         }
 
-        return nearest.transform.position - target.transform.position;
+        Vector2 output = nearest.transform.position - target.transform.position;
+
+        if (output == Vector2.zero)
+        {
+            return Vector2.up;
+        }
+        else
+        {
+            return output.normalized;
+        }
     }
 
-    public override bool EffectTried()
+    public override void Added(DuckWalk duck)
     {
-        return false;
+        duck.RemoveEffect<NestEffect>();
     }
 
 }

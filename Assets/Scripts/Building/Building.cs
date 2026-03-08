@@ -13,11 +13,11 @@ public class Building : MonoBehaviour
     [SerializeField] protected float constructionNeeded;
     protected float constructionCount;
     protected bool built;
-    public bool removing;
+    [SerializeField] protected int placeCost;
+    [SerializeField] protected int buildCost;
+    bool removing;
     [SerializeField] int removeHitsRequired = 2;
     int removeCounter;
-    [SerializeField] protected int buildCost;
-    [SerializeField] protected int placeCost;
 
     [SerializeField] protected bool[] filledSpots;
 
@@ -76,7 +76,7 @@ public class Building : MonoBehaviour
         return !built || walkable;
     }
 
-    public virtual void BuildingInteract()
+    public virtual void BuildingInteract(DuckWalk duck)
     {
         if (removing)
         {
@@ -149,6 +149,11 @@ public class Building : MonoBehaviour
     {
         Debug.LogError("Unique Bounce was used when it shouldn't be");
         return Vector2.up;
+    }
+
+    protected virtual void Update()
+    {
+        if (!built) {return;}
     }
 
 }
