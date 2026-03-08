@@ -21,6 +21,8 @@ public class Building : MonoBehaviour
 
     [SerializeField] protected bool[] filledSpots;
 
+    bool hasUniqueBounce;
+
     public int Width
     {
         get
@@ -58,6 +60,14 @@ public class Building : MonoBehaviour
         get
         {
             return spriteRenderer;
+        }
+    }
+
+    public bool HasUniqueBounce
+    {
+        get
+        {
+            return hasUniqueBounce;
         }
     }
 
@@ -133,6 +143,12 @@ public class Building : MonoBehaviour
     public bool GetSpot(int x, int y)
     {
         return filledSpots[x+y * width];
+    }
+
+    public virtual Vector2 UnqiueBounce()
+    {
+        Debug.LogError("Unique Bounce was used when it shouldn't be");
+        return Vector2.up;
     }
 
 }

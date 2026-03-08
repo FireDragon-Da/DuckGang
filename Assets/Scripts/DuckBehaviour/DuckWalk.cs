@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -15,6 +16,8 @@ public class DuckWalk : MonoBehaviour
     [SerializeField] Vector2 direction;
     [SerializeField] float randomBounceOffset;
 
+    List<StatusEffect> statusEffects = new();
+
     void Awake()
     {
         col = GetComponent<CircleCollider2D>();
@@ -23,6 +26,9 @@ public class DuckWalk : MonoBehaviour
 
     void Start()
     {
+        //TODO remove this it is just for temp testing and should be done elsewhere
+        PublicInfo.reference.duckList.Add(gameObject);
+
         if (direction == Vector2.zero)
         {
             ChangeDirection(UnityEngine.Random.insideUnitCircle.normalized);
@@ -36,6 +42,15 @@ public class DuckWalk : MonoBehaviour
     void Update()
     {
         MoveForward(speed * Time.deltaTime);
+
+        for (int i = statusEffects.Count-1; i >= 0; i--)
+        {
+            if (statusEffects[i].TickDown(Time.deltaTime))
+            {
+                statusEffects[i].Removed();
+                statusEffects.RemoveAt(i);
+            }
+        }
     }
 
     void MoveForward(float distance)
@@ -74,11 +89,13 @@ public class DuckWalk : MonoBehaviour
         }
     }
 
+    //Never used anymore
     public void Lure(Vector2 positon)
     {
         ChangeDirection(direction = (positon - (Vector2)transform.position).normalized);
     }
 
+    //For bouncing directly off a duck
     public void DuckBounce(Vector3 other)
     {
         ChangeDirection((transform.position - other).normalized);
@@ -86,9 +103,70 @@ public class DuckWalk : MonoBehaviour
 
     void WallBounce(Vector2 targetDirection)
     {
-        Vector2 newDirection = Quaternion.AngleAxis(UnityEngine.Random.Range(-randomBounceOffset,randomBounceOffset),Vector3.forward) * targetDirection;
+        float statusChance = 0;
+        foreach (StatusEffect cur in statusEffects)
+        {
+            statusChance += cur.Chance;
+        }
 
-        ChangeDirection(newDirection);
+        if (statusChance > 1)
+        {
+            float ranNum = UnityEngine.Random.Range(0,statusChance);
+
+            //Attempt to activate status effects
+            foreach (StatusEffect curEffect in statusEffects)
+            {
+                ranNum -= curEffect.Chance;
+                if (ranNum <= 0)
+                {
+                    curEffect.Activate(gameObject);
+                    break;
+                }
+            }
+
+            for (int i = statusEffects.Count-1; i >= 0; i--)
+            {
+                if (statusEffects[i].EffectTried())
+                {
+                    statusEffects[i].Removed();
+                    statusEffects.RemoveAt(i);
+                }
+            }
+
+        }
+        else
+        {
+            float ranNum = UnityEngine.Random.Range(0,1);
+
+            //Attempt to activate status effects
+            foreach (StatusEffect curEffect in statusEffects)
+            {
+                ranNum -= curEffect.Chance;
+                if (ranNum <= 0)
+                {
+                    curEffect.Activate(gameObject);
+                    break;
+                }
+            }
+
+            //Regular movement with random offset
+            if (ranNum > 0)
+            {
+                Vector2 newDirection = Quaternion.AngleAxis(UnityEngine.Random.Range(-randomBounceOffset,randomBounceOffset),Vector3.forward) * targetDirection;
+                ChangeDirection(newDirection);
+            }
+
+            for (int i = statusEffects.Count-1; i >= 0; i--)
+            {
+                if (statusEffects[i].EffectTried())
+                {
+                    statusEffects[i].Removed();
+                    statusEffects.RemoveAt(i);
+                }
+            }
+
+        }
+
     }
 
     void ChangeDirection(Vector2 newDirection)
@@ -107,10 +185,32 @@ public class DuckWalk : MonoBehaviour
 
             if (!curBuilding.CanWalkOver())
             {
-                ChangeDirection((transform.position - collision.transform.position).normalized);
+                if (curBuilding.HasUniqueBounce)
+                {
+                    //Force direction to unique bounce direction
+                    ChangeDirection(curBuilding.UnqiueBounce());
+                }
+                else
+                {
+                    WallBounce((transform.position - collision.transform.position).normalized);
+                }
             }
 
         }
+    }
+
+    public void GainStatusEffect(StatusEffect newEffect)
+    {
+        //Avoid duplicates
+        foreach (StatusEffect curEffect in statusEffects)
+        {
+            if (newEffect.GetType() == curEffect.GetType())
+            {
+                statusEffects.Remove(curEffect);
+            }
+        }
+
+        statusEffects.Add(newEffect);
     }
 
 }
