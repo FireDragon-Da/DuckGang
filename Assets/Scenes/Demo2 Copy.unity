@@ -14898,7 +14898,7 @@ PrefabInstance:
     - target: {fileID: 2111224227258808617, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: curBuildingPrefab
       value: 
-      objectReference: {fileID: 8776427355286273895, guid: 7c04a85c9d111054a9c5e735cb600a65, type: 3}
+      objectReference: {fileID: 787124332432010868, guid: e804da39ad4107549b7d48948ce2a642, type: 3}
     - target: {fileID: 3229418350418843075, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.34281

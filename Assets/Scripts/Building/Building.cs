@@ -21,7 +21,7 @@ public class Building : MonoBehaviour
 
     [SerializeField] protected bool[] filledSpots;
 
-    bool hasUniqueBounce;
+    [SerializeField] bool hasUniqueBounce;
 
     public int Width
     {
@@ -145,7 +145,7 @@ public class Building : MonoBehaviour
         return filledSpots[x+y * width];
     }
 
-    public virtual Vector2 UnqiueBounce()
+    public virtual Vector2 UnqiueBounce(DuckWalk target)
     {
         Debug.LogError("Unique Bounce was used when it shouldn't be");
         return Vector2.up;

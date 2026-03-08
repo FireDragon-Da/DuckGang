@@ -7,6 +7,8 @@ public class PublicInfo : MonoBehaviour
 
     public List<GameObject> duckList = new();
     public List<Nest> nestList = new();
+    public List<Farmland> farmList = new();
+    public List<Grass> grassList = new();
 
     void Awake()
     {
@@ -19,8 +21,6 @@ public class PublicInfo : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-
 
     //Random functions just for making other scripts cleaner
     public bool AnyNestEmpty()

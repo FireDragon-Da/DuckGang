@@ -110,6 +110,8 @@ public class Farmland : Building
     {
         base.Build();
         FinishGrow();
+        //TODO remove this it is just for temp testing and should be done elsewhere
+        PublicInfo.reference.farmList.Add(this);
     }
 
     void Decay()

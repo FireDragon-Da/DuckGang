@@ -193,6 +193,12 @@ public class DuckWalk : MonoBehaviour
         sprite.flipX = direction.x > 0;
     }
 
+    public void ForceChangeDirection(Vector2 newDirection)
+    {
+        direction = newDirection;
+        sprite.flipX = direction.x > 0;
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Building"))
@@ -206,7 +212,7 @@ public class DuckWalk : MonoBehaviour
                 if (curBuilding.HasUniqueBounce)
                 {
                     //Force direction to unique bounce direction
-                    ChangeDirection(curBuilding.UnqiueBounce());
+                    ChangeDirection(curBuilding.UnqiueBounce(this));
                 }
                 else
                 {
