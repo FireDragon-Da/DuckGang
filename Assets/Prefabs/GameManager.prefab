@@ -3580,6 +3580,7 @@ GameObject:
   - component: {fileID: 3229418350418843075}
   - component: {fileID: 1994707269928317475}
   - component: {fileID: 2111224227258808617}
+  - component: {fileID: 5396340594175169998}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3635,6 +3636,20 @@ MonoBehaviour:
   curBuildingPrefab: {fileID: 1964499539893817578, guid: 5a3fb6bec21f1c0478ad03e534316d5e, type: 3}
   buildingPreview: {fileID: 2820761235777249599}
   tilemap: {fileID: 0}
+--- !u!114 &5396340594175169998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8419782432875219653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31db11efc803d3445adb14683aef8c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PublicInfo
+  duckList: []
+  nestList: []
 --- !u!1 &8580610215923662431
 GameObject:
   m_ObjectHideFlags: 0

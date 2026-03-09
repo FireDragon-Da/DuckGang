@@ -26,12 +26,9 @@ public class Farmland : Building
         spriteRenderer.color = tempColor;
     }
 
-    void Update()
+    protected override void Update()
     {
-        if (!built)
-        {
-            return;
-        }
+        base.Update();
 
         if (growTimer > 0)
         {
@@ -47,7 +44,7 @@ public class Farmland : Building
         }
     }
 
-    public override void BuildingInteract()
+    public override void BuildingInteract(DuckWalk duck)
     {
         if (!built) //Doesn't have regular building behavior
         {
@@ -113,6 +110,8 @@ public class Farmland : Building
     {
         base.Build();
         FinishGrow();
+        //TODO remove this it is just for temp testing and should be done elsewhere
+        PublicInfo.reference.farmList.Add(this);
     }
 
     void Decay()
