@@ -432,7 +432,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &176012135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1971,6 +1971,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewspaperTestTrigger
   newspaperController: {fileID: 176012139}
   button: {fileID: 853839582}
+--- !u!1 &853917525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 853917527}
+  - component: {fileID: 853917526}
+  m_Layer: 0
+  m_Name: DuckSpeakManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &853917526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853917525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f6da55805205b345b6a8097b2cddfd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DuckSpeakManager
+  quacxiconSO: {fileID: 11400000, guid: 1aa141ee18302324aa45bfd96be65908, type: 2}
+  targetTextBox: {fileID: 1628398687}
+  mainCamera: {fileID: 749146409}
+  checkInterval: 30
+  speakProbability: 0.5
+  speakCategoryName: DuckThoughts
+--- !u!4 &853917527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853917525}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.34281, y: 0.34312, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &863856480
 GameObject:
   m_ObjectHideFlags: 0
@@ -2435,11 +2485,15 @@ MonoBehaviour:
   foundationSpriteRenderer: {fileID: 0}
   walkable: 0
   constructionNeeded: 2
-  removing: 0
-  removeHitsRequired: 2
-  buildCost: 0
   placeCost: 0
+  buildCost: 0
+  removeHitsRequired: 2
   filledSpots: 
+  hasUniqueBounce: 0
+  vfxHandler: {fileID: 0}
+  interactVFX: {fileID: 0}
+  buildCompleteVFX: {fileID: 0}
+  removeHitVFX: {fileID: 0}
 --- !u!212 &1045650752
 SpriteRenderer:
   serializedVersion: 2
@@ -5910,3 +5964,4 @@ SceneRoots:
   - {fileID: 614740986}
   - {fileID: 1628398691}
   - {fileID: 176012138}
+  - {fileID: 853917527}
