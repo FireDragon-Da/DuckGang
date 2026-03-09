@@ -432,7 +432,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &176012135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2432,12 +2432,14 @@ MonoBehaviour:
   width: 3
   height: 4
   spriteRenderer: {fileID: 0}
+  foundationSpriteRenderer: {fileID: 0}
   walkable: 0
   constructionNeeded: 2
   removing: 0
   removeHitsRequired: 2
   buildCost: 0
   placeCost: 0
+  filledSpots: 
 --- !u!212 &1045650752
 SpriteRenderer:
   serializedVersion: 2
@@ -3256,8 +3258,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1476765427}
   m_HandleRect: {fileID: 1476765426}
   m_Direction: 2
-  m_Value: 1.0000027
-  m_Size: 0.66666675
+  m_Value: 1.0000018
+  m_Size: 0.6666667
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5903,8 +5905,8 @@ SceneRoots:
   - {fileID: 1521318298}
   - {fileID: 1317727862}
   - {fileID: 6410375465495123799}
-  - {fileID: 614740986}
   - {fileID: 3104140294236712522}
   - {fileID: 1045650753}
+  - {fileID: 614740986}
   - {fileID: 1628398691}
   - {fileID: 176012138}
