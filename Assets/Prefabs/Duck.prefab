@@ -191,7 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DuckHunger
   hungerRate: 0.5
   satietyMax: 100
-  fillPerCrumb: 60
+  fillPerCrumb: 20
   eatRange: 25
 --- !u!212 &4187988425319091803
 SpriteRenderer:
