@@ -109,12 +109,18 @@ MonoBehaviour:
   width: 2
   height: 2
   spriteRenderer: {fileID: 8441657926999870883}
+  foundationSpriteRenderer: {fileID: 0}
   walkable: 0
   constructionNeeded: 0
-  removing: 0
-  removeHitsRequired: 40
-  buildCost: 0
   placeCost: 0
+  buildCost: 0
+  removeHitsRequired: 40
+  filledSpots: 
+  hasUniqueBounce: 0
+  vfxHandler: {fileID: 0}
+  interactVFX: {fileID: 0}
+  buildCompleteVFX: {fileID: 0}
+  removeHitVFX: {fileID: 0}
 --- !u!61 &5722018439423492281
 BoxCollider2D:
   m_ObjectHideFlags: 0
