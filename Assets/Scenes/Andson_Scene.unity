@@ -6180,7 +6180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1994707269928317475, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: crumbs
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2111224227258808617, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: tilemap
