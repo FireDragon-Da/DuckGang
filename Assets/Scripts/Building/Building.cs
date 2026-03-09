@@ -23,6 +23,13 @@ public class Building : MonoBehaviour
 
     [SerializeField] bool hasUniqueBounce;
 
+    [Header("Visual Effects")]
+    [SerializeField] protected BuildingVFXHandler vfxHandler;
+
+    [SerializeField] protected BuildingVFXSO interactVFX;
+    [SerializeField] protected BuildingVFXSO buildCompleteVFX;
+    [SerializeField] protected BuildingVFXSO removeHitVFX;
+
     public int Width
     {
         get
@@ -80,6 +87,7 @@ public class Building : MonoBehaviour
     {
         if (removing)
         {
+            if (vfxHandler != null) vfxHandler.PlayEffect(removeHitVFX);
             removeCounter++;
             if (removeCounter >= removeHitsRequired)
             {
@@ -94,6 +102,8 @@ public class Building : MonoBehaviour
             {
                 return;
             }
+
+            if (vfxHandler != null) vfxHandler.PlayEffect(interactVFX);
 
             AddConstruct();
             if (constructionCount >= constructionNeeded)
@@ -122,6 +132,8 @@ public class Building : MonoBehaviour
 
         foundationSpriteRenderer.enabled = false;
         spriteRenderer.enabled = true;
+
+        if (vfxHandler != null) vfxHandler.PlayEffect(buildCompleteVFX);
     }
 
     public virtual void Remove()
