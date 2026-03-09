@@ -393,7 +393,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DuckNameGen
   gameQuaxicon: {fileID: 11400000, guid: 26d247cceab03c446a0c7189b7821d55, type: 2}
   nameText: {fileID: 7309892685760580731}
-  duckName: John Quackna
 --- !u!82 &8290644685965031241
 AudioSource:
   m_ObjectHideFlags: 0
@@ -498,7 +497,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3206033706706982381}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
