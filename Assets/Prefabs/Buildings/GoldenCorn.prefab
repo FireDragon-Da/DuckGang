@@ -306,9 +306,13 @@ MonoBehaviour:
   constructionNeeded: 10
   placeCost: 10
   buildCost: 3
-  removeHitsRequired: 2
+  removeHitsRequired: 5
   filledSpots: 010101
   hasUniqueBounce: 1
+  vfxHandler: {fileID: 0}
+  interactVFX: {fileID: 0}
+  buildCompleteVFX: {fileID: 0}
+  removeHitVFX: {fileID: 0}
   defaultWitherTimer: 45
   hornRange: {fileID: 2936249175253164532}
 --- !u!61 &455469100539282678

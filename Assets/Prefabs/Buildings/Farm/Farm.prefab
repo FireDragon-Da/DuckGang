@@ -148,11 +148,15 @@ MonoBehaviour:
   foundationSpriteRenderer: {fileID: 6509931588633235376}
   walkable: 1
   constructionNeeded: 2
-  removing: 0
-  removeHitsRequired: 2
-  buildCost: 2
   placeCost: 1
+  buildCost: 2
+  removeHitsRequired: 4
   filledSpots: 010101000100000100
+  hasUniqueBounce: 0
+  vfxHandler: {fileID: 0}
+  interactVFX: {fileID: 0}
+  buildCompleteVFX: {fileID: 0}
+  removeHitVFX: {fileID: 0}
   farmland:
   - {fileID: 4977065885781206318}
   - {fileID: 6852804863708327957}
