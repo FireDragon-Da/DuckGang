@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 public class DuckHunger : MonoBehaviour
 {
 
@@ -10,10 +10,24 @@ public class DuckHunger : MonoBehaviour
     [SerializeField] float fillPerCrumb;
     [SerializeField] float eatRange;
 
+
+    [SerializeField] private SpriteRenderer duckSprite; 
+    private Color originalColor;
+
+    public float CurrentSatiety => satiety;
+    public float MaxSatiety => satietyMax;
+
     void Start()
     {
         curHungerTimer = hungerRate;
         satiety = satietyMax;
+
+
+        if (duckSprite == null)
+            duckSprite = GetComponentInChildren<SpriteRenderer>();
+
+        if (duckSprite != null)
+            originalColor = duckSprite.color;
     }
 
     void Update()
@@ -48,6 +62,20 @@ public class DuckHunger : MonoBehaviour
         {
             satiety = satietyMax;
         }
+        if (gameObject.activeInHierarchy)
+        {
+            StartCoroutine(EatFeedbackRoutine());
+        }
+    }
+
+    private IEnumerator EatFeedbackRoutine()
+    {
+        if (duckSprite == null) yield break;
+
+        duckSprite.color = Color.green;
+        yield return new WaitForSeconds(0.2f);
+
+        duckSprite.color = originalColor;
     }
 
     //This will likely be replaced / moved later
