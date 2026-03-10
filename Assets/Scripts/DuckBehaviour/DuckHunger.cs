@@ -31,7 +31,7 @@ public class DuckHunger : MonoBehaviour
 
             if (satiety <= 0)
             {
-                Die();
+                Starve();
             }
         }
     }
@@ -51,9 +51,9 @@ public class DuckHunger : MonoBehaviour
     }
 
     //This will likely be replaced / moved later
-    void Die()
+    void Starve()
     {
-        Destroy(gameObject);
+        GetComponent<DuckStats>().Die(DeathReason.Starvation);
     }
 
 }

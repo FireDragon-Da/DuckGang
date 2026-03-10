@@ -34,7 +34,6 @@ public struct DeathEvent
     public DeathReason reason;
 }
 
-
 public class NewspaperController : MonoBehaviour
 {
     [Header("Data Source")]

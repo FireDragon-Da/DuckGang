@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class DuckStats : MonoBehaviour
@@ -18,4 +19,30 @@ public class DuckStats : MonoBehaviour
     public void ModifyHunger(int amount) => hunger = Mathf.Clamp(hunger + amount, 0, MaxStatValue);
     public void ModifyEnergy(int amount) => energy = Mathf.Clamp(energy + amount, 0, MaxStatValue);
     public void ModifyHealth(int amount) => health = Mathf.Clamp(health + amount, 0, MaxStatValue);
+
+    [SerializeField] float lifespan;
+    float curLife;
+
+    void Update()
+    {
+        curLife += Time.deltaTime;
+        if (curLife >= lifespan)
+        {
+            Die(DeathReason.OldAge);
+        }
+    }
+
+    public void Die(DeathReason reason)
+    {
+        String name = GetComponent<DuckNameGen>().CurrentDuckName;
+
+        DeathEvent newEvent = new();
+        newEvent.duckName = name;
+        newEvent.reason = reason;
+
+        DuckSocietyManager.reference.recentDeaths.Add(newEvent);
+
+        PublicInfo.reference.duckList.Remove(gameObject);
+        Destroy(gameObject);
+    }
 }
