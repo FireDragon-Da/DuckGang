@@ -193,6 +193,7 @@ MonoBehaviour:
   satietyMax: 100
   fillPerCrumb: 60
   eatRange: 25
+  duckSprite: {fileID: 3935283322215448257}
 --- !u!212 &4187988425319091803
 SpriteRenderer:
   serializedVersion: 2
@@ -355,9 +356,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DuckStats
   happiness: 80
-  hunger: 60
   energy: 70
   health: 90
+  age: 0
+  maxAge: 100
 --- !u!114 &5534468101817164839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,7 +395,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DuckNameGen
   gameQuaxicon: {fileID: 11400000, guid: 26d247cceab03c446a0c7189b7821d55, type: 2}
   nameText: {fileID: 7309892685760580731}
-  duckName: John Quackna
 --- !u!82 &8290644685965031241
 AudioSource:
   m_ObjectHideFlags: 0
