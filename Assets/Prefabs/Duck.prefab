@@ -191,7 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DuckHunger
   hungerRate: 0.5
   satietyMax: 100
-  fillPerCrumb: 60
+  fillPerCrumb: 20
   eatRange: 25
 --- !u!212 &4187988425319091803
 SpriteRenderer:
@@ -498,7 +498,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3206033706706982381}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}

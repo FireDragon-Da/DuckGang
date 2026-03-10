@@ -147,9 +147,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 3457740062473728581}
   foundationSpriteRenderer: {fileID: 6509931588633235376}
   walkable: 1
-  constructionNeeded: 2
-  placeCost: 1
-  buildCost: 2
+  constructionNeeded: 8
+  placeCost: 6
+  buildCost: 3
   removeHitsRequired: 4
   filledSpots: 010101000100000100
   hasUniqueBounce: 0

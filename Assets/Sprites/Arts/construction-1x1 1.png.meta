@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 6ca47c7ed1389e243b4266f47d500f55
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4728124298063849045
+    second: construction-1x1 1_0
+  - first:
+      213: -5723442842687019555
+    second: construction-1x1 1_1
+  - first:
+      213: 7098230012929791905
+    second: construction-1x1 1_2
+  - first:
+      213: -98589429047184886
+    second: construction-1x1 1_3
+  - first:
+      213: 853339678076901876
+    second: construction-1x1 1_4
+  - first:
+      213: -6742028461012598205
+    second: construction-1x1 1_5
+  - first:
+      213: 3952422377781940523
+    second: construction-1x1 1_6
+  - first:
+      213: 8478451920991170817
+    second: construction-1x1 1_7
+  - first:
+      213: 2663507768883464962
+    second: construction-1x1 1_8
+  - first:
+      213: -2864420596215571104
+    second: construction-1x1 1_9
+  - first:
+      213: 1536387261836371631
+    second: construction-1x1 1_10
+  - first:
+      213: -6085230392451478349
+    second: construction-1x1 1_11
+  - first:
+      213: -543868490818824611
+    second: construction-1x1 1_12
+  - first:
+      213: 2856138402110571841
+    second: construction-1x1 1_13
+  - first:
+      213: 3671754797522768642
+    second: construction-1x1 1_14
+  - first:
+      213: 4325000554509855053
+    second: construction-1x1 1_15
+  - first:
+      213: 8798357912756713585
+    second: construction-1x1 1_16
+  - first:
+      213: -8250324146247218434
+    second: construction-1x1 1_17
+  - first:
+      213: -7434316892622270761
+    second: construction-1x1 1_18
+  - first:
+      213: -2119653119788916888
+    second: construction-1x1 1_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: construction-1x1 1_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 217
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5562df79ffbad9140800000000000000
+      internalID: 4728124298063849045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-1x1 1_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 243
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd563650f0f3290b0800000000000000
+      internalID: -5723442842687019555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-1x1 1_2
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 243
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a752b6b69af18260800000000000000
+      internalID: 7098230012929791905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-1x1 1_3
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 243
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a02b807cf6db1aef0800000000000000
+      internalID: -98589429047184886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-1x1 1_4
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 243
+        width: 28
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f915808aeba7db00800000000000000
+      internalID: 853339678076901876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-1x1 1_5
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 236
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34245c3e5d08f62a0800000000000000
+      internalID: -6742028461012598205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-1x1 1_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 170
+        width: 11
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b215ff53633d9d630800000000000000
+      internalID: 3952422377781940523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-1x1 1_7
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 27
+        width: 212
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10138e3f91389a570800000000000000
+      internalID: 8478451920991170817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-1x1 1_8
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 195
+        width: 13
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20bcac4343ea6f420800000000000000
+      internalID: 2663507768883464962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-1x1 1_9
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 122
+        width: 11
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06d1243e4a88f38d0800000000000000
+      internalID: -2864420596215571104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-1x1 1_10
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 146
+        width: 11
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa621331318525510800000000000000
+      internalID: 1536387261836371631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-1x1 1_11
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 74
+        width: 11
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bcc481f23bec8ba0800000000000000
+      internalID: -6085230392451478349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-1x1 1_12
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 98
+        width: 11
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5657383d7ac378f0800000000000000
+      internalID: -543868490818824611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-1x1 1_13
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 24
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14507278eba03a720800000000000000
+      internalID: 2856138402110571841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-1x1 1_14
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 49
+        width: 11
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2035ea8d881b4f230800000000000000
+      internalID: 3671754797522768642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-1x1 1_15
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 3
+        width: 29
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d496de8e61d750c30800000000000000
+      internalID: 4325000554509855053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-1x1 1_16
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 3
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1787c9ce7eb0a1a70800000000000000
+      internalID: 8798357912756713585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-1x1 1_17
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 3
+        width: 28
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efa4b1da6e5f08d80800000000000000
+      internalID: -8250324146247218434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-1x1 1_18
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 3
+        width: 28
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7de4093cc2004d890800000000000000
+      internalID: -7434316892622270761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-1x1 1_19
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 7
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86fdeebc7ba7592e0800000000000000
+      internalID: -2119653119788916888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      construction-1x1 1_0: 4728124298063849045
+      construction-1x1 1_1: -5723442842687019555
+      construction-1x1 1_10: 1536387261836371631
+      construction-1x1 1_11: -6085230392451478349
+      construction-1x1 1_12: -543868490818824611
+      construction-1x1 1_13: 2856138402110571841
+      construction-1x1 1_14: 3671754797522768642
+      construction-1x1 1_15: 4325000554509855053
+      construction-1x1 1_16: 8798357912756713585
+      construction-1x1 1_17: -8250324146247218434
+      construction-1x1 1_18: -7434316892622270761
+      construction-1x1 1_19: -2119653119788916888
+      construction-1x1 1_2: 7098230012929791905
+      construction-1x1 1_3: -98589429047184886
+      construction-1x1 1_4: 853339678076901876
+      construction-1x1 1_5: -6742028461012598205
+      construction-1x1 1_6: 3952422377781940523
+      construction-1x1 1_7: 8478451920991170817
+      construction-1x1 1_8: 2663507768883464962
+      construction-1x1 1_9: -2864420596215571104
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -60,13 +60,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoundSystem
   sounds:
   - name: click
-    clip: {fileID: 8300000, guid: f6f880e21d1784e43a5c5c9b94479aa5, type: 3}
+    clip: {fileID: 8300000, guid: d554b90e296acb84f8f79d90673a75e0, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: grass
-    clip: {fileID: 8300000, guid: dd6c1f94ce2ff8545aba427792b1bcd8, type: 3}
+    clip: {fileID: 8300000, guid: 4898615a661c05b49a9f1bfded86d9e1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: build-foundation
+    clip: {fileID: 8300000, guid: 0bec9fa70b5b9f7449386bde04315a30, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: click-ui
+    clip: {fileID: 8300000, guid: b3e6d6062aea875428024cb37525cd52, type: 3}
     volume: 1
     pitch: 1
     loop: 0
