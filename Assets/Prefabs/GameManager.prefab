@@ -3581,6 +3581,7 @@ GameObject:
   - component: {fileID: 1994707269928317475}
   - component: {fileID: 2111224227258808617}
   - component: {fileID: 5396340594175169998}
+  - component: {fileID: 3064272729836684732}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3650,6 +3651,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PublicInfo
   duckList: []
   nestList: []
+  farmList: []
+  grassList: []
+--- !u!114 &3064272729836684732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8419782432875219653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2db614e5aa2ec9041aa8028946b88a64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DuckSocietyManager
+  duckPrefab: {fileID: 3206033706706982381, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
+  newbornDuckNames: []
 --- !u!1 &8580610215923662431
 GameObject:
   m_ObjectHideFlags: 0

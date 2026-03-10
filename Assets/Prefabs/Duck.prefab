@@ -358,7 +358,8 @@ MonoBehaviour:
   hunger: 60
   energy: 70
   health: 90
-  lifespan: 3000
+  averageLifespan: 3000
+  lifespanVariance: 300
 --- !u!114 &5534468101817164839
 MonoBehaviour:
   m_ObjectHideFlags: 0

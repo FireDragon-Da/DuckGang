@@ -20,8 +20,15 @@ public class DuckStats : MonoBehaviour
     public void ModifyEnergy(int amount) => energy = Mathf.Clamp(energy + amount, 0, MaxStatValue);
     public void ModifyHealth(int amount) => health = Mathf.Clamp(health + amount, 0, MaxStatValue);
 
-    [SerializeField] float lifespan;
+    [SerializeField] float averageLifespan;
+    [SerializeField] float lifespanVariance;
+    float lifespan;
     float curLife;
+
+    void Start()
+    {
+        lifespan = averageLifespan + UnityEngine.Random.Range(-lifespanVariance/2,lifespanVariance/2);
+    }
 
     void Update()
     {

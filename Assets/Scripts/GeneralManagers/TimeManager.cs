@@ -2,15 +2,25 @@ using UnityEngine;
 
 public class TimeManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] float duckMonthLength;
+    int monthsPassed;
+    float curMonthTime;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        curMonthTime += Time.deltaTime;
+        if (curMonthTime >= duckMonthLength)
+        {
+            MonthPassed();
+        }
     }
+
+    void MonthPassed()
+    {
+        monthsPassed++;
+        curMonthTime -= duckMonthLength;
+
+        //TODO make newspaper show up
+    }
+
 }
