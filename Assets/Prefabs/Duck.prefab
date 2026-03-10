@@ -193,6 +193,7 @@ MonoBehaviour:
   satietyMax: 100
   fillPerCrumb: 20
   eatRange: 25
+  duckSprite: {fileID: 3935283322215448257}
 --- !u!212 &4187988425319091803
 SpriteRenderer:
   serializedVersion: 2
@@ -355,7 +356,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DuckStats
   happiness: 80
-  hunger: 60
   energy: 70
   health: 90
   averageLifespan: 3000
