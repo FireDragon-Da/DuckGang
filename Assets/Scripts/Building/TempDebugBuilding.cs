@@ -6,7 +6,6 @@ public class TempDebugBuilding : Building
     void Start()
     {
         Vector2Int arrayPos = MapManager.reference.TilemapPosToArrayPos(new((int)(transform.position.x-0.5f),(int)(transform.position.y-1.5f)));
-        print(arrayPos);
         MapManager.reference.buildingArray[arrayPos.x,arrayPos.y] = this;
     }
 

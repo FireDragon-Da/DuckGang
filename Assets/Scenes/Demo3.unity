@@ -14891,25 +14891,17 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1994707269928317475, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
-      propertyPath: crumbs
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 2111224227258808617, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: tilemap
       value: 
       objectReference: {fileID: 1979299568}
-    - target: {fileID: 2111224227258808617, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
-      propertyPath: curBuildingPrefab
-      value: 
-      objectReference: {fileID: 8776427355286273895, guid: 7c04a85c9d111054a9c5e735cb600a65, type: 3}
     - target: {fileID: 3229418350418843075, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.34281
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3229418350418843075, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.34312
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3229418350418843075, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14958,10 +14950,10 @@ SceneRoots:
   m_Roots:
   - {fileID: 389357174}
   - {fileID: 1028474220}
-  - {fileID: 1521318298}
-  - {fileID: 1317727862}
   - {fileID: 6410375465495123799}
   - {fileID: 614740986}
   - {fileID: 282456641}
+  - {fileID: 1521318298}
+  - {fileID: 1317727862}
   - {fileID: 1266718494}
   - {fileID: 1704132156}
