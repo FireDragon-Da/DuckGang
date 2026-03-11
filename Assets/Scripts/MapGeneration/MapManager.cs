@@ -58,10 +58,7 @@ public class MapManager : MonoBehaviour
     void Awake()
     {
         reference = this;
-    }
 
-    void Start()
-    {
         mapLeft = -mapWidth / 2;
         mapRight = mapWidth / 2;
         mapTop = mapHeight / 2;
@@ -70,6 +67,11 @@ public class MapManager : MonoBehaviour
         //This is only here for testing purposes
         mapArray = new int[mapWidth,mapHeight];
         buildingArray = new Building[mapWidth,mapHeight];
+    }
+
+    void Start()
+    {
+
     }
 
     void Update()

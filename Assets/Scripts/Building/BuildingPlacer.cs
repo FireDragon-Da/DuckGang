@@ -114,10 +114,15 @@ public class BuildingPlacer : MonoBehaviour
         return true;
     }
 
-    //Just for sprint demo2
-    public void TempDemoFarmButton()
+    public void EnableBuild()
     {
-        active = !active;
+        active = true;
+        removeToggled = false;
+    }
+
+    public void DisableBuildAndRemove()
+    {
+        active = false;
         removeToggled = false;
     }
 

@@ -16,4 +16,5 @@ public class DuckNameGen : MonoBehaviour
             nameText.text = CurrentDuckName;
         }
     }
+
 }

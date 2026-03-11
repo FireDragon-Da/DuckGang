@@ -8,8 +8,6 @@ public class Nest : Building
     [SerializeField] float defaultEggTimer;
     float curEggTimer;
 
-    [SerializeField] GameObject duckPrefab;
-
     public bool Empty
     {
         get
@@ -56,7 +54,7 @@ public class Nest : Building
             if (curEggTimer <= 0)
             {
                 //TODO Proper duck spawning stuff here
-                Instantiate(duckPrefab, new(transform.position.x, transform.position.y), new Quaternion());
+                DuckSocietyManager.reference.SpawnDuck(transform.position);
                 empty = true;
             }
         }

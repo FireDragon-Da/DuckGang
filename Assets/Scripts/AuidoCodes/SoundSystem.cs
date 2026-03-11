@@ -69,7 +69,7 @@ public class SoundSystem : MonoBehaviour
         else
         {
 
-            Debug.Log("play sound: " + s.name);
+            //Debug.Log("play sound: " + s.name);
 
         }
 
