@@ -3949,7 +3949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuildingPlacer
   active: 0
-  curBuildingPrefab: {fileID: 8776427355286273895, guid: 7c04a85c9d111054a9c5e735cb600a65, type: 3}
+  buildingList: []
   buildingPreview: {fileID: 2820761235777249599}
   tilemap: {fileID: 0}
 --- !u!114 &5396340594175169998
@@ -4574,7 +4574,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_text
-      value: Grow some crops, water them, and collect them.
+      value: 'Grow some crops, water them, and collect them.
+
+        Cost: 10 crumbies
+        for foundation + 6x3 crumbies  for construction.
+
+        Unlocking Condition:
+        Collect 10 crumbies from the grass!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4687aa7e5ab3e994ab40977c3a279d69, type: 2}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -9171163891231222849, guid: 4687aa7e5ab3e994ab40977c3a279d69, type: 2}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2058558519879537494, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Sprite
@@ -4583,6 +4601,10 @@ PrefabInstance:
     - target: {fileID: 5312112345543924573, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Name
       value: Building_buttons (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172706042799672984, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Pivot.x
@@ -4862,8 +4884,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_text
-      value: Spawn your eggs here and wait for them to crack. Mom and Dad will figure
+      value: 'Spawn your eggs here and wait for them to crack. Mom and Dad will figure
         it out.
+
+        Cost: 8 crumbies for foundation + 4x2 crumbies for construction.
+
+        Unlocking
+        Condition: No.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_margin.y
+      value: 1.3395386
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4687aa7e5ab3e994ab40977c3a279d69, type: 2}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -9171163891231222849, guid: 4687aa7e5ab3e994ab40977c3a279d69, type: 2}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2058558519879537494, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Sprite
@@ -4872,6 +4915,10 @@ PrefabInstance:
     - target: {fileID: 5312112345543924573, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Name
       value: Building_buttons
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172706042799672984, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Pivot.x
@@ -5073,7 +5120,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_text
-      value: Looking at the golden corn, the ducks remember to get more crumbies.
+      value: 'Looking at the golden corn, the ducks remember to get more crumbies.
+
+        Cost:
+        12 crumbies for foundation + 5x4 crumbies for construction.
+
+        Unlocking
+        Condition: Build 1 farmland.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4687aa7e5ab3e994ab40977c3a279d69, type: 2}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -9171163891231222849, guid: 4687aa7e5ab3e994ab40977c3a279d69, type: 2}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2058558519879537494, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Sprite
@@ -5082,6 +5147,10 @@ PrefabInstance:
     - target: {fileID: 5312112345543924573, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Name
       value: Building_buttons (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172706042799672984, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Pivot.x

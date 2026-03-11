@@ -235,9 +235,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 7740923157720687260}
   foundationSpriteRenderer: {fileID: 3591576457877265360}
   walkable: 1
-  constructionNeeded: 1
-  placeCost: 5
-  buildCost: 2
+  constructionNeeded: 2
+  placeCost: 8
+  buildCost: 4
   removeHitsRequired: 2
   filledSpots: 01
   hasUniqueBounce: 0
@@ -247,7 +247,6 @@ MonoBehaviour:
   removeHitVFX: {fileID: 0}
   effectApplier: {fileID: 7290271145044701039}
   defaultEggTimer: 20
-  duckPrefab: {fileID: 3206033706706982381, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
 --- !u!61 &2121938604369957597
 BoxCollider2D:
   m_ObjectHideFlags: 0
