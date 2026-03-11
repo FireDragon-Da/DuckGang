@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
+
+using NUnit.Framework;
 
 public class BuildingPlacer : MonoBehaviour
 {
     [SerializeField] bool active;
-    [SerializeField] Building curBuildingPrefab;
+    [SerializeField] List<Building> buildingList;
     [SerializeField] GameObject buildingPreview;
 
     [SerializeField] Tilemap tilemap;
@@ -14,10 +17,11 @@ public class BuildingPlacer : MonoBehaviour
     int height;
 
     bool removeToggled;
+    Building curBuildingPrefab;
 
     void Start()
     {
-        UpdateBuildingPrefab(curBuildingPrefab);
+        //UpdateBuildingPrefab(curBuildingPrefab);
     }
 
     void Update()
@@ -79,6 +83,7 @@ public class BuildingPlacer : MonoBehaviour
 
     public void UpdateBuildingPrefab(Building newBuilding)
     {
+        curBuildingPrefab = newBuilding;
         buildingPreview.GetComponent<SpriteRenderer>().sprite = newBuilding.SpriteRenderer.sprite;
         width = newBuilding.Width;
         height = newBuilding.Height;
