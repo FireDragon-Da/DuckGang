@@ -35,7 +35,8 @@ public class DuckStats : MonoBehaviour
         }
     }
 
-    public int Age => Mathf.FloorToInt(curLife);
+    //max age is around 3000, max in-game age is ~60
+    public int Age => Mathf.FloorToInt(curLife / 50);
     public int MaxAge => Mathf.FloorToInt(lifespan);
 
     private void Awake()
@@ -46,6 +47,7 @@ public class DuckStats : MonoBehaviour
     void Start()
     {
         lifespan = averageLifespan + UnityEngine.Random.Range(-lifespanVariance / 2, lifespanVariance / 2);
+
     }
 
     void Update()
