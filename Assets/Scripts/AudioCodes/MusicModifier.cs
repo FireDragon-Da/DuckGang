@@ -10,7 +10,7 @@ public class MusicModifier : MonoBehaviour
         MainTheme = GetComponent<AudioSource>();
         MainTheme.Play();
         MainTheme.enabled = true;
-        MainTheme.pitch = 2;
+        SwitchToNeutral();
     }
 
     // Update is called once per frame
@@ -31,6 +31,6 @@ public class MusicModifier : MonoBehaviour
 
     public void SwitchToNeutral()
     {
-        MainTheme.pitch = .97f;
+        MainTheme.pitch = 1f;
     }
 }
