@@ -10,11 +10,11 @@ public class ObjectToggleAccessor : MonoBehaviour
 
     public void ForceOn()
     {
-        gameObject.SetActive(true);
+        constructionUI.SetActive(true);
     }
 
     public void ForceOff()
     {
-        gameObject.SetActive(false);
+        constructionUI.SetActive(false);
     }
 }
