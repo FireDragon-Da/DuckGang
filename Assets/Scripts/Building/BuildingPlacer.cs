@@ -39,8 +39,12 @@ public class BuildingPlacer : MonoBehaviour
                     }
                 }
 
-                
+
             }
+        }
+        else if (active && Input.GetMouseButtonDown(1))
+        {
+            DisableBuildAndRemove();
         }
         else if (active && !EventSystem.current.IsPointerOverGameObject())
         {
@@ -49,7 +53,7 @@ public class BuildingPlacer : MonoBehaviour
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3Int mouseTile = tilemap.WorldToCell(worldPos);
 
-            int startX = mouseTile.x - (width  - 1) / 2;
+            int startX = mouseTile.x - (width - 1) / 2;
             int startY = mouseTile.y - (height - 1) / 2;
 
             Vector3Int bottomLeft = new Vector3Int(startX, startY, 0);
@@ -59,7 +63,7 @@ public class BuildingPlacer : MonoBehaviour
             Vector3 finalPosition = worldBottomLeft + offset;
             buildingPreview.transform.position = finalPosition;
 
-            if (Input.GetMouseButtonDown(0) && IsPlacementValid(startX,startY)
+            if (Input.GetMouseButtonDown(0) && IsPlacementValid(startX, startY)
                 && CrumbManager.reference.ConsumeCrumbs(curBuildingPrefab.PlaceCost))
             {
                 Building newBuilding = Instantiate(curBuildingPrefab, finalPosition, new());
