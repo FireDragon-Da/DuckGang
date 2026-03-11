@@ -4,6 +4,9 @@ using UnityEngine.UI;
 [RequireComponent(typeof(DuckStats))]
 public class OnClickDuck : MonoBehaviour
 {
+
+    DuckStatDisplay display;
+
     [SerializeField] private GameObject sliderPrefab;
     [SerializeField] private float sliderHeight = 50f;
     private Canvas canvas;
@@ -16,11 +19,18 @@ public class OnClickDuck : MonoBehaviour
         duckStats = GetComponent<DuckStats>();
         mainCamera = Camera.main;
         canvas = FindObjectOfType<Canvas>();
+
+        display = GameObject.Find("GameManager").GetComponentInChildren<DuckStatDisplay>();
     }
 
     private void OnMouseDown()
     {
-        ShowStatSliders();
+        display.displayStats(this.gameObject.GetComponent<DuckNameGen>().CurrentDuckName, duckStats.Age, duckStats.Hunger, duckStats.Happiness);
+        //ShowStatSliders();
+        Debug.Log("DUCK STATS\n" + this.gameObject.GetComponent<DuckNameGen>().CurrentDuckName + ": " +
+            "\nHunger: " + duckStats.Hunger + 
+            "\nHappiness: " + duckStats.Happiness +
+            "\nAge?: " + duckStats.Age);
     }
 
     private void ShowStatSliders()
