@@ -136708,6 +136708,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Yes, it's true. Against all the odds, Quackland is real.
       objectReference: {fileID: 0}
+    - target: {fileID: 5741726068280216701, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: duckMonthLength
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 5744577492140732123, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_text
       value: Nothing of note...
