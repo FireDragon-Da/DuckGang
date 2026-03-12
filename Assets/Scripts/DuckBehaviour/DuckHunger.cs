@@ -1,8 +1,8 @@
 using UnityEngine;
 using System.Collections;
+
 public class DuckHunger : MonoBehaviour
 {
-
     [SerializeField] float hungerRate;
     float curHungerTimer;
     [SerializeField] float satietyMax;
@@ -10,8 +10,7 @@ public class DuckHunger : MonoBehaviour
     [SerializeField] float fillPerCrumb;
     [SerializeField] float eatRange;
 
-
-    [SerializeField] private SpriteRenderer duckSprite; 
+    [SerializeField] private SpriteRenderer duckSprite;
     private Color originalColor;
 
     public float CurrentSatiety => satiety;
@@ -21,7 +20,6 @@ public class DuckHunger : MonoBehaviour
     {
         curHungerTimer = hungerRate;
         satiety = satietyMax;
-
 
         if (duckSprite == null)
             duckSprite = GetComponentInChildren<SpriteRenderer>();
@@ -37,15 +35,10 @@ public class DuckHunger : MonoBehaviour
         {
             curHungerTimer += hungerRate;
             satiety--;
-            
+
             if (satiety <= eatRange)
             {
                 TryEat();
-            }
-
-            if (satiety <= 0)
-            {
-                Starve();
             }
         }
     }
@@ -58,7 +51,6 @@ public class DuckHunger : MonoBehaviour
         }
 
         DuckFeedingAnimationManager.reference.SpawnFlyingCrumb(this.GetComponent<DuckWalk>());
-
 
         satiety += fillPerCrumb;
         if (satiety > satietyMax)
@@ -79,12 +71,6 @@ public class DuckHunger : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
 
         duckSprite.color = originalColor;
-    }
-
-    //This will likely be replaced / moved later
-    void Starve()
-    {
-        GetComponent<DuckStats>().Die(DeathReason.Starvation);
     }
 
 }

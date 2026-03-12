@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEditor;
 
+/// <summary>
+/// Custom editor for QuacxiconSO scriptable objects
+/// </summary>
 [CustomEditor(typeof(QuacxiconSO))]
 public class QuacxiconSOEditor : Editor
 {

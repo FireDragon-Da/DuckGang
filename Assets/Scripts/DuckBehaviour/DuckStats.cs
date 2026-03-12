@@ -17,6 +17,8 @@ public class DuckStats : MonoBehaviour
     float lifespan;
     float curLife;
 
+    private bool isDead = false;
+
     public const int MaxStatValue = 100;
 
     public int Happiness => happiness;
@@ -47,25 +49,25 @@ public class DuckStats : MonoBehaviour
     void Start()
     {
         lifespan = averageLifespan + UnityEngine.Random.Range(-lifespanVariance / 2, lifespanVariance / 2);
-
     }
 
     void Update()
     {
+        if (isDead) return;
+
         curLife += Time.deltaTime;
+
         if (curLife >= lifespan)
         {
             Die(DeathReason.OldAge);
         }
-
-        if (happiness <= 0)
-        {
-            Die(DeathReason.Suicide);
-        }
-
-        if (duckHunger.CurrentSatiety <= 0)
+        else if (duckHunger.CurrentSatiety <= 0)
         {
             Die(DeathReason.Starvation);
+        }
+        else if (happiness <= 0)
+        {
+            Die(DeathReason.Suicide);
         }
     }
 
@@ -73,17 +75,13 @@ public class DuckStats : MonoBehaviour
     public void ModifyEnergy(int amount) => energy = Mathf.Clamp(energy + amount, 0, MaxStatValue);
     public void ModifyHealth(int amount) => health = Mathf.Clamp(health + amount, 0, MaxStatValue);
 
-    public void Die(DeathReason reason)
+    private void Die(DeathReason reason)
     {
-        String name = GetComponent<DuckNameGen>().CurrentDuckName;
+        isDead = true;
 
-        DeathEvent newEvent = new();
-        newEvent.duckName = name;
-        newEvent.reason = reason;
-
-        DuckSocietyManager.reference.recentDeaths.Add(newEvent);
-
-        PublicInfo.reference.duckList.Remove(gameObject);
-        Destroy(gameObject);
+        if (DuckSocietyManager.reference != null)
+        {
+            DuckSocietyManager.reference.ProcessDuckDeath(gameObject, reason);
+        }
     }
 }
