@@ -1,12 +1,16 @@
+using System.Collections;
 using UnityEngine;
 
 public class Nest : Building
 {
-    bool empty = true;
+    [Header("Nest")]
     [SerializeField] NestEffectApplier effectApplier;
+    bool empty = true;
+    bool nestBusy; //Duck is trying to lay eff
 
     [SerializeField] float defaultEggTimer;
     float curEggTimer;
+    [SerializeField] float layTime = 2f;
 
     public bool Empty
     {
@@ -30,22 +34,9 @@ public class Nest : Building
         base.Remove();
     }
 
-    public bool TryLayEgg()
+    protected override void UpdateBehavior()
     {
-        if (!empty)
-        {
-            return false;
-        }
-
-        empty = false;
-        curEggTimer = defaultEggTimer;
-
-        return true;
-    }
-
-    protected override void Update()
-    {
-        base.Update();
+        base.UpdateBehavior();
 
         if (!empty)
         {
@@ -60,16 +51,22 @@ public class Nest : Building
         }
     }
 
-    public override void BuildingInteract(DuckWalk duck)
+    public override IEnumerator BuildingInteract(DuckWalk duck)
     {
-        base.BuildingInteract(duck);
+        yield return StartCoroutine(base.BuildingInteract(duck));
 
         if (CheckInLove(duck))
         {
-            if (TryLayEgg())
+            if ((!nestBusy) && empty)
             {
+                nestBusy = true;
+                yield return StartCoroutine(WaitWithProgress(layTime, duck.ProgressBar));
+
                 //TODO Duck Egg Cooldown
 
+                nestBusy = false;
+                empty = false;
+                curEggTimer = defaultEggTimer;
                 duck.RemoveEffect<LoveEffect>();
             }
         }

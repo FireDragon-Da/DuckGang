@@ -1,17 +1,20 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CompostSite : Building
 {
-
+    [Header("CompostSite")]
     [SerializeField] float defaultDecayTimer;
     float decayTimer;
     [SerializeField] float maxPoopCount;
     int poopCount;
 
-    protected override void Update()
+    [SerializeField] float poopTime = 2f;
+
+    protected override void UpdateBehavior()
     {
-        base.Update();
+        base.UpdateBehavior();
 
         if (poopCount <= 0) {return;}
 
@@ -26,17 +29,19 @@ public class CompostSite : Building
         }
     }
 
-    public override void BuildingInteract(DuckWalk duck)
+    public override IEnumerator BuildingInteract(DuckWalk duck)
     {
-        base.BuildingInteract(duck);
+        yield return StartCoroutine(base.BuildingInteract(duck));
 
         if (poopCount == 0)
         {
+            yield return StartCoroutine(WaitWithProgress(poopTime, duck.ProgressBar));
             poopCount++;
             decayTimer = defaultDecayTimer;
         }
         else if (poopCount < maxPoopCount)
         {
+            yield return StartCoroutine(WaitWithProgress(poopTime, duck.ProgressBar));
             poopCount++;
         }
     }

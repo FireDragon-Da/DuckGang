@@ -8,8 +8,8 @@ public class DuckSocietyManager : MonoBehaviour
     [SerializeField] GameObject duckPrefab;
 
     [Header("NewspaperData")]
-    public List<string> newbornDuckNames;
-    public List<DeathEvent> recentDeaths;
+    public List<string> newbornDuckNames = new();
+    public List<DeathEvent> recentDeaths = new();
 
     void Awake()
     {

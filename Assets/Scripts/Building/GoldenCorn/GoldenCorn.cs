@@ -9,9 +9,9 @@ public class GoldenCorn : Building
 
     [SerializeField] Collider2D hornRange;
 
-    protected override void Update()
+    protected override void UpdateBehavior()
     {
-        base.Update();
+        base.UpdateBehavior();
 
         witherTimer -= Time.deltaTime;
         if (witherTimer <= 0)
