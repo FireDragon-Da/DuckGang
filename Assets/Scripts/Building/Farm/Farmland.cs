@@ -73,8 +73,13 @@ public class Farmland : Building
     void TakeCrop()
     {
         curCropCount--;
+
+        //crumb visualization
         CrumbManager.reference.GainCrumbs(cropCrumbGain);
         CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, cropCrumbGain);
+
+        //SFX
+        SoundSystem.instance.PlaySound("collide-crop");
 
         if (curCropCount <= 0)
         {

@@ -5478,6 +5478,58 @@ PrefabInstance:
       propertyPath: m_Resource
       value: 
       objectReference: {fileID: 8300000, guid: 2b0e3b67953fdb84e8c6912e90784eeb, type: 3}
+    - target: {fileID: 1974547409609025872, guid: a732c826b5a381342802e9620c8c2bdc, type: 3}
+      propertyPath: sounds.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1974547409609025872, guid: a732c826b5a381342802e9620c8c2bdc, type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: db95582d25a925744ba77c842457be55, type: 3}
+    - target: {fileID: 1974547409609025872, guid: a732c826b5a381342802e9620c8c2bdc, type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: duck-eat
+      objectReference: {fileID: 0}
+    - target: {fileID: 1974547409609025872, guid: a732c826b5a381342802e9620c8c2bdc, type: 3}
+      propertyPath: sounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0bec9fa70b5b9f7449386bde04315a30, type: 3}
+    - target: {fileID: 1974547409609025872, guid: a732c826b5a381342802e9620c8c2bdc, type: 3}
+      propertyPath: sounds.Array.data[5].name
+      value: place-building
+      objectReference: {fileID: 0}
+    - target: {fileID: 1974547409609025872, guid: a732c826b5a381342802e9620c8c2bdc, type: 3}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4898615a661c05b49a9f1bfded86d9e1, type: 3}
+    - target: {fileID: 1974547409609025872, guid: a732c826b5a381342802e9620c8c2bdc, type: 3}
+      propertyPath: sounds.Array.data[6].name
+      value: collide-crop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1974547409609025872, guid: a732c826b5a381342802e9620c8c2bdc, type: 3}
+      propertyPath: sounds.Array.data[4].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1974547409609025872, guid: a732c826b5a381342802e9620c8c2bdc, type: 3}
+      propertyPath: sounds.Array.data[5].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1974547409609025872, guid: a732c826b5a381342802e9620c8c2bdc, type: 3}
+      propertyPath: sounds.Array.data[6].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1974547409609025872, guid: a732c826b5a381342802e9620c8c2bdc, type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1974547409609025872, guid: a732c826b5a381342802e9620c8c2bdc, type: 3}
+      propertyPath: sounds.Array.data[5].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1974547409609025872, guid: a732c826b5a381342802e9620c8c2bdc, type: 3}
+      propertyPath: sounds.Array.data[6].volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6473065463632084794, guid: a732c826b5a381342802e9620c8c2bdc, type: 3}
       propertyPath: m_Name
       value: SoundManager
