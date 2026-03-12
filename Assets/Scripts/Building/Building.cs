@@ -193,6 +193,7 @@ public class Building : MonoBehaviour
     protected IEnumerator WaitWithProgress(float duration, ProgressBar progressBar)
     {
         progressBar.ShowBar();
+        progressBar.ChangeFill(0);
         float elapsed = 0f;
 
         while (elapsed < duration)

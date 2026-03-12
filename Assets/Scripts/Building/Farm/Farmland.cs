@@ -22,6 +22,7 @@ public class Farmland : Building
 
     public override void StartBuild()
     {
+        gameObject.SetActive(false);
         progressBar.HideBar();
         holder = transform.parent.GetComponent<FarmHolder>();
 
@@ -116,6 +117,7 @@ public class Farmland : Building
 
     public override void Build()
     {
+        gameObject.SetActive(true);
         base.Build();
         FinishGrow();
         //TODO remove this it is just for temp testing and should be done elsewhere

@@ -2,19 +2,19 @@ using UnityEngine;
 
 public class ObjectToggleAccessor : MonoBehaviour
 {
-    [SerializeField] GameObject constructionUI;
+    [SerializeField] GameObject target;
     public void Toggle()
     {
-        constructionUI.SetActive(!constructionUI.activeSelf);
+        target.SetActive(!target.activeSelf);
     }
 
     public void ForceOn()
     {
-        constructionUI.SetActive(true);
+        target.SetActive(true);
     }
 
     public void ForceOff()
     {
-        constructionUI.SetActive(false);
+        target.SetActive(false);
     }
 }

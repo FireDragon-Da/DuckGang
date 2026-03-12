@@ -208,6 +208,11 @@ public class DuckWalk : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (interacting)
+        {
+            return;
+        }
+
         if (collision.CompareTag("Building"))
         {
             Building curBuilding = collision.GetComponent<Building>();

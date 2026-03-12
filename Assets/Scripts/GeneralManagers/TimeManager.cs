@@ -20,7 +20,15 @@ public class TimeManager : MonoBehaviour
         monthsPassed++;
         curMonthTime -= duckMonthLength;
 
-        //TODO make newspaper show up
+        NewspaperController.reference.UpdateNewspaper(
+            0,0,"",
+            DuckSocietyManager.reference.newbornDuckNames,
+            DuckSocietyManager.reference.recentDeaths,
+            new()
+        );
+
+        DuckSocietyManager.reference.newbornDuckNames = new();
+        DuckSocietyManager.reference.recentDeaths = new();
     }
 
 }
