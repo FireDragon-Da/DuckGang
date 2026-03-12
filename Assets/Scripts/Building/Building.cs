@@ -116,6 +116,9 @@ public class Building : MonoBehaviour
                 yield break;
             }
 
+            //show the crumbie decrease popup animation
+            CrumbManager.reference.SpawnCrumbiePopupDecrease(transform.position, BuildCost);
+
             if (vfxHandler != null) vfxHandler.PlayEffect(interactVFX);
 
             //Add 1 build

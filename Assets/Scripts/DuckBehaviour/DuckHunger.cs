@@ -57,6 +57,8 @@ public class DuckHunger : MonoBehaviour
             return;
         }
 
+        
+
         satiety += fillPerCrumb;
         if (satiety > satietyMax)
         {

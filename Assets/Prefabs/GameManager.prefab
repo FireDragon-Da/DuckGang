@@ -4511,6 +4511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CrumbManager
   crumbs: 10
   crumbCount: {fileID: 1216903115705135646}
+  crumbiePopupPrefab: {fileID: 2442303815009747861, guid: 505bbf22a4ef2854c8c72a5001be7a7a, type: 3}
 --- !u!114 &2111224227258808617
 MonoBehaviour:
   m_ObjectHideFlags: 0
