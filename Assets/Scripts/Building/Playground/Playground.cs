@@ -1,16 +1,22 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class Playground : Building
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] int happiness_increase = 10;
+
+    public override IEnumerator BuildingInteract(DuckWalk duck)
     {
+        if (!built) //Doesn't have regular building behavior
+        {
+            yield break;
+        }
+
+        DuckStats hitDuck = duck.gameObject.GetComponent<DuckStats>();
+
+        hitDuck.ModifyHappiness(happiness_increase);
         
     }
 }

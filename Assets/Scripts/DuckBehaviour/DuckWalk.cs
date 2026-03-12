@@ -29,10 +29,13 @@ public class DuckWalk : MonoBehaviour
     [SerializeField] StatusEffect loveEffect;
     [SerializeField] float loveChance;
 
+    DuckStats stats;
+
     void Awake()
     {
         col = GetComponent<CircleCollider2D>();
         rb = GetComponent<Rigidbody2D>();
+        stats = GetComponent<DuckStats>();
     }
 
     void Start()
@@ -118,6 +121,9 @@ public class DuckWalk : MonoBehaviour
         {
             GainStatusEffect(Instantiate(loveEffect));
         }
+
+        //running into ducks gives them a random but negatively skewed happiness modification
+        stats.ModifyHappiness(UnityEngine.Random.Range(-5, 3));
     }
 
     void WallBounce(Vector2 targetDirection)

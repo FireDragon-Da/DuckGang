@@ -20,6 +20,8 @@ public class Farmland : Building
     [SerializeField] float waterTime = 2f;
     [SerializeField] float harvestTime = 2f;
 
+    [SerializeField] int happiness_decrease = -5;
+
     public override void StartBuild()
     {
         gameObject.SetActive(false);
@@ -57,17 +59,24 @@ public class Farmland : Building
         {
             yield break;
         }
-
-        if (curCropCount > 0)
-        {
-            yield return StartCoroutine(WaitWithProgress(harvestTime, duck.ProgressBar));
-            TakeCrop();
-        }
         else
         {
-            yield return StartCoroutine(WaitWithProgress(waterTime, duck.ProgressBar));
-            WaterCrop();
+            if (curCropCount > 0)
+            {
+                yield return StartCoroutine(WaitWithProgress(harvestTime, duck.ProgressBar));
+                TakeCrop();
+            }
+            else
+            {
+                yield return StartCoroutine(WaitWithProgress(waterTime, duck.ProgressBar));
+                WaterCrop();
+            }
+
+            DuckStats hitDuck = duck.gameObject.GetComponent<DuckStats>();
+
+            hitDuck.ModifyHappiness(happiness_decrease);
         }
+
     }
 
     void TakeCrop()

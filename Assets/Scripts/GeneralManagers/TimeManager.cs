@@ -9,7 +9,7 @@ public class TimeManager : MonoBehaviour
     void Update()
     {
         curMonthTime += Time.deltaTime;
-        print(curMonthTime);
+        //print(curMonthTime);
         if (curMonthTime >= duckMonthLength)
         {
             MonthPassed();

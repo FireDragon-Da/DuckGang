@@ -57,6 +57,16 @@ public class DuckStats : MonoBehaviour
         {
             Die(DeathReason.OldAge);
         }
+
+        if (happiness <= 0)
+        {
+            Die(DeathReason.Suicide);
+        }
+
+        if (duckHunger.CurrentSatiety <= 0)
+        {
+            Die(DeathReason.Starvation);
+        }
     }
 
     public void ModifyHappiness(int amount) => happiness = Mathf.Clamp(happiness + amount, 0, MaxStatValue);
