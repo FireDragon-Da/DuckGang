@@ -41,6 +41,7 @@ public class DuckFeedingAnimationManager : MonoBehaviour
         crumb.Init(startWorldPos, targetWorldPos, () =>
         {
             //duck.OnFedOneCrumb();
+            SoundSystem.instance.PlaySound("duck-eat");
         });
     }
 
