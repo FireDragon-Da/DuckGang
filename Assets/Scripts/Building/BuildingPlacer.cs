@@ -71,6 +71,10 @@ public class BuildingPlacer : MonoBehaviour
                 && CrumbManager.reference.ConsumeCrumbs(curBuildingPrefab.PlaceCost))
             {
                 Building newBuilding = Instantiate(curBuildingPrefab, finalPosition, new());
+
+                //show the crumbie decrease popup animation
+                CrumbManager.reference.SpawnCrumbiePopupDecrease(finalPosition, curBuildingPrefab.PlaceCost);
+
                 UpdateBuildingGrid(newBuilding, startX, startY);
                 newBuilding.StartBuild();
             }

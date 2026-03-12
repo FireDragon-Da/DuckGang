@@ -7,6 +7,8 @@ public class CrumbManager : MonoBehaviour
     public static CrumbManager reference;
     public int crumbs;
     [SerializeField] TextMeshProUGUI crumbCount;
+    [SerializeField] CrumbiePopup crumbiePopupPrefab;
+
 
     void Awake()
     {
@@ -38,6 +40,26 @@ public class CrumbManager : MonoBehaviour
     void UpdateCrumbCount()
     {
         crumbCount.text = crumbs.ToString();
+    }
+
+    public void SpawnCrumbiePopupIncrease(Vector3 worldPosition, int amount)
+    {
+        CrumbiePopup popup = Instantiate(crumbiePopupPrefab, worldPosition, Quaternion.identity);
+        
+            popup.Setup(amount);
+
+       
+     
+    }
+
+    public void SpawnCrumbiePopupDecrease(Vector3 worldPosition, int amount)
+    {
+        CrumbiePopup popup = Instantiate(crumbiePopupPrefab, worldPosition, Quaternion.identity);
+
+        popup.Setdown(amount);
+
+
+
     }
 
 }

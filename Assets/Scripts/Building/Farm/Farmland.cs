@@ -74,6 +74,7 @@ public class Farmland : Building
     {
         curCropCount--;
         CrumbManager.reference.GainCrumbs(cropCrumbGain);
+        CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, cropCrumbGain);
 
         if (curCropCount <= 0)
         {

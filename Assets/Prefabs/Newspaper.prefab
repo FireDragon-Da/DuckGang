@@ -1361,6 +1361,7 @@ GameObject:
   - component: {fileID: 6838341368335249976}
   - component: {fileID: 1188429890048884155}
   - component: {fileID: 6306480132200995966}
+  - component: {fileID: 3790887154377196170}
   m_Layer: 5
   m_Name: Newspaper
   m_TagString: Untagged
@@ -1481,6 +1482,19 @@ MonoBehaviour:
   topPriorityContentText: {fileID: 1692435558532987046}
   secondPriorityTitleText: {fileID: 5373015446105427502}
   secondPriorityContentText: {fileID: 5161985125893049035}
+--- !u!114 &3790887154377196170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6372784760348236869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b09446b9c0352f4a9643ea63d747edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectToggleAccessor
+  target: {fileID: 6372784760348236869}
 --- !u!1 &7761753193461928453
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Grass : MonoBehaviour
 {
-
     void Start()
     {
         //TODO remove this it is just for temp testing and should be done elsewhere
@@ -15,6 +14,7 @@ public class Grass : MonoBehaviour
         {
             CrumbManager.reference.GainCrumbs(1);
             SoundSystem.instance.PlaySound("grass");
+            CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, 1);
         }
     }
 }

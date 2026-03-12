@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: da46841db1e4ce94fba0a6ae28eb568e
+guid: fe230db39f788474e838584d0be2c0ff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1336840205157546448
-    second: playground_0
+      213: -7283446723115020595
+    second: crumbies_0
+  - first:
+      213: -7403734732659955574
+    second: crumbies_1
+  - first:
+      213: -8170876239066904929
+    second: crumbies_2
+  - first:
+      213: -8169617402039517504
+    second: crumbies_3
+  - first:
+      213: -1349280046606907697
+    second: crumbies_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +58,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: playground_0
+      name: crumbies_0
       rect:
         serializedVersion: 2
-        x: 36
-        y: 20
-        width: 972
-        height: 451
+        x: 60
+        y: 139
+        width: 30
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +127,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0d930ed65196d8210800000000000000
-      internalID: 1336840205157546448
+      spriteID: dce0f307bcffbea90800000000000000
+      internalID: -7283446723115020595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crumbies_1
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 134
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a88e490cc76a04990800000000000000
+      internalID: -7403734732659955574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crumbies_2
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 118
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f96ccba0a573b9e80800000000000000
+      internalID: -8170876239066904929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crumbies_3
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 82
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ceb590e140bf9e80800000000000000
+      internalID: -8169617402039517504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crumbies_4
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 85
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc6097742f4664de0800000000000000
+      internalID: -1349280046606907697
       vertices: []
       indices: 
       edges: []
@@ -125,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      playground_0: 1336840205157546448
+      crumbies_0: -7283446723115020595
+      crumbies_1: -7403734732659955574
+      crumbies_2: -8170876239066904929
+      crumbies_3: -8169617402039517504
+      crumbies_4: -1349280046606907697
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
