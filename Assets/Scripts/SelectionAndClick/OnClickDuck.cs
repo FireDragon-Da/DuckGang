@@ -27,12 +27,8 @@ public class OnClickDuck : MonoBehaviour
     {
         duckStats.ModifyHappiness(1);
 
-        display.displayStats(this.gameObject.GetComponent<DuckNameGen>().CurrentDuckName, duckStats.Age, duckStats.Hunger, duckStats.Happiness);
+        display.displayStats(this.gameObject.GetComponent<DuckNameGen>().CurrentDuckName, duckStats);
         //ShowStatSliders();
-        Debug.Log("DUCK STATS\n" + this.gameObject.GetComponent<DuckNameGen>().CurrentDuckName + ": " +
-            "\nHunger: " + duckStats.Hunger + 
-            "\nHappiness: " + duckStats.Happiness +
-            "\nAge?: " + duckStats.Age);
     }
 
     private void ShowStatSliders()
