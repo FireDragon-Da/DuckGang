@@ -4471,6 +4471,7 @@ GameObject:
   - component: {fileID: 5396340594175169998}
   - component: {fileID: 3064272729836684732}
   - component: {fileID: 5741726068280216701}
+  - component: {fileID: 6271641844843293820}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4571,6 +4572,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeManager
   duckMonthLength: 300
+--- !u!114 &6271641844843293820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8419782432875219653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5abe1f5c3f2c5f7418e0132287be7ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DuckFeedingAnimationManager
+  crumbUIIcon: {fileID: 1177815776860203422}
+  flyingCrumbPrefab: {fileID: 6735486293416864718, guid: e632f054116f96d4db5f0fab90d5259c, type: 3}
+  worldCamera: {fileID: 0}
 --- !u!1 &8580610215923662431
 GameObject:
   m_ObjectHideFlags: 0
