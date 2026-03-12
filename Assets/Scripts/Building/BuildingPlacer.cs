@@ -74,6 +74,8 @@ public class BuildingPlacer : MonoBehaviour
 
                 //show the crumbie decrease popup animation
                 CrumbManager.reference.SpawnCrumbiePopupDecrease(finalPosition, curBuildingPrefab.PlaceCost);
+                //Place Sound
+                SoundSystem.instance.PlaySound("place-building");
 
                 UpdateBuildingGrid(newBuilding, startX, startY);
                 newBuilding.StartBuild();
