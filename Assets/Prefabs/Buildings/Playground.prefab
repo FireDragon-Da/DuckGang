@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7342729541611523924
 Transform:
   m_ObjectHideFlags: 0
@@ -271,13 +271,14 @@ MonoBehaviour:
   removeHitsRequired: 2
   buildTime: 2
   removeTime: 2
-  filledSpots: 010101010101
+  filledSpots: 0101010101010101
   hasUniqueBounce: 0
   vfxHandler: {fileID: 0}
   interactVFX: {fileID: 0}
   buildCompleteVFX: {fileID: 0}
   removeHitVFX: {fileID: 0}
   progressBar: {fileID: 9131167817744461444}
+  happiness_increase: 10
 --- !u!1 &1661359709266622970
 GameObject:
   m_ObjectHideFlags: 0
