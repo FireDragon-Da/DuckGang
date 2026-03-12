@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -20,7 +21,10 @@ public class DuckWalk : MonoBehaviour
     List<StatusEffect> statusEffects = new();
     public IReadOnlyList<StatusEffect> StatusEffects => statusEffects;
 
-    
+    Building interacting;
+    [SerializeField] ProgressBar progressBar;
+    public ProgressBar ProgressBar => progressBar;
+
     [Header("'Static'")]
     [SerializeField] StatusEffect loveEffect;
     [SerializeField] float loveChance;
@@ -48,7 +52,10 @@ public class DuckWalk : MonoBehaviour
 
     void Update()
     {
-        MoveForward(speed * Time.deltaTime);
+        if (interacting == null)
+        {
+            MoveForward(speed * Time.deltaTime);
+        }
 
         for (int i = statusEffects.Count-1; i >= 0; i--)
         {
@@ -201,25 +208,39 @@ public class DuckWalk : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (interacting)
+        {
+            return;
+        }
+
         if (collision.CompareTag("Building"))
         {
             Building curBuilding = collision.GetComponent<Building>();
 
-            curBuilding.BuildingInteract(this);
+            StartCoroutine(BuildingInteraction(curBuilding, collision));
+        }
+    }
 
-            if (!curBuilding.CanWalkOver())
+    IEnumerator BuildingInteraction(Building curBuilding, Collider2D collision)
+    {
+        progressBar.ShowBar();
+        interacting = curBuilding;
+
+        yield return StartCoroutine(curBuilding.BuildingInteract(this));
+
+        interacting = null;
+        progressBar.HideBar();
+
+        if (!curBuilding.CanWalkOver())
+        {
+            if (curBuilding.HasUniqueBounce)
             {
-                if (curBuilding.HasUniqueBounce)
-                {
-                    //Force direction to unique bounce direction
-                    ChangeDirection(curBuilding.UnqiueBounce(this));
-                }
-                else
-                {
-                    WallBounce((transform.position - collision.transform.position).normalized);
-                }
+                ChangeDirection(curBuilding.UnqiueBounce(this));
             }
-
+            else
+            {
+                WallBounce((transform.position - collision.transform.position).normalized);
+            }
         }
     }
 

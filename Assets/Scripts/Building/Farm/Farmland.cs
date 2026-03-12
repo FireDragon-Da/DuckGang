@@ -1,7 +1,9 @@
+using System.Collections;
 using UnityEngine;
 
 public class Farmland : Building
 {
+    [Header("Farm")]
     float growTimer;
     [SerializeField] int cropGrowCount;
     int curCropCount;
@@ -15,8 +17,13 @@ public class Farmland : Building
 
     FarmHolder holder;
 
+    [SerializeField] float waterTime = 2f;
+    [SerializeField] float harvestTime = 2f;
+
     public override void StartBuild()
     {
+        gameObject.SetActive(false);
+        progressBar.HideBar();
         holder = transform.parent.GetComponent<FarmHolder>();
 
         Color tempColor = spriteRenderer.color;
@@ -26,9 +33,9 @@ public class Farmland : Building
         spriteRenderer.color = tempColor;
     }
 
-    protected override void Update()
+    protected override void UpdateBehavior()
     {
-        base.Update();
+        base.UpdateBehavior();
 
         if (growTimer > 0)
         {
@@ -44,19 +51,21 @@ public class Farmland : Building
         }
     }
 
-    public override void BuildingInteract(DuckWalk duck)
+    public override IEnumerator BuildingInteract(DuckWalk duck)
     {
         if (!built) //Doesn't have regular building behavior
         {
-            return;
+            yield break;
         }
 
         if (curCropCount > 0)
         {
+            yield return StartCoroutine(WaitWithProgress(harvestTime, duck.ProgressBar));
             TakeCrop();
         }
         else
         {
+            yield return StartCoroutine(WaitWithProgress(waterTime, duck.ProgressBar));
             WaterCrop();
         }
     }
@@ -108,6 +117,7 @@ public class Farmland : Building
 
     public override void Build()
     {
+        gameObject.SetActive(true);
         base.Build();
         FinishGrow();
         //TODO remove this it is just for temp testing and should be done elsewhere

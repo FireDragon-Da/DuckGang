@@ -36,6 +36,8 @@ public struct DeathEvent
 
 public class NewspaperController : MonoBehaviour
 {
+    public static NewspaperController reference;
+
     [Header("Data Source")]
     [SerializeField] private QuacxiconSO quacxiconSO;
 
@@ -52,6 +54,19 @@ public class NewspaperController : MonoBehaviour
     [SerializeField] private TMP_Text topPriorityContentText;
     [SerializeField] private TMP_Text secondPriorityTitleText;
     [SerializeField] private TMP_Text secondPriorityContentText;
+
+    void Awake()
+    {
+        if (reference == null)
+        {
+            reference = this;
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public void UpdateNewspaper(
         float currentHappiness,
