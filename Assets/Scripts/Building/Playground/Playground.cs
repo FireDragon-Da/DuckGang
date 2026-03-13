@@ -9,6 +9,9 @@ public class Playground : Building
 
     public override IEnumerator BuildingInteract(DuckWalk duck)
     {
+
+        yield return StartCoroutine(base.BuildingInteract(duck));
+
         if (!built) //Doesn't have regular building behavior
         {
             yield break;
