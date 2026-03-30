@@ -9,6 +9,7 @@ public class PublicInfo : MonoBehaviour
     public List<Nest> nestList = new();
     public List<Farmland> farmList = new();
     public List<Grass> grassList = new();
+    public List<Building> constructionList = new();
 
     void Awake()
     {

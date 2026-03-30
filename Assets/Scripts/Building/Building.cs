@@ -153,17 +153,21 @@ public class Building : MonoBehaviour
         foundationSpriteRenderer.enabled = false;
         spriteRenderer.enabled = true;
 
+        PublicInfo.reference.constructionList.Remove(this);
+
         if (vfxHandler != null) vfxHandler.PlayEffect(buildCompleteVFX);
     }
 
     public virtual void Remove()
     {
         Destroy(gameObject);
+        PublicInfo.reference.constructionList.Remove(this);
     }
 
     public virtual void StartDeconstruction()
     {
         removing = true;
+        PublicInfo.reference.constructionList.Add(this);
     }
 
     public virtual void StartBuild()
@@ -172,6 +176,7 @@ public class Building : MonoBehaviour
         spriteRenderer.enabled = false;
         progressBar.ShowBar();
         progressBar.ChangeFill(0);
+        PublicInfo.reference.constructionList.Add(this);
     }
 
     public bool GetSpot(int x, int y)

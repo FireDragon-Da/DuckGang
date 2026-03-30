@@ -23,7 +23,6 @@ public class GoldenCorn : Building
 
     public override Vector2 UnqiueBounce(DuckWalk target)
     {
-        //TODO prob needs error handing for when corn is in between
         return GetClosestFarmlike(target);
     }
 

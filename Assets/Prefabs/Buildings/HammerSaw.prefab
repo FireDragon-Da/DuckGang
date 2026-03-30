@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 204ab614753e17645985f66e5226311d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bbb10c03d8fc4434aa2e6416cc77ed6f, type: 3}
   m_Color: {r: 0.106291056, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -176,9 +176,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5812239758529882092}
   - component: {fileID: 5330495585513566628}
-  - component: {fileID: 7778407694498513754}
+  - component: {fileID: 2041303792550475411}
   m_Layer: 0
-  m_Name: SecretSite
+  m_Name: HammerSaw
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -246,9 +246,9 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3, y: 2}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
---- !u!114 &7778407694498513754
+--- !u!114 &2041303792550475411
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -257,32 +257,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1187526609237102256}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c3d856c885835440ae780f8deaab7dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 2211eb7de635b64448c4437afd888fca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SecretSite
-  width: 3
+  m_EditorClassIdentifier: Assembly-CSharp::HammerSaw
+  width: 2
   height: 2
   spriteRenderer: {fileID: 2990216547036666206}
   foundationSpriteRenderer: {fileID: 3715528951212348669}
   walkable: 0
-  constructionNeeded: 15
-  placeCost: 25
-  buildCost: 5
+  constructionNeeded: 10
+  placeCost: 10
+  buildCost: 3
   removeHitsRequired: 2
   buildTime: 2
   removeTime: 2
-  filledSpots: 010101010101
-  hasUniqueBounce: 0
+  filledSpots: 01010101
+  hasUniqueBounce: 1
   vfxHandler: {fileID: 0}
   interactVFX: {fileID: 0}
   buildCompleteVFX: {fileID: 0}
   removeHitVFX: {fileID: 0}
   progressBar: {fileID: 9131167817744461444}
-  takePerTouch: 10
-  fillTime: 1
-  totalCapactiy: 100
-  totalGain: 150
-  productionTime: 60
 --- !u!1 &1661359709266622970
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,7 +410,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 204ab614753e17645985f66e5226311d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bbb10c03d8fc4434aa2e6416cc77ed6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
