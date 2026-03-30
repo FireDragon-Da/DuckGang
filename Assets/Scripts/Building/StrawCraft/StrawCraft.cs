@@ -5,29 +5,10 @@ using UnityEngine;
 public class StrawCraft : Building
 {
     [Header("StrawCraft")]
-    [SerializeField] float defaultDecayTimer;
-    float decayTimer;
-    [SerializeField] float maxPoopCount;
-    int poopCount;
-
-    [SerializeField] float poopTime = 2f;
-
-    protected override void UpdateBehavior()
-    {
-        base.UpdateBehavior();
-
-        if (poopCount <= 0) {return;}
-
-        decayTimer -= Time.deltaTime;
-        if (decayTimer <= 0)
-        {
-            poopCount--;
-            if (poopCount > 0)
-            {
-                decayTimer += defaultDecayTimer;
-            }
-        }
-    }
+    [SerializeField] int productionAmount = 5;
+    [SerializeField] int totalCapacity = 3;
+    int curCapacity;
+    [SerializeField] float productionTime = 5f;
 
     public override IEnumerator BuildingInteract(DuckWalk duck)
     {
@@ -37,16 +18,12 @@ public class StrawCraft : Building
             yield break;
         }
 
-        if (poopCount == 0)
+        if (curCapacity < totalCapacity)
         {
-            yield return StartCoroutine(WaitWithProgress(poopTime, duck.ProgressBar));
-            poopCount++;
-            decayTimer = defaultDecayTimer;
-        }
-        else if (poopCount < maxPoopCount)
-        {
-            yield return StartCoroutine(WaitWithProgress(poopTime, duck.ProgressBar));
-            poopCount++;
+            curCapacity++;
+            yield return StartCoroutine(WaitWithProgress(productionTime, duck.ProgressBar));
+            CrumbManager.reference.GainCrumbs(productionAmount);
+            curCapacity--;
         }
     }
 
