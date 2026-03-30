@@ -3,6 +3,7 @@ using UnityEngine;
 public class TimeManager : MonoBehaviour
 {
     [SerializeField] float duckMonthLength;
+    //HENRY - change DML back to 60 in editor
     int monthsPassed;
     float curMonthTime;
 
@@ -14,6 +15,8 @@ public class TimeManager : MonoBehaviour
         {
             MonthPassed();
         }
+        //HENRY
+        print(curMonthTime);
     }
 
     void MonthPassed()

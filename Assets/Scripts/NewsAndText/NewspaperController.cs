@@ -113,7 +113,7 @@ public class NewspaperController : MonoBehaviour
     {
         if (newbornDuckNames == null || newbornDuckNames.Count == 0)
         {
-            welcomeToLifeContent.text = "No new ducks out today.";
+            welcomeToLifeContent.text = "No new ducks out recently.";
             return;
         }
 
