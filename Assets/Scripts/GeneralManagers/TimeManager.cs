@@ -2,9 +2,18 @@ using UnityEngine;
 
 public class TimeManager : MonoBehaviour
 {
+    public static TimeManager reference;
+
     [SerializeField] float duckMonthLength;
     int monthsPassed;
     float curMonthTime;
+
+    int pauses;
+
+    void Awake()
+    {
+        reference = this;
+    }
 
     void Update()
     {
@@ -30,6 +39,21 @@ public class TimeManager : MonoBehaviour
 
         DuckSocietyManager.reference.newbornDuckNames = new();
         DuckSocietyManager.reference.recentDeaths = new();
+    }
+
+    void AddPause()
+    {
+        pauses++;
+        Time.timeScale = 0;
+    }
+
+    void RemovePause()
+    {
+        pauses--;
+        if (pauses == 0)
+        {
+            Time.timeScale = 1;
+        }
     }
 
 }
