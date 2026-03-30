@@ -9,14 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 5acf2cf32a9b1134ea7a8b6ad6b27ae6, type: 3}
   m_Name: DuckSpeaks
   m_EditorClassIdentifier: Assembly-CSharp::QuacxiconSO
-  categories:
-  - categoryName: DuckThoughts
-    contentList:
-    - thinks that it is gonna be John Cena
-    - thinks it smells like a sponge
-    sourceTxtFile: {fileID: 0}
-    targetCategoryName: 
-    clearExistingContent: 0
+  categories: []

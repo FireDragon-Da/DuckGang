@@ -9,17 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 5acf2cf32a9b1134ea7a8b6ad6b27ae6, type: 3}
   m_Name: DuckNames
   m_EditorClassIdentifier: Assembly-CSharp::QuacxiconSO
   categories:
   - categoryName: DuckNames
     contentList:
-    - John
-    - Cena
-    - Bob
-    - Alice
-    - John Quackna
     - Braz
     - Borm
     - Brom
@@ -132,5 +127,5 @@ MonoBehaviour:
     - Georgia
     - Alabama
     sourceTxtFile: {fileID: 4900000, guid: 2014e3731d3b6354d850b9b012aa6b25, type: 3}
-    targetCategoryName: DuckNames
+    targetCategoryName: 
     clearExistingContent: 0
