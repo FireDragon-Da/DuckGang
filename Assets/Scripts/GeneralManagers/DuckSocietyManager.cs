@@ -10,6 +10,7 @@ public class DuckSocietyManager : MonoBehaviour
     [Header("NewspaperData")]
     public List<string> newbornDuckNames = new();
     public List<DeathEvent> recentDeaths = new();
+    public List<ArticleEvent> articles = new();
 
     void Awake()
     {
