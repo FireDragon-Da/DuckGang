@@ -176,9 +176,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5812239758529882092}
   - component: {fileID: 5330495585513566628}
-  - component: {fileID: 5451366449413808237}
+  - component: {fileID: 1142701861580220971}
   m_Layer: 0
-  m_Name: CompostSite
+  m_Name: Altar
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,6 +199,7 @@ Transform:
   m_Children:
   - {fileID: 7342729541611523924}
   - {fileID: 4175369216205376807}
+  - {fileID: 1054933629212180206}
   - {fileID: 2482967486333466979}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -248,7 +249,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5451366449413808237
+--- !u!114 &1142701861580220971
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -257,18 +258,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1187526609237102256}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d954855ef655b7c409a371dba154a5b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 81c15bf9b9e24a84e8d13995fc2eb496, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CompostSite
+  m_EditorClassIdentifier: Assembly-CSharp::Altar
   width: 2
   height: 2
   spriteRenderer: {fileID: 2990216547036666206}
   foundationSpriteRenderer: {fileID: 3715528951212348669}
-  walkable: 0
-  constructionNeeded: 12
-  placeCost: 12
+  walkable: 1
+  constructionNeeded: 2
+  placeCost: 2
   buildCost: 4
-  removeHitsRequired: 5
+  removeHitsRequired: 2
   buildTime: 2
   removeTime: 2
   filledSpots: 01010101
@@ -278,9 +279,9 @@ MonoBehaviour:
   buildCompleteVFX: {fileID: 0}
   removeHitVFX: {fileID: 0}
   progressBar: {fileID: 9131167817744461444}
-  defaultDecayTimer: 0
-  maxPoopCount: 0
-  poopTime: 2
+  productionAmount: 150
+  watchersRequired: 3
+  altarGrabber: {fileID: 3311538184535782130}
 --- !u!1 &1661359709266622970
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,6 +424,88 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &3054704099238470437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1054933629212180206}
+  - component: {fileID: 2749359099658663528}
+  - component: {fileID: 3311538184535782130}
+  m_Layer: 0
+  m_Name: AltarGrabber
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1054933629212180206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3054704099238470437}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 5812239758529882092}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &2749359099658663528
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3054704099238470437}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
+--- !u!114 &3311538184535782130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3054704099238470437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6519c4c9417f2fd43bc419bf16fe248a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AltarGrabber
+  altar: {fileID: 1142701861580220971}
 --- !u!1 &4178022493155501639
 GameObject:
   m_ObjectHideFlags: 0

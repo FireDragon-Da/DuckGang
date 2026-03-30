@@ -264,6 +264,24 @@ public class DuckWalk : MonoBehaviour
         }
     }
 
+    public bool TryInteract(Building targetBuilding)
+    {
+        if (interacting != null) {return false;}
+
+        canBeGrabbed = false;
+        interacting = targetBuilding;
+        return true;
+    }
+
+    public bool EndInteract(Building targetBuilding)
+    {
+        if (interacting != targetBuilding) {return false;}
+
+        interacting = null;
+        canBeGrabbed = true;
+        return true;
+    }
+
     public void GainStatusEffect(StatusEffect newEffect)
     {
         //Avoid duplicates

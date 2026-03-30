@@ -75,7 +75,7 @@ public class DuckStats : MonoBehaviour
     public void ModifyEnergy(int amount) => energy = Mathf.Clamp(energy + amount, 0, MaxStatValue);
     public void ModifyHealth(int amount) => health = Mathf.Clamp(health + amount, 0, MaxStatValue);
 
-    private void Die(DeathReason reason)
+    public void Die(DeathReason reason)
     {
         isDead = true;
 
