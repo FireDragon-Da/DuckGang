@@ -10,7 +10,8 @@ public enum ArticlePriority
     NewBuilding = 1,
     MentalHealthCrisis = 2,
     Starvation = 3,
-    SocialFormation = 4
+    SocialFormation = 4,
+    Required = 5
 }
 
 public enum DeathReason
@@ -47,6 +48,10 @@ public struct ArticleEvent
 
             case "SocialFormation":
                 priority = ArticlePriority.SocialFormation;
+                break;
+
+            case "Required":
+                priority = ArticlePriority.Required;
                 break;
 
             default:

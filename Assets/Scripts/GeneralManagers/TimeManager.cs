@@ -28,7 +28,7 @@ public class TimeManager : MonoBehaviour
             0,0,"",
             DuckSocietyManager.reference.newbornDuckNames,
             DuckSocietyManager.reference.recentDeaths,
-            new()
+            DuckSocietyManager.reference.articles
         );
 
         DuckSocietyManager.reference.newbornDuckNames = new();
