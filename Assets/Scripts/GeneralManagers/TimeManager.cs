@@ -16,7 +16,7 @@ public class TimeManager : MonoBehaviour
             MonthPassed();
         }
         //HENRY
-        print(curMonthTime);
+       // print(curMonthTime);
     }
 
     void MonthPassed()
