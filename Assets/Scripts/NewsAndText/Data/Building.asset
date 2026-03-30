@@ -9,26 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 5acf2cf32a9b1134ea7a8b6ad6b27ae6, type: 3}
   m_Name: Building
   m_EditorClassIdentifier: Assembly-CSharp::QuacxiconSO
-  categories:
-  - categoryName: Grass
-    contentList:
-    - Grass Hurts, Quack.
-    - Oh there's more crumbies
-    - Help I am a soul of grass trapped in a duck's body
-    sourceTxtFile: {fileID: 0}
-    targetCategoryName: 
-    clearExistingContent: 1
-  - categoryName: Test
-    contentList:
-    - I have just one quackstion for you.
-    - Are you ready?
-    - Are you ready for this Sunday night when QQE Champ John Quackna defend his
-      title
-    - In QQE super slang
-    - Join for 59.99 crumbies
-    sourceTxtFile: {fileID: 4900000, guid: 9c52168b651f6884f9a265daccfa1bae, type: 3}
-    targetCategoryName: Test
-    clearExistingContent: 1
+  categories: []

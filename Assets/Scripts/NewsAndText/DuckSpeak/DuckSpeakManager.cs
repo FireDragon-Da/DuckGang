@@ -18,6 +18,28 @@ public class DuckSpeakManager : MonoBehaviour
     {
         if (mainCamera == null) mainCamera = Camera.main;
 
+        // Validate references
+        Debug.Log("[DuckSpeakManager] Starting DuckSpeakManager");
+        
+        if (quacxiconSO == null)
+        {
+            Debug.LogError("[DuckSpeakManager] ? QuacxiconSO is NULL! Assign it in the inspector!");
+        }
+        else
+        {
+            Debug.Log($"[DuckSpeakManager] ? QuacxiconSO assigned: {quacxiconSO.name}");
+            Debug.Log($"[DuckSpeakManager] Will use category: {speakCategoryName}");
+        }
+        
+        if (targetTextBox == null)
+        {
+            Debug.LogWarning("[DuckSpeakManager] ?? TargetTextBox is NULL! Duck speech won't be displayed!");
+        }
+        else
+        {
+            Debug.Log($"[DuckSpeakManager] ? TextBox assigned: {targetTextBox.name}");
+        }
+
         StartCoroutine(DuckSpeakRoutine());
     }
 
@@ -27,16 +49,26 @@ public class DuckSpeakManager : MonoBehaviour
         {
             yield return new WaitForSeconds(checkInterval);
 
+            Debug.Log($"[DuckSpeakManager] Check interval reached. Probability: {speakProbability}");
+            
             if (Random.value <= speakProbability)
             {
                 TriggerDuckSpeak();
+            }
+            else
+            {
+                Debug.Log("[DuckSpeakManager] Probability check failed, not triggering speech");
             }
         }
     }
 
     private void TriggerDuckSpeak()
     {
+        Debug.Log("[DuckSpeakManager] TriggerDuckSpeak called");
+        
         DuckNameGen[] allDucks = FindObjectsOfType<DuckNameGen>();
+        Debug.Log($"[DuckSpeakManager] Found {allDucks.Length} ducks in scene");
+        
         List<DuckNameGen> visibleDucks = new List<DuckNameGen>();
 
         foreach (var duck in allDucks)
@@ -49,18 +81,45 @@ public class DuckSpeakManager : MonoBehaviour
             }
         }
 
-        if (visibleDucks.Count == 0) return;
+        Debug.Log($"[DuckSpeakManager] Visible ducks: {visibleDucks.Count}");
+        
+        if (visibleDucks.Count == 0)
+        {
+            Debug.Log("[DuckSpeakManager] No visible ducks, aborting");
+            return;
+        }
 
         DuckNameGen chosenDuck = visibleDucks[Random.Range(0, visibleDucks.Count)];
+        Debug.Log($"[DuckSpeakManager] Chosen duck: {chosenDuck.CurrentDuckName}");
 
+        if (quacxiconSO == null)
+        {
+            Debug.LogError("[DuckSpeakManager] QuacxiconSO is null, cannot get dialog!");
+            return;
+        }
+
+        Debug.Log($"[DuckSpeakManager] Requesting text from category: {speakCategoryName}");
         string dialogLine = quacxiconSO.GetRandomLogFromCategory(speakCategoryName);
-        if (string.IsNullOrEmpty(dialogLine)) return;
+        
+        if (string.IsNullOrEmpty(dialogLine))
+        {
+            Debug.LogWarning($"[DuckSpeakManager] ? No dialog returned from category '{speakCategoryName}'!");
+            return;
+        }
+
+        Debug.Log($"[DuckSpeakManager] ? Got dialog: {dialogLine}");
 
         string formattedMessage = $"<color=yellow>{chosenDuck.CurrentDuckName}: {dialogLine}</color>";
+        Debug.Log($"[DuckSpeakManager] Formatted message: {formattedMessage}");
 
         if (targetTextBox != null)
         {
             targetTextBox.AddLine(formattedMessage);
+            Debug.Log("[DuckSpeakManager] ? Message added to TextBox");
+        }
+        else
+        {
+            Debug.LogWarning("[DuckSpeakManager] ?? Cannot display message - TextBox is null!");
         }
     }
 }
