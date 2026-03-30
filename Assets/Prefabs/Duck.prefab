@@ -380,6 +380,7 @@ MonoBehaviour:
   progressBar: {fileID: 2729108085979526114}
   loveEffect: {fileID: 11400000, guid: 8b08947eb8e9d5040a760478ebbcc528, type: 2}
   loveChance: 0.2
+  beingDragged: 0
 --- !u!114 &8509052136411195652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,8 +562,8 @@ MonoBehaviour:
   happiness: 80
   energy: 70
   health: 90
-  averageLifespan: 3000
-  lifespanVariance: 300
+  averageLifespan: 300
+  lifespanVariance: 60
 --- !u!114 &5534468101817164839
 MonoBehaviour:
   m_ObjectHideFlags: 0
