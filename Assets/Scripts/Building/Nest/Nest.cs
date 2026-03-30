@@ -54,6 +54,10 @@ public class Nest : Building
     public override IEnumerator BuildingInteract(DuckWalk duck)
     {
         yield return StartCoroutine(base.BuildingInteract(duck));
+        if (!continueBehavior)
+        {
+            yield break;
+        }
 
         if (CheckInLove(duck))
         {

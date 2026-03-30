@@ -12,6 +12,11 @@ public class Grass : MonoBehaviour
     {
         if (collision.CompareTag("Duck"))
         {
+            //TODO This check should be redone, grass should be a building
+            if (collision.GetComponent<DuckWalk>().beingDragged)
+            {
+                return;
+            }
             CrumbManager.reference.GainCrumbs(1);
             SoundSystem.instance.PlaySound("grass");
             CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, 1);

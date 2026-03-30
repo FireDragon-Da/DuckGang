@@ -32,6 +32,10 @@ public class CompostSite : Building
     public override IEnumerator BuildingInteract(DuckWalk duck)
     {
         yield return StartCoroutine(base.BuildingInteract(duck));
+        if (!continueBehavior)
+        {
+            yield break;
+        }
 
         if (poopCount == 0)
         {

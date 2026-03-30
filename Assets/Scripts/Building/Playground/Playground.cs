@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class Playground : Building
 {
-
-    [SerializeField] int happiness_increase = 10;
+    [Header("Playground")]
+    [SerializeField] int happinessIncrease = 10;
+    [SerializeField] float playTime = 1f;
 
     public override IEnumerator BuildingInteract(DuckWalk duck)
     {
-
         yield return StartCoroutine(base.BuildingInteract(duck));
-
-        if (!built) //Doesn't have regular building behavior
+        if (!continueBehavior)
         {
             yield break;
         }
 
         DuckStats hitDuck = duck.gameObject.GetComponent<DuckStats>();
 
-        hitDuck.ModifyHappiness(happiness_increase);
+        yield return StartCoroutine(WaitWithProgress(playTime, duck.ProgressBar));
+
+        hitDuck.ModifyHappiness(happinessIncrease);
         
     }
 }

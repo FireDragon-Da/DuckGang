@@ -11,6 +11,8 @@ public class Building : MonoBehaviour
     [SerializeField] protected SpriteRenderer foundationSpriteRenderer;
     [SerializeField] protected bool walkable;
 
+    protected bool continueBehavior; //Flag for passing if Interact should continue
+
     [Header("Construction")]
     [SerializeField] protected float constructionNeeded;
     protected float constructionCount;
@@ -93,6 +95,7 @@ public class Building : MonoBehaviour
 
     public virtual IEnumerator BuildingInteract(DuckWalk duck)
     {
+        continueBehavior = false;
         if (removing)
         {
             if (vfxHandler != null) vfxHandler.PlayEffect(removeHitVFX);
@@ -132,6 +135,7 @@ public class Building : MonoBehaviour
 
             yield break;
         }
+        continueBehavior = true;
     }
 
     void AddConstruct()
@@ -193,10 +197,10 @@ public class Building : MonoBehaviour
         
     }
 
-    protected IEnumerator WaitWithProgress(float duration, ProgressBar progressBar)
+    protected IEnumerator WaitWithProgress(float duration, ProgressBar duckProgressBar)
     {
-        progressBar.ShowBar();
-        progressBar.ChangeFill(0);
+        duckProgressBar.ShowBar();
+        duckProgressBar.ChangeFill(0);
         float elapsed = 0f;
 
         while (elapsed < duration)
@@ -204,12 +208,12 @@ public class Building : MonoBehaviour
             elapsed += Time.deltaTime;
 
             float progress = elapsed / duration;
-            progressBar.ChangeFill(progress);
+            duckProgressBar.ChangeFill(progress);
 
             yield return null;
         }
 
-        progressBar.HideBar();
+        duckProgressBar.HideBar();
     }
 
 }

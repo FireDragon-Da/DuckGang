@@ -29,6 +29,10 @@ public class DuckWalk : MonoBehaviour
     [SerializeField] StatusEffect loveEffect;
     [SerializeField] float loveChance;
 
+    bool canBeGrabbed = true;
+    public bool CanBeGrabbed => canBeGrabbed;
+    public bool beingDragged;
+
     DuckStats stats;
 
     void Awake()
@@ -55,6 +59,11 @@ public class DuckWalk : MonoBehaviour
 
     void Update()
     {
+        if (beingDragged)
+        {
+            return;
+        }
+
         if (interacting == null)
         {
             MoveForward(speed * Time.deltaTime);
@@ -214,6 +223,11 @@ public class DuckWalk : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (beingDragged)
+        {
+            return;
+        }
+        
         if (interacting)
         {
             return;
@@ -229,13 +243,13 @@ public class DuckWalk : MonoBehaviour
 
     IEnumerator BuildingInteraction(Building curBuilding, Collider2D collision)
     {
-        progressBar.ShowBar();
+        canBeGrabbed = false;
         interacting = curBuilding;
 
         yield return StartCoroutine(curBuilding.BuildingInteract(this));
 
         interacting = null;
-        progressBar.HideBar();
+        canBeGrabbed = true;
 
         if (!curBuilding.CanWalkOver())
         {

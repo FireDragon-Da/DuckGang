@@ -19,11 +19,6 @@ public class BuildingPlacer : MonoBehaviour
     bool removeToggled;
     Building curBuildingPrefab;
 
-    void Start()
-    {
-        //UpdateBuildingPrefab(curBuildingPrefab);
-    }
-
     void Update()
     {
         if (removeToggled && !EventSystem.current.IsPointerOverGameObject())
