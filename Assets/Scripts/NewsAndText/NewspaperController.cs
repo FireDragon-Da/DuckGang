@@ -26,6 +26,34 @@ public struct ArticleEvent
     public string title;
     public string content;
     public ArticlePriority priority;
+
+    public ArticleEvent(string t, string c, string p)
+    {
+        title = t; content = c;
+        switch (p)
+        {
+
+            case "MentalHealthCrisis":
+                priority = ArticlePriority.MentalHealthCrisis;
+                break;
+
+            case "Starvation":
+                priority = ArticlePriority.Starvation;
+                break;
+
+            case "NewBuilding":
+                priority = ArticlePriority.NewBuilding;
+                break;
+
+            case "SocialFormation":
+                priority = ArticlePriority.SocialFormation;
+                break;
+
+            default:
+                priority = ArticlePriority.Fluff; 
+                break;
+        }
+    }
 }
 
 public struct DeathEvent
@@ -113,7 +141,7 @@ public class NewspaperController : MonoBehaviour
     {
         if (newbornDuckNames == null || newbornDuckNames.Count == 0)
         {
-            welcomeToLifeContent.text = "No new ducks out today.";
+            welcomeToLifeContent.text = "No new ducks out recently.";
             return;
         }
 
