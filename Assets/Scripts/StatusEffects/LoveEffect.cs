@@ -35,6 +35,7 @@ public class LoveEffect : StatusEffect
 
     public override void Added(DuckWalk duck)
     {
+        base.Added(duck);
         duck.RemoveEffect<NestEffect>();
     }
 

@@ -15,6 +15,8 @@ public class DuckWalk : MonoBehaviour
     Rigidbody2D rb;
 
     [SerializeField] float speed;
+    float speedModifier = 1;
+    float effectiveSpeed => speed * speedModifier;
     [SerializeField] Vector2 direction;
     [SerializeField] float randomBounceOffset;
 
@@ -66,7 +68,7 @@ public class DuckWalk : MonoBehaviour
 
         if (interacting == null)
         {
-            MoveForward(speed * Time.deltaTime);
+            MoveForward(effectiveSpeed * Time.deltaTime);
         }
 
         for (int i = statusEffects.Count-1; i >= 0; i--)
@@ -289,6 +291,7 @@ public class DuckWalk : MonoBehaviour
         {
             if (newEffect.GetType() == curEffect.GetType())
             {
+                curEffect.DuplicateGained();
                 statusEffects.Remove(curEffect);
                 break;
             }
@@ -309,6 +312,11 @@ public class DuckWalk : MonoBehaviour
                 return;
             }
         }
+    }
+
+    public void GainSpeedModifier(float amount)
+    {
+        speedModifier += amount;
     }
 
 }

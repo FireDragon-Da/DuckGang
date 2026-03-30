@@ -54,4 +54,9 @@ public class StatusEffect : ScriptableObject
         Destroy(this);
     }
 
+    public virtual void DuplicateGained()
+    {
+        
+    }
+
 }
