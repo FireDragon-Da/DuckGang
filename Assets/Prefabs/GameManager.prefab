@@ -106,43 +106,44 @@ MonoBehaviour:
   AltarBuildingBar: {fileID: 7672281964391082819}
   DrumBuildingBar: {fileID: 6894245550759001135}
   lockedString: ????????????????????? ????????Locked???????? ???????????????????????
-  NestDescription: 'Spawn eggs here, hutch kid ducks after a few moments.  Cost:
-    $15 ($5 + 5 * $2), total $15; foundation costs $5; requires 5 times to build,
-    each costs $2 . Unlocking Condition: Build 1 Farmland.'
-  FarmlandDescription: 'Grow some crops, ducks can collect them when harvest, or
-    water them when not. Cost: $30 ($6 + 8 * $3), total $30; foundation costs $6;
-    requires 8 times to build, each costs $3. Unlocking Condition: Collect 10 crumbies
-    from the grass!'
-  GoldenCornDescription: 'The ducks will go straight to the nearest farm or grass
-    when touching it or when the horn blows. Cost: $40 ($10 + 10 * $3), total $40;
-    foundation costs $10; requires 10 times to build, each costs $3. Unlocking Condition:
-    Build 2 farmlands.'
-  PlaygroundDescription: 'A playground could improve the happiness of the duck collided.
-    Cost: $26 ($20 + 2 * $3), total $26; foundation costs $20; requires 10 times
-    to build, each costs $3. Unlocking Condition: Have 5 ducks.'
-  CompostsiteDescription: 'When there are poops inside, every farm or grass within
-    its range will produce more crumbies. Cost: $60 ($12 + 12 * $4), total $60; foundation
-    costs $12; requires 12 times to build, each costs $4. Unlock Condition: Build
-    3 Farmland.'
-  SecreteSiteDescription: 'Ducks can store crumbies here. After a few moments, it
-    will return the ducks with more crumbies. Cost: Cost:$100 ($25 + 15 * $5), total
-    $100; foundation costs $25; requires 15 times to build, each costs $5. Unlock
-    Condition: Collect 300 crumbies from all sources.'
-  HammerSawDescription: 'The ducks will go straight to the nearest construction site
-    when touching it. Cost: $40 ($10 + 10 * $3), total $40; foundation costs $10;
-    requires 10 times to build, each costs $3. Unlock Condition: Build 3 buildings
-    in total.'
-  StrawCraftDescription: 'The duck will be forced to labor in it for a few moments,
-    not able to get away, but will produce some crumbies when finished. Cost: $30
-    ($6 + 8 * $3), total $30; foundation costs $6; requires 8 times to build, each
-    costs $3. Unlock Condition: Collect 30 crumbies from Farmland in total.'
-  AltarDescription: 'Sacrifice one duck to produce more crumbies. Cost: $10 ($2 +
-    2 * $4), total $10; foundation costs $2; requires 2 times to build, each costs
-    $4. Unlock Condition: Have 6 ducks.'
-  DrumDescription: 'Speed up the ducks that collide with it or when the drum roars.
-    Cost: $50 ($10 + 10 * $4), total $50; foundation costs $10; requires 10 times
-    to build, each costs $4. Unlock Condition: ducks collide buildings 20 times in
+  NestDescription: 'Nest: spawn eggs here, hutch kid ducks after a few moments. 
+    Cost: $15 ($5 + 5 * $2), total $15; foundation costs $5; requires 5 times to
+    build, each costs $2 . Unlocking Condition: Build 1 Farmland.'
+  FarmlandDescription: 'Farmland: grow some crops, ducks can collect them when harvest,
+    or water them when not. Cost: $30 ($6 + 8 * $3), total $30; foundation costs
+    $6; requires 8 times to build, each costs $3. Unlocking Condition: Collect 10
+    crumbies from the grass!'
+  GoldenCornDescription: 'Golden Corn: the ducks will go straight to the nearest
+    farm or grass when touching it or when the horn blows. Cost: $40 ($10 + 10 *
+    $3), total $40; foundation costs $10; requires 10 times to build, each costs
+    $3. Unlocking Condition: Build 2 farmlands.'
+  PlaygroundDescription: 'Playground: a playground could improve the happiness of
+    the duck collided. Cost: $26 ($20 + 2 * $3), total $26; foundation costs $20;
+    requires 10 times to build, each costs $3. Unlocking Condition: Have 5 ducks.'
+  CompostsiteDescription: 'Compost Site: when there are poops inside, every farm
+    or grass within its range will produce more crumbies. Cost: $60 ($12 + 12 * $4),
+    total $60; foundation costs $12; requires 12 times to build, each costs $4. Unlock
+    Condition: Build 3 Farmland.'
+  SecreteSiteDescription: 'Mr Duckson''s Secret Site: can store crumbies here. After
+    a few moments, it will return the ducks with more crumbies. Cost: Cost:$100 ($25
+    + 15 * $5), total $100; foundation costs $25; requires 15 times to build, each
+    costs $5. Unlock Condition: Collect 300 crumbies from all sources.'
+  HammerSawDescription: 'Hammer & Saw Symmbol: the ducks will go straight to the
+    nearest construction site when touching it. Cost: $40 ($10 + 10 * $3), total
+    $40; foundation costs $10; requires 10 times to build, each costs $3. Unlock
+    Condition: Build 3 buildings in total.'
+  StrawCraftDescription: 'Straw Craft: the duck will be forced to labor in it for
+    a few moments, not able to get away, but will produce some crumbies when finished.
+    Cost: $30 ($6 + 8 * $3), total $30; foundation costs $6; requires 8 times to
+    build, each costs $3. Unlock Condition: Collect 30 crumbies from Farmland in
     total.'
+  AltarDescription: 'Altar: sacrifice one duck to produce more crumbies. Cost: $10
+    ($2 + 2 * $4), total $10; foundation costs $2; requires 2 times to build, each
+    costs $4. Unlock Condition: Have 6 ducks.'
+  DrumDescription: 'Duck duck Drum: speed up the ducks that collide with it or when
+    the drum roars. Cost: $50 ($10 + 10 * $4), total $50; foundation costs $10; requires
+    10 times to build, each costs $4. Unlock Condition: ducks collide buildings 20
+    times in total.'
 --- !u!1 &189532926243449513
 GameObject:
   m_ObjectHideFlags: 0

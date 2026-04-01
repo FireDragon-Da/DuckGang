@@ -219,7 +219,7 @@ public class UnlockingUIManager : MonoBehaviour
         if (isGoldenCornUnlocked)
         {
             TextMeshProUGUI tmp = GoldenCornBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
-            tmp.text = GoldenCornDescription;
+            tmp.text = FormatDescription(GoldenCornDescription);
         }
     }
 
@@ -228,7 +228,7 @@ public class UnlockingUIManager : MonoBehaviour
         if (isPlayGroundUnlocked)
         {
             TextMeshProUGUI tmp = PlaygroundBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
-            tmp.text = PlaygroundDescription;
+            tmp.text = FormatDescription(PlaygroundDescription);
         }
     }
 
@@ -237,7 +237,7 @@ public class UnlockingUIManager : MonoBehaviour
         if (isCompostsiteUnlocked)
         {
             TextMeshProUGUI tmp = CompostsiteBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
-            tmp.text = CompostsiteDescription;
+            tmp.text = FormatDescription(CompostsiteDescription);
         }
     }
 
@@ -246,7 +246,7 @@ public class UnlockingUIManager : MonoBehaviour
         if (isSecretSiteUnlocked)
         {
             TextMeshProUGUI tmp = SecreteSiteBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
-            tmp.text = SecreteSiteDescription;
+            tmp.text = FormatDescription(SecreteSiteDescription);
         }
     }
 
@@ -255,7 +255,7 @@ public class UnlockingUIManager : MonoBehaviour
         if (isHammerSawUnlocked)
         {
             TextMeshProUGUI tmp = HammerSawBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
-            tmp.text = HammerSawDescription;
+            tmp.text = FormatDescription(HammerSawDescription);
         }
     }
 
@@ -264,7 +264,7 @@ public class UnlockingUIManager : MonoBehaviour
         if (isStrawCraftUnlocked)
         {
             TextMeshProUGUI tmp = StrawCraftBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
-            tmp.text = StrawCraftDescription;
+            tmp.text = FormatDescription(StrawCraftDescription);
         }
     }
 
@@ -273,7 +273,7 @@ public class UnlockingUIManager : MonoBehaviour
         if (isAltarUnlcoked)
         {
             TextMeshProUGUI tmp = AltarBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
-            tmp.text = AltarDescription;
+            tmp.text = FormatDescription(AltarDescription);
         }
     }
 
@@ -282,7 +282,7 @@ public class UnlockingUIManager : MonoBehaviour
         if (isDrumUnlocked)
         {
             TextMeshProUGUI tmp = DrumBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
-            tmp.text = DrumDescription;
+            tmp.text = FormatDescription(DrumDescription);
         }
     }
 
