@@ -265,12 +265,12 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2990216547036666206}
   foundationSpriteRenderer: {fileID: 3715528951212348669}
   walkable: 1
-  constructionNeeded: 3
+  constructionNeeded: 10
   placeCost: 15
-  buildCost: 2
+  buildCost: 3
   removeHitsRequired: 2
   buildTime: 2
-  removeTime: 2
+  removeTime: 5
   filledSpots: 0101010101010101
   hasUniqueBounce: 0
   vfxHandler: {fileID: 0}
