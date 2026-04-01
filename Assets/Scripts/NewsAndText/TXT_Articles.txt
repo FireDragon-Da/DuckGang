@@ -1,19 +1,90 @@
-﻿id1
-title1
-content1
-priority1
+﻿starvationArticle
+Quackland Goes Hungry
+//content
+Starvation
 &
-id2
-title2
-content2
-priority2
+mentalHealthArticle
+Quackland In Despair
+//content
+MentalHealthCrisis
 &
-id3
-title3
-content3
-priority3
+newMayorArticle //MAKE SURE THIS GETS ADDED AT START BY SOMETHING
+New Mayor Installed
+//content
+Required
 &
-id4
-title4
-content4
-priority4
+farmArticle
+//title
+//content
+Building
+&
+nestArticle
+//title
+//content
+Building
+&
+playgroundArticle
+//title
+//content
+Building
+&
+goldenCornArticle
+//title
+//content
+Building
+&
+compostArticle
+//title
+//content
+Building
+&
+ducksonArticle
+//title
+//content
+Building
+&
+hammerArticle
+//title
+//content
+Building
+&
+strawCraftArticle
+//title
+//content
+Building
+&
+altarArticle
+//title
+//content
+Building
+&
+drumArticle
+//title
+//content
+Building
+&
+villageHallArticle
+//title
+//content
+Building
+&
+Fluff
+Lovely Weather Today
+//fluff content
+Fluff
+&
+Fluff
+Many Ducks Still Alive
+//fluff content
+Fluff
+&
+Fluff
+Water A Little Too Cold
+//fluff content
+Fluff
+&
+Fluff
+Water A Little Too Wet
+//fluff content
+Fluff
+

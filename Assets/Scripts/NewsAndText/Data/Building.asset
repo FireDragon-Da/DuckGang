@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5acf2cf32a9b1134ea7a8b6ad6b27ae6, type: 3}
   m_Name: Building
   m_EditorClassIdentifier: Assembly-CSharp::QuacxiconSO
-  categories: []
+  categories:
+  - categoryName: Test
+    contentList:
+    - I am the master of Quackland
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0

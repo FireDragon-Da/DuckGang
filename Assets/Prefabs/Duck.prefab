@@ -562,7 +562,7 @@ MonoBehaviour:
   happiness: 80
   energy: 70
   health: 90
-  averageLifespan: 300
+  averageLifespan: 240
   lifespanVariance: 60
 --- !u!114 &5534468101817164839
 MonoBehaviour:

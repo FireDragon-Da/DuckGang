@@ -135917,6 +135917,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7204972533377679507, guid: 89992ff3af29cde46bcb0d9c24ff4d28, type: 3}
   m_PrefabInstance: {fileID: 2097164858}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2109207471 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8419782432875219653, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+  m_PrefabInstance: {fileID: 6410375465495123799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2109207482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109207471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc3f392d775691543ae254698a9d8cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArticleCreator
+  textFile: {fileID: 4900000, guid: 897dc624b2a973749942bb9e4496f503, type: 3}
 --- !u!1001 &2120883730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136235,6 +136253,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1144618833250589911, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1531058157115479153, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -136291,6 +136313,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -328502495259980252, guid: 216a36af05339484f94ec32b827caddb, type: 3}
+    - target: {fileID: 5741726068280216701, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: duckMonthLength
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136879387656836452, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8419782432875219653, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -136298,7 +136328,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8419782432875219653, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2109207482}
   m_SourcePrefab: {fileID: 100100000, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

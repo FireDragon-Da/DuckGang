@@ -33,6 +33,10 @@ public class TimeManager : MonoBehaviour
         monthsPassed++;
         curMonthTime -= duckMonthLength;
 
+        //add two random fluff articles to article list in case nothing else happened
+        DuckSocietyManager.reference.articles.Add(ArticleCreator.reference.fluffArticles[Random.Range(0, ArticleCreator.reference.fluffArticles.Count)]);
+        DuckSocietyManager.reference.articles.Add(ArticleCreator.reference.fluffArticles[Random.Range(0, ArticleCreator.reference.fluffArticles.Count)]);
+
         NewspaperController.reference.UpdateNewspaper(
             0,0,"",
             DuckSocietyManager.reference.newbornDuckNames,
@@ -42,6 +46,7 @@ public class TimeManager : MonoBehaviour
 
         DuckSocietyManager.reference.newbornDuckNames = new();
         DuckSocietyManager.reference.recentDeaths = new();
+        DuckSocietyManager.reference.articles = new();
     }
 
     void AddPause()
