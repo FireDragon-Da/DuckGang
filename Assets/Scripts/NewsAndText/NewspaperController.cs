@@ -198,6 +198,7 @@ public class NewspaperController : MonoBehaviour
 
     public void UpdateArticles(List<ArticleEvent> candidateArticles)
     {
+        print("NC: updating articles");
         if (candidateArticles == null || candidateArticles.Count == 0)
         {
             SetTopArticle("Quiet Day", "Nothing interesting happened. Our editors have taken the day off to swim in one of the seventeen identical lakes.");
