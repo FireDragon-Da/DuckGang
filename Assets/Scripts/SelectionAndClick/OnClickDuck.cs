@@ -5,8 +5,6 @@ using UnityEngine.UI;
 public class OnClickDuck : MonoBehaviour
 {
 
-    DuckStatDisplay display;
-
     [SerializeField] private GameObject sliderPrefab;
     [SerializeField] private float sliderHeight = 50f;
     private Canvas canvas;
@@ -20,14 +18,13 @@ public class OnClickDuck : MonoBehaviour
         mainCamera = Camera.main;
         canvas = FindObjectOfType<Canvas>();
 
-        display = GameObject.Find("GameManager").GetComponentInChildren<DuckStatDisplay>();
     }
 
     private void OnMouseDown()
     {
         duckStats.ModifyHappiness(1);
 
-        display.displayStats(this.gameObject.GetComponent<DuckNameGen>().CurrentDuckName, duckStats);
+        DuckStatDisplay.reference.displayStats(this.gameObject.GetComponent<DuckNameGen>().CurrentDuckName, duckStats);
         //ShowStatSliders();
     }
 

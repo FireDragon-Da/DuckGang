@@ -19,6 +19,9 @@ public class Building : MonoBehaviour
     protected bool built;
     [SerializeField] protected int placeCost;
     [SerializeField] protected int buildCost;
+
+
+
     protected bool removing;
     [SerializeField] int removeHitsRequired = 2;
     int removeCounter;
@@ -112,7 +115,7 @@ public class Building : MonoBehaviour
             yield break;
         }
 
-        if (!built)
+        if (!built && constructionCount < constructionNeeded)
         {
             if (!CrumbManager.reference.ConsumeCrumbs(BuildCost))
             {
@@ -124,7 +127,7 @@ public class Building : MonoBehaviour
 
             if (vfxHandler != null) vfxHandler.PlayEffect(interactVFX);
 
-            //Add 1 build
+            constructionCount++; //Add 1 build to block others
             yield return StartCoroutine(WaitWithProgress(buildTime, duck.ProgressBar));
 
             AddConstruct();
@@ -138,10 +141,8 @@ public class Building : MonoBehaviour
         continueBehavior = true;
     }
 
-    void AddConstruct()
+    void AddConstruct() //Only does the visuals
     {
-        constructionCount++;
-
         progressBar.ChangeFill(constructionCount/constructionNeeded);
     }
 

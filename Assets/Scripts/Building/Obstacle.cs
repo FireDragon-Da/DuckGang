@@ -5,7 +5,7 @@ public class Obstacle : Building
 
     void Start()
     {
-        //Build();
+        Build();
     }
 
     // Update is called once per frame

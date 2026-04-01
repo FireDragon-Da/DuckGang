@@ -155,7 +155,15 @@ public class DuckWalk : MonoBehaviour
                 ranNum -= curEffect.Chance;
                 if (ranNum <= 0)
                 {
-                    ChangeDirection(curEffect.Activate(gameObject));
+                    Vector2 effectDir = curEffect.Activate(gameObject);
+                    if (effectDir != Vector2.zero)
+                    {
+                        StandardBounce(targetDirection);
+                    }
+                    else
+                    {
+                        ChangeDirection(effectDir);
+                    }
                     break;
                 }
             }
@@ -180,8 +188,15 @@ public class DuckWalk : MonoBehaviour
                 ranNum -= curEffect.Chance;
                 if (ranNum < 0)
                 {
-                    ChangeDirection(curEffect.Activate(gameObject));
-                    break;
+                    Vector2 effectDir = curEffect.Activate(gameObject);
+                    if (effectDir != Vector2.zero)
+                    {
+                        StandardBounce(targetDirection);
+                    }
+                    else
+                    {
+                        ChangeDirection(effectDir);
+                    }
                 }
             }
 
@@ -213,7 +228,13 @@ public class DuckWalk : MonoBehaviour
 
     void ChangeDirection(Vector2 newDirection)
     {
-        direction = newDirection;
+        if (newDirection == Vector2.zero)
+        {
+            direction = Vector2.up;
+        }
+        {
+            direction = newDirection;
+        }
         sprite.flipX = direction.x > 0;
     }
 
@@ -238,7 +259,7 @@ public class DuckWalk : MonoBehaviour
         if (collision.CompareTag("Building"))
         {
             Building curBuilding = collision.GetComponent<Building>();
-            PublicInfo.reference.duckCollideBuildingTimes += 1;
+
             StartCoroutine(BuildingInteraction(curBuilding, collision));
         }
     }
@@ -272,7 +293,6 @@ public class DuckWalk : MonoBehaviour
             {
                 WallBounce((transform.position - collision.transform.position).normalized);
             }
-            
         }
     }
 
