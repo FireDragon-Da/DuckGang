@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.UI;
+
 
 
 public class UnlockingUIManager : MonoBehaviour
@@ -15,6 +17,8 @@ public class UnlockingUIManager : MonoBehaviour
     public bool isStrawCraftUnlocked;
     public bool isAltarUnlcoked;
     public bool isDrumUnlocked;
+
+    private bool hasOpened = false;
 
     public GameObject NestBuildingBar;
     public GameObject FarmlandBuildingBar;
@@ -52,7 +56,11 @@ public class UnlockingUIManager : MonoBehaviour
     }
     private void OnEnable()
     {
-        SetAllBuildingsDescriptionLocked();
+        if (!hasOpened)
+        {
+            SetAllBuildingsDescriptionLocked();
+            hasOpened = true;
+        }
     }
 
     // Update is called once per frame
@@ -200,8 +208,16 @@ public class UnlockingUIManager : MonoBehaviour
     {
         if (isNestUnlocked)
         {
-            TextMeshProUGUI nestTmp = NestBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
-            nestTmp.text = FormatDescription(NestDescription) ;
+            TextMeshProUGUI tmp = NestBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
+            tmp.text = FormatDescription(NestDescription);
+
+            Button btn = NestBuildingBar.GetComponent<Button>();
+            btn.interactable = true;
+
+            Transform imageTransform = NestBuildingBar.transform.Find("Image");
+            imageTransform.gameObject.SetActive(true);
+
+            PopupUnlokcingTextManager.instance.ShowText("Nest Unlocked! Ducks will die of aging. Always remember to build nests to keep the population! Remember, you shoule be able to feed your ducks first, and then have more ducks! (Click Twice to close)");
         }
     }
 
@@ -211,6 +227,14 @@ public class UnlockingUIManager : MonoBehaviour
         {
             TextMeshProUGUI tmp = FarmlandBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
             tmp.text = FormatDescription(FarmlandDescription);
+
+            Button btn = FarmlandBuildingBar.GetComponent<Button>();
+            btn.interactable = true;
+
+            Transform imageTransform = FarmlandBuildingBar.transform.Find("Image");
+            imageTransform.gameObject.SetActive(true);
+
+            PopupUnlokcingTextManager.instance.ShowText("Farmland Unlocked! Ducks now learn the knowledge of farming by collecting crumbies from grass! (Click Twice to close)");
         }
     }
 
@@ -219,7 +243,13 @@ public class UnlockingUIManager : MonoBehaviour
         if (isGoldenCornUnlocked)
         {
             TextMeshProUGUI tmp = GoldenCornBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
-            tmp.text = GoldenCornDescription;
+            tmp.text = FormatDescription(GoldenCornDescription);
+
+            Button btn = GoldenCornBuildingBar.GetComponent<Button>();
+            btn.interactable = true;
+
+            Transform imageTransform = GoldenCornBuildingBar.transform.Find("Image");
+            imageTransform.gameObject.SetActive(true);
         }
     }
 
@@ -228,7 +258,13 @@ public class UnlockingUIManager : MonoBehaviour
         if (isPlayGroundUnlocked)
         {
             TextMeshProUGUI tmp = PlaygroundBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
-            tmp.text = PlaygroundDescription;
+            tmp.text = FormatDescription(PlaygroundDescription);
+
+            Button btn = PlaygroundBuildingBar.GetComponent<Button>();
+            btn.interactable = true;
+
+            Transform imageTransform = PlaygroundBuildingBar.transform.Find("Image");
+            imageTransform.gameObject.SetActive(true);
         }
     }
 
@@ -237,7 +273,13 @@ public class UnlockingUIManager : MonoBehaviour
         if (isCompostsiteUnlocked)
         {
             TextMeshProUGUI tmp = CompostsiteBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
-            tmp.text = CompostsiteDescription;
+            tmp.text = FormatDescription(CompostsiteDescription);
+
+            Button btn = CompostsiteBuildingBar.GetComponent<Button>();
+            btn.interactable = true;
+
+            Transform imageTransform = CompostsiteBuildingBar.transform.Find("Image");
+            imageTransform.gameObject.SetActive(true);
         }
     }
 
@@ -246,7 +288,13 @@ public class UnlockingUIManager : MonoBehaviour
         if (isSecretSiteUnlocked)
         {
             TextMeshProUGUI tmp = SecreteSiteBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
-            tmp.text = SecreteSiteDescription;
+            tmp.text = FormatDescription(SecreteSiteDescription);
+
+            Button btn = SecreteSiteBuildingBar.GetComponent<Button>();
+            btn.interactable = true;
+
+            Transform imageTransform = SecreteSiteBuildingBar.transform.Find("Image");
+            imageTransform.gameObject.SetActive(true);
         }
     }
 
@@ -255,7 +303,13 @@ public class UnlockingUIManager : MonoBehaviour
         if (isHammerSawUnlocked)
         {
             TextMeshProUGUI tmp = HammerSawBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
-            tmp.text = HammerSawDescription;
+            tmp.text = FormatDescription(HammerSawDescription);
+
+            Button btn = HammerSawBuildingBar.GetComponent<Button>();
+            btn.interactable = true;
+
+            Transform imageTransform = HammerSawBuildingBar.transform.Find("Image");
+            imageTransform.gameObject.SetActive(true);
         }
     }
 
@@ -264,7 +318,13 @@ public class UnlockingUIManager : MonoBehaviour
         if (isStrawCraftUnlocked)
         {
             TextMeshProUGUI tmp = StrawCraftBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
-            tmp.text = StrawCraftDescription;
+            tmp.text = FormatDescription(StrawCraftDescription);
+
+            Button btn = StrawCraftBuildingBar.GetComponent<Button>();
+            btn.interactable = true;
+
+            Transform imageTransform = StrawCraftBuildingBar.transform.Find("Image");
+            imageTransform.gameObject.SetActive(true);
         }
     }
 
@@ -273,7 +333,13 @@ public class UnlockingUIManager : MonoBehaviour
         if (isAltarUnlcoked)
         {
             TextMeshProUGUI tmp = AltarBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
-            tmp.text = AltarDescription;
+            tmp.text = FormatDescription(AltarDescription);
+
+            Button btn = AltarBuildingBar.GetComponent<Button>();
+            btn.interactable = true;
+
+            Transform imageTransform = AltarBuildingBar.transform.Find("Image");
+            imageTransform.gameObject.SetActive(true);
         }
     }
 
@@ -282,7 +348,13 @@ public class UnlockingUIManager : MonoBehaviour
         if (isDrumUnlocked)
         {
             TextMeshProUGUI tmp = DrumBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
-            tmp.text = DrumDescription;
+            tmp.text = FormatDescription(DrumDescription);
+
+            Button btn = DrumBuildingBar.GetComponent<Button>();
+            btn.interactable = true;
+
+            Transform imageTransform = DrumBuildingBar.transform.Find("Image");
+            imageTransform.gameObject.SetActive(true);
         }
     }
 
