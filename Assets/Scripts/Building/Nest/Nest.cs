@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Nest : Building
@@ -13,7 +14,9 @@ public class Nest : Building
     [SerializeField] float layTime = 2f;
 
     [SerializeField] int totalUses;
-    int usesLeft;
+    int timesUsed;
+
+    [SerializeField] List<Sprite> sprites;
 
     public bool Empty
     {
@@ -29,8 +32,6 @@ public class Nest : Building
 
         PublicInfo.reference.nestList.Add(this);
         effectApplier.gameObject.SetActive(true);
-
-        usesLeft = totalUses;
     }
 
     public override void Remove()
@@ -52,10 +53,13 @@ public class Nest : Building
                 //TODO Proper duck spawning stuff here
                 DuckSocietyManager.reference.SpawnDuck(transform.position);
                 empty = true;
-                usesLeft--;
-                if (usesLeft <= 0)
+                timesUsed++;
+                if (timesUsed >= totalUses)
                 {
                     Remove();
+                } else
+                {
+                    spriteRenderer.sprite = sprites[timesUsed * 2];
                 }
             }
         }
@@ -82,6 +86,8 @@ public class Nest : Building
                 empty = false;
                 curEggTimer = defaultEggTimer;
                 duck.RemoveEffect<LoveEffect>();
+
+                spriteRenderer.sprite = sprites[timesUsed * 2 + 1];
             }
         }
 
