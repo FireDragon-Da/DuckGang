@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 4705246525205698813, guid: ec1d3c9b432e17b4984cb0b6cb75e4ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8c699c660ea864e47b692d68fe082dbf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -504,6 +504,14 @@ MonoBehaviour:
   effectApplier: {fileID: 7290271145044701039}
   defaultEggTimer: 20
   layTime: 2
+  totalUses: 3
+  sprites:
+  - {fileID: 21300000, guid: 8c699c660ea864e47b692d68fe082dbf, type: 3}
+  - {fileID: 21300000, guid: 0c971375f38c84240a7159ae8cd1f2f8, type: 3}
+  - {fileID: 21300000, guid: ab5e7b365cd55524e9a586ed65fc88e0, type: 3}
+  - {fileID: 21300000, guid: f879b07885cf7ed4183a8ef3ad43fd54, type: 3}
+  - {fileID: 21300000, guid: 9f284cf572a077343813f0beb0a74e69, type: 3}
+  - {fileID: 21300000, guid: 0a601389c94407a4397ad139bda2b1bd, type: 3}
 --- !u!61 &2121938604369957597
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ public class PublicInfo : MonoBehaviour
     public int crumbieEverCollected = 0;
     public int crumbieGainedFromFarmland = 0;
     public int duckCollideBuildingTimes = 0;
+    public List<Building> curBuildingList = new();
 
     void Awake()
     {

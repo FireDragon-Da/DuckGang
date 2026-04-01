@@ -21,6 +21,11 @@ public class LoveEffect : StatusEffect
             }
         }
 
+        if (nearest == null)
+        {
+            return Vector2.zero;
+        }
+
         Vector2 output = nearest.transform.position - target.transform.position;
 
         if (output == Vector2.zero)
