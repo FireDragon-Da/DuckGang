@@ -137,6 +137,8 @@ public class Farmland : Building
         FinishGrow();
         //TODO remove this it is just for temp testing and should be done elsewhere
         PublicInfo.reference.farmList.Add(this);
+        //TODO this should be cleaner as its added in base and then removed here. not sure what's a better approach
+        PublicInfo.reference.curBuildingList.Remove(this);
     }
 
     void Decay()
