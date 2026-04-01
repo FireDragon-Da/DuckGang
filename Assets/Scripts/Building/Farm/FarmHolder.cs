@@ -4,8 +4,6 @@ public class FarmHolder : Building
 {
     [SerializeField] Farmland[] farmland;
 
-    public bool destroyed; //To avoid infinite loop with child destruction
-
     //When built, build child farms
     public override void Build()
     {
@@ -16,15 +14,16 @@ public class FarmHolder : Building
         }
     }
 
-    //When removed, remove child farms
-    public override void Remove()
+    public override void StartDeconstruction()
     {
-        destroyed = true;
+        if (removing) {return;}
+
+        base.StartDeconstruction();
+
         foreach (Farmland farmPiece in farmland)
         {
             farmPiece.Remove();   
         }
-        base.Remove();
     }
 
     public override void StartBuild()

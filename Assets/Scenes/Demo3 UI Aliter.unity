@@ -136307,6 +136307,14 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 730886731}
+    - target: {fileID: 5431576680511910202, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: quacxiconSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f369d3f95eb8a94dbe8fe8176c592c2, type: 2}
+    - target: {fileID: 5431576680511910202, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: targetCategory
+      value: Tutorial
+      objectReference: {fileID: 0}
     - target: {fileID: 5716779658420469607, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
