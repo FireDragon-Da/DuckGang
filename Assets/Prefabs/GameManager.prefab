@@ -2309,7 +2309,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2113882199429230324}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2111224227258808617}
+        m_TargetAssemblyTypeName: BuildingPlacer, Assembly-CSharp
+        m_MethodName: RemoveToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2372007313369006182
 GameObject:
   m_ObjectHideFlags: 0
@@ -3306,7 +3318,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2359640398245695792}
   m_Direction: 2
   m_Value: 1.0000021
-  m_Size: 0.6666667
+  m_Size: 0.66666675
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
