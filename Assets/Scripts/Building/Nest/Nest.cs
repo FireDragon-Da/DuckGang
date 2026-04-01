@@ -6,11 +6,14 @@ public class Nest : Building
     [Header("Nest")]
     [SerializeField] NestEffectApplier effectApplier;
     bool empty = true;
-    bool nestBusy; //Duck is trying to lay eff
+    bool nestBusy; //Duck is trying to lay egg
 
     [SerializeField] float defaultEggTimer;
     float curEggTimer;
     [SerializeField] float layTime = 2f;
+
+    [SerializeField] int totalUses;
+    int usesLeft;
 
     public bool Empty
     {
@@ -26,6 +29,8 @@ public class Nest : Building
 
         PublicInfo.reference.nestList.Add(this);
         effectApplier.gameObject.SetActive(true);
+
+        usesLeft = totalUses;
     }
 
     public override void Remove()
@@ -47,6 +52,11 @@ public class Nest : Building
                 //TODO Proper duck spawning stuff here
                 DuckSocietyManager.reference.SpawnDuck(transform.position);
                 empty = true;
+                usesLeft--;
+                if (usesLeft <= 0)
+                {
+                    Remove();
+                }
             }
         }
     }
