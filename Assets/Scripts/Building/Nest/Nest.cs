@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Nest : Building
@@ -6,11 +7,16 @@ public class Nest : Building
     [Header("Nest")]
     [SerializeField] NestEffectApplier effectApplier;
     bool empty = true;
-    bool nestBusy; //Duck is trying to lay eff
+    bool nestBusy; //Duck is trying to lay egg
 
     [SerializeField] float defaultEggTimer;
     float curEggTimer;
     [SerializeField] float layTime = 2f;
+
+    [SerializeField] int totalUses;
+    int timesUsed;
+
+    [SerializeField] List<Sprite> sprites;
 
     public bool Empty
     {
@@ -47,6 +53,14 @@ public class Nest : Building
                 //TODO Proper duck spawning stuff here
                 DuckSocietyManager.reference.SpawnDuck(transform.position);
                 empty = true;
+                timesUsed++;
+                if (timesUsed >= totalUses)
+                {
+                    Remove();
+                } else
+                {
+                    spriteRenderer.sprite = sprites[timesUsed * 2];
+                }
             }
         }
     }
@@ -72,6 +86,8 @@ public class Nest : Building
                 empty = false;
                 curEggTimer = defaultEggTimer;
                 duck.RemoveEffect<LoveEffect>();
+
+                spriteRenderer.sprite = sprites[timesUsed * 2 + 1];
             }
         }
 

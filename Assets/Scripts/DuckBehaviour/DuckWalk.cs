@@ -257,7 +257,16 @@ public class DuckWalk : MonoBehaviour
         {
             if (curBuilding.HasUniqueBounce)
             {
-                ChangeDirection(curBuilding.UnqiueBounce(this));
+                Vector2 targetBounce = curBuilding.UnqiueBounce(this);
+                if (targetBounce != Vector2.zero)
+                {
+                    ChangeDirection(targetBounce);
+                }
+                else //If the unique bounce can't be used for some reason
+                {
+                    WallBounce((transform.position - collision.transform.position).normalized);
+                }
+                
             }
             else
             {
