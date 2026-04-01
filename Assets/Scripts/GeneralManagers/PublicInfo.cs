@@ -25,6 +25,9 @@ public class PublicInfo : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+       
+
     }
 
     //Random functions just for making other scripts cleaner
