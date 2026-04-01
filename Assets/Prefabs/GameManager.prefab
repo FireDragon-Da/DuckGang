@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4164969681927187003}
   - component: {fileID: 799787125491257656}
+  - component: {fileID: 227004892069175135}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -72,6 +73,76 @@ MonoBehaviour:
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
+--- !u!114 &227004892069175135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164566559525596665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d968c54cb4788b14b9e874d924d2aff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnlockingUIManager
+  isNestUnlocked: 0
+  isFarmlandUnlocked: 0
+  isGoldenCornUnlocked: 0
+  isPlayGroundUnlocked: 0
+  isCompostsiteUnlocked: 0
+  isSecretSiteUnlocked: 0
+  isHammerSawUnlocked: 0
+  isStrawCraftUnlocked: 0
+  isAltarUnlcoked: 0
+  isDrumUnlocked: 0
+  NestBuildingBar: {fileID: 2358945062960898415}
+  FarmlandBuildingBar: {fileID: 8028514760392528929}
+  GoldenCornBuildingBar: {fileID: 2616796819425573954}
+  PlaygroundBuildingBar: {fileID: 1262981699660195658}
+  CompostsiteBuildingBar: {fileID: 2891286188473471329}
+  SecreteSiteBuildingBar: {fileID: 7390111312441536824}
+  HammerSawBuildingBar: {fileID: 4203161712232629941}
+  StrawCraftBuildingBar: {fileID: 7623676468376536709}
+  AltarBuildingBar: {fileID: 7672281964391082819}
+  DrumBuildingBar: {fileID: 6894245550759001135}
+  lockedString: ????????????????????? ????????Locked???????? ???????????????????????
+  NestDescription: 'Spawn eggs here, hutch kid ducks after a few moments.  Cost:
+    $15 ($5 + 5 * $2), total $15; foundation costs $5; requires 5 times to build,
+    each costs $2 . Unlocking Condition: Build 1 Farmland.'
+  FarmlandDescription: 'Grow some crops, ducks can collect them when harvest, or
+    water them when not. Cost: $30 ($6 + 8 * $3), total $30; foundation costs $6;
+    requires 8 times to build, each costs $3. Unlocking Condition: Collect 10 crumbies
+    from the grass!'
+  GoldenCornDescription: 'The ducks will go straight to the nearest farm or grass
+    when touching it or when the horn blows. Cost: $40 ($10 + 10 * $3), total $40;
+    foundation costs $10; requires 10 times to build, each costs $3. Unlocking Condition:
+    Build 2 farmlands.'
+  PlaygroundDescription: 'A playground could improve the happiness of the duck collided.
+    Cost: $26 ($20 + 2 * $3), total $26; foundation costs $20; requires 10 times
+    to build, each costs $3. Unlocking Condition: Have 5 ducks.'
+  CompostsiteDescription: 'When there are poops inside, every farm or grass within
+    its range will produce more crumbies. Cost: $60 ($12 + 12 * $4), total $60; foundation
+    costs $12; requires 12 times to build, each costs $4. Unlock Condition: Build
+    3 Farmland.'
+  SecreteSiteDescription: 'Ducks can store crumbies here. After a few moments, it
+    will return the ducks with more crumbies. Cost: Cost:$100 ($25 + 15 * $5), total
+    $100; foundation costs $25; requires 15 times to build, each costs $5. Unlock
+    Condition: Collect 300 crumbies from all sources.'
+  HammerSawDescription: 'The ducks will go straight to the nearest construction site
+    when touching it. Cost: $40 ($10 + 10 * $3), total $40; foundation costs $10;
+    requires 10 times to build, each costs $3. Unlock Condition: Build 3 buildings
+    in total.'
+  StrawCraftDescription: 'The duck will be forced to labor in it for a few moments,
+    not able to get away, but will produce some crumbies when finished. Cost: $30
+    ($6 + 8 * $3), total $30; foundation costs $6; requires 8 times to build, each
+    costs $3. Unlock Condition: Collect 30 crumbies from Farmland in total.'
+  AltarDescription: 'Sacrifice one duck to produce more crumbies. Cost: $10 ($2 +
+    2 * $4), total $10; foundation costs $2; requires 2 times to build, each costs
+    $4. Unlock Condition: Have 6 ducks.'
+  DrumDescription: 'Speed up the ducks that collide with it or when the drum roars.
+    Cost: $50 ($10 + 10 * $4), total $50; foundation costs $10; requires 10 times
+    to build, each costs $4. Unlock Condition: ducks collide buildings 20 times in
+    total.'
 --- !u!1 &189532926243449513
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,9 +178,9 @@ RectTransform:
   m_Father: {fileID: 3679125847056562441}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -17, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1379232625732274796
 CanvasRenderer:
@@ -1244,8 +1315,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 7762388237410950674}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.6453967}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2368,7 +2439,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 7788263312815577062}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.84959066
+  m_Size: 0.3546033
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5317,6 +5388,10 @@ MonoBehaviour:
   farmList: []
   grassList: []
   constructionList: []
+  crumbieGainedFromGrass: 0
+  crumbieEverCollected: 0
+  crumbieGainedFromFarmland: 0
+  duckCollideBuildingTimes: 0
 --- !u!114 &3064272729836684732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6104,17 +6179,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_text
-      value: 'Duck lies in movement, quack!
+      value: 'Speed up the ducks that collide with it or when the drum roars.
 
-        Cost: 10 crumbies for foundation
-        + 4x10 crumbies for construction.
+        Cost:
+        $50 ($10 + 10 * $4), total $50; foundation costs $10; requires 10 times to
+        build, each costs $4.
 
-        Already unlocked!'
+        Unlock Condition: ducks collide buildings
+        20 times in total.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontSize
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 4687aa7e5ab3e994ab40977c3a279d69, type: 2}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -6209,11 +6294,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -2220
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6276,6 +6361,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+--- !u!1 &6894245550759001135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5312112345543924573, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+  m_PrefabInstance: {fileID: 1591228369697138546}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8050748429717470590 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
@@ -6371,18 +6461,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_text
-      value: 'Mr. Duckson found a way to reproduce crumbies. Use this method carefully.
+      value: 'The duck will be forced to labor in it for a few moments, not able
+        to get away, but will produce some crumbies when finished.
 
         Cost:
-        25 crumbies for foundation + 5x15 crumbies for construction.
+        $30 ($6 + 8 * $3), total $30; foundation costs $6; requires 8 times to build,
+        each costs $3.
 
-        Already
-        unlocked!'
+        Unlock Condition: Collect 30 crumbies from Farmland
+        in total.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontSize
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 4687aa7e5ab3e994ab40977c3a279d69, type: 2}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -6477,11 +6577,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -1760
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6547,6 +6647,11 @@ PrefabInstance:
 --- !u!224 &6475045540904028116 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+  m_PrefabInstance: {fileID: 2338730861065297368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7623676468376536709 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5312112345543924573, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
   m_PrefabInstance: {fileID: 2338730861065297368}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2576342405359235102
@@ -6639,18 +6744,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_text
-      value: 'Mr. Duckson found a way to reproduce crumbies. Use this method carefully.
+      value: 'Sacrifice one duck to produce more crumbies.
 
-        Cost:
-        25 crumbies for foundation + 5x15 crumbies for construction.
+        Cost: $10 ($2
+        + 2 * $4), total $10; foundation costs $2; requires 2 times to build, each
+        costs $4.
 
-        Already
-        unlocked!'
+        Unlock Condition: Have 6 ducks.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontSize
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 4687aa7e5ab3e994ab40977c3a279d69, type: 2}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -6745,11 +6858,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -1990
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6815,6 +6928,11 @@ PrefabInstance:
 --- !u!224 &6516195239579085330 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+  m_PrefabInstance: {fileID: 2576342405359235102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7672281964391082819 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5312112345543924573, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
   m_PrefabInstance: {fileID: 2576342405359235102}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2797695979576463228
@@ -6907,18 +7025,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_text
-      value: 'Grow some crops, water them, and collect them.
+      value: 'Grow some crops, ducks can collect them when harvest, or water them
+        when not.
 
-        Cost: 10 crumbies
-        for foundation + 6x3 crumbies  for construction.
+        Cost: $30 ($6 + 8 * $3), total $30; foundation costs $6;
+        requires 8 times to build, each costs $3.
 
-        Unlocking Condition:
-        Collect 10 crumbies from the grass!'
+        Unlocking Condition: Collect
+        10 crumbies from the grass!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontSize
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 4687aa7e5ab3e994ab40977c3a279d69, type: 2}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -6935,9 +7062,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building_buttons (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5719152670858146538, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7172706042799672984, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -18
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Pivot.x
@@ -6953,7 +7084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchorMin.x
@@ -6961,7 +7092,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_SizeDelta.x
@@ -7001,11 +7132,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -380
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7063,6 +7194,11 @@ PrefabInstance:
 --- !u!224 &6880450630292608368 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+  m_PrefabInstance: {fileID: 2797695979576463228}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8028514760392528929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5312112345543924573, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
   m_PrefabInstance: {fileID: 2797695979576463228}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3402074918889761381
@@ -7155,18 +7291,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_text
-      value: 'Mr. Duckson found a way to reproduce crumbies. Use this method carefully.
+      value: 'Ducks can store crumbies here. After a few moments, it will return
+        the ducks with more crumbies.
 
-        Cost:
-        25 crumbies for foundation + 5x15 crumbies for construction.
+        Cost: Cost:$100 ($25 + 15 * $5), total
+        $100; foundation costs $25; requires 15 times to build, each costs $5.
 
-        Already
-        unlocked!'
+        Unlock
+        Condition: Collect 300 crumbies from all sources.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontSize
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 4687aa7e5ab3e994ab40977c3a279d69, type: 2}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -7261,11 +7406,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -1300
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7331,6 +7476,11 @@ PrefabInstance:
 --- !u!224 &6240218673633898601 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+  m_PrefabInstance: {fileID: 3402074918889761381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7390111312441536824 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5312112345543924573, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
   m_PrefabInstance: {fileID: 3402074918889761381}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4893278086278584285
@@ -7566,17 +7716,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_text
-      value: 'A playground could improve the mood.
+      value: 'A playground could improve the happiness of the duck collided.
 
-        Cost: 20 crumbies for
-        foundation + 2x3 crumbies for construction.
+        Cost:
+        $26 ($20 + 2 * $3), total $26; foundation costs $20; requires 10 times to
+        build, each costs $3.
 
-        Already unlocked!'
+        Unlocking Condition: Have 5 ducks.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontSize
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 4687aa7e5ab3e994ab40977c3a279d69, type: 2}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -7611,7 +7770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchorMin.x
@@ -7619,7 +7778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_SizeDelta.x
@@ -7659,11 +7818,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -840
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7726,6 +7885,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+--- !u!1 &1262981699660195658 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5312112345543924573, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+  m_PrefabInstance: {fileID: 6358916796255075351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2418509887597831707 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
@@ -7765,7 +7929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6372784760348236869, guid: e08f5405804e57042b3a0916f645bae5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7848066495884907706, guid: e08f5405804e57042b3a0916f645bae5, type: 3}
       propertyPath: m_text
@@ -7962,12 +8126,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_text
-      value: Don't use this one it's evil
+      value: 'When there are poops inside, every farm or grass within its range will
+        produce more crumbies.
+
+        Cost: $60 ($12 + 12 * $4), total $60; foundation
+        costs $12; requires 12 times to build, each costs $4.
+
+        Unlock Condition:
+        Build 3 Farmland.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontSize
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 4687aa7e5ab3e994ab40977c3a279d69, type: 2}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -8062,11 +8241,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -1070
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8132,6 +8311,11 @@ PrefabInstance:
 --- !u!224 &1731827295387979824 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+  m_PrefabInstance: {fileID: 7036737462750186044}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2891286188473471329 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5312112345543924573, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
   m_PrefabInstance: {fileID: 7036737462750186044}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7567386586819525170
@@ -8224,13 +8408,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_text
-      value: 'Spawn your eggs here and wait for them to crack. Mom and Dad will figure
-        it out.
-
-        Cost: 8 crumbies for foundation + 4x2 crumbies for construction.
-
-        Unlocking
-        Condition: No.'
+      value: "Spawn eggs here, hutch kid ducks after a few moments. \nCost: $15 ($5
+        + 5 * $2), total $15; foundation costs $5; requires 5 times to build, each
+        costs $2 .\nUnlocking Condition: Build 1 Farmland."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontSize
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_margin.y
@@ -8240,6 +8424,10 @@ PrefabInstance:
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 4687aa7e5ab3e994ab40977c3a279d69, type: 2}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -8255,6 +8443,10 @@ PrefabInstance:
     - target: {fileID: 5312112345543924573, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Name
       value: Building_buttons
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719152670858146538, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7172706042799672984, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -8274,7 +8466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchorMin.x
@@ -8282,7 +8474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_SizeDelta.x
@@ -8322,11 +8514,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8368,6 +8560,11 @@ PrefabInstance:
 --- !u!224 &1201316296376672318 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+  m_PrefabInstance: {fileID: 7567386586819525170}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2358945062960898415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5312112345543924573, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
   m_PrefabInstance: {fileID: 7567386586819525170}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7919809602339170079
@@ -8460,18 +8657,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_text
-      value: 'Looking at the golden corn, the ducks remember to get more crumbies.
+      value: 'The ducks will go straight to the nearest farm or grass when touching
+        it or when the horn blows.
 
-        Cost:
-        12 crumbies for foundation + 5x4 crumbies for construction.
+        Cost: $40 ($10 + 10 * $3), total $40;
+        foundation costs $10; requires 10 times to build, each costs $3.
 
         Unlocking
-        Condition: Build 1 farmland.'
+        Condition: Built 2 farmlands.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontSize
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 4687aa7e5ab3e994ab40977c3a279d69, type: 2}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -8506,7 +8712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchorMin.x
@@ -8514,7 +8720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_SizeDelta.x
@@ -8554,11 +8760,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -610
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8616,6 +8822,11 @@ PrefabInstance:
 --- !u!224 &1461413750176414995 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+  m_PrefabInstance: {fileID: 7919809602339170079}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2616796819425573954 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5312112345543924573, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
   m_PrefabInstance: {fileID: 7919809602339170079}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8353274911518285288
@@ -8708,18 +8919,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_text
-      value: 'Mr. Duckson found a way to reproduce crumbies. Use this method carefully.
+      value: 'The ducks will go straight to the nearest construction site when touching
+        it.
 
-        Cost:
-        25 crumbies for foundation + 5x15 crumbies for construction.
+        Cost: $40 ($10 + 10 * $3), total $40; foundation costs $10;
+        requires 10 times to build, each costs $3.
 
-        Already
-        unlocked!'
+        Unlock Condition: Build
+        3 buildings in total.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontSize
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 4687aa7e5ab3e994ab40977c3a279d69, type: 2}
+    - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -8814,11 +9034,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -1530
       objectReference: {fileID: 0}
     - target: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8884,5 +9104,10 @@ PrefabInstance:
 --- !u!224 &739689339570571236 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8768276268375710220, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+  m_PrefabInstance: {fileID: 8353274911518285288}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4203161712232629941 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5312112345543924573, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
   m_PrefabInstance: {fileID: 8353274911518285288}
   m_PrefabAsset: {fileID: 0}
