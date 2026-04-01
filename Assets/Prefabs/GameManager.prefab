@@ -1999,7 +1999,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2113882199429230324}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2111224227258808617}
+        m_TargetAssemblyTypeName: BuildingPlacer, Assembly-CSharp
+        m_MethodName: RemoveToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2533609247846509224
 GameObject:
   m_ObjectHideFlags: 0
@@ -6580,7 +6592,7 @@ Transform:
   m_GameObject: {fileID: 8419782432875219653}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.34281, y: 0.34312, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6642,6 +6654,7 @@ MonoBehaviour:
   crumbieEverCollected: 0
   crumbieGainedFromFarmland: 0
   duckCollideBuildingTimes: 0
+  curBuildingList: []
 --- !u!114 &3064272729836684732
 MonoBehaviour:
   m_ObjectHideFlags: 0

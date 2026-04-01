@@ -142,6 +142,12 @@ public class Farmland : Building
         PublicInfo.reference.curBuildingList.Remove(this);
     }
 
+    public override void Remove()
+    {
+        PublicInfo.reference.farmList.Remove(this);
+        base.Remove();
+    }
+
     void Decay()
     {
         curCropCount = 0;
@@ -152,18 +158,8 @@ public class Farmland : Building
         spriteRenderer.color = tempColor;
     }
 
-    //If this is removed, remove the whole thing
-    public override void Remove()
+    public override void StartDeconstruction() //Farm holder deals ith this
     {
-        if (!holder.destroyed) {
-            holder.Remove();
-        }
-    }
-
-    //If this is removed, remove the whole thing
-    public override void StartDeconstruction()
-    {
-        holder.StartDeconstruction();
     }
 
 }

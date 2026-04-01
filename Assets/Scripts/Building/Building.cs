@@ -19,7 +19,7 @@ public class Building : MonoBehaviour
     protected bool built;
     [SerializeField] protected int placeCost;
     [SerializeField] protected int buildCost;
-    bool removing;
+    protected bool removing;
     [SerializeField] int removeHitsRequired = 2;
     int removeCounter;
     [SerializeField] float buildTime = 2f;
@@ -103,7 +103,7 @@ public class Building : MonoBehaviour
             //Add 1 remove
             yield return StartCoroutine(WaitWithProgress(removeTime, duck.ProgressBar));
 
-            removeCounter++;
+            AddRemove();
             if (removeCounter >= removeHitsRequired)
             {
                 Remove();
@@ -145,6 +145,13 @@ public class Building : MonoBehaviour
         progressBar.ChangeFill(constructionCount/constructionNeeded);
     }
 
+    void AddRemove()
+    {
+        removeCounter++;
+
+        progressBar.ChangeFill((float)removeCounter/removeHitsRequired);
+    }
+
     public virtual void Build()
     {
         built = true;
@@ -161,13 +168,17 @@ public class Building : MonoBehaviour
 
     public virtual void Remove()
     {
-        Destroy(gameObject);
         PublicInfo.reference.constructionList.Remove(this);
+        Destroy(gameObject);
     }
 
     public virtual void StartDeconstruction()
     {
+        if (removing) {return;}
+
         removing = true;
+        progressBar.ShowBar();
+        progressBar.ChangeFill(0);
         PublicInfo.reference.constructionList.Add(this);
         PublicInfo.reference.curBuildingList.Remove(this);
     }
@@ -194,7 +205,7 @@ public class Building : MonoBehaviour
 
     void Update()
     {
-        if (!built) {return;}
+        if (!built || removing) {return;}
 
         UpdateBehavior();
     }
