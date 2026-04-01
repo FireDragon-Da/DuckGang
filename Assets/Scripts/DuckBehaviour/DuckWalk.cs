@@ -238,7 +238,6 @@ public class DuckWalk : MonoBehaviour
         if (collision.CompareTag("Building"))
         {
             Building curBuilding = collision.GetComponent<Building>();
-            PublicInfo.reference.duckCollideBuildingTimes += 1;
             StartCoroutine(BuildingInteraction(curBuilding, collision));
         }
     }
@@ -261,18 +260,24 @@ public class DuckWalk : MonoBehaviour
                 if (targetBounce != Vector2.zero)
                 {
                     ChangeDirection(targetBounce);
+                    PublicInfo.reference.duckCollideBuildingTimes += 1;
+
                 }
                 else //If the unique bounce can't be used for some reason
                 {
                     WallBounce((transform.position - collision.transform.position).normalized);
+                    PublicInfo.reference.duckCollideBuildingTimes += 1;
+
                 }
-                
+
             }
             else
             {
                 WallBounce((transform.position - collision.transform.position).normalized);
+                PublicInfo.reference.duckCollideBuildingTimes += 1;
+
             }
-            
+
         }
     }
 

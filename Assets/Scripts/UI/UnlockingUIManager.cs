@@ -178,7 +178,7 @@ public class UnlockingUIManager : MonoBehaviour
 
     void TestIfHammerSawIsUnlocked()
     {
-        if (!isHammerSawUnlocked && PublicInfo.reference.constructionList.Count >= 3)
+        if (!isHammerSawUnlocked && PublicInfo.reference.curBuildingList.Count >= 3)
         {
             isHammerSawUnlocked = true;
             ChangeHammerSawDescriptionIfUnlocked();
@@ -214,7 +214,7 @@ public class UnlockingUIManager : MonoBehaviour
 
     void TestIfDrumIsUnlocked()
     {
-        if (!isDrumUnlocked && PublicInfo.reference.duckCollideBuildingTimes >= 20)
+        if (!isDrumUnlocked && PublicInfo.reference.duckCollideBuildingTimes >= 50)
         {
             isDrumUnlocked = true;
             ChangeDrumDescriptionIfUnlocked();
