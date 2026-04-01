@@ -154,6 +154,7 @@ public class Building : MonoBehaviour
         spriteRenderer.enabled = true;
 
         PublicInfo.reference.constructionList.Remove(this);
+        PublicInfo.reference.curBuildingList.Add(this);
 
         if (vfxHandler != null) vfxHandler.PlayEffect(buildCompleteVFX);
     }
@@ -168,6 +169,7 @@ public class Building : MonoBehaviour
     {
         removing = true;
         PublicInfo.reference.constructionList.Add(this);
+        PublicInfo.reference.curBuildingList.Remove(this);
     }
 
     public virtual void StartBuild()
