@@ -268,7 +268,7 @@ MonoBehaviour:
   constructionNeeded: 8
   placeCost: 6
   buildCost: 3
-  removeHitsRequired: 2
+  removeHitsRequired: 4
   buildTime: 2
   removeTime: 2
   filledSpots: 01010101
