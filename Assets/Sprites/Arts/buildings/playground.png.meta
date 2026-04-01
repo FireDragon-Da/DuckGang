@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: ec1d3c9b432e17b4984cb0b6cb75e4ee
+guid: ac37d5e3367306549829ae3c3f548a00
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4705246525205698813
-    second: nest_0
+      213: 1336840205157546448
+    second: playground_0
+  - first:
+      213: 5946226634917283096
+    second: playground_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,43 +99,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: nest_0
+      name: playground_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 19
-        width: 290
-        height: 134
+        x: 42
+        y: 37
+        width: 957
+        height: 458
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df8d68309c46c4140800000000000000
-      internalID: 4705246525205698813
+      spriteID: 0d930ed65196d8210800000000000000
+      internalID: 1336840205157546448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playground_1
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 55
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8150638be9d358250800000000000000
+      internalID: 5946226634917283096
       vertices: []
       indices: 
       edges: []
@@ -161,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      nest_0: 4705246525205698813
+      playground_0: 1336840205157546448
+      playground_1: 5946226634917283096
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

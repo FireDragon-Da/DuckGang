@@ -8,17 +8,26 @@ using UnityEngine;
 //drag the TXT_Articles file (should be in the same folder) into the textFile field in the editor
 
 //the dictionary namedArticles contains all specific articles relating to game properties
-    //these can be accessed by their keys, ie StarvationArticle or FarmArticle
+//these can be accessed by their keys, ie StarvationArticle or FarmArticle
 //the list fluffArticles has all of the random articles that can be filled in in there are no named articles for the month
-    //these can just be added randomly since they won't correspond to anything
+//these can just be added randomly since they won't correspond to anything
+
 
 public class ArticleCreator : MonoBehaviour
 {
+
+    public static ArticleCreator reference;
+    
+
     public Dictionary<string, ArticleEvent> namedArticles = new Dictionary<string, ArticleEvent>();
     public List<ArticleEvent> fluffArticles = new List<ArticleEvent>();
     public TextAsset textFile;
+   
+    void Awake()
+    {
+        reference = this;
+    }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         if (textFile == null)
@@ -40,7 +49,7 @@ public class ArticleCreator : MonoBehaviour
 
         if (data.Length != 4 )
         {
-            print("bad article! skipping...");
+            print("ArticleCreator: bad article! skipping...");
             return;
         }
 

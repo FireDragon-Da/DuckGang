@@ -109,7 +109,7 @@ public class DuckSpeakManager : MonoBehaviour
 
         Debug.Log($"[DuckSpeakManager] ? Got dialog: {dialogLine}");
 
-        string formattedMessage = $"<color=yellow>{chosenDuck.CurrentDuckName}: {dialogLine}</color>";
+        string formattedMessage = $"<color=darkyellow>{chosenDuck.CurrentDuckName}: {dialogLine}</color>";
         Debug.Log($"[DuckSpeakManager] Formatted message: {formattedMessage}");
 
         if (targetTextBox != null)
