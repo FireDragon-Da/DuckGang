@@ -490,7 +490,7 @@ MonoBehaviour:
   walkable: 1
   constructionNeeded: 2
   placeCost: 5
-  buildCost: 2
+  buildCost: 5
   removeHitsRequired: 2
   buildTime: 2
   removeTime: 2
