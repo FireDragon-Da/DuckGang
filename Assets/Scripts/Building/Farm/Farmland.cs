@@ -85,6 +85,7 @@ public class Farmland : Building
 
         //crumb visualization
         CrumbManager.reference.GainCrumbs(cropCrumbGain);
+        PublicInfo.reference.crumbieGainedFromFarmland += cropCrumbGain;
         CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, cropCrumbGain);
 
         //SFX

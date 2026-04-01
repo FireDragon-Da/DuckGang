@@ -10,6 +10,10 @@ public class PublicInfo : MonoBehaviour
     public List<Farmland> farmList = new();
     public List<Grass> grassList = new();
     public List<Building> constructionList = new();
+    public int crumbieGainedFromGrass = 0;
+    public int crumbieEverCollected = 0;
+    public int crumbieGainedFromFarmland = 0;
+    public int duckCollideBuildingTimes = 0;
 
     void Awake()
     {

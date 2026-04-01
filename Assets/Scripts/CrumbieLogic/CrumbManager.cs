@@ -23,6 +23,7 @@ public class CrumbManager : MonoBehaviour
     public void GainCrumbs(int amount)
     {
         crumbs += amount;
+        PublicInfo.reference.crumbieEverCollected += amount;
         UpdateCrumbCount();
     }
 
