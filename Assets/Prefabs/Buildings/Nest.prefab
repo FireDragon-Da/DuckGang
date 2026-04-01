@@ -502,7 +502,7 @@ MonoBehaviour:
   removeHitVFX: {fileID: 0}
   progressBar: {fileID: 1560123294479746760}
   effectApplier: {fileID: 7290271145044701039}
-  defaultEggTimer: 20
+  defaultEggTime: 15
   layTime: 2
   totalUses: 3
   sprites:
