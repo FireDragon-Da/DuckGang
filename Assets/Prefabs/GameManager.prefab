@@ -6642,6 +6642,7 @@ MonoBehaviour:
   crumbieEverCollected: 0
   crumbieGainedFromFarmland: 0
   duckCollideBuildingTimes: 0
+  curBuildingList: []
 --- !u!114 &3064272729836684732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9340,7 +9341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6372784760348236869, guid: e08f5405804e57042b3a0916f645bae5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7848066495884907706, guid: e08f5405804e57042b3a0916f645bae5, type: 3}
       propertyPath: m_text
