@@ -19,6 +19,8 @@ public class UnlockingUIManager : MonoBehaviour
     public bool isDrumUnlocked;
 
     private bool hasOpened = false;
+    private bool hasunlocked = false;
+
 
     public GameObject NestBuildingBar;
     public GameObject FarmlandBuildingBar;
@@ -93,6 +95,22 @@ public class UnlockingUIManager : MonoBehaviour
         TestIfStrawCraftIsUnlocked();
         TestIfAltarIsUnlocked();
         TestIfDrumIsUnlocked();
+
+        if (!hasunlocked)
+        {
+            ChangeNestDescriptionIfUnlocked();
+            ChangeFarmlandDescriptionIfUnlocked();
+            ChangeGoldenCornDescriptionIfUnlocked();
+            ChangeCompostsiteDescriptionIfUnlocked();
+            ChangeSecreteSiteDescriptionIfUnlocked();
+            ChangeHammerSawDescriptionIfUnlocked();
+            ChangePlaygroundDescriptionIfUnlocked();
+            ChangeStrawCraftDescriptionIfUnlocked();
+            ChangeAltarDescriptionIfUnlocked();
+            ChangeDrumDescriptionIfUnlocked();
+            hasunlocked=true;
+        }
+        
     }
 
     void SetAllBuildingsDescriptionLocked()
