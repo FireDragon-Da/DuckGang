@@ -1,18 +1,25 @@
 using UnityEngine;
 
-public class Grass : MonoBehaviour
+public class Grass : Building
 {
+    //Ideally this stuff would have been done in mapgen
     void Start()
     {
-        //TODO remove this it is just for temp testing and should be done elsewhere
+        Vector2Int arrayPos = MapManager.reference.TilemapPosToArrayPos(
+            MapManager.reference.TransformPosToTilemapPos(transform.position)
+        );print(arrayPos);
+        MapManager.reference.buildingArray[arrayPos.x,arrayPos.y] = this;
+
         PublicInfo.reference.grassList.Add(this);
+
+        BasicBuild();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Duck"))
         {
-            //TODO This check should be redone, grass should be a building
+            
             if (collision.GetComponent<DuckWalk>().beingDragged)
             {
                 return;

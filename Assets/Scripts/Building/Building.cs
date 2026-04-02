@@ -153,10 +153,15 @@ public class Building : MonoBehaviour
         progressBar.ChangeFill((float)removeCounter/removeHitsRequired);
     }
 
-    public virtual void Build()
+    protected void BasicBuild()
     {
         built = true;
         progressBar.HideBar();
+    }
+
+    public virtual void Build()
+    {
+        BasicBuild();
 
         foundationSpriteRenderer.enabled = false;
         spriteRenderer.enabled = true;
