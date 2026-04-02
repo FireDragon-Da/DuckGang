@@ -104,11 +104,13 @@ public class DuckWalk : MonoBehaviour
                 if (duckHit.collider != col)
                 {
                     Vector3 otherPos = duckHit.collider.transform.position;
-                    duckHit.collider.GetComponent<DuckWalk>().DuckBounce(transform.position);
-                    DuckBounce(otherPos);
+                    DuckWalk otherDuck = duckHit.collider.GetComponent<DuckWalk>();
+                    otherDuck.DuckBounce(this);
+                    DuckBounce(otherDuck);
 
                     duckHit.collider.GetComponent<DuckStats>().modHappinessOnCollision(stats.Happiness);
                     stats.modHappinessOnCollision(duckHit.collider.GetComponent<DuckStats>().Happiness);
+
                     break;
                 }
             }
@@ -127,13 +129,15 @@ public class DuckWalk : MonoBehaviour
     }
 
     //For bouncing directly off a duck
-    public void DuckBounce(Vector3 other)
+    public void DuckBounce(DuckWalk other)
     {
-        ChangeDirection((transform.position - other).normalized);
+        ChangeDirection((transform.position - other.transform.position).normalized);
 
-        if (PublicInfo.reference.AnyNestEmpty() && UnityEngine.Random.Range(0,1) < loveChance)
-        {
-            GainStatusEffect(Instantiate(loveEffect));
+        if (!stats.IsBaby && !other.stats.IsBaby) {
+            if (PublicInfo.reference.AnyNestEmpty() && UnityEngine.Random.Range(0,1) < loveChance)
+            {
+                GainStatusEffect(Instantiate(loveEffect));
+            }
         }
     }
 
@@ -258,7 +262,7 @@ public class DuckWalk : MonoBehaviour
             return;
         }
 
-        if (collision.CompareTag("Building"))
+        if (collision.CompareTag("Building") && !stats.IsBaby)
         {
             Building curBuilding = collision.GetComponent<Building>();
 
@@ -301,9 +305,9 @@ public class DuckWalk : MonoBehaviour
         }
     }
 
-    public bool TryInteract(Building targetBuilding)
+    public bool TryInteract(Building targetBuilding) //For interacting not directly with building
     {
-        if (interacting != null) {return false;}
+        if (interacting != null || beingDragged || stats.IsBaby) {return false;}
 
         canBeGrabbed = false;
         interacting = targetBuilding;

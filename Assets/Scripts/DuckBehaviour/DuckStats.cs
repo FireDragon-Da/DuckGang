@@ -19,6 +19,12 @@ public class DuckStats : MonoBehaviour
     float lifespan;
     float curLife;
 
+    [Header("Baby Settings")]
+    [SerializeField] bool isBaby = true;
+    public bool IsBaby => isBaby;
+    [SerializeField] float babyDuration = 60f;
+    [SerializeField] Animator animator;
+
     private bool isDead = false;
 
     public const int MaxStatValue = 100;
@@ -39,8 +45,7 @@ public class DuckStats : MonoBehaviour
         }
     }
 
-    //max age is around 3000, max in-game age is ~60
-    public int Age => Mathf.FloorToInt(curLife / 50);
+    public int Age => Mathf.FloorToInt(curLife / 10);
     public int MaxAge => Mathf.FloorToInt(lifespan);
 
     //passive happiness drop value
@@ -55,7 +60,19 @@ public class DuckStats : MonoBehaviour
     {
         lifespan = averageLifespan + UnityEngine.Random.Range(-lifespanVariance / 2, lifespanVariance / 2);
 
+
         StartCoroutine(passiveHappinessDrop());
+
+        if (!isBaby)
+        {
+            GrowUp();
+        }
+        else
+        {
+            curLife = 0;
+            animator.SetBool("isBaby", true);
+        }
+
     }
 
     void Update()
@@ -63,6 +80,11 @@ public class DuckStats : MonoBehaviour
         if (isDead) return;
 
         curLife += Time.deltaTime;
+
+        if (isBaby && curLife > babyDuration)
+        {
+            GrowUp();
+        }
 
         if (curLife >= lifespan)
         {
@@ -129,4 +151,12 @@ public class DuckStats : MonoBehaviour
 
         ModifyHappiness(happyMod);
     }
+
+    public void GrowUp()
+    {
+        isBaby = false;
+        curLife = babyDuration;
+        animator.SetBool("isBaby", false);
+    }
+
 }
