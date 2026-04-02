@@ -7,7 +7,17 @@ public class PopupTriggerTest : MonoBehaviour
     [SerializeField] private string targetCategory;
     [SerializeField] private List<Vector2> customPositions = new List<Vector2>();
 
+    public bool triggerOnStart = false;
+
     [ContextMenu("Trigger Popup")]
+
+    private void Start()
+    {
+        if (triggerOnStart)
+        {
+            TriggerMyPopup();
+        }
+    }
     public void TriggerMyPopup()
     {
         if (PopupManager.Instance == null || quacxiconSO == null) return;

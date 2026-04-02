@@ -306,7 +306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -18.5172, y: 22}
+  m_AnchoredPosition: {x: -76, y: -127}
   m_SizeDelta: {x: 352.9657, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1981466785417464118
@@ -2766,6 +2766,7 @@ MonoBehaviour:
   customPositions:
   - {x: 100, y: 100}
   - {x: 200, y: 200}
+  triggerOnStart: 0
 --- !u!1 &2820761235777249599
 GameObject:
   m_ObjectHideFlags: 0
@@ -3317,7 +3318,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1111363450385128167}
   m_HandleRect: {fileID: 2359640398245695792}
   m_Direction: 2
-  m_Value: 1.0000018
+  m_Value: 1.0000058
   m_Size: 0.6666667
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5539,8 +5540,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.657385, y: -2.8492}
-  m_SizeDelta: {x: 396.3153, y: 244.4943}
+  m_AnchoredPosition: {x: 3.5955, y: -127.29242}
+  m_SizeDelta: {x: 581.4611, y: 169.9094}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5039764446434266820
 CanvasRenderer:
@@ -6845,7 +6846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 0, y: -0.0005645752}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &7228465248248824662
@@ -8301,6 +8302,9 @@ GameObject:
   - component: {fileID: 6815134751862295159}
   - component: {fileID: 2545802020297177650}
   - component: {fileID: 2865197382281362407}
+  - component: {fileID: 6169121046599755092}
+  - component: {fileID: 4039424153079914584}
+  - component: {fileID: 4288473015694714660}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -8523,6 +8527,52 @@ MonoBehaviour:
     the drum roars. Cost: $50 ($10 + 10 * $4), total $50; foundation costs $10; requires
     10 times to build, each costs $4. Unlock Condition: ducks collide buildings 20
     times in total.'
+--- !u!114 &6169121046599755092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8419782432875219653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc3f392d775691543ae254698a9d8cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArticleCreator
+  textFile: {fileID: 4900000, guid: 897dc624b2a973749942bb9e4496f503, type: 3}
+--- !u!114 &4039424153079914584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8419782432875219653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ad199376298e145aea03d8d20b4124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  loseOnWork: -4
+  playgroundGainInteract: 7
+  playgroundGainPassive: 3
+  passiveDrop: 0.07
+  instaKillHappiness: 0
+--- !u!114 &4288473015694714660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8419782432875219653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d88ba079333587409c4dae618de50b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopupTriggerTest
+  quacxiconSO: {fileID: 11400000, guid: 2f369d3f95eb8a94dbe8fe8176c592c2, type: 2}
+  targetCategory: Tutorial
+  customPositions: []
+  triggerOnStart: 1
 --- !u!1 &8580610215923662431
 GameObject:
   m_ObjectHideFlags: 0
@@ -11308,7 +11358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6372784760348236869, guid: e08f5405804e57042b3a0916f645bae5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7848066495884907706, guid: e08f5405804e57042b3a0916f645bae5, type: 3}
       propertyPath: m_text
