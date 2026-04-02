@@ -64,56 +64,31 @@ MonoBehaviour:
     - "Good luck boss, and remember I\u2019m watching you."
     sourceTxtFile: {fileID: 4900000, guid: ec6b39934239aeb4fa1790df476d6e9e, type: 3}
     targetCategoryName: 
-    clearExistingContent: 0
+    clearExistingContent: 1
   - categoryName: TutorialShort
     contentList:
-    - Whew! I am so glad you finally made it!
-    - "You know, If you didn\u2019t show up, I\u2019d have to hunt you down haha!"
-    - "Anyway, I\u2019m glad we can have you."
-    - "Just take one look at this place it\u2019s obvious we need the help."
-    - But let me show you around, so that this can be a smooth transition.
-    - "You wouldn\u2019t want to end up like the last mayor, am I right?!"
-    - "You don\u2019t. I wouldn\u2019t recommend it."
+    - "Whew! I\u2019m so glad you finally made it!"
+    - Let me show you around so that this can be a smooth transition.
+    - "You wouldn\u2019t want to end up like the last mayor, right??"
+    - "\u2026you don\u2019t. Really."
     - But lets get on with it.
-    - This is your calendar.
-    - You know what a calendar is right?
-    - "Well if you don\u2019t it shows you the day it is of course!"
-    - "If you want to know how much time you have until the next month just look
-      at this bar right here. Once the bar is full it\u2019s time to move on!"
-    - However, if you ever get one of those days where you feel like time is just
-      dragging on just use this fast forward to kick things up a notch.
-    - If you even feel like you need time to think then you can also use this to
-      have things come to a full stop.
-    - "Whenever you\u2019re ready to come back just use this to continue where you
-      left off."
-    - "You\u2019re not the only one who will get moody around here you know."
-    - "If you\u2019re gonna be the major you have to take care of us which means
-      giving us things that will make us happy."
-    - This stat right here tells you the happiness of all of the ducks in your land.
-    - Sometimes how a duck feels will be obvious, so obvious that it will just show
-      up above their heads.
-    - But if you ever want to see what is specifically  bothering a duck just click
-      on them for more information!
-    - When you click on a duck you will be able to see their individual happiness
-      and hunger levels.
-    - How do you make us happy you ask?
-    - "Well that\u2019s easy! You give us more stuff to do!"
-    - This right here shows you all the buildings that can be created to spruce up
-      the place.
-    - "You like it? I can\u2019t wait to see what it would look like in person."
-    - "Each build has a requirement that will benefit our \u201Clovely\u201D community.
-      Each build costs a certain amount of crumbies so don\u2019t get too trigger
-      happy."
+    - "If you\u2019re gonna be the major you have to make sure that everyone gets
+      fed and that no one gets too unhappy."
+    - If you ever want to see how someone is doing, you can click on them to find
+      out.
+    - "It\u2019s looking glum right now, but there are lots of buildings you could
+      create to spruce up the place."
+    - "Nothing\u2019s free, though! And things take time to be built before they
+      can be used, so don\u2019t get too trigger happy."
     - If you ever want to know the crumbs of the community that is my specialty.
-    - Here is a journal, I will make sure to keep you updated on all the things going
-      on. From boring political news to juicy gossip!
-    - Hover over it and you have a choice of either the newspaper or my trusty notepad.
-    - If you want the boring stuff just click the newspaper, it will tell you all
-      of the developments that you and the community have done.
-    - But if you want something more interesting just check out my notepad. I have
+    - "As your trusty journalist, I\u2019ll keep you updated on all goings-on. From
+      boring political news to juicy gossip!"
+    - "I\u2019ll update my newspaper every month so you can see all of the developments
+      that you and the community have done."
+    - But, if you want something more personal, just check out my notepad. I have
       ears everywhere.
-    - That should be everything! I should be around if you ever need a refresher.
-    - "Good luck boss, and remember I\u2019m watching you."
-    sourceTxtFile: {fileID: 4900000, guid: ec6b39934239aeb4fa1790df476d6e9e, type: 3}
+    - "That should be everything! Good luck boss, and remember I\u2019m watching
+      you."
+    sourceTxtFile: {fileID: 4900000, guid: a584cf32f1dad5640a5a71eeae981272, type: 3}
     targetCategoryName: 
-    clearExistingContent: 0
+    clearExistingContent: 1
