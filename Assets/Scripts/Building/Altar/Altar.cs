@@ -36,6 +36,8 @@ public class Altar : Building
 
             heldDuck.GetComponent<DuckStats>().Die(DeathReason.Disappeared);
             CrumbManager.reference.GainCrumbs(productionAmount);
+            CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, productionAmount);
+
             foreach (DuckWalk curDuck in curWatchers)
             {
                 curDuck.EndInteract(this);

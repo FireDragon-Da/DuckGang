@@ -28,6 +28,7 @@ public class SecretSite : Building
         {
             yield return StartCoroutine(WaitWithProgress(fillTime, duck.ProgressBar));
             curCapactiy += takePerTouch;
+            CrumbManager.reference.SpawnCrumbiePopupDecrease(transform.position, takePerTouch);
             print("filed");
             if (curCapactiy >= totalCapactiy)
             {
@@ -59,5 +60,6 @@ public class SecretSite : Building
 
         producing = false;
         CrumbManager.reference.GainCrumbs(totalGain);
+        CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, totalGain);
     }
 }
