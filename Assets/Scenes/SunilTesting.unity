@@ -68152,7 +68152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6936053547256598761, guid: 37d779a7f2cc2364ba8b178377e554ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.09
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -133001,7 +133001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4497072422537156931, guid: 937979eed1ce7354e8cbc335de155503, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.34952
+      value: 10.44
       objectReference: {fileID: 0}
     - target: {fileID: 4497072422537156931, guid: 937979eed1ce7354e8cbc335de155503, type: 3}
       propertyPath: m_LocalPosition.z
@@ -133037,7 +133037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6936053547256598761, guid: 937979eed1ce7354e8cbc335de155503, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.88
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -135549,6 +135549,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1417862247}
     m_Modifications:
+    - target: {fileID: 5202530350097780069, guid: 89992ff3af29cde46bcb0d9c24ff4d28, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6757929086206339906, guid: 89992ff3af29cde46bcb0d9c24ff4d28, type: 3}
       propertyPath: m_Name
       value: Grass (26)
@@ -136311,6 +136315,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5716779658420469607, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716779658420469607, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716779658420469607, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8136879387656836452, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -136321,7 +136337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9134085688117941406, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: 0.000015258789
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

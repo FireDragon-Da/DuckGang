@@ -89,6 +89,11 @@ public class MapManager : MonoBehaviour
         }
     }
 
+    public Vector2Int TransformPosToTilemapPos(Vector2 transformPos)
+    {
+        return new((int)(transformPos.x-0.5f) , ((int)(transformPos.y-0.5f) ));
+    }
+
     public Vector2Int TilemapPosToArrayPos(Vector2Int tilemapPos)
     {
         return new(tilemapPos.x - mapLeft, -(tilemapPos.y + 1 - mapTop));

@@ -22,9 +22,10 @@ public class DuckDragger : MonoBehaviour
                 {
                     if (hit.collider.CompareTag("Duck"))
                     {
-                        curDuck = hit.collider.GetComponent<DuckWalk>();
-                        if (curDuck.CanBeGrabbed)
+                        DuckWalk tempCurDuck = hit.collider.GetComponent<DuckWalk>();
+                        if (tempCurDuck.CanBeGrabbed)
                         {
+                            curDuck = tempCurDuck;
                             curDuck.beingDragged = true;
                         }
                     }
