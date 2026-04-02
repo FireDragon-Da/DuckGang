@@ -144,6 +144,16 @@ MonoBehaviour:
     the drum roars. Cost: $50 ($10 + 10 * $4), total $50; foundation costs $10; requires
     10 times to build, each costs $4. Unlock Condition: ducks collide buildings 20
     times in total.'
+  nestUnlockingText: 
+  farmlandUnlockingText: 
+  goldenCornUnlockingText: 
+  playgroundUnlockingText: 
+  compostsiteUnlockingText: 
+  secreteSiteUnlockingText: 
+  hammerSawUnlockingText: 
+  strawCraftUnlockingText: 
+  altarUnlockingText: 
+  drumUnlockingText: 
 --- !u!1 &189532926243449513
 GameObject:
   m_ObjectHideFlags: 0
@@ -8527,6 +8537,40 @@ MonoBehaviour:
     the drum roars. Cost: $50 ($10 + 10 * $4), total $50; foundation costs $10; requires
     10 times to build, each costs $4. Unlock Condition: ducks collide buildings 20
     times in total.'
+  nestUnlockingText: 'Nest unlocked! Ducks have now learnt the necessity of reproduction
+    and offspring after building the farmland as a consistent crumbie resource! The
+    nest can add new populations to ducks! (Click Twice to close) '
+  farmlandUnlockingText: 'Farmland unlocked! Ducks have learnt the knowledge of farming
+    by collecting enough crumbies from grass. Build farmland to gain crumbies to
+    feed your ducks and use them to develop the duck society! (Click Twice to close) '
+  goldenCornUnlockingText: 'Golden Corn Unlocked! Ducks have learnt the necessity
+    of agriculture after building some farmlands, so they figured out Golden Corn
+    to remind their farming agencies! (Click Twice to close) '
+  playgroundUnlockingText: 'Playground unlocked! Ducks found that they started to
+    become unhappy when there were too many ducks in the society. They are losing
+    happiness because of the massive duck population and because of their work! They
+    figured out the playground as a way to entertain themselves. (Click Twice to
+    close) '
+  compostsiteUnlockingText: 'Compost Site unlocked! Ducks have learnt that farmlands
+    can produce more crumbies if they throw their pops to the farmlands! (Click Twice
+    to close) '
+  secreteSiteUnlockingText: 'Mr Duckson''s Secret Site unlocked! Ducks have learnt
+    the foundation of the business: invest, lend, store, and harvest by collecting
+    a relatively huge amount of crumbies! (Click Twice to close) '
+  hammerSawUnlockingText: 'Symbol of Hammer and Saw unlocked! Ducks have learnt the
+    necessity of habitat construction after building some buildings, so they figured
+    out Symbol of Hammer and Saw to remind their constructing agencies! (Click Twice
+    to close) '
+  strawCraftUnlockingText: 'Straw Craft unlocked! Ducks have learnt a new way to
+    produce more crumbies: doing labors and making the raw materials into advanced
+    products, after collecting many raw materials from the farmlands! (Click Twice
+    to close) '
+  altarUnlockingText: 'Altar unlocked! Overpopulation is dangerous! Ducks have figured
+    out a way to deal with this problem... Their Gods will reward them for building
+    this altar! (Click Twice to close) '
+  drumUnlockingText: 'Duck duck drum unlocked! Ducks have learnt the benefit of walking
+    like a New Yorker after working enough times in different buildings. (Click Twice
+    to close) '
 --- !u!114 &6169121046599755092
 MonoBehaviour:
   m_ObjectHideFlags: 0
