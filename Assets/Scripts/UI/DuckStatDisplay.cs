@@ -5,7 +5,8 @@ using UnityEngine;
 public class DuckStatDisplay : MonoBehaviour
 {
 
-    [SerializeField] TextMeshProUGUI nameAndAge;
+    [SerializeField] TextMeshProUGUI name;
+    [SerializeField] TextMeshProUGUI age;
     [SerializeField] TextMeshProUGUI hunger;
     [SerializeField] TextMeshProUGUI happiness;
 
@@ -13,6 +14,8 @@ public class DuckStatDisplay : MonoBehaviour
     DuckStats stats;
 
     public static DuckStatDisplay reference;
+
+    public bool displayExactNumbers = false;
 
     void Awake()
     {
@@ -42,19 +45,67 @@ public class DuckStatDisplay : MonoBehaviour
 
     void updateStats()
     {
-        nameAndAge.text = duckName + ", " + stats.Age;
-        hunger.text = "hunger: " + stats.Hunger + "/100";
-        happiness.text = "happiness: " + stats.Happiness + "/100";
+        name.text = duckName;
+        age.text = stats.Age + " years old";
+
+        if (displayExactNumbers)
+        {
+            hunger.text = "hunger: " + stats.Hunger + "/100";
+            happiness.text = "joy: " + stats.Happiness + "/100";
+        }
+        else
+        {
+            string hungerText = "";
+            string happinessText = "";
+
+            switch (stats.Hunger)
+            {
+                case > 90:
+                    hungerText = "Very full!";
+                    break;
+                case > 70:
+                    hungerText = "Full & satisfied.";
+                    break;
+                case > 50:
+                    hungerText = "Not too hungry.";
+                    break;
+                case > 30:
+                    hungerText = "Feeling hungry.";
+                    break;
+                case > 10:
+                    hungerText = "Very hungry...";
+                    break;
+                default:
+                    hungerText = "STARVING";
+                    break;
+            }
+            
+            switch (stats.Happiness)
+            {
+                case > 90:
+                    happinessText = "Euphoric!";
+                    break;
+                case > 70:
+                    happinessText = "Very content.";
+                    break;
+                case > 50:
+                    happinessText = "Quite happy.";
+                    break;
+                case > 30:
+                    happinessText = "Feeling neutral.";
+                    break;
+                case > 10:
+                    happinessText = "Getting sad...";
+                    break;
+                default:
+                    happinessText = "Depressed";
+                    break;
+            }
+
+            hunger.text = hungerText;
+            happiness.text = happinessText;
+        }
     }
 
-
-    //obselete
-    public void displayStats(string name, int age, int hun, int hap)
-    {
-        gameObject.SetActive(true);
-        nameAndAge.text = name + ", " + age;
-        hunger.text = "hunger: " + hun + "/100";
-        happiness.text = "happiness: " + hap + "/100";
-    }
 
 }
