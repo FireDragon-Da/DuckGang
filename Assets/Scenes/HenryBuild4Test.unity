@@ -135900,6 +135900,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArticleCreator
   textFile: {fileID: 4900000, guid: 897dc624b2a973749942bb9e4496f503, type: 3}
+--- !u!114 &2109207493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109207471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ad199376298e145aea03d8d20b4124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  loseOnWork: -4
+  playgroundGainInteract: 7
+  playgroundGainPassive: 3
+  passiveDrop: 0.07
+  instaKillHappiness: 0
 --- !u!1001 &2120883730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136428,7 +136445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5741726068280216701, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: duckMonthLength
-      value: 60
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6240218673633898601, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchorMax.y
@@ -136561,6 +136578,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8419782432875219653, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2109207482}
+    - targetCorrespondingSourceObject: {fileID: 8419782432875219653, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2109207493}
   m_SourcePrefab: {fileID: 100100000, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

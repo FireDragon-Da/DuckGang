@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 [RequireComponent(typeof(DuckHunger))]
@@ -41,6 +43,9 @@ public class DuckStats : MonoBehaviour
     public int Age => Mathf.FloorToInt(curLife / 50);
     public int MaxAge => Mathf.FloorToInt(lifespan);
 
+    //passive happiness drop value
+    float phd = 0;
+
     private void Awake()
     {
         duckHunger = GetComponent<DuckHunger>();
@@ -49,6 +54,8 @@ public class DuckStats : MonoBehaviour
     void Start()
     {
         lifespan = averageLifespan + UnityEngine.Random.Range(-lifespanVariance / 2, lifespanVariance / 2);
+
+        StartCoroutine(passiveHappinessDrop());
     }
 
     void Update()
@@ -83,5 +90,43 @@ public class DuckStats : MonoBehaviour
         {
             DuckSocietyManager.reference.ProcessDuckDeath(gameObject, reason);
         }
+    }
+
+    IEnumerator passiveHappinessDrop()
+    {
+        yield return new WaitForSeconds(1);
+        phd += TuningManager.reference.passiveDrop * (PublicInfo.reference.duckList.Count + 1);
+
+        if (phd > 1)
+        {
+            ModifyHappiness(-1);
+            phd--;
+        }
+        if (TuningManager.reference.instaKillHappiness) ModifyHappiness(-100);
+
+        StartCoroutine(passiveHappinessDrop());
+    }
+
+    public void modHappinessOnCollision(int otherHappiness)
+    {
+        int happyMod = 0;
+
+        switch (otherHappiness)
+        {
+            case > 70:
+                happyMod = 2;
+                break;
+            case > 50:
+                happyMod = 1;
+                break;
+            case > 30:
+                happyMod = -2;
+                break;
+            default:
+                happyMod = -3;
+                break;
+        }
+
+        ModifyHappiness(happyMod);
     }
 }

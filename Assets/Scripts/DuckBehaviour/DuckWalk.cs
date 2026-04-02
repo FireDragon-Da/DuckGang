@@ -106,6 +106,9 @@ public class DuckWalk : MonoBehaviour
                     Vector3 otherPos = duckHit.collider.transform.position;
                     duckHit.collider.GetComponent<DuckWalk>().DuckBounce(transform.position);
                     DuckBounce(otherPos);
+
+                    duckHit.collider.GetComponent<DuckStats>().modHappinessOnCollision(stats.Happiness);
+                    stats.modHappinessOnCollision(duckHit.collider.GetComponent<DuckStats>().Happiness);
                     break;
                 }
             }
@@ -132,10 +135,9 @@ public class DuckWalk : MonoBehaviour
         {
             GainStatusEffect(Instantiate(loveEffect));
         }
-
-        //running into ducks gives them a random but negatively skewed happiness modification
-        stats.ModifyHappiness(UnityEngine.Random.Range(-5, 3));
     }
+
+    
 
     void WallBounce(Vector2 targetDirection)
     {
@@ -273,6 +275,9 @@ public class DuckWalk : MonoBehaviour
 
         interacting = null;
         canBeGrabbed = true;
+
+        //decrease happiness on interacting if it's not an obstacle
+        if (collision.GetComponent<Obstacle>() == null) stats.ModifyHappiness(TuningManager.reference.loseOnWork);
 
         if (!curBuilding.CanWalkOver())
         {
