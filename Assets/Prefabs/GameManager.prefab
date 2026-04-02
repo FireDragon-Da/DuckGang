@@ -144,16 +144,6 @@ MonoBehaviour:
     the drum roars. Cost: $50 ($10 + 10 * $4), total $50; foundation costs $10; requires
     10 times to build, each costs $4. Unlock Condition: ducks collide buildings 20
     times in total.'
-  nestUnlockingText: 
-  farmlandUnlockingText: 
-  goldenCornUnlockingText: 
-  playgroundUnlockingText: 
-  compostsiteUnlockingText: 
-  secreteSiteUnlockingText: 
-  hammerSawUnlockingText: 
-  strawCraftUnlockingText: 
-  altarUnlockingText: 
-  drumUnlockingText: 
 --- !u!1 &189532926243449513
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,8 +306,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -95, y: 22}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -76, y: -127}
+  m_SizeDelta: {x: 352.9657, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1981466785417464118
 CanvasRenderer:
@@ -374,8 +364,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2319,7 +2309,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2113882199429230324}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2111224227258808617}
+        m_TargetAssemblyTypeName: BuildingPlacer, Assembly-CSharp
+        m_MethodName: RemoveToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2372007313369006182
 GameObject:
   m_ObjectHideFlags: 0
@@ -2764,6 +2766,7 @@ MonoBehaviour:
   customPositions:
   - {x: 100, y: 100}
   - {x: 200, y: 200}
+  triggerOnStart: 0
 --- !u!1 &2820761235777249599
 GameObject:
   m_ObjectHideFlags: 0
@@ -3232,7 +3235,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 0.000015259}
+  m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &1470170336959727909
 CanvasRenderer:
@@ -3315,7 +3318,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1111363450385128167}
   m_HandleRect: {fileID: 2359640398245695792}
   m_Direction: 2
-  m_Value: 1.0000021
+  m_Value: 1.0000058
   m_Size: 0.6666667
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5537,8 +5540,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.657385, y: -2.8492}
-  m_SizeDelta: {x: 396.3153, y: 244.4943}
+  m_AnchoredPosition: {x: 3.5955, y: -127.29242}
+  m_SizeDelta: {x: 581.4611, y: 169.9094}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5039764446434266820
 CanvasRenderer:
@@ -6843,7 +6846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00019464189}
+  m_AnchoredPosition: {x: 0, y: -0.0005645752}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &7228465248248824662
@@ -8299,6 +8302,9 @@ GameObject:
   - component: {fileID: 6815134751862295159}
   - component: {fileID: 2545802020297177650}
   - component: {fileID: 2865197382281362407}
+  - component: {fileID: 6169121046599755092}
+  - component: {fileID: 4039424153079914584}
+  - component: {fileID: 4288473015694714660}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -8315,7 +8321,7 @@ Transform:
   m_GameObject: {fileID: 8419782432875219653}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.34281, y: 0.34312, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8521,20 +8527,52 @@ MonoBehaviour:
     the drum roars. Cost: $50 ($10 + 10 * $4), total $50; foundation costs $10; requires
     10 times to build, each costs $4. Unlock Condition: ducks collide buildings 20
     times in total.'
-  nestUnlockingText: Nest Unlocked! Ducks will die of aging. Always remember to build
-    nests to keep the population! Remember, you shoule be able to feed your ducks
-    first, and then have more ducks! (Click Twice to close)
-  farmlandUnlockingText: Farmland Unlocked! Ducks have learnt the knowledge of farming
-    by collecting grass crumbies! Build farmland to produce crumbies to feed your
-    ducks and develop duck society! (Click Twice to close)
-  goldenCornUnlockingText: 
-  playgroundUnlockingText: 
-  compostsiteUnlockingText: 
-  secreteSiteUnlockingText: 
-  hammerSawUnlockingText: 
-  strawCraftUnlockingText: 
-  altarUnlockingText: 
-  drumUnlockingText: 
+--- !u!114 &6169121046599755092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8419782432875219653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc3f392d775691543ae254698a9d8cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArticleCreator
+  textFile: {fileID: 4900000, guid: 897dc624b2a973749942bb9e4496f503, type: 3}
+--- !u!114 &4039424153079914584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8419782432875219653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ad199376298e145aea03d8d20b4124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  loseOnWork: -4
+  playgroundGainInteract: 7
+  playgroundGainPassive: 3
+  passiveDrop: 0.07
+  instaKillHappiness: 0
+--- !u!114 &4288473015694714660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8419782432875219653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d88ba079333587409c4dae618de50b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopupTriggerTest
+  quacxiconSO: {fileID: 11400000, guid: 2f369d3f95eb8a94dbe8fe8176c592c2, type: 2}
+  targetCategory: Tutorial
+  customPositions: []
+  triggerOnStart: 1
 --- !u!1 &8580610215923662431
 GameObject:
   m_ObjectHideFlags: 0
@@ -9526,7 +9564,7 @@ PrefabInstance:
     - target: {fileID: 2058558519879537494, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: da46841db1e4ce94fba0a6ae28eb568e, type: 3}
+      objectReference: {fileID: 21300000, guid: 60f2c3bd38b69254ea17ce368e9695bd, type: 3}
     - target: {fileID: 2058558519879537494, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -9821,7 +9859,7 @@ PrefabInstance:
     - target: {fileID: 2058558519879537494, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: da46841db1e4ce94fba0a6ae28eb568e, type: 3}
+      objectReference: {fileID: 21300000, guid: 6614edc2f08aa4945aa25d1da876456b, type: 3}
     - target: {fileID: 2058558519879537494, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -10114,7 +10152,7 @@ PrefabInstance:
     - target: {fileID: 2058558519879537494, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: da46841db1e4ce94fba0a6ae28eb568e, type: 3}
+      objectReference: {fileID: 21300000, guid: 43bef32bc83859f499abad07f012905f, type: 3}
     - target: {fileID: 2058558519879537494, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -10686,7 +10724,7 @@ PrefabInstance:
     - target: {fileID: 2058558519879537494, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: da46841db1e4ce94fba0a6ae28eb568e, type: 3}
+      objectReference: {fileID: -6294804172037325909, guid: 251cf20e4851c3b47a9def459ed932ae, type: 3}
     - target: {fileID: 2058558519879537494, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -11126,7 +11164,7 @@ PrefabInstance:
     - target: {fileID: 2058558519879537494, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: da46841db1e4ce94fba0a6ae28eb568e, type: 3}
+      objectReference: {fileID: 21300000, guid: ac37d5e3367306549829ae3c3f548a00, type: 3}
     - target: {fileID: 2058558519879537494, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -11302,6 +11340,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Yes, it's true. Against all the odds, Quackland is real.
       objectReference: {fileID: 0}
+    - target: {fileID: 4561296173834695875, guid: e08f5405804e57042b3a0916f645bae5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5161985125893049035, guid: e08f5405804e57042b3a0916f645bae5, type: 3}
       propertyPath: m_text
       value: You might also be real! But frankly, that's none of our business.
@@ -11316,7 +11358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6372784760348236869, guid: e08f5405804e57042b3a0916f645bae5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7848066495884907706, guid: e08f5405804e57042b3a0916f645bae5, type: 3}
       propertyPath: m_text
@@ -11553,7 +11595,7 @@ PrefabInstance:
     - target: {fileID: 2058558519879537494, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: da46841db1e4ce94fba0a6ae28eb568e, type: 3}
+      objectReference: {fileID: 21300000, guid: 671b173d2b49fbe4f8ddb508925f3a28, type: 3}
     - target: {fileID: 2058558519879537494, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -12382,7 +12424,7 @@ PrefabInstance:
     - target: {fileID: 2058558519879537494, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: da46841db1e4ce94fba0a6ae28eb568e, type: 3}
+      objectReference: {fileID: 21300000, guid: 0bbf276d042c3894ebbf8b6952193a91, type: 3}
     - target: {fileID: 2058558519879537494, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_Enabled
       value: 1

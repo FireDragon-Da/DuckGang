@@ -17,9 +17,13 @@ public class Building : MonoBehaviour
     [SerializeField] protected float constructionNeeded;
     protected float constructionCount;
     protected bool built;
+    bool hasFinalBuilder;
     [SerializeField] protected int placeCost;
     [SerializeField] protected int buildCost;
-    bool removing;
+
+
+
+    protected bool removing;
     [SerializeField] int removeHitsRequired = 2;
     int removeCounter;
     [SerializeField] float buildTime = 2f;
@@ -103,7 +107,7 @@ public class Building : MonoBehaviour
             //Add 1 remove
             yield return StartCoroutine(WaitWithProgress(removeTime, duck.ProgressBar));
 
-            removeCounter++;
+            AddRemove();
             if (removeCounter >= removeHitsRequired)
             {
                 Remove();
@@ -112,7 +116,7 @@ public class Building : MonoBehaviour
             yield break;
         }
 
-        if (!built)
+        if (!built && !hasFinalBuilder)
         {
             if (!CrumbManager.reference.ConsumeCrumbs(BuildCost))
             {
@@ -124,7 +128,11 @@ public class Building : MonoBehaviour
 
             if (vfxHandler != null) vfxHandler.PlayEffect(interactVFX);
 
-            //Add 1 build
+            if (constructionCount >= constructionNeeded - 1)
+            {
+                hasFinalBuilder = true;
+            }
+
             yield return StartCoroutine(WaitWithProgress(buildTime, duck.ProgressBar));
 
             AddConstruct();
@@ -138,17 +146,28 @@ public class Building : MonoBehaviour
         continueBehavior = true;
     }
 
-    void AddConstruct()
+    void AddConstruct() //Only does the visuals
     {
         constructionCount++;
-
         progressBar.ChangeFill(constructionCount/constructionNeeded);
+    }
+
+    void AddRemove()
+    {
+        removeCounter++;
+
+        progressBar.ChangeFill((float)removeCounter/removeHitsRequired);
+    }
+
+    protected void BasicBuild()
+    {
+        built = true;
+        progressBar.HideBar();
     }
 
     public virtual void Build()
     {
-        built = true;
-        progressBar.HideBar();
+        BasicBuild();
 
         foundationSpriteRenderer.enabled = false;
         spriteRenderer.enabled = true;
@@ -161,13 +180,17 @@ public class Building : MonoBehaviour
 
     public virtual void Remove()
     {
-        Destroy(gameObject);
         PublicInfo.reference.constructionList.Remove(this);
+        Destroy(gameObject);
     }
 
     public virtual void StartDeconstruction()
     {
+        if (removing) {return;}
+
         removing = true;
+        progressBar.ShowBar();
+        progressBar.ChangeFill(0);
         PublicInfo.reference.constructionList.Add(this);
         PublicInfo.reference.curBuildingList.Remove(this);
     }
@@ -194,7 +217,7 @@ public class Building : MonoBehaviour
 
     void Update()
     {
-        if (!built) {return;}
+        if (!built || removing) {return;}
 
         UpdateBehavior();
     }

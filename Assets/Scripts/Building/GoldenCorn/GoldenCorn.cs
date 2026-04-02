@@ -48,7 +48,7 @@ public class GoldenCorn : Building
         GameObject nearest = null;
         float nearestSqrDist = float.PositiveInfinity;
 
-        foreach (Nest cur in PublicInfo.reference.nestList)
+        foreach (Farmland cur in PublicInfo.reference.farmList)
         {
             if (Mathf.Pow(cur.transform.position.x - target.transform.position.x, 2) +
                 Mathf.Pow(cur.transform.position.y - target.transform.position.y, 2) <

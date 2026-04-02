@@ -11,6 +11,11 @@ public class LoveEffect : StatusEffect
 
         foreach (Nest cur in PublicInfo.reference.nestList)
         {
+            if (cur == null)
+            {
+                Debug.LogError("Null Nest in List");
+                continue;
+            }
             if (Mathf.Pow(cur.transform.position.x - target.transform.position.x, 2) +
                 Mathf.Pow(cur.transform.position.y - target.transform.position.y, 2) <
                 nearestSqrDist)

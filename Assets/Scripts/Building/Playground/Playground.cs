@@ -5,7 +5,6 @@ using UnityEngine;
 public class Playground : Building
 {
     [Header("Playground")]
-    [SerializeField] int happinessIncrease = 10;
     [SerializeField] float playTime = 1f;
 
     public override IEnumerator BuildingInteract(DuckWalk duck)
@@ -20,7 +19,7 @@ public class Playground : Building
 
         yield return StartCoroutine(WaitWithProgress(playTime, duck.ProgressBar));
 
-        hitDuck.ModifyHappiness(happinessIncrease);
+        hitDuck.ModifyHappiness(TuningManager.reference.playgroundGainInteract);
         
     }
 }

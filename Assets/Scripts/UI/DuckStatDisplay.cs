@@ -12,7 +12,13 @@ public class DuckStatDisplay : MonoBehaviour
     string duckName;
     DuckStats stats;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public static DuckStatDisplay reference;
+
+    void Awake()
+    {
+        reference = this;
+    }
+
     void Start()
     {
         gameObject.SetActive(false);

@@ -9,8 +9,8 @@ public class Nest : Building
     bool empty = true;
     bool nestBusy; //Duck is trying to lay egg
 
-    [SerializeField] float defaultEggTimer;
-    float curEggTimer;
+    [SerializeField] float defaultEggTime;
+
     [SerializeField] float layTime = 2f;
 
     [SerializeField] int totalUses;
@@ -40,31 +40,6 @@ public class Nest : Building
         base.Remove();
     }
 
-    protected override void UpdateBehavior()
-    {
-        base.UpdateBehavior();
-
-        if (!empty)
-        {
-            curEggTimer -= Time.deltaTime;
-
-            if (curEggTimer <= 0)
-            {
-                //TODO Proper duck spawning stuff here
-                DuckSocietyManager.reference.SpawnDuck(transform.position);
-                empty = true;
-                timesUsed++;
-                if (timesUsed >= totalUses)
-                {
-                    Remove();
-                } else
-                {
-                    spriteRenderer.sprite = sprites[timesUsed * 2];
-                }
-            }
-        }
-    }
-
     public override IEnumerator BuildingInteract(DuckWalk duck)
     {
         yield return StartCoroutine(base.BuildingInteract(duck));
@@ -84,7 +59,7 @@ public class Nest : Building
 
                 nestBusy = false;
                 empty = false;
-                curEggTimer = defaultEggTimer;
+                StartCoroutine(WaitEgg());
                 duck.RemoveEffect<LoveEffect>();
 
                 spriteRenderer.sprite = sprites[timesUsed * 2 + 1];
@@ -103,6 +78,36 @@ public class Nest : Building
             }
         }
         return false;
+    }
+
+    public IEnumerator WaitEgg()
+    {
+        progressBar.ShowBar();
+        progressBar.ChangeFill(0);
+        float elapsed = 0f;
+
+        while (elapsed < defaultEggTime)
+        {
+            elapsed += Time.deltaTime;
+
+            float progress = elapsed / defaultEggTime;
+            progressBar.ChangeFill(progress);
+
+            yield return null;
+        }
+
+        progressBar.HideBar();
+
+        DuckSocietyManager.reference.SpawnDuck(transform.position);
+        empty = true;
+        timesUsed++;
+        if (timesUsed >= totalUses)
+        {
+            Remove();
+        } else
+        {
+            spriteRenderer.sprite = sprites[timesUsed * 2];
+        }
     }
 
 }

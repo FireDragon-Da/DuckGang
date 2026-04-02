@@ -104,8 +104,13 @@ public class DuckWalk : MonoBehaviour
                 if (duckHit.collider != col)
                 {
                     Vector3 otherPos = duckHit.collider.transform.position;
-                    duckHit.collider.GetComponent<DuckWalk>().DuckBounce(transform.position);
-                    DuckBounce(otherPos);
+                    DuckWalk otherDuck = duckHit.collider.GetComponent<DuckWalk>();
+                    otherDuck.DuckBounce(this);
+                    DuckBounce(otherDuck);
+
+                    duckHit.collider.GetComponent<DuckStats>().modHappinessOnCollision(stats.Happiness);
+                    stats.modHappinessOnCollision(duckHit.collider.GetComponent<DuckStats>().Happiness);
+
                     break;
                 }
             }
@@ -124,18 +129,19 @@ public class DuckWalk : MonoBehaviour
     }
 
     //For bouncing directly off a duck
-    public void DuckBounce(Vector3 other)
+    public void DuckBounce(DuckWalk other)
     {
-        ChangeDirection((transform.position - other).normalized);
+        ChangeDirection((transform.position - other.transform.position).normalized);
 
-        if (PublicInfo.reference.AnyNestEmpty() && UnityEngine.Random.Range(0,1) < loveChance)
-        {
-            GainStatusEffect(Instantiate(loveEffect));
+        if (!stats.IsBaby && !other.stats.IsBaby) {
+            if (PublicInfo.reference.AnyNestEmpty() && UnityEngine.Random.Range(0,1) < loveChance)
+            {
+                GainStatusEffect(Instantiate(loveEffect));
+            }
         }
-
-        //running into ducks gives them a random but negatively skewed happiness modification
-        stats.ModifyHappiness(UnityEngine.Random.Range(-5, 3));
     }
+
+    
 
     void WallBounce(Vector2 targetDirection)
     {
@@ -155,7 +161,15 @@ public class DuckWalk : MonoBehaviour
                 ranNum -= curEffect.Chance;
                 if (ranNum <= 0)
                 {
-                    ChangeDirection(curEffect.Activate(gameObject));
+                    Vector2 effectDir = curEffect.Activate(gameObject);
+                    if (effectDir != Vector2.zero)
+                    {
+                        StandardBounce(targetDirection);
+                    }
+                    else
+                    {
+                        ChangeDirection(effectDir);
+                    }
                     break;
                 }
             }
@@ -180,8 +194,15 @@ public class DuckWalk : MonoBehaviour
                 ranNum -= curEffect.Chance;
                 if (ranNum < 0)
                 {
-                    ChangeDirection(curEffect.Activate(gameObject));
-                    break;
+                    Vector2 effectDir = curEffect.Activate(gameObject);
+                    if (effectDir != Vector2.zero)
+                    {
+                        StandardBounce(targetDirection);
+                    }
+                    else
+                    {
+                        ChangeDirection(effectDir);
+                    }
                 }
             }
 
@@ -213,7 +234,13 @@ public class DuckWalk : MonoBehaviour
 
     void ChangeDirection(Vector2 newDirection)
     {
-        direction = newDirection;
+        if (newDirection == Vector2.zero)
+        {
+            direction = Vector2.up;
+        }
+        {
+            direction = newDirection;
+        }
         sprite.flipX = direction.x > 0;
     }
 
@@ -235,9 +262,10 @@ public class DuckWalk : MonoBehaviour
             return;
         }
 
-        if (collision.CompareTag("Building"))
+        if (collision.CompareTag("Building") && !stats.IsBaby)
         {
             Building curBuilding = collision.GetComponent<Building>();
+
             StartCoroutine(BuildingInteraction(curBuilding, collision));
         }
     }
@@ -252,6 +280,9 @@ public class DuckWalk : MonoBehaviour
         interacting = null;
         canBeGrabbed = true;
 
+        //decrease happiness on interacting if it's not an obstacle
+        if (collision.GetComponent<Obstacle>() == null) stats.ModifyHappiness(TuningManager.reference.loseOnWork);
+
         if (!curBuilding.CanWalkOver())
         {
             if (curBuilding.HasUniqueBounce)
@@ -260,30 +291,23 @@ public class DuckWalk : MonoBehaviour
                 if (targetBounce != Vector2.zero)
                 {
                     ChangeDirection(targetBounce);
-                    PublicInfo.reference.duckCollideBuildingTimes += 1;
-
                 }
                 else //If the unique bounce can't be used for some reason
                 {
                     WallBounce((transform.position - collision.transform.position).normalized);
-                    PublicInfo.reference.duckCollideBuildingTimes += 1;
-
                 }
-
+                
             }
             else
             {
                 WallBounce((transform.position - collision.transform.position).normalized);
-                PublicInfo.reference.duckCollideBuildingTimes += 1;
-
             }
-
         }
     }
 
-    public bool TryInteract(Building targetBuilding)
+    public bool TryInteract(Building targetBuilding) //For interacting not directly with building
     {
-        if (interacting != null) {return false;}
+        if (interacting != null || beingDragged || stats.IsBaby) {return false;}
 
         canBeGrabbed = false;
         interacting = targetBuilding;
