@@ -137601,6 +137601,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -6779551134932077940, guid: 8272d90dfdb1080488968bb13c3e97d6, type: 3}
     - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: isDrumUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: isNestUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: isAltarUnlcoked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: drumUnlockingText
       value: 'Duck duck drum unlocked! Ducks have learnt the benefit of walking like
         a New Yorker after working enough times in different buildings. (Click Twice
@@ -137611,6 +137623,34 @@ PrefabInstance:
       value: 'Altar unlocked! Overpopulation is dangerous! Ducks have figured out
         a way to deal with this problem... Their Gods will reward them for building
         this altar! (Click Twice to close) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: isFarmlandUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: isHammerSawUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: isGoldenCornUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: isPlayGroundUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: isSecretSiteUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: isStrawCraftUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: isCompostsiteUnlocked
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: hammerSawUnlockingText
