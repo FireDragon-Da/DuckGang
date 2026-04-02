@@ -262,7 +262,7 @@ public class DuckWalk : MonoBehaviour
             return;
         }
 
-        if (collision.CompareTag("Building") && !stats.IsBaby)
+        if (collision.CompareTag("Building"))
         {
             Building curBuilding = collision.GetComponent<Building>();
 
@@ -275,7 +275,9 @@ public class DuckWalk : MonoBehaviour
         canBeGrabbed = false;
         interacting = curBuilding;
 
-        yield return StartCoroutine(curBuilding.BuildingInteract(this));
+        if (!stats.IsBaby) {
+            yield return StartCoroutine(curBuilding.BuildingInteract(this));
+        }
 
         interacting = null;
         canBeGrabbed = true;

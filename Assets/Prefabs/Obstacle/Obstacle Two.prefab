@@ -118,7 +118,7 @@ MonoBehaviour:
   removeHitsRequired: 60
   buildTime: 2
   removeTime: 2
-  filledSpots: 01010101
+  filledSpots: 010101010101
   hasUniqueBounce: 0
   vfxHandler: {fileID: 0}
   interactVFX: {fileID: 0}

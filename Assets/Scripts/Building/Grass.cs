@@ -7,7 +7,7 @@ public class Grass : Building
     {
         Vector2Int arrayPos = MapManager.reference.TilemapPosToArrayPos(
             MapManager.reference.TransformPosToTilemapPos(transform.position)
-        );print(arrayPos);
+        );
         MapManager.reference.buildingArray[arrayPos.x,arrayPos.y] = this;
 
         PublicInfo.reference.grassList.Add(this);

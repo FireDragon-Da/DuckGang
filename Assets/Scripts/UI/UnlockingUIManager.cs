@@ -19,6 +19,8 @@ public class UnlockingUIManager : MonoBehaviour
     public bool isDrumUnlocked;
 
     private bool hasOpened = false;
+    private bool hasunlocked = false;
+
 
     public GameObject NestBuildingBar;
     public GameObject FarmlandBuildingBar;
@@ -44,15 +46,32 @@ public class UnlockingUIManager : MonoBehaviour
     public string AltarDescription;
     public string DrumDescription;
 
+    public string nestUnlockingText;
+    public string farmlandUnlockingText;
+    public string goldenCornUnlockingText;
+    public string playgroundUnlockingText;
+    public string compostsiteUnlockingText;
+    public string secreteSiteUnlockingText;
+    public string hammerSawUnlockingText;
+    public string strawCraftUnlockingText;
+    public string altarUnlockingText;
+    public string drumUnlockingText;
 
 
-   
+
 
     string FormatDescription(string raw)
     {
         return raw
             .Replace(" Cost:", "\nCost:")
             .Replace(" Unlocking Condition:", "\nUnlocking Condition:");
+    }
+
+    string FormatUnlockingText(string raw)
+    {
+        return raw
+            .Replace(" (Click", "\n(Click")
+            .Replace("Unlocked!", "Unlocked!\n");
     }
     private void OnEnable()
     {
@@ -76,6 +95,22 @@ public class UnlockingUIManager : MonoBehaviour
         TestIfStrawCraftIsUnlocked();
         TestIfAltarIsUnlocked();
         TestIfDrumIsUnlocked();
+
+        if (!hasunlocked)
+        {
+            ChangeNestDescriptionIfUnlocked();
+            ChangeFarmlandDescriptionIfUnlocked();
+            ChangeGoldenCornDescriptionIfUnlocked();
+            ChangeCompostsiteDescriptionIfUnlocked();
+            ChangeSecreteSiteDescriptionIfUnlocked();
+            ChangeHammerSawDescriptionIfUnlocked();
+            ChangePlaygroundDescriptionIfUnlocked();
+            ChangeStrawCraftDescriptionIfUnlocked();
+            ChangeAltarDescriptionIfUnlocked();
+            ChangeDrumDescriptionIfUnlocked();
+            hasunlocked=true;
+        }
+        
     }
 
     void SetAllBuildingsDescriptionLocked()
@@ -134,7 +169,7 @@ public class UnlockingUIManager : MonoBehaviour
 
     void TestIfGoldenCornIsUnlocked()
     {
-        if (!isGoldenCornUnlocked && PublicInfo.reference.farmList.Count >= 2)
+        if (!isGoldenCornUnlocked && PublicInfo.reference.farmList.Count >= 8)
         {
             isGoldenCornUnlocked = true;
             ChangeGoldenCornDescriptionIfUnlocked();
@@ -143,7 +178,7 @@ public class UnlockingUIManager : MonoBehaviour
 
     void TestIfCompostSiteIsUnlocked()
     {
-        if (!isCompostsiteUnlocked && PublicInfo.reference.farmList.Count >= 3)
+        if (!isCompostsiteUnlocked && PublicInfo.reference.farmList.Count >= 12)
         {
             isCompostsiteUnlocked = true;
             ChangeCompostsiteDescriptionIfUnlocked();
@@ -161,7 +196,7 @@ public class UnlockingUIManager : MonoBehaviour
 
     void TestIfHammerSawIsUnlocked()
     {
-        if (!isHammerSawUnlocked && PublicInfo.reference.constructionList.Count >= 3)
+        if (!isHammerSawUnlocked && PublicInfo.reference.curBuildingList.Count >= 3)
         {
             isHammerSawUnlocked = true;
             ChangeHammerSawDescriptionIfUnlocked();
@@ -197,7 +232,7 @@ public class UnlockingUIManager : MonoBehaviour
 
     void TestIfDrumIsUnlocked()
     {
-        if (!isDrumUnlocked && PublicInfo.reference.duckCollideBuildingTimes >= 20)
+        if (!isDrumUnlocked && PublicInfo.reference.duckCollideBuildingTimes >= 50)
         {
             isDrumUnlocked = true;
             ChangeDrumDescriptionIfUnlocked();
@@ -217,7 +252,7 @@ public class UnlockingUIManager : MonoBehaviour
             Transform imageTransform = NestBuildingBar.transform.Find("Image");
             imageTransform.gameObject.SetActive(true);
 
-            PopupUnlokcingTextManager.instance.ShowText("Nest Unlocked! Ducks will die of aging. Always remember to build nests to keep the population! Remember, you shoule be able to feed your ducks first, and then have more ducks! (Click Twice to close)");
+            PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(nestUnlockingText));
         }
     }
 
@@ -234,7 +269,7 @@ public class UnlockingUIManager : MonoBehaviour
             Transform imageTransform = FarmlandBuildingBar.transform.Find("Image");
             imageTransform.gameObject.SetActive(true);
 
-            PopupUnlokcingTextManager.instance.ShowText("Farmland Unlocked! Ducks now learn the knowledge of farming by collecting crumbies from grass! (Click Twice to close)");
+            PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(farmlandUnlockingText));
         }
     }
 
@@ -250,6 +285,8 @@ public class UnlockingUIManager : MonoBehaviour
 
             Transform imageTransform = GoldenCornBuildingBar.transform.Find("Image");
             imageTransform.gameObject.SetActive(true);
+
+            PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(goldenCornUnlockingText));
         }
     }
 
@@ -265,6 +302,8 @@ public class UnlockingUIManager : MonoBehaviour
 
             Transform imageTransform = PlaygroundBuildingBar.transform.Find("Image");
             imageTransform.gameObject.SetActive(true);
+
+            PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(playgroundUnlockingText));
         }
     }
 
@@ -280,6 +319,8 @@ public class UnlockingUIManager : MonoBehaviour
 
             Transform imageTransform = CompostsiteBuildingBar.transform.Find("Image");
             imageTransform.gameObject.SetActive(true);
+
+            PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(compostsiteUnlockingText));
         }
     }
 
@@ -295,6 +336,8 @@ public class UnlockingUIManager : MonoBehaviour
 
             Transform imageTransform = SecreteSiteBuildingBar.transform.Find("Image");
             imageTransform.gameObject.SetActive(true);
+
+            PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(secreteSiteUnlockingText));
         }
     }
 
@@ -310,6 +353,8 @@ public class UnlockingUIManager : MonoBehaviour
 
             Transform imageTransform = HammerSawBuildingBar.transform.Find("Image");
             imageTransform.gameObject.SetActive(true);
+
+            PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(hammerSawUnlockingText));
         }
     }
 
@@ -325,6 +370,8 @@ public class UnlockingUIManager : MonoBehaviour
 
             Transform imageTransform = StrawCraftBuildingBar.transform.Find("Image");
             imageTransform.gameObject.SetActive(true);
+
+            PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(strawCraftUnlockingText));
         }
     }
 
@@ -340,6 +387,8 @@ public class UnlockingUIManager : MonoBehaviour
 
             Transform imageTransform = AltarBuildingBar.transform.Find("Image");
             imageTransform.gameObject.SetActive(true);
+
+            PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(altarUnlockingText));
         }
     }
 
@@ -355,6 +404,8 @@ public class UnlockingUIManager : MonoBehaviour
 
             Transform imageTransform = DrumBuildingBar.transform.Find("Image");
             imageTransform.gameObject.SetActive(true);
+
+            PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(drumUnlockingText));
         }
     }
 
