@@ -70826,6 +70826,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2297540820357817334, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
+      propertyPath: isBaby
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3206033706706982381, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
       propertyPath: m_Name
       value: Duck (2)
@@ -131554,6 +131558,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2297540820357817334, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
+      propertyPath: isBaby
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3206033706706982381, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
       propertyPath: m_Name
       value: Duck (1)
@@ -133253,6 +133261,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2297540820357817334, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
+      propertyPath: isBaby
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3206033706706982381, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
       propertyPath: m_Name
       value: Duck
@@ -134578,6 +134590,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2297540820357817334, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
+      propertyPath: isBaby
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3206033706706982381, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
       propertyPath: m_Name
       value: Duck (3)
@@ -137408,6 +137424,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1601873190478296587, guid: 17444c5b74a36cb43ba34d094ee39d83, type: 3}
+    - target: {fileID: 1144618833250589911, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1177815776860203422, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_SizeDelta.x
       value: 300
@@ -137528,6 +137548,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 6722193024006204630, guid: af72379185a33094c99debe558d3dc05, type: 3}
+    - target: {fileID: 2359640398245695792, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359640398245695792, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359640398245695792, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2418509887597831707, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -137568,6 +137600,56 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -6779551134932077940, guid: 8272d90dfdb1080488968bb13c3e97d6, type: 3}
+    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: drumUnlockingText
+      value: 'Duck duck drum unlocked! Ducks have learnt the benefit of walking like
+        a New Yorker after working enough times in different buildings. (Click Twice
+        to close) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: altarUnlockingText
+      value: 'Altar unlocked! Overpopulation is dangerous! Ducks have figured out
+        a way to deal with this problem... Their Gods will reward them for building
+        this altar! (Click Twice to close) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: hammerSawUnlockingText
+      value: 'Symbol of Hammer and Saw unlocked! Ducks have learnt the necessity
+        of habitat construction after building some buildings, so they figured out
+        Symbol of Hammer and Saw to remind their constructing agencies! (Click Twice
+        to close) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: goldenCornUnlockingText
+      value: 'Golden Corn Unlocked! Ducks have learnt the necessity of agriculture
+        after building some farmlands, so they figured out Golden Corn to remind
+        their farming agencies! (Click Twice to close) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: playgroundUnlockingText
+      value: 'Playground unlocked! Ducks found that they started to become unhappy
+        when there were too many ducks in the society. They are losing happiness
+        because of the massive duck population and because of their work! They figured
+        out the playground as a way to entertain themselves. (Click Twice to close) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: strawCraftUnlockingText
+      value: 'Straw Craft unlocked! Ducks have learnt a new way to produce more crumbies:
+        doing labors and making the raw materials into advanced products, after collecting
+        many raw materials from the farmlands! (Click Twice to close) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: compostsiteUnlockingText
+      value: 'Compost Site unlocked! Ducks have learnt that farmlands can produce
+        more crumbies if they throw their pops to the farmlands! (Click Twice to
+        close) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: secreteSiteUnlockingText
+      value: 'Mr Duckson''s Secret Site unlocked! Ducks have learnt the foundation
+        of the business: invest, lend, store, and harvest by collecting a relatively
+        huge amount of crumbies! (Click Twice to close) '
+      objectReference: {fileID: 0}
     - target: {fileID: 2997944765601680816, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 667.4
@@ -137822,6 +137904,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8050748429717470590, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136879387656836452, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8419782432875219653, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
