@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bdca0aff96937642b70c02efaeada72, type: 3}
   m_Name: StrongAttitude
   m_EditorClassIdentifier: Assembly-CSharp::DuckThought
-  thoughtText: Serfodm System
-  type: 0
+  thoughtText: Strong Attitude
+  descriptionText: "Add 50% chance: increase a duck\u2019s mental health by 1% whenever
+    it collides with an obstacle"
+  type: 6

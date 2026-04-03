@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bdca0aff96937642b70c02efaeada72, type: 3}
   m_Name: BeneficialSocialInteraction
   m_EditorClassIdentifier: Assembly-CSharp::DuckThought
-  thoughtText: Serfodm System
-  type: 0
+  thoughtText: Beneficial Social Interaction
+  descriptionText: 'Add 50% chance: produce 2 crumbies whenever two ducks collide'
+  type: 3

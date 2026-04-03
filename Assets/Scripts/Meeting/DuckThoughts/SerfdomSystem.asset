@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: SerfdomSystem
   m_EditorClassIdentifier: Assembly-CSharp::DuckThought
   thoughtText: Serfodm System
+  descriptionText: Double the outcome of the farmland, ducks will lose 6% mental
+    health after working on the farmland each time
   type: 0

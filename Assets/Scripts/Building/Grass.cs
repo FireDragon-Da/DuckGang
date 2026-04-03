@@ -24,10 +24,18 @@ public class Grass : Building
             {
                 return;
             }
-            CrumbManager.reference.GainCrumbs(1);
-            PublicInfo.reference.crumbieGainedFromGrass += 1;
+
+            int gain = 1;
+
+            if (MeetingManager.reference.hasGatherSociety)
+            {
+                gain += 1;
+            }
+
+            CrumbManager.reference.GainCrumbs(gain);
+            PublicInfo.reference.crumbieGainedFromGrass += gain;
             SoundSystem.instance.PlaySound("grass");
-            CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, 1);
+            CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, gain);
         }
     }
 }

@@ -19,7 +19,9 @@ public class DuckThought : ScriptableObject
     }
 
     [SerializeField] string thoughtText;
+    [SerializeField] string descriptionText;
     public string ThoughtText => thoughtText;
+    public string DescriptionText => descriptionText;
     [SerializeField] ThoughtType type;
     public ThoughtType Type => type;
 
