@@ -26,7 +26,7 @@ public class DuckStats : MonoBehaviour
     [SerializeField] Animator animator;
 
     [Header("Happiness")]
-    [SerializeField] int minWorkHappiness = 20;
+    [SerializeField] int minWorkHappiness = -1;
 
     private bool isDead = false;
 

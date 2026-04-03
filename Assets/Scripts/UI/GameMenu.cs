@@ -5,7 +5,7 @@ public class GameMenu : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = 0;
-        AudioListener.pause = true;
+        //AudioListener.pause = true;
     }
 
     public void PlayGame()
@@ -23,6 +23,6 @@ public class GameMenu : MonoBehaviour
     public void PressSettings()
     {
         Time.timeScale = 0;
-        AudioListener.pause = true;
+        //AudioListener.pause = true;
     }
 }
