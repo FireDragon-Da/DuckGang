@@ -136564,6 +136564,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Notepad
       objectReference: {fileID: 0}
+    - target: {fileID: 5591946561074939898, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591946561074939898, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591946561074939898, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591946561074939898, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591946561074939898, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -587.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591946561074939898, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 487
+      objectReference: {fileID: 0}
     - target: {fileID: 5702199441414199652, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -136922,7 +136946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8539567550171102767, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: displayExactNumbers
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8540017145163608298, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

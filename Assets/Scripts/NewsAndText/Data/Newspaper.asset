@@ -23,37 +23,47 @@ MonoBehaviour:
     clearExistingContent: 0
   - categoryName: Death_OldAge
     contentList:
-    - getting bored with aging
+    - '''s biological clock ran out.'
+    - reached terminal maturity.
+    - aged into oblivion.
+    - became a fossil.
+    - was buried naturally.
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Death_Suicide
     contentList:
     - wanted to take a long sleep.
+    - chose to find greener fields.
+    - went to the great pond in the sky.
+    - went to the great pond in the sky.
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Death_Starvation
     contentList:
-    - went for finding more crumbies
+    - went to find food elsewhere.
+    - ran out of edible material.
+    - went too long without lunch.
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Death_General
     contentList:
-    - went for the duck duck heaven
+    - found their way to duck heaven.
+    - moved on from this plane.
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Death_Disappeared
     contentList:
-    - Found a teleport to another world
+    - wandered away...
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Quotes
     contentList:
-    - "It couldn\u2019t be worse\u2026"
+    - Sure, it's alright
     - Where have the good days gone?
     - "It\u2019s tough times out here."
     - Things have taken a turn.
