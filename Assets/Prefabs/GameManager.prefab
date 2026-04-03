@@ -3605,7 +3605,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1111363450385128167}
   m_HandleRect: {fileID: 2359640398245695792}
   m_Direction: 2
-  m_Value: 1.0000058
+  m_Value: 1.0000055
   m_Size: 0.6666667
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -8952,8 +8952,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ad199376298e145aea03d8d20b4124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  loseOnWork: -4
-  playgroundGainInteract: 7
+  maxGrassCrumbs: 10
+  loseOnWork: -3
+  playgroundGainInteract: 10
   playgroundGainPassive: 3
   passiveDrop: 0.07
   instaKillHappiness: 0

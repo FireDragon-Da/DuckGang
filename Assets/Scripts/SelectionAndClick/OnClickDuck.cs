@@ -22,7 +22,7 @@ public class OnClickDuck : MonoBehaviour
 
     private void OnMouseDown()
     {
-        duckStats.ModifyHappiness(1);
+        duckStats.ModifyHappiness(10);
 
         DuckStatDisplay.reference.displayStats(this.gameObject.GetComponent<DuckNameGen>().CurrentDuckName, duckStats);
         //ShowStatSliders();
