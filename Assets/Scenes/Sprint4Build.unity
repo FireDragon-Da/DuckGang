@@ -69710,7 +69710,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1609795050610455315, guid: 7161ed2a8299f8046a2f91a440695b1c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1575780368}
   m_SourcePrefab: {fileID: 100100000, guid: 7161ed2a8299f8046a2f91a440695b1c, type: 3}
 --- !u!4 &1241492593 stripped
 Transform:
@@ -70097,6 +70100,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2297540820357817334, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
+      propertyPath: isBaby
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3206033706706982381, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
       propertyPath: m_Name
       value: Duck (2)
@@ -130825,6 +130832,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2297540820357817334, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
+      propertyPath: isBaby
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3206033706706982381, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
       propertyPath: m_Name
       value: Duck (1)
@@ -131943,7 +131954,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1609795050610455315, guid: c8a4a76dca841e14c87458c41932ddc4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2076520035}
   m_SourcePrefab: {fileID: 100100000, guid: c8a4a76dca841e14c87458c41932ddc4, type: 3}
 --- !u!4 &1465638191 stripped
 Transform:
@@ -132392,6 +132406,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2297540820357817334, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
+      propertyPath: isBaby
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3206033706706982381, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
       propertyPath: m_Name
       value: Duck
@@ -133138,6 +133156,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7204972533377679507, guid: 89992ff3af29cde46bcb0d9c24ff4d28, type: 3}
   m_PrefabInstance: {fileID: 1574270255}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1575780363 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1609795050610455315, guid: 7161ed2a8299f8046a2f91a440695b1c, type: 3}
+  m_PrefabInstance: {fileID: 1241492592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1575780368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575780363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a27491369ed1e4e87faf2fb1af1b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GridAlignTemp
 --- !u!1001 &1576132292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133642,6 +133677,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2297540820357817334, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
+      propertyPath: isBaby
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3206033706706982381, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
       propertyPath: m_Name
       value: Duck (3)
@@ -133941,7 +133980,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1609795050610455315, guid: ab9d3c16065a0a44195d988056c1b4f9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2116091132}
   m_SourcePrefab: {fileID: 100100000, guid: ab9d3c16065a0a44195d988056c1b4f9, type: 3}
 --- !u!4 &1740260279 stripped
 Transform:
@@ -135630,6 +135672,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4497072422537156931, guid: f726fb8c7c1fedb4bb7401cb242c6d4a, type: 3}
   m_PrefabInstance: {fileID: 2074443168}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2076520030 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1609795050610455315, guid: c8a4a76dca841e14c87458c41932ddc4, type: 3}
+  m_PrefabInstance: {fileID: 1465638190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2076520035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076520030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a27491369ed1e4e87faf2fb1af1b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GridAlignTemp
 --- !u!1001 &2089170333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -135882,6 +135941,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7204972533377679507, guid: 89992ff3af29cde46bcb0d9c24ff4d28, type: 3}
   m_PrefabInstance: {fileID: 2097164858}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2116091127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1609795050610455315, guid: ab9d3c16065a0a44195d988056c1b4f9, type: 3}
+  m_PrefabInstance: {fileID: 1740260278}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2116091132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116091127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a27491369ed1e4e87faf2fb1af1b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GridAlignTemp
 --- !u!1001 &2120883730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136216,6 +136292,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1137274717239994530, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1144618833250589911, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -136403,6 +136483,10 @@ PrefabInstance:
     - target: {fileID: 4288473015694714660, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: targetCategory
       value: TutorialShort
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288473015694714660, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: triggerOnStart
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5716779658420469607, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchorMax.x
