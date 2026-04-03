@@ -14,6 +14,9 @@ public class MeetingManager : MonoBehaviour
 
     [SerializeField] int optionCount = 3;
 
+    [SerializeField] GameObject newspaper;
+    [SerializeField] GameObject notepad;
+
     //TODO prob clean this up
     public bool hasSerfdomSystem;
     public bool hasCompassionateSociety;
@@ -58,6 +61,7 @@ public class MeetingManager : MonoBehaviour
 
         thoughtSelectManager.maxSelections = optionCount;
         gameObject.SetActive(true);
+        ForceOffNewspaperAndNotepad();
 
         TimeManager.reference.AddPause();
     }
@@ -84,6 +88,12 @@ public class MeetingManager : MonoBehaviour
         gameObject.SetActive(false);
 
         TimeManager.reference.RemovePause();
+    }
+
+    void ForceOffNewspaperAndNotepad()
+    {
+        newspaper.SetActive(false);
+        notepad.SetActive(false);
     }
 
     void ProcessThoughts()
