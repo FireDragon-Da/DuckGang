@@ -46,7 +46,7 @@ public class DuckStatDisplay : MonoBehaviour
     void updateStats()
     {
         name.text = duckName;
-        age.text = stats.Age + " years old";
+        age.text = stats.Age/2 + " years old";
 
         if (displayExactNumbers)
         {

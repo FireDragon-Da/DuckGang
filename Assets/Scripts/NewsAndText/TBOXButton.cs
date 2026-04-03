@@ -20,7 +20,10 @@ public class TBOXButton : MonoBehaviour
 
     private void Start()
     {
-        button.onClick.AddListener(OnButtonClick);
+        if (button != null)
+        {
+            button.onClick.AddListener(OnButtonClick);
+        }
 
         if (toggleButton != null)
         {

@@ -67260,6 +67260,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4497072422537156931, guid: 937979eed1ce7354e8cbc335de155503, type: 3}
   m_PrefabInstance: {fileID: 984275079}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &991407804 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5069685731630711544, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+  m_PrefabInstance: {fileID: 6410375465495123799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &991407810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991407804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b09446b9c0352f4a9643ea63d747edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectToggleAccessor
+  target: {fileID: 991407804}
 --- !u!1001 &1004821049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69710,7 +69728,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1609795050610455315, guid: 7161ed2a8299f8046a2f91a440695b1c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1575780368}
   m_SourcePrefab: {fileID: 100100000, guid: 7161ed2a8299f8046a2f91a440695b1c, type: 3}
 --- !u!4 &1241492593 stripped
 Transform:
@@ -70097,6 +70118,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2297540820357817334, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
+      propertyPath: isBaby
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3206033706706982381, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
       propertyPath: m_Name
       value: Duck (2)
@@ -130825,6 +130850,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2297540820357817334, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
+      propertyPath: isBaby
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3206033706706982381, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
       propertyPath: m_Name
       value: Duck (1)
@@ -131943,7 +131972,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1609795050610455315, guid: c8a4a76dca841e14c87458c41932ddc4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2076520035}
   m_SourcePrefab: {fileID: 100100000, guid: c8a4a76dca841e14c87458c41932ddc4, type: 3}
 --- !u!4 &1465638191 stripped
 Transform:
@@ -132392,6 +132424,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2297540820357817334, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
+      propertyPath: isBaby
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3206033706706982381, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
       propertyPath: m_Name
       value: Duck
@@ -133138,6 +133174,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7204972533377679507, guid: 89992ff3af29cde46bcb0d9c24ff4d28, type: 3}
   m_PrefabInstance: {fileID: 1574270255}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1575780363 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1609795050610455315, guid: 7161ed2a8299f8046a2f91a440695b1c, type: 3}
+  m_PrefabInstance: {fileID: 1241492592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1575780368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575780363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a27491369ed1e4e87faf2fb1af1b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GridAlignTemp
 --- !u!1001 &1576132292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133642,6 +133695,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2297540820357817334, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
+      propertyPath: isBaby
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3206033706706982381, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
       propertyPath: m_Name
       value: Duck (3)
@@ -133941,7 +133998,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1609795050610455315, guid: ab9d3c16065a0a44195d988056c1b4f9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2116091132}
   m_SourcePrefab: {fileID: 100100000, guid: ab9d3c16065a0a44195d988056c1b4f9, type: 3}
 --- !u!4 &1740260279 stripped
 Transform:
@@ -135630,6 +135690,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4497072422537156931, guid: f726fb8c7c1fedb4bb7401cb242c6d4a, type: 3}
   m_PrefabInstance: {fileID: 2074443168}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2076520030 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1609795050610455315, guid: c8a4a76dca841e14c87458c41932ddc4, type: 3}
+  m_PrefabInstance: {fileID: 1465638190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2076520035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076520030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a27491369ed1e4e87faf2fb1af1b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GridAlignTemp
 --- !u!1001 &2089170333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -135882,6 +135959,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7204972533377679507, guid: 89992ff3af29cde46bcb0d9c24ff4d28, type: 3}
   m_PrefabInstance: {fileID: 2097164858}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2097523110 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7625982485566203134, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+  m_PrefabInstance: {fileID: 6410375465495123799}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b09446b9c0352f4a9643ea63d747edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectToggleAccessor
+--- !u!1 &2116091127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1609795050610455315, guid: ab9d3c16065a0a44195d988056c1b4f9, type: 3}
+  m_PrefabInstance: {fileID: 1740260278}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2116091132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116091127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a27491369ed1e4e87faf2fb1af1b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GridAlignTemp
 --- !u!1001 &2120883730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136216,6 +136321,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1137274717239994530, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1144618833250589911, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -136356,6 +136465,14 @@ PrefabInstance:
       propertyPath: isCompostsiteUnlocked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2922072152565152049, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_Size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2922072152565152049, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3229418350418843075, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -136404,6 +136521,42 @@ PrefabInstance:
       propertyPath: targetCategory
       value: TutorialShort
       objectReference: {fileID: 0}
+    - target: {fileID: 4288473015694714660, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: triggerOnStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069685731630711544, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_Name
+      value: Notepad
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702199441414199652, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702199441414199652, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702199441414199652, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 991407810}
+    - target: {fileID: 5702199441414199652, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702199441414199652, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Toggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702199441414199652, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ObjectToggleAccessor, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702199441414199652, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5716779658420469607, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -136420,6 +136573,10 @@ PrefabInstance:
       propertyPath: duckMonthLength
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5752657249974774311, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_Name
+      value: JournalistPopup
+      objectReference: {fileID: 0}
     - target: {fileID: 6240218673633898601, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -136483,10 +136640,22 @@ PrefabInstance:
     - target: {fileID: 6880450630292608368, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228465248248824662, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_Name
+      value: Newspaper
+      objectReference: {fileID: 0}
+    - target: {fileID: 7272153506267874368, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_Name
+      value: Notepad
       objectReference: {fileID: 0}
     - target: {fileID: 7665983180892884196, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711052971133131421, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7788263312815577062, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchorMax.x
@@ -136524,6 +136693,58 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8178509703118682588, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178509703118682588, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178509703118682588, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178509703118682588, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 991407810}
+    - target: {fileID: 8178509703118682588, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 2097523110}
+    - target: {fileID: 8178509703118682588, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178509703118682588, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178509703118682588, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: ForceOff
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178509703118682588, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: ForceOff
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178509703118682588, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: ObjectToggleAccessor, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178509703118682588, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: ObjectToggleAccessor, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178509703118682588, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178509703118682588, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8419782432875219653, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -136542,13 +136763,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9134085688117941406, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00011256709
+      value: 0.000015258789
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2372007313369006182, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5069685731630711544, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 991407810}
   m_SourcePrefab: {fileID: 100100000, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
