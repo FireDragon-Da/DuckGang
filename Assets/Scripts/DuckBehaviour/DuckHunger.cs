@@ -52,7 +52,14 @@ public class DuckHunger : MonoBehaviour
 
         DuckFeedingAnimationManager.reference.SpawnFlyingCrumb(this.GetComponent<DuckWalk>());
 
-        satiety += fillPerCrumb;
+        float fillThisCrumb = fillPerCrumb;
+
+        if (MeetingManager.reference.hasCrumbieAllocationSystem)
+        {
+            fillThisCrumb += 5;
+        }
+
+        satiety += fillThisCrumb;
         if (satiety > satietyMax)
         {
             satiety = satietyMax;

@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Gather Society
   m_EditorClassIdentifier: Assembly-CSharp::DuckThought
   thoughtText: Gather Society
+  descriptionText: Increase the output of grass by 1
   type: 2

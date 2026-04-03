@@ -149,6 +149,14 @@ public class DuckStats : MonoBehaviour
                 break;
         }
 
+        if (MeetingManager.reference.hasCompassionateSociety)
+        {
+            if (UnityEngine.Random.value > 0.5f)
+            {
+                happyMod += 2;
+            }
+        }
+
         ModifyHappiness(happyMod);
     }
 

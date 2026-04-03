@@ -134,11 +134,28 @@ public class DuckWalk : MonoBehaviour
         ChangeDirection((transform.position - other.transform.position).normalized);
 
         if (!stats.IsBaby && !other.stats.IsBaby) {
-            if (PublicInfo.reference.AnyNestEmpty() && UnityEngine.Random.Range(0,1) < loveChance)
+
+            float curLoveChance = loveChance;
+
+            if (MeetingManager.reference.hasRomanticSociety)
+            {
+                curLoveChance += 0.2f;
+            }
+
+            if (PublicInfo.reference.AnyNestEmpty() && UnityEngine.Random.Range(0,1) < curLoveChance)
             {
                 GainStatusEffect(Instantiate(loveEffect));
             }
         }
+
+        if (MeetingManager.reference.hasBeneficialSocialInteraction)
+        {
+            if (UnityEngine.Random.value > 0.5f)
+            {
+                CrumbManager.reference.GainCrumbs(2);
+            }
+        }
+
     }
 
     
@@ -283,7 +300,20 @@ public class DuckWalk : MonoBehaviour
         canBeGrabbed = true;
 
         //decrease happiness on interacting if it's not an obstacle
-        if (collision.GetComponent<Obstacle>() == null) stats.ModifyHappiness(TuningManager.reference.loseOnWork);
+        if (collision.GetComponent<Obstacle>() == null) 
+        {
+            stats.ModifyHappiness(TuningManager.reference.loseOnWork);
+        } 
+        else //Hit obstacle
+        {
+            if (MeetingManager.reference.hasStrongAttitude)
+            {
+                if (UnityEngine.Random.value > 0.5f)
+                {
+                    stats.ModifyHappiness(1);
+                }
+            }
+        }
 
         if (!curBuilding.CanWalkOver())
         {

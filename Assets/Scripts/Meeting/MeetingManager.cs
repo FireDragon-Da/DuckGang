@@ -14,6 +14,15 @@ public class MeetingManager : MonoBehaviour
 
     [SerializeField] int optionCount = 3;
 
+    //TODO prob clean this up
+    public bool hasSerfdomSystem;
+    public bool hasCompassionateSociety;
+    public bool hasGatherSociety;
+    public bool hasBeneficialSocialInteraction;
+    public bool hasRomanticSociety;
+    public bool hasCrumbieAllocationSystem;
+    public bool hasStrongAttitude;
+
     void Awake()
     {
         reference = this;
@@ -79,6 +88,17 @@ public class MeetingManager : MonoBehaviour
 
     void ProcessThoughts()
     {
+        //TODO clean this up
+
+        hasSerfdomSystem = false;
+        hasCompassionateSociety = false;
+        hasGatherSociety = false;
+        hasBeneficialSocialInteraction = false;
+        hasRomanticSociety = false;
+        hasCrumbieAllocationSystem = false;
+        hasStrongAttitude = false;
+
+
         for (int i = 0; i < curThoughts.Count; i++)
         {
             if (curThoughts[i] == null) {continue;}
@@ -86,18 +106,25 @@ public class MeetingManager : MonoBehaviour
             switch (curThoughts[i].Type)
             {
                 case DuckThought.ThoughtType.SerfdomSystem:
+                    hasSerfdomSystem = true;
                     break;
                 case DuckThought.ThoughtType.CompassionateSociety:
+                    hasCompassionateSociety = true;
                     break;
                 case DuckThought.ThoughtType.GatherSociety:
+                    hasGatherSociety = true;
                     break;
                 case DuckThought.ThoughtType.BeneficialSocialInteraction:
+                    hasBeneficialSocialInteraction = true;
                     break;
-                case DuckThought.ThoughtType.RomanticSociety:   
+                case DuckThought.ThoughtType.RomanticSociety:
+                    hasRomanticSociety = true;
                     break;
-                case DuckThought.ThoughtType.CrumbieAllocationSystem:   
+                case DuckThought.ThoughtType.CrumbieAllocationSystem:
+                    hasCrumbieAllocationSystem = true;
                     break;
                 case DuckThought.ThoughtType.StrongAttitude:
+                    hasStrongAttitude = true;
                     break;
             }
         } 

@@ -395,6 +395,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3f857cb30f62d7c4fb0d0e40d00949ee, type: 2}
   - {fileID: 11400000, guid: 339b2d46e7ee5fc40a2c497ac10c9010, type: 2}
   optionCount: 3
+  hasSerfdomSystem: 0
+  hasCompassionateSociety: 0
+  hasGatherSociety: 0
+  hasBeneficialSocialInteraction: 0
+  hasRomanticSociety: 0
+  hasCrumbieAllocationSystem: 0
+  hasStrongAttitude: 0
 --- !u!1 &8541409714178205920
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,6 +802,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4081099487651587563, guid: 1aad6d0b6473c384aaff5893ed81fd1c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8486036871947543708, guid: c73a3135180d0ae49856c8c8f1fda823, type: 3}
     - target: {fileID: 8945022254494451038, guid: 1aad6d0b6473c384aaff5893ed81fd1c, type: 3}
       propertyPath: m_Name
       value: Paper1 (3)

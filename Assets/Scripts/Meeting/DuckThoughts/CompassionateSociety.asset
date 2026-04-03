@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bdca0aff96937642b70c02efaeada72, type: 3}
   m_Name: CompassionateSociety
   m_EditorClassIdentifier: Assembly-CSharp::DuckThought
-  thoughtText: Serfodm System
+  thoughtText: Compassionate Society
+  descriptionText: 'Add 50% chance: ducks increase 2% mental health when colliding
+    with each other'
   type: 1

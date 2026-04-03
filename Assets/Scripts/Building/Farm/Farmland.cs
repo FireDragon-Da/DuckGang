@@ -62,7 +62,7 @@ public class Farmland : Building
             if (curCropCount > 0)
             {
                 yield return StartCoroutine(WaitWithProgress(harvestTime, duck.ProgressBar));
-                TakeCrop();
+                TakeCrop(duck);
             }
             else
             {
@@ -73,14 +73,22 @@ public class Farmland : Building
 
     }
 
-    void TakeCrop()
+    void TakeCrop(DuckWalk duck)
     {
         curCropCount--;
 
         //crumb visualization
-        CrumbManager.reference.GainCrumbs(cropCrumbGain);
-        PublicInfo.reference.crumbieGainedFromFarmland += cropCrumbGain;
-        CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, cropCrumbGain);
+        int gain = cropCrumbGain;
+
+        if (MeetingManager.reference.hasSerfdomSystem)
+        {
+            gain *= 2;
+            duck.GetComponent<DuckStats>().ModifyHappiness(-6);
+        }
+
+        CrumbManager.reference.GainCrumbs(gain);
+        PublicInfo.reference.crumbieGainedFromFarmland += gain;
+        CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, gain);
 
         //SFX
         SoundSystem.instance.PlaySound("collide-crop");
