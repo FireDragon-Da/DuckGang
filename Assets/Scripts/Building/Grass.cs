@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class Grass : Building
 {
+
+    int hits = 0;
+    int maxHits;
+
     //Ideally this stuff would have been done in mapgen
     void Start()
     {
@@ -13,6 +17,8 @@ public class Grass : Building
         PublicInfo.reference.grassList.Add(this);
 
         BasicBuild();
+
+        maxHits = TuningManager.reference.maxGrassCrumbs;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -27,7 +33,11 @@ public class Grass : Building
 
             int gain = 1;
 
-            if (MeetingManager.reference.hasGatherSociety)
+            if (hits > maxHits && !MeetingManager.reference.hasGatherSociety) {
+                return;
+            }
+            
+            if (hits <= maxHits && MeetingManager.reference.hasGatherSociety)
             {
                 gain += 1;
             }
@@ -36,6 +46,8 @@ public class Grass : Building
             PublicInfo.reference.crumbieGainedFromGrass += gain;
             SoundSystem.instance.PlaySound("grass");
             CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, gain);
+
+            hits++;
         }
     }
 }
