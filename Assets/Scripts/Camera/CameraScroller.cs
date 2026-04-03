@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(PlayerInput))]
 public class CameraScroller : MonoBehaviour
@@ -30,7 +31,7 @@ public class CameraScroller : MonoBehaviour
 
         float zoomInput = playerInput.actions["Zoom"].ReadValue<float>();
 
-        if (zoomInput != 0)
+        if (zoomInput != 0 && !EventSystem.current.IsPointerOverGameObject())
         {
             targetSize -= zoomInput * zoomSpeed * Time.deltaTime;
             targetSize = Mathf.Clamp(targetSize, minSize, maxSize);

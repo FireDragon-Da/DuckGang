@@ -11380,6 +11380,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 937314123718992433, guid: b6418661d01ccae40aa3f50686414f06, type: 3}
+      propertyPath: notepad
+      value: 
+      objectReference: {fileID: 5069685731630711544}
+    - target: {fileID: 937314123718992433, guid: b6418661d01ccae40aa3f50686414f06, type: 3}
+      propertyPath: newspaper
+      value: 
+      objectReference: {fileID: 378210676133132849}
     - target: {fileID: 3044515668870051171, guid: b6418661d01ccae40aa3f50686414f06, type: 3}
       propertyPath: m_Name
       value: DuckMeeting_UI
@@ -11955,6 +11963,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08f5405804e57042b3a0916f645bae5, type: 3}
+--- !u!1 &378210676133132849 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6372784760348236869, guid: e08f5405804e57042b3a0916f645bae5, type: 3}
+  m_PrefabInstance: {fileID: 6723594292188194420}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2391240316270243647 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8962274340286089547, guid: e08f5405804e57042b3a0916f645bae5, type: 3}
@@ -11965,7 +11978,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3790887154377196170, guid: e08f5405804e57042b3a0916f645bae5, type: 3}
   m_PrefabInstance: {fileID: 6723594292188194420}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 378210676133132849}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b09446b9c0352f4a9643ea63d747edd, type: 3}

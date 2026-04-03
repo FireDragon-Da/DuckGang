@@ -25,6 +25,9 @@ public class DuckStats : MonoBehaviour
     [SerializeField] float babyDuration = 60f;
     [SerializeField] Animator animator;
 
+    [Header("Happiness")]
+    [SerializeField] int minWorkHappiness = 20;
+
     private bool isDead = false;
 
     public const int MaxStatValue = 100;
@@ -165,6 +168,16 @@ public class DuckStats : MonoBehaviour
         isBaby = false;
         curLife = babyDuration;
         animator.SetBool("isBaby", false);
+    }
+
+    public void SetHappiness(int amount)
+    {
+        happiness = amount;
+    }
+
+    public bool WillWork()
+    {
+        return happiness >= minWorkHappiness;
     }
 
 }

@@ -17,10 +17,23 @@ public class DuckSocietyManager : MonoBehaviour
         reference = this;
     }
 
-    public void SpawnDuck(Vector2 position)
+    public GameObject SpawnDuck(Vector2 position)
     {
+
+        int totalHappiness = 0;
+        foreach (GameObject duck in PublicInfo.reference.duckList)
+        {
+            totalHappiness += duck.GetComponent<DuckStats>().Happiness;
+        }
+
+        int averageHappiness = totalHappiness / PublicInfo.reference.duckList.Count;
+
         GameObject newDuck = Instantiate(duckPrefab, new(position.x, position.y), new Quaternion());
         newbornDuckNames.Add(newDuck.GetComponent<DuckNameGen>().CurrentDuckName);
+
+        newDuck.GetComponent<DuckStats>().SetHappiness(averageHappiness);
+
+        return newDuck;
     }
 
     public void ProcessDuckDeath(GameObject duck, DeathReason reason)

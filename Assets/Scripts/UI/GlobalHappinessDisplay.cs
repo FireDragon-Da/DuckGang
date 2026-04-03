@@ -32,9 +32,9 @@ public class GlobalHappinessDisplay : MonoBehaviour
 
     private void CalculateAndDisplayAverageHappiness()
     {
-        DuckStats[] allDucks = FindObjectsOfType<DuckStats>();
+        int duckCount = PublicInfo.reference.duckList.Count;
 
-        if (allDucks.Length == 0)
+        if (duckCount == 0)
         {
             if (averageHappinessText != null)
             {
@@ -48,12 +48,12 @@ public class GlobalHappinessDisplay : MonoBehaviour
         }
 
         int totalHappiness = 0;
-        foreach (DuckStats duck in allDucks)
+        foreach (GameObject duck in PublicInfo.reference.duckList)
         {
-            totalHappiness += duck.Happiness;
+            totalHappiness += duck.GetComponent<DuckStats>().Happiness;
         }
 
-        int averageHappiness = totalHappiness / allDucks.Length;
+        int averageHappiness = totalHappiness / duckCount;
 
         if (averageHappinessText != null)
         {
