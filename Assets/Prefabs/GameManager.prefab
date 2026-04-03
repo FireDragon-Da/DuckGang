@@ -3421,6 +3421,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8281934852920608784}
+  - component: {fileID: 7383715656929548951}
   m_Layer: 0
   m_Name: PopupWindow
   m_TagString: Untagged
@@ -3449,6 +3450,19 @@ RectTransform:
   m_AnchoredPosition: {x: 37.30453, y: 62.694366}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7383715656929548951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354067610813295388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b09446b9c0352f4a9643ea63d747edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectToggleAccessor
+  target: {fileID: 3354067610813295388}
 --- !u!1 &3387805585965948863
 GameObject:
   m_ObjectHideFlags: 0
@@ -4128,6 +4142,7 @@ GameObject:
   - component: {fileID: 5217697972212025886}
   - component: {fileID: 380531914444076214}
   - component: {fileID: 2135093178812882943}
+  - component: {fileID: 6167433634143310939}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4256,6 +4271,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6167433634143310939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4161265389824044208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ContentSizeFitter
+  m_HorizontalFit: 0
+  m_VerticalFit: 0
 --- !u!1 &4237793748272924398
 GameObject:
   m_ObjectHideFlags: 0
@@ -5880,7 +5909,7 @@ GameObject:
   - component: {fileID: 5039764446434266820}
   - component: {fileID: 209129726164513550}
   m_Layer: 0
-  m_Name: PopupImage
+  m_Name: JournalistPopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6950,6 +6979,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9157777529248599276}
   - component: {fileID: 1433000758333177552}
+  - component: {fileID: 5410304511701395185}
   m_Layer: 5
   m_Name: TimeProgress
   m_TagString: Untagged
@@ -7024,12 +7054,24 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8136879387656836452}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 60
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5410304511701395185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6785786050735469833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c912f703c4215a4cb09b4e00c6e21e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeSlider
 --- !u!1 &6797261914481318880
 GameObject:
   m_ObjectHideFlags: 0
@@ -7039,6 +7081,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 409604702107752874}
+  - component: {fileID: 8478603523682546427}
   m_Layer: 5
   m_Name: NewsParent
   m_TagString: Untagged
@@ -7066,6 +7109,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8478603523682546427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6797261914481318880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b09446b9c0352f4a9643ea63d747edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectToggleAccessor
+  target: {fileID: 1483061824537727478}
 --- !u!1 &6866273861232446878
 GameObject:
   m_ObjectHideFlags: 0
@@ -7464,7 +7520,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3566640898608718020}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ObjectToggleAccessor, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7438202796535334028
 GameObject:
   m_ObjectHideFlags: 0
@@ -8781,6 +8849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TimeManager
   monthsPerMeeting: 5
   duckMonthLength: 60
+  curMonthTime: 0
 --- !u!114 &6271641844843293820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8952,6 +9021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ad199376298e145aea03d8d20b4124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  maxGrassCrumbs: 10
   loseOnWork: -4
   playgroundGainInteract: 7
   playgroundGainPassive: 3

@@ -68,6 +68,8 @@ public class TextBox : MonoBehaviour
 
             textComponent.alignment = TextAlignmentOptions.TopLeft;
         }
+
+        gameObject.SetActive(false);
     }
 
 
