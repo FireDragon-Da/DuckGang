@@ -1,3 +1,4 @@
+using System;
 using UnityEditor;
 using UnityEngine;
 
@@ -5,59 +6,21 @@ using UnityEngine;
 public class DuckThought : ScriptableObject
 {
 
-    [SerializeField] float chance;
-    [SerializeField] float duration;
-
-    public float Chance
+    public enum ThoughtType
     {
-        get
-        {
-            return chance;
-        }
+        SerfdomSystem,
+        CompassionateSociety,
+        GatherSociety,
+        BeneficialSocialInteraction,
+        RomanticSociety,
+        CrumbieAllocationSystem,
+        StrongAttitude,
+
     }
 
-    public virtual Vector2 Activate(GameObject target)
-    {
-        return Vector2.up;
-    }
-
-    /// <summary>
-    /// Return true if effect should be destroyed
-    /// </summary>
-    /// <returns></returns>
-    public virtual bool EffectTried()
-    {
-        return false;
-    }
-
-    /// <summary>
-    /// Return true if effect should be destroyed
-    /// </summary>
-    /// <param name="amount"></param>
-    /// <returns></returns>
-    public bool TickDown(float amount)
-    {
-        duration -= amount;
-        if (duration <= 0)
-        {
-            return true;
-        }
-        return false;
-    }
-
-    public virtual void Added(DuckWalk duck)
-    {
-        
-    }
-
-    public virtual void Removed()
-    {
-        Destroy(this);
-    }
-
-    public virtual void DuplicateGained()
-    {
-        
-    }
+    [SerializeField] string thoughtText;
+    public string ThoughtText => thoughtText;
+    [SerializeField] ThoughtType type;
+    public ThoughtType Type => type;
 
 }

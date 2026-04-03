@@ -4,6 +4,7 @@ public class TimeManager : MonoBehaviour
 {
     public static TimeManager reference;
 
+    [SerializeField] int monthsPerMeeting = 5;
     [SerializeField] float duckMonthLength;
     //HENRY - change DML back to 60 in editor
     int monthsPassed;
@@ -23,6 +24,10 @@ public class TimeManager : MonoBehaviour
         if (curMonthTime >= duckMonthLength)
         {
             MonthPassed();
+            if (monthsPassed % monthsPerMeeting == 0)
+            {
+                MeetingManager.reference.StartMeeting();
+            }
         }
         //HENRY
        // print(curMonthTime);
@@ -33,7 +38,7 @@ public class TimeManager : MonoBehaviour
         monthsPassed++;
         curMonthTime -= duckMonthLength;
 
-        //add two random fluff articles to article list in case nothing else happened
+        /*//add two random fluff articles to article list in case nothing else happened
         DuckSocietyManager.reference.articles.Add(ArticleCreator.reference.fluffArticles[Random.Range(0, ArticleCreator.reference.fluffArticles.Count)]);
         DuckSocietyManager.reference.articles.Add(ArticleCreator.reference.fluffArticles[Random.Range(0, ArticleCreator.reference.fluffArticles.Count)]);
 
@@ -46,16 +51,16 @@ public class TimeManager : MonoBehaviour
 
         DuckSocietyManager.reference.newbornDuckNames = new();
         DuckSocietyManager.reference.recentDeaths = new();
-        DuckSocietyManager.reference.articles = new();
+        DuckSocietyManager.reference.articles = new();*/
     }
 
-    void AddPause()
+    public void AddPause()
     {
         pauses++;
         Time.timeScale = 0;
     }
 
-    void RemovePause()
+    public void RemovePause()
     {
         pauses--;
         if (pauses == 0)
