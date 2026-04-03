@@ -395,8 +395,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DuckHunger
   hungerRate: 0.5
   satietyMax: 100
-  fillPerCrumb: 20
-  eatRange: 25
+  fillPerCrumb: 30
+  eatRange: 40
   duckSprite: {fileID: 3935283322215448257}
 --- !u!212 &4187988425319091803
 SpriteRenderer:
@@ -567,6 +567,7 @@ MonoBehaviour:
   isBaby: 1
   babyDuration: 60
   animator: {fileID: 4222849990296066770}
+  minWorkHappiness: 20
 --- !u!114 &5534468101817164839
 MonoBehaviour:
   m_ObjectHideFlags: 0
