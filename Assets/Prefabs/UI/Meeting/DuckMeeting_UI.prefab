@@ -120,7 +120,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4968997400229068283}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 937314123718992433}
+        m_TargetAssemblyTypeName: MeetingManager, Assembly-CSharp
+        m_MethodName: EndMeeting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1403222276150900504
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,6 +407,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3f857cb30f62d7c4fb0d0e40d00949ee, type: 2}
   - {fileID: 11400000, guid: 339b2d46e7ee5fc40a2c497ac10c9010, type: 2}
   optionCount: 3
+  newspaper: {fileID: 0}
+  notepad: {fileID: 0}
   hasSerfdomSystem: 0
   hasCompassionateSociety: 0
   hasGatherSociety: 0
