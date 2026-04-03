@@ -265,7 +265,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2990216547036666206}
   foundationSpriteRenderer: {fileID: 3715528951212348669}
   walkable: 1
-  constructionNeeded: 10
+  constructionNeeded: 6
   placeCost: 15
   buildCost: 3
   removeHitsRequired: 2
@@ -278,7 +278,6 @@ MonoBehaviour:
   buildCompleteVFX: {fileID: 0}
   removeHitVFX: {fileID: 0}
   progressBar: {fileID: 9131167817744461444}
-  happinessIncrease: 10
   playTime: 1
 --- !u!1 &1661359709266622970
 GameObject:
