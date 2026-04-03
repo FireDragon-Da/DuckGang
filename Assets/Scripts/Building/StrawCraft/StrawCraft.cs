@@ -23,6 +23,7 @@ public class StrawCraft : Building
             curCapacity++;
             yield return StartCoroutine(WaitWithProgress(productionTime, duck.ProgressBar));
             CrumbManager.reference.GainCrumbs(productionAmount);
+            CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, productionAmount);
             curCapacity--;
         }
     }
