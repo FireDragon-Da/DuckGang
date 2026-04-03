@@ -92,14 +92,17 @@ public class DuckStats : MonoBehaviour
         if (curLife >= lifespan)
         {
             Die(DeathReason.OldAge);
+            Debug.Log("The Duck Dies of Old Age!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         }
         else if (duckHunger.CurrentSatiety <= 0)
         {
             Die(DeathReason.Starvation);
+            Debug.Log("The Duck Dies of Starvation???????????????????????????????????????????????????");
         }
         else if (happiness <= 0)
         {
             Die(DeathReason.Suicide);
+            Debug.Log("The Duck Dies of Suicide///////////////////////////////////////////////");
         }
     }
 
