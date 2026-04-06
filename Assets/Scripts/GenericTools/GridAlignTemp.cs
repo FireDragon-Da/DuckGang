@@ -8,12 +8,10 @@ public class GridAlignTemp : MonoBehaviour
         float roundx = Mathf.Round(transform.localPosition.x * 2);
         float roundy = Mathf.Round(transform.localPosition.y * 2);
 
-        print("I rounded " + transform.localPosition.x + " to " + roundx / 2);
-        print("I rounded " + transform.localPosition.x + " to " + roundx / 2);
+        roundx /= 2;
+        roundy /= 2;
 
         transform.localPosition = new Vector3(roundx, roundy, 0);
-
-        print("My position is " + transform.localPosition);
     }
 
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2112351706159920637}
   - component: {fileID: 2789616182574228215}
   - component: {fileID: 5722018439423492281}
+  - component: {fileID: 5416206207601403902}
   m_Layer: 0
   m_Name: Obstacle Seven
   m_TagString: Building
@@ -171,6 +172,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5416206207601403902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609795050610455315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a27491369ed1e4e87faf2fb1af1b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GridAlignTemp
 --- !u!1 &5941844064046680309
 GameObject:
   m_ObjectHideFlags: 0

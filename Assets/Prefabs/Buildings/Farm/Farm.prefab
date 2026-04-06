@@ -376,9 +376,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 3457740062473728581}
   foundationSpriteRenderer: {fileID: 6509931588633235376}
   walkable: 1
-  constructionNeeded: 3
+  constructionNeeded: 1
   placeCost: 6
-  buildCost: 3
+  buildCost: 0
   removeHitsRequired: 4
   buildTime: 2
   removeTime: 2
@@ -394,7 +394,6 @@ MonoBehaviour:
   - {fileID: 6852804863708327957}
   - {fileID: 65834814641859694}
   - {fileID: 6781699758947928979}
-  destroyed: 0
 --- !u!61 &2169654896224676718
 BoxCollider2D:
   m_ObjectHideFlags: 0

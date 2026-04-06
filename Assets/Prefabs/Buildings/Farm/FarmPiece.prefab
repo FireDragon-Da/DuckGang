@@ -235,11 +235,10 @@ MonoBehaviour:
   cropGrowCount: 3
   totalGrowTime: 30
   cropWaterGain: 1
-  cropCrumbGain: 5
+  cropCrumbGain: 3
   cropDecayTime: 15
   waterTime: 2
   harvestTime: 2
-  happiness_decrease: -5
 --- !u!61 &2262419668460893649
 BoxCollider2D:
   m_ObjectHideFlags: 0

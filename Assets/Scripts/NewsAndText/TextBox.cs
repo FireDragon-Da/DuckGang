@@ -99,7 +99,7 @@ public class TextBox : MonoBehaviour
         if (textComponent != null)
             textComponent.text = _builder.ToString();
 
-        if (scrollRect != null)
+        if (scrollRect.isActiveAndEnabled)
             StartCoroutine(ScrollToTopNextFrame());
     }
 
