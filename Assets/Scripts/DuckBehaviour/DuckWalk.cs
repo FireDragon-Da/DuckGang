@@ -292,7 +292,7 @@ public class DuckWalk : MonoBehaviour
         canBeGrabbed = false;
         interacting = curBuilding;
 
-        if (!stats.IsBaby && stats.WillWork()) {
+        if ((!stats.IsBaby && stats.WillWork()) || (curBuilding.GetComponent<Playground>() && curBuilding.Built)) {
             yield return StartCoroutine(curBuilding.BuildingInteract(this));
         }
 

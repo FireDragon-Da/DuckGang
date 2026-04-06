@@ -17,6 +17,7 @@ public class Building : MonoBehaviour
     [SerializeField] protected float constructionNeeded;
     protected float constructionCount;
     protected bool built;
+    public bool Built => built;
     bool hasFinalBuilder;
     [SerializeField] protected int placeCost;
     [SerializeField] protected int buildCost;
