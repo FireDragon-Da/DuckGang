@@ -11462,6 +11462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DuckMeeting_UI
       objectReference: {fileID: 0}
+    - target: {fileID: 3044515668870051171, guid: b6418661d01ccae40aa3f50686414f06, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
