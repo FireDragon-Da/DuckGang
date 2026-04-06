@@ -4575,8 +4575,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Crumb #
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4687aa7e5ab3e994ab40977c3a279d69, type: 2}
+  m_sharedMaterial: {fileID: -9171163891231222849, guid: 4687aa7e5ab3e994ab40977c3a279d69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5245,10 +5245,10 @@ RectTransform:
   m_Children:
   - {fileID: 409604702107752874}
   - {fileID: 8581483851438592099}
-  - {fileID: 5591946561074939898}
   - {fileID: 33683692997991759}
   - {fileID: 1177815776860203422}
   - {fileID: 2817062690760277446}
+  - {fileID: 5591946561074939898}
   - {fileID: 2323217267264127119}
   - {fileID: 5429667887926800680}
   - {fileID: 8807944558546872914}
