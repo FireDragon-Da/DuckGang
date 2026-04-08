@@ -236,6 +236,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 7740923157720687260}
   foundationSpriteRenderer: {fileID: 3591576457877265360}
   walkable: 1
+  quacxiconSO: {fileID: 11400000, guid: d9affd977097b284db68ee2e6313957e, type: 2}
+  buildingName: Nest
+  infoTextBox: {fileID: 0}
   constructionNeeded: 2
   placeCost: 5
   buildCost: 5

@@ -15,8 +15,12 @@ public class TextBox : MonoBehaviour
     private readonly StringBuilder _builder = new StringBuilder();
     private readonly List<string> _messages = new List<string>();
 
+    public static TextBox reference;
+
     private void Awake()
     {
+        reference = this;
+
         if (textComponent == null)
             textComponent = GetComponentInChildren<TMP_Text>(true);
 

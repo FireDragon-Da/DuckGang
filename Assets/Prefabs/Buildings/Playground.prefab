@@ -265,6 +265,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2990216547036666206}
   foundationSpriteRenderer: {fileID: 3715528951212348669}
   walkable: 1
+  quacxiconSO: {fileID: 11400000, guid: d9affd977097b284db68ee2e6313957e, type: 2}
+  buildingName: Playground
+  infoTextBox: {fileID: 0}
   constructionNeeded: 6
   placeCost: 15
   buildCost: 3

@@ -13,9 +13,15 @@ MonoBehaviour:
   m_Name: Building
   m_EditorClassIdentifier: Assembly-CSharp::QuacxiconSO
   categories:
-  - categoryName: Test
+  - categoryName: Altar
     contentList:
-    - I am the master of Quackland
+    - has triggered the apocolypse.
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Farm
+    contentList:
+    - has become the farmer with the last kick.
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
