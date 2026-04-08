@@ -28,7 +28,11 @@ public class DuckStats : MonoBehaviour
     [Header("Happiness")]
     [SerializeField] int minWorkHappiness = -1;
 
-    private bool isDead = false;
+    private bool isDead = false;//Not sure why this is here but I'll leave it
+
+    bool pendingDie;
+    public bool PendingDie => pendingDie;
+    DeathReason pendingReason;
 
     public const int MaxStatValue = 100;
 
@@ -92,17 +96,17 @@ public class DuckStats : MonoBehaviour
         if (curLife >= lifespan)
         {
             Die(DeathReason.OldAge);
-            Debug.Log("The Duck Dies of Old Age!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            //Debug.Log("The Duck Dies of Old Age!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         }
         else if (duckHunger.CurrentSatiety <= 0)
         {
             Die(DeathReason.Starvation);
-            Debug.Log("The Duck Dies of Starvation???????????????????????????????????????????????????");
+            //Debug.Log("The Duck Dies of Starvation???????????????????????????????????????????????????");
         }
         else if (happiness <= 0)
         {
             Die(DeathReason.Suicide);
-            Debug.Log("The Duck Dies of Suicide///////////////////////////////////////////////");
+            //Debug.Log("The Duck Dies of Suicide///////////////////////////////////////////////");
         }
     }
 
@@ -110,8 +114,20 @@ public class DuckStats : MonoBehaviour
     public void ModifyEnergy(int amount) => energy = Mathf.Clamp(energy + amount, 0, MaxStatValue);
     public void ModifyHealth(int amount) => health = Mathf.Clamp(health + amount, 0, MaxStatValue);
 
+    public void LateDie() //Used to force die after working
+    {
+        Die(pendingReason);
+    }
+
     public void Die(DeathReason reason)
     {
+        if (GetComponent<DuckWalk>().Interacting)
+        {
+            pendingDie = true;
+            pendingReason = reason;
+            return;
+        }
+
         isDead = true;
 
         if (DuckSocietyManager.reference != null)

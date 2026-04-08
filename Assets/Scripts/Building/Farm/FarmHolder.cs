@@ -35,4 +35,19 @@ public class FarmHolder : Building
         }
     }
 
+    public override void TryStartRemove()
+    {
+        if (interacting.Count == 0)
+        {
+            foreach (Farmland farm in farmland)
+            {
+                if (farm.Interacting.Count > 0)
+                {
+                    return;
+                }
+            }
+            StartDeconstruction();
+        }
+    }
+
 }

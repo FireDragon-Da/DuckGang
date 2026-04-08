@@ -1,10 +1,14 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
 public class Building : MonoBehaviour
 {
+    Collider2D col;
+    public Collider2D Col => col;
+
     [SerializeField] protected int width;
     [SerializeField] protected int height;
     [SerializeField] protected SpriteRenderer spriteRenderer;
@@ -12,6 +16,9 @@ public class Building : MonoBehaviour
     [SerializeField] protected bool walkable;
 
     protected bool continueBehavior; //Flag for passing if Interact should continue
+
+    protected List<DuckWalk> interacting = new();
+    public List<DuckWalk> Interacting => interacting;
 
     [Header("Construction")]
     [SerializeField] protected float constructionNeeded;
@@ -93,9 +100,24 @@ public class Building : MonoBehaviour
         }
     }
 
+    void Awake()
+    {
+        col = GetComponent<Collider2D>();
+    }
+
     public bool CanWalkOver()
     {
         return !built || walkable;
+    }
+
+    public void StartInteracting(DuckWalk duck)
+    {
+        interacting.Add(duck);
+    }
+
+    public void EndInteracting(DuckWalk duck)
+    {
+        interacting.Remove(duck);
     }
 
     public virtual IEnumerator BuildingInteract(DuckWalk duck)
@@ -245,6 +267,14 @@ public class Building : MonoBehaviour
         }
 
         duckProgressBar.HideBar();
+    }
+
+    public virtual void TryStartRemove()
+    {
+        if (interacting.Count == 0)
+        {
+            StartDeconstruction();
+        }
     }
 
 }

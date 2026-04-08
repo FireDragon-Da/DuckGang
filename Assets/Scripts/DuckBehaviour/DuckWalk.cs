@@ -24,8 +24,11 @@ public class DuckWalk : MonoBehaviour
     public IReadOnlyList<StatusEffect> StatusEffects => statusEffects;
 
     Building interacting;
+    public bool Interacting => interacting != null;
     [SerializeField] ProgressBar progressBar;
     public ProgressBar ProgressBar => progressBar;
+
+    Queue<Building> taskQueue = new();
 
     [Header("'Static'")]
     [SerializeField] StatusEffect loveEffect;
@@ -269,38 +272,47 @@ public class DuckWalk : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (beingDragged)
-        {
-            return;
-        }
-        
-        if (interacting)
-        {
-            return;
-        }
-
         if (collision.CompareTag("Building"))
         {
+            print(collision.name);
+            if (beingDragged) {return;}
+
             Building curBuilding = collision.GetComponent<Building>();
 
-            StartCoroutine(BuildingInteraction(curBuilding, collision));
+            if (interacting)
+            {
+                taskQueue.Enqueue(curBuilding); //Add task to queue
+                print("added");
+            }
+            else
+            {
+                StartCoroutine(BuildingInteraction(curBuilding)); //Start task
+            }            
         }
     }
 
-    IEnumerator BuildingInteraction(Building curBuilding, Collider2D collision)
+    IEnumerator BuildingInteraction(Building curBuilding)
     {
         canBeGrabbed = false;
         interacting = curBuilding;
+        interacting.StartInteracting(this);
 
         if ((!stats.IsBaby && stats.WillWork()) || (curBuilding.GetComponent<Playground>() && curBuilding.Built)) {
             yield return StartCoroutine(curBuilding.BuildingInteract(this));
         }
 
+        interacting.EndInteracting(this);
         interacting = null;
         canBeGrabbed = true;
 
+        if (stats.PendingDie)
+        {
+            stats.LateDie();
+            yield break;
+        }
+
         //decrease happiness on interacting if it's not an obstacle
-        if (collision.GetComponent<Obstacle>() == null) 
+        if (curBuilding.GetComponent<Obstacle>() == null) 
         {
             stats.ModifyHappiness(TuningManager.reference.loseOnWork);
         } 
@@ -326,13 +338,27 @@ public class DuckWalk : MonoBehaviour
                 }
                 else //If the unique bounce can't be used for some reason
                 {
-                    WallBounce((transform.position - collision.transform.position).normalized);
+                    WallBounce((transform.position - curBuilding.transform.position).normalized);
                 }
                 
             }
             else
             {
-                WallBounce((transform.position - collision.transform.position).normalized);
+                WallBounce((transform.position - curBuilding.transform.position).normalized);
+            }
+        }
+
+        while (taskQueue.Count > 0)
+        {
+            Building targetBuilding = taskQueue.Dequeue();
+            if (!targetBuilding) {continue;}
+            if (col.bounds.Intersects(targetBuilding.Col.bounds))
+            {
+                print("remobed");
+                interacting = curBuilding; //Force interacting to ensure no issues
+                interacting.StartInteracting(this);
+                StartCoroutine(BuildingInteraction(targetBuilding));
+                break;
             }
         }
     }
@@ -343,6 +369,7 @@ public class DuckWalk : MonoBehaviour
 
         canBeGrabbed = false;
         interacting = targetBuilding;
+        interacting.StartInteracting(this);
         return true;
     }
 
@@ -350,6 +377,7 @@ public class DuckWalk : MonoBehaviour
     {
         if (interacting != targetBuilding) {return false;}
 
+        interacting.EndInteracting(this);
         interacting = null;
         canBeGrabbed = true;
         return true;
