@@ -1,10 +1,14 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
 public class Building : MonoBehaviour
 {
+    Collider2D col;
+    public Collider2D Col => col;
+
     [SerializeField] protected int width;
     [SerializeField] protected int height;
     [SerializeField] protected SpriteRenderer spriteRenderer;
@@ -16,6 +20,9 @@ public class Building : MonoBehaviour
 
     protected bool continueBehavior; //Flag for passing if Interact should continue
     string textinfo;
+
+    protected List<DuckWalk> interacting = new();
+    public List<DuckWalk> Interacting => interacting;
 
     [Header("Construction")]
     [SerializeField] protected float constructionNeeded;
@@ -101,6 +108,16 @@ public class Building : MonoBehaviour
     public bool CanWalkOver()
     {
         return !built || walkable;
+    }
+
+    public void StartInteracting(DuckWalk duck)
+    {
+        interacting.Add(duck);
+    }
+
+    public void EndInteracting(DuckWalk duck)
+    {
+        interacting.Remove(duck);
     }
 
     public virtual IEnumerator BuildingInteract(DuckWalk duck)
@@ -206,7 +223,7 @@ public class Building : MonoBehaviour
         {
             //Debug.LogWarning($"[Building] Cannot add message - infoTextBox is NULL! Trying to find TextBox again...");
 
-            infoTextBox = FindObjectOfType<TextBox>(true);
+            infoTextBox = TextBox.reference;
             if (infoTextBox != null)
             {
                 //Debug.Log($"[Building] Found TextBox on second try: {infoTextBox.name} (Active: {infoTextBox.gameObject.activeSelf})");
@@ -297,19 +314,21 @@ public class Building : MonoBehaviour
         duckProgressBar.HideBar();
     }
 
+    public virtual void TryStartRemove()
+    {
+        if (interacting.Count == 0)
+        {
+            StartDeconstruction();
+        }
+    }
+
     protected virtual void Awake()
     {
-        if (infoTextBox == null)
-        {
-            infoTextBox = FindObjectOfType<TextBox>(true);
-            if (infoTextBox != null)
-            {
-                //Debug.Log($"[Building] Auto-found TextBox: {infoTextBox.name} (Active: {infoTextBox.gameObject.activeSelf})");
-            }
-            else
-            {
-                Debug.LogWarning("[Building] No TextBox found in scene!");
-            }
-        }
+        col = GetComponent<Collider2D>();
+    }
+
+    protected virtual void Start()
+    {
+        infoTextBox = TextBox.reference;
     }
 }
