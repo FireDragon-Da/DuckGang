@@ -615,7 +615,7 @@ MonoBehaviour:
   buildCost: 3
   removeHitsRequired: 5
   buildTime: 2
-  removeTime: 2
+  removeTime: 3
   filledSpots: 010101
   hasUniqueBounce: 1
   vfxHandler: {fileID: 0}
