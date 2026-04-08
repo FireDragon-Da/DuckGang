@@ -223,7 +223,7 @@ public class Building : MonoBehaviour
         {
             //Debug.LogWarning($"[Building] Cannot add message - infoTextBox is NULL! Trying to find TextBox again...");
 
-            infoTextBox = FindObjectOfType<TextBox>(true);
+            infoTextBox = TextBox.reference;
             if (infoTextBox != null)
             {
                 //Debug.Log($"[Building] Found TextBox on second try: {infoTextBox.name} (Active: {infoTextBox.gameObject.activeSelf})");

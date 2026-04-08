@@ -274,7 +274,6 @@ public class DuckWalk : MonoBehaviour
     {
         if (collision.CompareTag("Building"))
         {
-            print(collision.name);
             if (beingDragged) {return;}
 
             Building curBuilding = collision.GetComponent<Building>();
@@ -282,7 +281,6 @@ public class DuckWalk : MonoBehaviour
             if (interacting)
             {
                 taskQueue.Enqueue(curBuilding); //Add task to queue
-                print("added");
             }
             else
             {
@@ -352,9 +350,9 @@ public class DuckWalk : MonoBehaviour
         {
             Building targetBuilding = taskQueue.Dequeue();
             if (!targetBuilding) {continue;}
-            if (col.bounds.Intersects(targetBuilding.Col.bounds))
+
+            if (col.IsTouching(targetBuilding.Col))
             {
-                print("remobed");
                 interacting = curBuilding; //Force interacting to ensure no issues
                 interacting.StartInteracting(this);
                 StartCoroutine(BuildingInteraction(targetBuilding));
@@ -416,6 +414,18 @@ public class DuckWalk : MonoBehaviour
     public void GainSpeedModifier(float amount)
     {
         speedModifier += amount;
+    }
+
+    public void Place()
+    {
+        List<Collider2D> hits = new();
+        col.Overlap(hits);
+
+        foreach (Collider2D curHit in hits)
+        {
+            OnTriggerEnter2D(curHit);
+        }
+
     }
 
 }

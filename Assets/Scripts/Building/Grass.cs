@@ -7,7 +7,7 @@ public class Grass : Building
     int maxHits;
 
     //Ideally this stuff would have been done in mapgen
-    void Start()
+    protected override void Start()
     {
         Vector2Int arrayPos = MapManager.reference.TilemapPosToArrayPos(
             MapManager.reference.TransformPosToTilemapPos(transform.position)
