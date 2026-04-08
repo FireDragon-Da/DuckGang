@@ -34,7 +34,7 @@ public class BuildingPlacer : MonoBehaviour
                 {
                     if (hit.collider.CompareTag("Building"))
                     {
-                        hit.collider.GetComponent<Building>().StartDeconstruction();
+                        hit.collider.GetComponent<Building>().TryStartRemove();
                     }
                 }
 

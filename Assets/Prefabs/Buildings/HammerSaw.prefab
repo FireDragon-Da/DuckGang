@@ -265,12 +265,15 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2990216547036666206}
   foundationSpriteRenderer: {fileID: 3715528951212348669}
   walkable: 0
+  quacxiconSO: {fileID: 11400000, guid: d9affd977097b284db68ee2e6313957e, type: 2}
+  buildingName: Hammersaw
+  infoTextBox: {fileID: 0}
   constructionNeeded: 6
   placeCost: 10
   buildCost: 3
   removeHitsRequired: 5
   buildTime: 2
-  removeTime: 2
+  removeTime: 3
   filledSpots: 01010101
   hasUniqueBounce: 1
   vfxHandler: {fileID: 0}

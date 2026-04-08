@@ -265,12 +265,15 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2990216547036666206}
   foundationSpriteRenderer: {fileID: 3715528951212348669}
   walkable: 1
+  quacxiconSO: {fileID: 11400000, guid: d9affd977097b284db68ee2e6313957e, type: 2}
+  buildingName: Strawcraft
+  infoTextBox: {fileID: 0}
   constructionNeeded: 8
   placeCost: 6
   buildCost: 3
   removeHitsRequired: 4
   buildTime: 2
-  removeTime: 2
+  removeTime: 3
   filledSpots: 01010101
   hasUniqueBounce: 0
   vfxHandler: {fileID: 0}
@@ -278,9 +281,9 @@ MonoBehaviour:
   buildCompleteVFX: {fileID: 0}
   removeHitVFX: {fileID: 0}
   progressBar: {fileID: 9131167817744461444}
-  productionAmount: 10
+  productionAmount: 5
   totalCapacity: 3
-  productionTime: 2
+  productionTime: 5
 --- !u!1 &1661359709266622970
 GameObject:
   m_ObjectHideFlags: 0

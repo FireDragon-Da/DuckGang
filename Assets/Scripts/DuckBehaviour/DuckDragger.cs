@@ -40,6 +40,9 @@ public class DuckDragger : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 curDuck.beingDragged = false;
+
+                curDuck.Place();
+
                 curDuck = null;
             }
             else
