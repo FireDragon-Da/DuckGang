@@ -265,6 +265,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2990216547036666206}
   foundationSpriteRenderer: {fileID: 3715528951212348669}
   walkable: 0
+  quacxiconSO: {fileID: 11400000, guid: d9affd977097b284db68ee2e6313957e, type: 2}
+  buildingName: Compostsite
+  infoTextBox: {fileID: 0}
   constructionNeeded: 8
   placeCost: 12
   buildCost: 4
