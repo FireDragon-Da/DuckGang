@@ -10,8 +10,12 @@ public class Building : MonoBehaviour
     [SerializeField] protected SpriteRenderer spriteRenderer;
     [SerializeField] protected SpriteRenderer foundationSpriteRenderer;
     [SerializeField] protected bool walkable;
+    [SerializeField] protected QuacxiconSO quacxiconSO;
+    [SerializeField] protected string buildingName;
+    [SerializeField] private TextBox infoTextBox;
 
     protected bool continueBehavior; //Flag for passing if Interact should continue
+    string textinfo;
 
     [Header("Construction")]
     [SerializeField] protected float constructionNeeded;
@@ -21,6 +25,7 @@ public class Building : MonoBehaviour
     bool hasFinalBuilder;
     [SerializeField] protected int placeCost;
     [SerializeField] protected int buildCost;
+    protected string lastBuilderName;
 
 
 
@@ -129,6 +134,13 @@ public class Building : MonoBehaviour
 
             if (vfxHandler != null) vfxHandler.PlayEffect(interactVFX);
 
+            // Capture the last builder's name
+            DuckNameGen duckNameGen = duck.GetComponent<DuckNameGen>();
+            if (duckNameGen != null)
+            {
+                lastBuilderName = duckNameGen.CurrentDuckName;
+            }
+
             if (constructionCount >= constructionNeeded - 1)
             {
                 hasFinalBuilder = true;
@@ -173,6 +185,44 @@ public class Building : MonoBehaviour
         foundationSpriteRenderer.enabled = false;
         spriteRenderer.enabled = true;
 
+        textinfo = quacxiconSO.GetRandomLogFromCategory(buildingName);
+
+        //Debug.Log($"[Building] Build() called. textinfo: '{textinfo}', lastBuilderName: '{lastBuilderName}'");
+        //Debug.Log($"[Building] infoTextBox is null: {infoTextBox == null}");
+
+        if (infoTextBox != null)
+        {
+            string outputMessage = textinfo;
+            if (!string.IsNullOrEmpty(lastBuilderName))
+            {
+                outputMessage = lastBuilderName + " " + textinfo;
+            }
+
+            //Debug.Log($"[Building] Attempting to add line to TextBox: '{outputMessage}'");
+            infoTextBox.AddLine(outputMessage);
+            //Debug.Log($"[Building] Line added to TextBox successfully!");
+        }
+        else
+        {
+            //Debug.LogWarning($"[Building] Cannot add message - infoTextBox is NULL! Trying to find TextBox again...");
+
+            infoTextBox = FindObjectOfType<TextBox>(true);
+            if (infoTextBox != null)
+            {
+                //Debug.Log($"[Building] Found TextBox on second try: {infoTextBox.name} (Active: {infoTextBox.gameObject.activeSelf})");
+                string outputMessage = textinfo;
+                if (!string.IsNullOrEmpty(lastBuilderName))
+                {
+                    outputMessage = lastBuilderName + " " + textinfo;
+                }
+                infoTextBox.AddLine($"<color=green>{outputMessage}</color>");
+            }
+            else
+            {
+                Debug.LogError("[Building] Still no TextBox found in scene!");
+            }
+        }
+
         PublicInfo.reference.constructionList.Remove(this);
         PublicInfo.reference.curBuildingList.Add(this);
 
@@ -212,7 +262,7 @@ public class Building : MonoBehaviour
 
     public virtual Vector2 UnqiueBounce(DuckWalk target)
     {
-        Debug.LogError("Unique Bounce was used when it shouldn't be");
+        //Debug.LogError("Unique Bounce was used when it shouldn't be");
         return Vector2.up;
     }
 
@@ -247,4 +297,19 @@ public class Building : MonoBehaviour
         duckProgressBar.HideBar();
     }
 
+    protected virtual void Awake()
+    {
+        if (infoTextBox == null)
+        {
+            infoTextBox = FindObjectOfType<TextBox>(true);
+            if (infoTextBox != null)
+            {
+                //Debug.Log($"[Building] Auto-found TextBox: {infoTextBox.name} (Active: {infoTextBox.gameObject.activeSelf})");
+            }
+            else
+            {
+                Debug.LogWarning("[Building] No TextBox found in scene!");
+            }
+        }
+    }
 }

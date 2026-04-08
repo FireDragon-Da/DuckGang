@@ -219,6 +219,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 8440786190465635735}
   foundationSpriteRenderer: {fileID: 3776309270541549310}
   walkable: 1
+  quacxiconSO: {fileID: 11400000, guid: d9affd977097b284db68ee2e6313957e, type: 2}
+  buildingName: Farm
+  infoTextBox: {fileID: 0}
   constructionNeeded: 2
   placeCost: 1
   buildCost: 2
