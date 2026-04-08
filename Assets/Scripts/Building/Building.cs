@@ -195,7 +195,7 @@ public class Building : MonoBehaviour
             string outputMessage = textinfo;
             if (!string.IsNullOrEmpty(lastBuilderName))
             {
-                outputMessage = lastBuilderName + " " + textinfo;
+                outputMessage = $"<color=green>{lastBuilderName + " " + textinfo}</color>";
             }
 
             //Debug.Log($"[Building] Attempting to add line to TextBox: '{outputMessage}'");
@@ -213,9 +213,9 @@ public class Building : MonoBehaviour
                 string outputMessage = textinfo;
                 if (!string.IsNullOrEmpty(lastBuilderName))
                 {
-                    outputMessage = lastBuilderName + " " + textinfo;
+                    outputMessage = $"<color=green>{lastBuilderName + " " + textinfo}</color>";
                 }
-                infoTextBox.AddLine($"<color=green>{outputMessage}</color>");
+                infoTextBox.AddLine(outputMessage);
             }
             else
             {
