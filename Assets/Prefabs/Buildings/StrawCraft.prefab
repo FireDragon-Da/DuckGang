@@ -278,9 +278,9 @@ MonoBehaviour:
   buildCompleteVFX: {fileID: 0}
   removeHitVFX: {fileID: 0}
   progressBar: {fileID: 9131167817744461444}
-  productionAmount: 10
+  productionAmount: 5
   totalCapacity: 3
-  productionTime: 2
+  productionTime: 5
 --- !u!1 &1661359709266622970
 GameObject:
   m_ObjectHideFlags: 0
