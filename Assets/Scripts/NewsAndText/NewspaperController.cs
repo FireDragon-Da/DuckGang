@@ -1,7 +1,10 @@
+using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public enum ArticlePriority
@@ -88,6 +91,20 @@ public class NewspaperController : MonoBehaviour
     [SerializeField] private TMP_Text secondPriorityTitleText;
     [SerializeField] private TMP_Text secondPriorityContentText;
 
+    [Header("UI References - Duck Photo")]
+    [SerializeField] private Image duckPhotoImage1;
+    [SerializeField] private Image duckPhotoImage2;
+
+    [Header("Photo Capture Settings")]
+    [SerializeField] private float photoCaptureInterval = 60f;
+    [SerializeField] private int photoWidth = 512;
+    [SerializeField] private int photoHeight = 512;
+    [SerializeField] private float photoCaptureZoom = 3f;
+
+    private float photoTimer;
+    private Camera mainCamera;
+    private int currentPhotoIndex = 0;
+
     void Awake()
     {
         if (reference == null)
@@ -98,6 +115,19 @@ public class NewspaperController : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+
+        mainCamera = Camera.main;
+        photoTimer = photoCaptureInterval;
+    }
+
+    void Update()
+    {
+        photoTimer -= Time.deltaTime;
+        if (photoTimer <= 0f)
+        {
+            photoTimer = photoCaptureInterval;
+            CaptureDuckPhoto();
         }
     }
 
@@ -231,5 +261,94 @@ public class NewspaperController : MonoBehaviour
     {
         if (secondPriorityTitleText != null) secondPriorityTitleText.text = title;
         if (secondPriorityContentText != null) secondPriorityContentText.text = content;
+    }
+
+    //---------------------------------------------------------------------------------
+    // Duck Photo Capture System
+    //---------------------------------------------------------------------------------
+
+    private void CaptureDuckPhoto()
+    {
+        GameObject randomDuck = GetRandomDuck();
+        if (randomDuck == null)
+        {
+            Debug.Log("No ducks available for photo capture");
+            return;
+        }
+
+        StartCoroutine(CaptureScreenshotCoroutine(randomDuck));
+    }
+
+    private GameObject GetRandomDuck()
+    {
+        GameObject[] allDucks = GameObject.FindGameObjectsWithTag("Duck");
+        if (allDucks.Length == 0)
+        {
+            return null;
+        }
+
+        return allDucks[Random.Range(0, allDucks.Length)];
+    }
+
+    private IEnumerator CaptureScreenshotCoroutine(GameObject targetDuck)
+    {
+        if (mainCamera == null)
+        {
+            mainCamera = Camera.main;
+        }
+
+        Vector3 originalPosition = mainCamera.transform.position;
+        float originalSize = mainCamera.orthographicSize;
+
+        Vector3 duckPosition = targetDuck.transform.position;
+        mainCamera.transform.position = new Vector3(duckPosition.x, duckPosition.y, mainCamera.transform.position.z);
+        mainCamera.orthographicSize = photoCaptureZoom;
+
+        yield return new WaitForEndOfFrame();
+
+        RenderTexture renderTexture = new RenderTexture(photoWidth, photoHeight, 24);
+        RenderTexture currentRT = RenderTexture.active;
+        mainCamera.targetTexture = renderTexture;
+
+        mainCamera.Render();
+
+        RenderTexture.active = renderTexture;
+        Texture2D screenshot = new Texture2D(photoWidth, photoHeight, TextureFormat.RGB24, false);
+        screenshot.ReadPixels(new Rect(0, 0, photoWidth, photoHeight), 0, 0);
+        screenshot.Apply();
+
+        mainCamera.targetTexture = null;
+        RenderTexture.active = currentRT;
+        Destroy(renderTexture);
+
+        mainCamera.transform.position = originalPosition;
+        mainCamera.orthographicSize = originalSize;
+
+        UpdateDuckPhoto(screenshot);
+    }
+
+    private void UpdateDuckPhoto(Texture2D photoTexture)
+    {
+        if (photoTexture == null)
+        {
+            return;
+        }
+
+        Sprite photoSprite = Sprite.Create(
+            photoTexture,
+            new Rect(0, 0, photoTexture.width, photoTexture.height),
+            new Vector2(0.5f, 0.5f)
+        );
+
+        if (currentPhotoIndex == 0 && duckPhotoImage1 != null)
+        {
+            duckPhotoImage1.sprite = photoSprite;
+            currentPhotoIndex = 1;
+        }
+        else if (currentPhotoIndex == 1 && duckPhotoImage2 != null)
+        {
+            duckPhotoImage2.sprite = photoSprite;
+            currentPhotoIndex = 0;
+        }
     }
 }
