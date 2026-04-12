@@ -52,5 +52,13 @@ public class DuckSocietyManager : MonoBehaviour
         }
 
         Destroy(duck);
+
+        if (PublicInfo.reference.duckList.Count <= 0)
+        {
+            if (GameOverManager.reference != null)
+            {
+                GameOverManager.reference.TriggerGameOver();
+            }
+        }
     }
 }
