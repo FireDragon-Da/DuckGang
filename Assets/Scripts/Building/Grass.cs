@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Grass : Building
+public class Grass : Building , Farmlike
 {
     [Header("Grass")]
     [SerializeField] float growTime;
@@ -12,6 +12,8 @@ public class Grass : Building
     int hits = 0;
     int maxHits;
     bool hasFood;
+
+    int compostBoost;
 
     //Ideally alot of this stuff would have been done in mapgen
     protected override void Start()
@@ -45,7 +47,8 @@ public class Grass : Building
             }
 
             int gain = 1;
-            
+            gain += compostBoost;
+
             if (MeetingManager.reference.hasGatherSociety)
             {
                 gain += 1;
@@ -81,4 +84,15 @@ public class Grass : Building
             }
         }
     }
+
+    public void GainBoost()
+    {
+        compostBoost++;
+    }
+
+    public void RemoveBoost()
+    {
+        compostBoost--;
+    }
+
 }
