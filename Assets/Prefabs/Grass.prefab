@@ -247,11 +247,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Grass
   width: 1
   height: 1
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 7987995685023459490}
   foundationSpriteRenderer: {fileID: 0}
   walkable: 0
   quacxiconSO: {fileID: 11400000, guid: d9affd977097b284db68ee2e6313957e, type: 2}
   buildingName: 
+  infoTextBox: {fileID: 0}
   constructionNeeded: 0
   placeCost: 0
   buildCost: 0
@@ -265,6 +266,9 @@ MonoBehaviour:
   buildCompleteVFX: {fileID: 0}
   removeHitVFX: {fileID: 0}
   progressBar: {fileID: 7484858622110699207}
+  growTime: 30
+  grownSprite: {fileID: 4042948224979219458, guid: 881e27bcd6388d5409c6aa1b9aaccc57, type: 3}
+  emptySprite: {fileID: 4966732595609684114, guid: 7d306053d54f1e84ebabc9212a4eb160, type: 3}
 --- !u!114 &5450738039778334083
 MonoBehaviour:
   m_ObjectHideFlags: 0
