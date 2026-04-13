@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Farmland : Building
+public class Farmland : Building , Farmlike
 {
     [Header("Farm")]
     float growTimer;
@@ -19,6 +19,8 @@ public class Farmland : Building
 
     [SerializeField] float waterTime = 2f;
     [SerializeField] float harvestTime = 2f;
+
+    int compostBoost;
 
     public override void StartBuild()
     {
@@ -77,8 +79,8 @@ public class Farmland : Building
     {
         curCropCount--;
 
-        //crumb visualization
         int gain = cropCrumbGain;
+        gain += compostBoost;
 
         if (MeetingManager.reference.hasSerfdomSystem)
         {
@@ -160,8 +162,18 @@ public class Farmland : Building
         spriteRenderer.color = tempColor;
     }
 
-    public override void StartDeconstruction() //Farm holder deals ith this
+    public override void StartDeconstruction() //Farm holder deals with this
     {
+    }
+
+    public void GainBoost()
+    {
+        compostBoost++;
+    }
+
+    public void RemoveBoost()
+    {
+        compostBoost--;
     }
 
 }

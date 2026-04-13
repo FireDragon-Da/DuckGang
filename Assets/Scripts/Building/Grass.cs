@@ -1,10 +1,12 @@
 using UnityEngine;
 
-public class Grass : Building
+public class Grass : Building , Farmlike
 {
 
     int hits = 0;
     int maxHits;
+
+    int compostBoost;
 
     //Ideally this stuff would have been done in mapgen
     protected override void Start()
@@ -33,6 +35,8 @@ public class Grass : Building
 
             int gain = 1;
 
+            gain += compostBoost;
+
             if (hits > maxHits && !MeetingManager.reference.hasGatherSociety) {
                 return;
             }
@@ -50,4 +54,15 @@ public class Grass : Building
             hits++;
         }
     }
+
+    public void GainBoost()
+    {
+        compostBoost++;
+    }
+
+    public void RemoveBoost()
+    {
+        compostBoost--;
+    }
+
 }
