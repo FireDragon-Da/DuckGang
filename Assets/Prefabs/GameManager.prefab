@@ -5550,6 +5550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e9840c57f531b4bafa86967c797bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DuckDragger
+  dragSpeed: 15
 --- !u!114 &2545802020297177650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6670,6 +6671,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3467961759958769889, guid: cda72d5e04cdbd7419c759a99110c20b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1032eb9345f5d0a4f8723ab305198ab4, type: 3}
     - target: {fileID: 4200657851574072297, guid: cda72d5e04cdbd7419c759a99110c20b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.00046619048
