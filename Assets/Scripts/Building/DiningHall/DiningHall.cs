@@ -1,0 +1,56 @@
+using System.Collections;
+using UnityEngine;
+
+public class DiningHall : Building
+{
+
+    [SerializeField] int foodCap;
+    [SerializeField] int foodGainPerHit;
+    int heldFood;
+
+    [SerializeField] static float range = 20f;
+    public static float Range => range;
+
+    [SerializeField] float fillTime = 2f;
+
+    public override IEnumerator BuildingInteract(DuckWalk duck)
+    {
+        yield return StartCoroutine(base.BuildingInteract(duck));
+        if (!continueBehavior)
+        {
+            yield break;
+        }
+
+        if (heldFood + interacting.Count <= foodCap)
+        {
+            if (CrumbManager.reference.ConsumeCrumbs(foodGainPerHit)) {
+                yield return StartCoroutine(WaitWithProgress(fillTime, duck.ProgressBar));
+                heldFood += foodGainPerHit;
+            }
+        }
+    }
+
+    public override void Build()
+    {
+        base.Build();
+
+        PublicInfo.reference.diningHalls.Add(this);
+    }
+
+    public override void StartDeconstruction()
+    {
+        PublicInfo.reference.diningHalls.Remove(this);
+        base.StartDeconstruction();
+    }
+
+    public bool HasFood(int amount)
+    {
+        return heldFood >= amount;
+    }
+
+    public void TakeFood(int amount)
+    {
+        heldFood -= amount;
+    }
+
+}

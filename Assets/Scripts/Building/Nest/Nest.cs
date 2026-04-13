@@ -34,10 +34,10 @@ public class Nest : Building
         effectApplier.gameObject.SetActive(true);
     }
 
-    public override void Remove()
+    public override void StartDeconstruction()
     {
         PublicInfo.reference.nestList.Remove(this);
-        base.Remove();
+        base.StartDeconstruction();
     }
 
     public override IEnumerator BuildingInteract(DuckWalk duck)
