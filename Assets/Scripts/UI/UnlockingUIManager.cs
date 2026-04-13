@@ -33,30 +33,56 @@ public class UnlockingUIManager : MonoBehaviour
     public GameObject AltarBuildingBar;
     public GameObject DrumBuildingBar;
 
-    public string lockedString;
+    private string lockedString;
 
-    public string NestDescription;
-    public string FarmlandDescription;
-    public string GoldenCornDescription;
-    public string PlaygroundDescription;
-    public string CompostsiteDescription;
-    public string SecreteSiteDescription;
-    public string HammerSawDescription;
-    public string StrawCraftDescription;
-    public string AltarDescription;
-    public string DrumDescription;
+    private string NestDescription;
+    private string FarmlandDescription;
+    private string GoldenCornDescription;
+    private string PlaygroundDescription;
+    private string CompostsiteDescription;
+    private string SecreteSiteDescription;
+    private string HammerSawDescription;
+    private string StrawCraftDescription;
+    private string AltarDescription;
+    private string DrumDescription;
 
-    public string nestUnlockingText;
-    public string farmlandUnlockingText;
-    public string goldenCornUnlockingText;
-    public string playgroundUnlockingText;
-    public string compostsiteUnlockingText;
-    public string secreteSiteUnlockingText;
-    public string hammerSawUnlockingText;
-    public string strawCraftUnlockingText;
-    public string altarUnlockingText;
-    public string drumUnlockingText;
+    private string nestUnlockingText;
+    private string farmlandUnlockingText;
+    private string goldenCornUnlockingText;
+    private string playgroundUnlockingText;
+    private string compostsiteUnlockingText;
+    private string secreteSiteUnlockingText;
+    private string hammerSawUnlockingText;
+    private string strawCraftUnlockingText;
+    private string altarUnlockingText;
+    private string drumUnlockingText;
 
+    public QuacxiconSO quacxiconSO;
+
+    private void Awake()
+    {
+        lockedString = quacxiconSO.GetRandomLogFromCategory("Locked");
+        NestDescription = quacxiconSO.GetRandomLogFromCategory("Nest");
+        FarmlandDescription = quacxiconSO.GetRandomLogFromCategory("Farmland");
+        GoldenCornDescription = quacxiconSO.GetRandomLogFromCategory("Golden Corn");
+        PlaygroundDescription = quacxiconSO.GetRandomLogFromCategory("Playground");
+        CompostsiteDescription = quacxiconSO.GetRandomLogFromCategory("Compost Site");
+        SecreteSiteDescription = quacxiconSO.GetRandomLogFromCategory("Secret Site");
+        HammerSawDescription = quacxiconSO.GetRandomLogFromCategory("Hammer Saw");
+        StrawCraftDescription = quacxiconSO.GetRandomLogFromCategory("Straw Craft");
+        AltarDescription = quacxiconSO.GetRandomLogFromCategory("Altar");
+        DrumDescription = quacxiconSO.GetRandomLogFromCategory("Drum");
+        nestUnlockingText = quacxiconSO.GetRandomLogFromCategory("NestDes");
+        farmlandUnlockingText = quacxiconSO.GetRandomLogFromCategory("FarmlandDes");
+        goldenCornUnlockingText = quacxiconSO.GetRandomLogFromCategory("Golden CornDes");
+        playgroundUnlockingText = quacxiconSO.GetRandomLogFromCategory("PlaygroundDes");
+        compostsiteUnlockingText = quacxiconSO.GetRandomLogFromCategory("Compost SiteDes");
+        secreteSiteUnlockingText = quacxiconSO.GetRandomLogFromCategory("Secret SiteDes");
+        hammerSawUnlockingText = quacxiconSO.GetRandomLogFromCategory("Hammer SawDes");
+        strawCraftUnlockingText = quacxiconSO.GetRandomLogFromCategory("Straw CraftDes");
+        altarUnlockingText = quacxiconSO.GetRandomLogFromCategory("AltarDes");
+        drumUnlockingText = quacxiconSO.GetRandomLogFromCategory("DrumDes");
+    }
 
 
 

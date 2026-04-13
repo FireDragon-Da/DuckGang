@@ -248,7 +248,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -121, y: -354}
-  m_SizeDelta: {x: 368.788, y: 195.229}
+  m_SizeDelta: {x: 370, y: 195}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4767490828378897723
 CanvasRenderer:
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -629,7 +629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1482,6 +1482,12 @@ MonoBehaviour:
   topPriorityContentText: {fileID: 1692435558532987046}
   secondPriorityTitleText: {fileID: 5373015446105427502}
   secondPriorityContentText: {fileID: 5161985125893049035}
+  duckPhotoImage1: {fileID: 3755345851288018447}
+  duckPhotoImage2: {fileID: 7079727641845414455}
+  photoCaptureInterval: 60
+  photoWidth: 370
+  photoHeight: 195
+  photoCaptureZoom: 3
 --- !u!114 &3790887154377196170
 MonoBehaviour:
   m_ObjectHideFlags: 0

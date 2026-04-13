@@ -19,6 +19,14 @@ public class BuildingPlacer : MonoBehaviour
     bool removeToggled;
     Building curBuildingPrefab;
 
+    public static BuildingPlacer reference;
+    public bool Using => active || removeToggled;
+
+    void Awake()
+    {
+        reference = this;
+    }
+
     void Update()
     {
         if (removeToggled && !EventSystem.current.IsPointerOverGameObject())

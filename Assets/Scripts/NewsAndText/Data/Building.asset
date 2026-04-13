@@ -25,3 +25,51 @@ MonoBehaviour:
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
+  - categoryName: Compostsite
+    contentList:
+    - has made the gorgeous Compostsite
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Drum
+    contentList:
+    - do not know why but made some drums to play
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Goldencorn
+    contentList:
+    - just jump into capitalism by finish building the Golden corn
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Hammersaw
+    contentList:
+    - has just built a hammersaw
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Nest
+    contentList:
+    - has just built a love nest
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Playground
+    contentList:
+    - wants to play and built a playground. Hurray!
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Secretsite
+    contentList:
+    - built a secret site for deep dark fantasys.
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Strawcraft
+    contentList:
+    - built a strawcraft for yourcraft.
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0

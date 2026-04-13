@@ -65,7 +65,7 @@ public class TimeManager : MonoBehaviour
         pauses--;
         if (pauses == 0)
         {
-            Time.timeScale = 1;
+            Time.timeScale = GameMenu.reference.Speed;
         }
     }
 

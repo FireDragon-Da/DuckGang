@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -5,11 +6,12 @@ public class DuckDragger : MonoBehaviour
 {
 
     DuckWalk curDuck;
+    [SerializeField] float dragSpeed = 15f;
 
     // Update is called once per frame
     void Update()
     {
-        if (!EventSystem.current.IsPointerOverGameObject())
+        if (!EventSystem.current.IsPointerOverGameObject() && !BuildingPlacer.reference.Using)
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D[] hits;
@@ -49,7 +51,26 @@ public class DuckDragger : MonoBehaviour
             {
                 Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mousePos.z = 0;
-                curDuck.transform.position = mousePos;
+
+                Vector2 move = mousePos-curDuck.transform.position;
+
+                RaycastHit2D hit = Physics2D.CircleCast((Vector2)curDuck.transform.position, 
+                                            0.5f, move.normalized, 
+                                            move.magnitude, LayerMask.GetMask("Obstacle"));
+
+                Vector2 target;
+                
+                if (hit)
+                {
+                    target = hit.centroid + hit.normal * 0.01f;
+                }
+                else
+                {
+                    target = mousePos;
+                }
+
+                curDuck.transform.position = Vector2.MoveTowards(curDuck.transform.position, target, dragSpeed*Time.deltaTime);
+
             }
         }
 
