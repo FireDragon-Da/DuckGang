@@ -9,7 +9,7 @@ public class GameMenu : MonoBehaviour
 
     bool paused;
     public bool Paused => paused;
-    float speed;
+    float speed = 1;
     public float Speed => speed;
 
     void Awake()
