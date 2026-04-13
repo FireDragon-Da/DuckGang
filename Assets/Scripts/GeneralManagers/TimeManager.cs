@@ -57,12 +57,12 @@ public class TimeManager : MonoBehaviour
     public void AddPause()
     {
         pauses++;
-        Time.timeScale = 0;print("yuh");
+        Time.timeScale = 0;
     }
 
     public void RemovePause()
     {
-        pauses--;print("stopped "+pauses);
+        pauses--;
         if (pauses == 0)
         {
             Time.timeScale = GameMenu.reference.Speed;
