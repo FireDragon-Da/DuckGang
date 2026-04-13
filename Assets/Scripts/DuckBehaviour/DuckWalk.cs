@@ -285,7 +285,8 @@ public class DuckWalk : MonoBehaviour
             else
             {
                 StartCoroutine(BuildingInteraction(curBuilding)); //Start task
-            }            
+                PublicInfo.reference.duckCollideBuildingTimes++;
+            }
         }
     }
 
