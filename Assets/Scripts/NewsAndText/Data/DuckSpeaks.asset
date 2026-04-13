@@ -17,6 +17,58 @@ MonoBehaviour:
     contentList:
     - "thinks no one should \nstands in John Quackna's\nway"
     - thinks it is so quacky
-    sourceTxtFile: {fileID: 0}
-    targetCategoryName: 
+    - has been staring at a puddle for several minutes. He now believes the sky lives
+      underground.
+    - found a stick and briefly assumed he had become employed.
+    - smelled a flower. He is uncertain whether it was a snack or an opinion.
+    - walked into a rock with tremendous confidence. He has blamed the rock for moving.
+    - spent the morning following a butterfly. He has learned nothing.
+    - is attempting to intimidate a pebble. The pebble remains unmoved.
+    - looked at his own footprint and became concerned that someone is stalking him.
+    - has decided the wind is invisible soup.
+    - tried to sit on water. The results were educational.
+    - found a leaf. He is treating it like a legal document.
+    - has become emotionally attached to a  rock.
+    - watched a cloud for too long and now suspects it is thinking about him.
+    - tried to eat the concept of distance.
+    - is glaring at the sun. This rivalry will not end well.
+    - heard an echo and assumed the world was politely quacking back.
+    - spent ten minutes preparing to jump over nothing in particular.
+    - has mistaken a shadow for a hole and is refusing to go near it.
+    - is carrying a twig with the dignity of a decorated war hero.
+    - looked into the pond and gasped. He appears to have discovered another duck
+      again.
+    - has concluded that mud is just wet floor seasoning.
+    - is trying to remember where he was going. He has also forgotten where he currently
+      is.
+    - pecked a rock repeatedly in the hope that it would eventually become bread.
+    - has been standing very still to see if thinking happens on its own.
+    - believes the grass is growing specifically to annoy him.
+    - saw two Crumbies at once and temporarily lost the ability to behave.
+    - has decided a nearby bush is probably a university.
+    - tried to whisper to a tree. The tree offered no guidance.
+    - is deeply suspicious of the pound.
+    - found a feather on the ground and is unsettled by the evidence.
+    - has been chasing his own excitement in a small circle.
+    - looked very hard at a nest and concluded that architecture is mostly luck.
+    - is trying to smell whether rain is approaching. He currently smells like dirt.
+    - has confused bravery with poor judgment once again.
+    - watched another duck trip and seems inspired.
+    - is treating a very ordinary rock like a historical landmark.
+    - has developed a personal philosophy based entirely on crumbies.
+    - is unsure why his feet keep taking him places, but he appreciates their initiative.
+    - has attempted to organize three pebbles into a family.
+    - believes the pond is larger on the inside.
+    - has taken a short break from doing nothing to do something worse.
+    - is investigating whether silence is edible.
+    - has decided that being lost is just a scenic route.
+    - found a patch of dirt and seems convinced it contains secrets.
+    - is waiting for a stick to do something impressive.
+    - has become tired from thinking and will now resume not thinking.
+    - tried to inspect a flower up close and sneezed directly into destiny.
+    - is staring at the horizon like he personally misplaced it.
+    - smelled his own feathers. He has decided he smells like a damp sponge.
+    - bought a ticket for QQE super slang.
+    sourceTxtFile: {fileID: 4900000, guid: d1cb3245eed4bbf48af73be6264493e2, type: 3}
+    targetCategoryName: DuckThoughts
     clearExistingContent: 0
