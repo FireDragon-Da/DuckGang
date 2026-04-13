@@ -51,6 +51,8 @@ public class DuckHunger : MonoBehaviour
             return;
         }
 
+        diningHall.TakeFood(1);
+
         DuckFeedingAnimationManager.reference.SpawnFlyingCrumb(diningHall.gameObject, gameObject);
 
         float fillThisCrumb = fillPerCrumb;
