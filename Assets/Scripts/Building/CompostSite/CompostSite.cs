@@ -62,12 +62,12 @@ public class CompostSite : Building
 
     List<Farmlike> GetInRange()
     {
-        
+        return null;
     }
 
     bool IsInRange(Farmlike farmlike)
     {
-        
+        return false;
     }
 
 }
