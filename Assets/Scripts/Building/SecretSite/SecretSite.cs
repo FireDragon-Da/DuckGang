@@ -13,6 +13,8 @@ public class SecretSite : Building
     [SerializeField] int totalGain = 150;
     bool producing;
     [SerializeField] float productionTime = 60f;
+    [SerializeField] Sprite openSprite;
+    [SerializeField] Sprite regularSprite;
 
     public override IEnumerator BuildingInteract(DuckWalk duck)
     {
@@ -29,7 +31,7 @@ public class SecretSite : Building
             yield return StartCoroutine(WaitWithProgress(fillTime, duck.ProgressBar));
             curCapactiy += takePerTouch;
             CrumbManager.reference.SpawnCrumbiePopupDecrease(transform.position, takePerTouch);
-            print("filed");
+
             if (curCapactiy >= totalCapactiy)
             {
                 producing = true;
@@ -42,6 +44,8 @@ public class SecretSite : Building
 
     public IEnumerator ProduceCrumbies()
     {
+        spriteRenderer.sprite = openSprite;
+
         progressBar.ShowBar();
         progressBar.ChangeFill(0);
         float elapsed = 0f;
@@ -61,5 +65,7 @@ public class SecretSite : Building
         producing = false;
         CrumbManager.reference.GainCrumbs(totalGain);
         CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, totalGain);
+
+        spriteRenderer.sprite = regularSprite;
     }
 }

@@ -45,12 +45,15 @@ public class DuckHunger : MonoBehaviour
 
     public void TryEat()
     {
-        if (!CrumbManager.reference.ConsumeCrumbs(1))
+        DiningHall diningHall = FindHall();
+        if (!diningHall)
         {
             return;
         }
 
-        DuckFeedingAnimationManager.reference.SpawnFlyingCrumb(this.GetComponent<DuckWalk>());
+        diningHall.TakeFood(1);
+
+        DuckFeedingAnimationManager.reference.SpawnFlyingCrumb(diningHall.gameObject, gameObject);
 
         float fillThisCrumb = fillPerCrumb;
 
@@ -67,6 +70,41 @@ public class DuckHunger : MonoBehaviour
         if (gameObject.activeInHierarchy)
         {
             StartCoroutine(EatFeedbackRoutine());
+        }
+    }
+
+    /// <summary>
+    /// Finds a nearby dining hall with food
+    /// </summary>
+    /// <returns></returns>
+    DiningHall FindHall()
+    {
+        DiningHall diningHall = null;
+        float nearestSqrDist = float.PositiveInfinity;
+
+        foreach (DiningHall curHall in PublicInfo.reference.diningHalls)
+        {
+            if (!curHall.HasFood(1))
+            {
+                continue;
+            }
+
+            float curDist = Mathf.Pow(curHall.transform.position.x - transform.position.x, 2) +
+                            Mathf.Pow(curHall.transform.position.y - transform.position.y, 2);
+            if (curDist < nearestSqrDist)
+            {
+                nearestSqrDist = curDist;
+                diningHall = curHall;
+            }
+        }
+
+        if (nearestSqrDist <= DiningHall.Range*DiningHall.Range)
+        {
+            return diningHall;
+        }
+        else
+        {
+            return null;
         }
     }
 

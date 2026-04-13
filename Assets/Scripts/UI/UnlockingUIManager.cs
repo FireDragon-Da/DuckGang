@@ -258,7 +258,7 @@ public class UnlockingUIManager : MonoBehaviour
 
     void TestIfDrumIsUnlocked()
     {
-        if (!isDrumUnlocked && PublicInfo.reference.duckCollideBuildingTimes >= 50)
+        if (!isDrumUnlocked && PublicInfo.reference.duckCollideBuildingTimes >= 70)
         {
             isDrumUnlocked = true;
             ChangeDrumDescriptionIfUnlocked();

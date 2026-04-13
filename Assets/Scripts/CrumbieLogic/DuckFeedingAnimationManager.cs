@@ -18,7 +18,8 @@ public class DuckFeedingAnimationManager : MonoBehaviour
     {
         worldCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
     }
-    public void PlayFeedSequence(List<DuckWalk> ducksToFeed)
+
+    /*public void PlayFeedSequence(List<DuckWalk> ducksToFeed)
     {
         StartCoroutine(FeedRoutine(ducksToFeed));
     }
@@ -30,12 +31,12 @@ public class DuckFeedingAnimationManager : MonoBehaviour
             SpawnFlyingCrumb(duck);
             yield return new WaitForSeconds(0.08f);
         }
-    }
+    }*/
 
-    public void SpawnFlyingCrumb(DuckWalk duck)
+    public void SpawnFlyingCrumb(GameObject start, GameObject end)
     {
-        Vector3 startWorldPos = GetUIIconWorldPosition();
-        Vector3 targetWorldPos = duck.transform.position;
+        Vector3 startWorldPos = start.transform.position;
+        Vector3 targetWorldPos = end.transform.position;
 
         FlyingCrumbie crumb = Instantiate(flyingCrumbPrefab, startWorldPos, Quaternion.identity);
         crumb.Init(startWorldPos, targetWorldPos, () =>

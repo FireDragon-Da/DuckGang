@@ -2053,6 +2053,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1355218679006568040, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3286283160227145588, guid: 9b60f8f41e5efd3428dfb1bbf0faa424, type: 3}
     - target: {fileID: 1388743540479684200, guid: 564aca28bc9a3bc4ba02e26e5aa61361, type: 3}
       propertyPath: m_text
       value: 'Ducks can store crumbies here. After a few moments, it will return

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2789616182574228215}
   - component: {fileID: 5722018439423492281}
   - component: {fileID: 4054533393662204298}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Obstacle Two
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -113,6 +113,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 8441657926999870883}
   foundationSpriteRenderer: {fileID: 8441657926999870883}
   walkable: 0
+  quacxiconSO: {fileID: 0}
+  buildingName: 
+  infoTextBox: {fileID: 0}
   constructionNeeded: 0
   placeCost: 0
   buildCost: 0
