@@ -136234,6 +136234,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3330367235136803162, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: quacxiconSO
+      value: 
+      objectReference: {fileID: 11400000, guid: c5230599a02267e49a326de818b7a127, type: 2}
+    - target: {fileID: 3330367235136803162, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: titleString
+      value: Game Over
+      objectReference: {fileID: 0}
     - target: {fileID: 3969327570406657050, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_Sprite
       value: 
