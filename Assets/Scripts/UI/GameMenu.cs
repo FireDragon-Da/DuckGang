@@ -21,6 +21,7 @@ public class GameMenu : MonoBehaviour
     {
         if (paused) {return;}
         TimeManager.reference.AddPause();
+        paused = true;
         //AudioListener.pause = true;
     }
 
@@ -32,7 +33,8 @@ public class GameMenu : MonoBehaviour
         }
         else
         {
-            TimeManager.reference.AddPause();
+            TimeManager.reference.RemovePause();
+            paused = false;
         }
 
         AudioListener.pause = false;
