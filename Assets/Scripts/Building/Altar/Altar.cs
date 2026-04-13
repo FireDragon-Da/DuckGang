@@ -11,6 +11,8 @@ public class Altar : Building
     [SerializeField] int watchersRequired = 3;
     DuckWalk heldDuck;
 
+    [SerializeField] List<Vector2> spotOffsets;
+
     [SerializeField] AltarGrabber altarGrabber;
 
     public override void Build()
@@ -43,6 +45,8 @@ public class Altar : Building
                 curDuck.EndInteract(this);
             }
             curWatchers.Clear();
+
+            Remove();
         }
     }
 
@@ -56,8 +60,11 @@ public class Altar : Building
 
     public void GainWatcher(DuckWalk duck)
     {
-        duck.TryInteract(this);
-        curWatchers.Add(duck);
+        if (duck.TryInteract(this))
+        {
+            duck.transform.position = transform.position + (Vector3)spotOffsets[curWatchers.Count];
+            curWatchers.Add(duck);
+        }
     }
 
     public bool HasVictim()

@@ -284,6 +284,10 @@ MonoBehaviour:
   progressBar: {fileID: 9131167817744461444}
   productionAmount: 50
   watchersRequired: 3
+  spotOffsets:
+  - {x: 0, y: 0.7}
+  - {x: 0.675, y: -0.5}
+  - {x: -0.675, y: -0.5}
   altarGrabber: {fileID: 3311538184535782130}
 --- !u!1 &1661359709266622970
 GameObject:
@@ -444,7 +448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1054933629212180206
 Transform:
   m_ObjectHideFlags: 0
@@ -455,7 +459,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5812239758529882092}

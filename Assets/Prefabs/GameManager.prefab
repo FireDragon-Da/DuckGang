@@ -2790,10 +2790,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7802172427600454279}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2024975036895980192}
+        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2806,18 +2806,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 5976628600133048580}
-        m_TargetAssemblyTypeName: GameMenu, Assembly-CSharp
-        m_MethodName: PressSettings
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6376,7 +6364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1628695511758800338, guid: cda72d5e04cdbd7419c759a99110c20b, type: 3}
       propertyPath: m_Size
-      value: 0.35460326
+      value: 0.33633375
       objectReference: {fileID: 0}
     - target: {fileID: 1628695511758800338, guid: cda72d5e04cdbd7419c759a99110c20b, type: 3}
       propertyPath: m_Value
@@ -7004,7 +6992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8039547575157247540, guid: cda72d5e04cdbd7419c759a99110c20b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.6453967
+      value: 0.66366625
       objectReference: {fileID: 0}
     - target: {fileID: 8064672374129250018, guid: cda72d5e04cdbd7419c759a99110c20b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -7487,10 +7475,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DuckMeeting_UI
       objectReference: {fileID: 0}
-    - target: {fileID: 3044515668870051171, guid: b6418661d01ccae40aa3f50686414f06, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7679,10 +7663,6 @@ PrefabInstance:
     - target: {fileID: 6372784760348236869, guid: e08f5405804e57042b3a0916f645bae5, type: 3}
       propertyPath: m_Name
       value: Newspaper
-      objectReference: {fileID: 0}
-    - target: {fileID: 6372784760348236869, guid: e08f5405804e57042b3a0916f645bae5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7848066495884907706, guid: e08f5405804e57042b3a0916f645bae5, type: 3}
       propertyPath: m_text
@@ -7939,13 +7919,19 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 173e44d80bf5c0d42bb1690c0a30f8ba, type: 3}
+--- !u!114 &2024975036895980192 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7439804215438928266, guid: 173e44d80bf5c0d42bb1690c0a30f8ba, type: 3}
+  m_PrefabInstance: {fileID: 8873593839198602026}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c34dac77a76f64d83731a051b11db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SettingsMenu
 --- !u!224 &7448365311252888377 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2051598934963845139, guid: 173e44d80bf5c0d42bb1690c0a30f8ba, type: 3}
-  m_PrefabInstance: {fileID: 8873593839198602026}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7802172427600454279 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1685389599158821293, guid: 173e44d80bf5c0d42bb1690c0a30f8ba, type: 3}
   m_PrefabInstance: {fileID: 8873593839198602026}
   m_PrefabAsset: {fileID: 0}

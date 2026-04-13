@@ -36,7 +36,7 @@ public class FarmHolder : Building
     }
 
     public override void TryStartRemove()
-    {
+    {print("proc");
         if (interacting.Count == 0)
         {
             foreach (Farmland farm in farmland)
