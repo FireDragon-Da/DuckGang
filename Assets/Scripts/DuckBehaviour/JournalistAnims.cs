@@ -1,30 +1,35 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class JournalistAnims : MonoBehaviour
+public class JournalistAnims : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 
-    Animator animator;
+    [SerializeField] GameObject journalist;
+    Animator jAnimator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        animator = GetComponent<Animator>();
+        jAnimator = journalist.GetComponent<Animator>();
         StartCoroutine(changeAnim());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     IEnumerator changeAnim()
     {
-        yield return new WaitForSeconds(Random.Range(1, 3));
-        int clip = Random.Range(0, 3);
-        animator.SetInteger("clip", clip);
-        print("changed clip to clip " + clip);
+        yield return new WaitForSeconds(Random.Range(3, 3));
+        int clip = Random.Range(10, 30);        
+        jAnimator.SetInteger("clip", clip);
         StartCoroutine(changeAnim());
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        journalist.SetActive(false);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        journalist.SetActive(true);
     }
 }
