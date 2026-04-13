@@ -29,7 +29,10 @@ public class DuckSocietyManager : MonoBehaviour
         int averageHappiness = totalHappiness / PublicInfo.reference.duckList.Count;
 
         GameObject newDuck = Instantiate(duckPrefab, new(position.x, position.y), new Quaternion());
-        newbornDuckNames.Add(newDuck.GetComponent<DuckNameGen>().CurrentDuckName);
+
+        DuckNameGen nameGen = newDuck.GetComponent<DuckNameGen>();
+        nameGen.GenerateName();
+        newbornDuckNames.Add(nameGen.CurrentDuckName);
 
         newDuck.GetComponent<DuckStats>().SetHappiness(averageHappiness);
 

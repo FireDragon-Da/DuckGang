@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Obstacle : Building
 {
-    void Start()
+    protected override void Start()
     {
         BasicBuild();
         UpdateBuildingGrid();

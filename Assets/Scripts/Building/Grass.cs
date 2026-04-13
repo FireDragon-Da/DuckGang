@@ -1,14 +1,21 @@
+using System;
 using UnityEngine;
 
 public class Grass : Building , Farmlike
 {
+    [Header("Grass")]
+    [SerializeField] float growTime;
+    [SerializeField] Sprite grownSprite;
+    [SerializeField] Sprite emptySprite;
+    float curGrowTimer;
 
     int hits = 0;
     int maxHits;
+    bool hasFood;
 
     int compostBoost;
 
-    //Ideally this stuff would have been done in mapgen
+    //Ideally alot of this stuff would have been done in mapgen
     protected override void Start()
     {
         Vector2Int arrayPos = MapManager.reference.TilemapPosToArrayPos(
@@ -21,6 +28,7 @@ public class Grass : Building , Farmlike
         BasicBuild();
 
         maxHits = TuningManager.reference.maxGrassCrumbs;
+        hasFood = true;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -33,15 +41,15 @@ public class Grass : Building , Farmlike
                 return;
             }
 
-            int gain = 1;
-
-            gain += compostBoost;
-
-            if (hits > maxHits && !MeetingManager.reference.hasGatherSociety) {
+            if (!hasFood)
+            {
                 return;
             }
-            
-            if (hits <= maxHits && MeetingManager.reference.hasGatherSociety)
+
+            int gain = 1;
+            gain += compostBoost;
+
+            if (MeetingManager.reference.hasGatherSociety)
             {
                 gain += 1;
             }
@@ -52,6 +60,28 @@ public class Grass : Building , Farmlike
             CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, gain);
 
             hits++;
+            if (hits >= maxHits)
+            {
+                hasFood = false;
+                curGrowTimer = growTime;
+                spriteRenderer.sprite = emptySprite;
+            }
+        }
+    }
+
+    protected override void UpdateBehavior()
+    {
+        base.UpdateBehavior();
+
+        if (curGrowTimer > 0)
+        {
+            curGrowTimer -= Time.deltaTime;
+            if (curGrowTimer <= 0)
+            {
+                hits = 0;
+                hasFood = true;
+                spriteRenderer.sprite = grownSprite;
+            }
         }
     }
 

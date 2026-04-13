@@ -9,6 +9,11 @@ public class DuckNameGen : MonoBehaviour
 
     private void Start()
     {
+        GenerateName();
+    }
+
+    public void GenerateName()
+    {
         CurrentDuckName = gameQuaxicon.GetRandomLogFromCategory("DuckNames");
 
         if (nameText != null)
