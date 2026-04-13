@@ -1,28 +1,52 @@
 using UnityEngine;
 
+// All of the audio listener stuff might need to be redone, doesn't seem right
+
 public class GameMenu : MonoBehaviour
 {
+
+    public static GameMenu reference;
+
+    bool paused;
+    public bool Paused => paused;
+    float speed;
+    public float Speed => speed;
+
+    void Awake()
+    {
+        reference = this;
+    }
+
     public void PauseGame()
     {
-        Time.timeScale = 0;
+        if (paused) {return;}
+        TimeManager.reference.AddPause();
         //AudioListener.pause = true;
     }
 
     public void PlayGame()
     {
-        Time.timeScale = 1;
+        if (!paused)
+        {
+            speed = 1;
+        }
+        else
+        {
+            TimeManager.reference.AddPause();
+        }
+
         AudioListener.pause = false;
     }
 
     public void FastForwardGame()
     {
-        Time.timeScale = 2;
+        speed = 2;
         AudioListener.pause = false;
     }
 
+    //Unused now
     public void PressSettings()
     {
-        Time.timeScale = 0;
         //AudioListener.pause = true;
     }
 }
