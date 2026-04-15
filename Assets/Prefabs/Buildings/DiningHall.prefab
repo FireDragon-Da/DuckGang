@@ -555,7 +555,7 @@ MonoBehaviour:
   removeHitVFX: {fileID: 0}
   progressBar: {fileID: 3149917625053071788}
   foodCap: 20
-  foodGainPerHit: 1
+  foodGainPerHit: 5
   fillTime: 1
 --- !u!61 &455469100539282678
 BoxCollider2D:

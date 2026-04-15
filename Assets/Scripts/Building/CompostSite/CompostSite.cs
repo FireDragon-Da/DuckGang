@@ -15,7 +15,8 @@ public class CompostSite : Building
     [SerializeField] float poopTime = 2f;
 
     List<Farmlike> boostedFarms = new();
-    [SerializeField] int range;
+    [SerializeField] float rangeNum;
+    [SerializeField] Collider2D range;
 
     protected override void UpdateBehavior()
     {
@@ -98,29 +99,15 @@ public class CompostSite : Building
     {
         List<Farmlike> output = new();
 
-        int min = -range;
-        int maxX = width + range;
-        int maxY = height + range;
+        List<Collider2D> hits = new();
+        range.Overlap(hits);
 
-        Vector2Int bottomLeft = MapManager.reference.TilemapPosToArrayPos(GetBottomLeftTile());
-
-        for (int dx = min; dx < maxX; dx++)
+        foreach (Collider2D col in hits)
         {
-            for (int dy = min; dy < maxY; dy++)
+            Farmlike farmlike = col.GetComponent<Farmlike>();
+            if (farmlike != null)
             {
-                Vector2Int checkPos = bottomLeft + new Vector2Int(dx, dy);
-
-                if (!MapManager.reference.IsArrayPosValid(checkPos)) {continue;}
-
-                Building building = MapManager.reference.buildingArray[checkPos.x, checkPos.y];
-                if (building != null)
-                {
-                    Farmlike farmlike = building.GetComponent<Farmlike>();
-
-                    if (farmlike != null) {
-                        output.Add(farmlike);
-                    }
-                }
+                output.Add(farmlike);
             }
         }
 
@@ -130,11 +117,12 @@ public class CompostSite : Building
     //Assumes farmlike is only 1 tile big
     public bool IsInRange(Building farmlike)
     {
-        Vector2Int myBottomLeft = MapManager.reference.TilemapPosToArrayPos(GetBottomLeftTile());
-        Vector2Int otherPos = MapManager.reference.TilemapPosToArrayPos(farmlike.GetBottomLeftTile());
-
-        return otherPos.x >= myBottomLeft.x - range && otherPos.x < myBottomLeft.x + width + range
-        && otherPos.y >= myBottomLeft.y - range && otherPos.y < myBottomLeft.y + height + range;
+        if (Mathf.Pow(transform.position.x - farmlike.transform.position.x, 2) +
+            Mathf.Pow(transform.position.y - farmlike.transform.position.y, 2) < rangeNum * rangeNum)
+        {
+            return true;
+        }
+        return false;
     }
 
     public void AddBoosted(Farmlike farmlike)
