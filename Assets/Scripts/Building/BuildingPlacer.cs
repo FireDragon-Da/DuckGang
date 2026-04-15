@@ -10,6 +10,7 @@ public class BuildingPlacer : MonoBehaviour
     [SerializeField] bool active;
     [SerializeField] List<Building> buildingList;
     [SerializeField] GameObject buildingPreview;
+    SpriteRenderer previewSprite;
 
     [SerializeField] Tilemap tilemap;
 
@@ -25,6 +26,11 @@ public class BuildingPlacer : MonoBehaviour
     void Awake()
     {
         reference = this;
+    }
+
+    void Start()
+    {
+        previewSprite = buildingPreview.GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -70,7 +76,20 @@ public class BuildingPlacer : MonoBehaviour
             Vector3 finalPosition = worldBottomLeft + offset;
             buildingPreview.transform.position = finalPosition;
 
-            if (Input.GetMouseButtonDown(0) && IsPlacementValid(startX, startY)
+            bool canPlace = IsPlacementValid(startX, startY) && 
+                            CrumbManager.reference.Crumbs > curBuildingPrefab.PlaceCost;
+
+            //Change visual color
+            if (canPlace)
+            {
+                previewSprite.color = Color.white;
+            }
+            else
+            {
+                previewSprite.color = Color.red;
+            }
+
+            if (Input.GetMouseButtonDown(0) && canPlace
                 && CrumbManager.reference.ConsumeCrumbs(curBuildingPrefab.PlaceCost))
             {
                 Building newBuilding = Instantiate(curBuildingPrefab, finalPosition, new());

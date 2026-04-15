@@ -5,7 +5,8 @@ public class CrumbManager : MonoBehaviour
 {
     
     public static CrumbManager reference;
-    public int crumbs;
+    [SerializeField] int crumbs;
+    public int Crumbs => crumbs;
     [SerializeField] TextMeshProUGUI crumbCount;
     [SerializeField] CrumbiePopup crumbiePopupPrefab;
 
