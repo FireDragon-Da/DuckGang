@@ -1,4 +1,4 @@
-interface Farmlike
+public interface Farmlike
 {
     public void GainBoost()
     {

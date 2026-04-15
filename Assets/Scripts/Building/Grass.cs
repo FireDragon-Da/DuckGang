@@ -29,6 +29,16 @@ public class Grass : Building , Farmlike
 
         maxHits = TuningManager.reference.maxGrassCrumbs;
         hasFood = true;
+
+        //Never used currently as grass never disappears and exists at game start
+        foreach (CompostSite site in PublicInfo.reference.activeSites)
+        {
+            if (site.IsInRange(this))
+            {
+                site.AddBoosted(this);
+                GainBoost();
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)

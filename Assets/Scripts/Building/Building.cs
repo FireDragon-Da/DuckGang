@@ -331,4 +331,15 @@ public class Building : MonoBehaviour
     {
         infoTextBox = TextBox.reference;
     }
+
+    public Vector2Int GetBottomLeftTile()
+    {
+        Vector2 tilePos = transform.position;
+
+        tilePos.x -= width / 2f;
+        tilePos.y -= height / 2f;
+
+        return MapManager.reference.TransformPosToTilemapPos(tilePos);
+    }
+
 }

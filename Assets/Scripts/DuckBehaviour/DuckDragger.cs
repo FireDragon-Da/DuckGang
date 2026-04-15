@@ -7,6 +7,7 @@ public class DuckDragger : MonoBehaviour
 
     DuckWalk curDuck;
     [SerializeField] float dragSpeed = 15f;
+    [SerializeField] LayerMask nonDragThrough;
 
     // Update is called once per frame
     void Update()
@@ -56,7 +57,7 @@ public class DuckDragger : MonoBehaviour
 
                 RaycastHit2D hit = Physics2D.CircleCast((Vector2)curDuck.transform.position, 
                                             0.5f, move.normalized, 
-                                            move.magnitude, LayerMask.GetMask("Obstacle"));
+                                            move.magnitude, nonDragThrough);
 
                 Vector2 target;
                 
