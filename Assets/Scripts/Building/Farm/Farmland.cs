@@ -144,6 +144,15 @@ public class Farmland : Building , Farmlike
         PublicInfo.reference.farmList.Add(this);
         //TODO this should be cleaner as its added in base and then removed here. not sure what's a better approach
         PublicInfo.reference.curBuildingList.Remove(this);
+
+        foreach (CompostSite site in PublicInfo.reference.activeSites)
+        {
+            if (site.IsInRange(this))
+            {
+                site.AddBoosted(this);
+                GainBoost();
+            }
+        }
     }
 
     public override void Remove()

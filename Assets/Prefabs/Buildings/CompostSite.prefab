@@ -281,9 +281,10 @@ MonoBehaviour:
   buildCompleteVFX: {fileID: 0}
   removeHitVFX: {fileID: 0}
   progressBar: {fileID: 9131167817744461444}
-  defaultDecayTimer: 0
-  maxPoopCount: 0
+  defaultDecayTimer: 30
+  maxPoopCount: 4
   poopTime: 2
+  range: 5
 --- !u!1 &1661359709266622970
 GameObject:
   m_ObjectHideFlags: 0
