@@ -108,17 +108,15 @@ MonoBehaviour:
     clearExistingContent: 0
   - categoryName: NestDes
     contentList:
-    - Nest unlocked! Ducks have now learnt the necessity of reproduction and offspring
-      after building the farmland as a consistent crumbie resource! The nest can
-      add new populations to ducks! (Click Twice to close)
+    - Your ducks remembered how to build nests! Those should be useful in keeping
+      the population from dropping. (Which would be bad.)
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: FarmlandDes
     contentList:
-    - Farmland unlocked! Ducks have learnt the knowledge of farming by collecting
-      enough crumbies from grass. Build farmland to gain crumbies to feed your ducks
-      and use them to develop the duck society! (Click Twice to close)
+    - Your citizens remembered how to farm! Build and harvest from farms to keep
+      them from going hungry.
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
