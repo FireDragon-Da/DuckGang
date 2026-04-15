@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -23,9 +24,11 @@ public class DiningHall : Building
 
         if (heldFood + interacting.Count <= foodCap)
         {
-            if (CrumbManager.reference.ConsumeCrumbs(foodGainPerHit)) {
+            int foodGainNow = Math.Min(foodGainPerHit,foodCap-heldFood);
+
+            if (CrumbManager.reference.ConsumeCrumbs(foodGainNow)) {
                 yield return StartCoroutine(WaitWithProgress(fillTime, duck.ProgressBar));
-                heldFood += foodGainPerHit;
+                heldFood += foodGainNow;
             }
         }
     }
