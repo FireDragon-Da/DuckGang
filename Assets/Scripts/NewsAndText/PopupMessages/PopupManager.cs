@@ -43,6 +43,8 @@ public class PopupManager : MonoBehaviour
         currentMessages = messages;
         currentIndex = 0;
 
+        TimeManager.reference.AddPause();
+
         popupContainer.SetActive(true);
         DisplayCurrentMessage();
     }
@@ -73,5 +75,6 @@ public class PopupManager : MonoBehaviour
     {
         popupContainer.SetActive(false);
         currentMessages.Clear();
+        TimeManager.reference.RemovePause();
     }
 }
