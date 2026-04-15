@@ -265,6 +265,13 @@ public class UnlockingUIManager : MonoBehaviour
         }
     }
 
+    void triggerPopup(string txt)
+    {
+        List<PopupMessageData> popupTextList = new();
+        popupTextList.Add(new PopupMessageData(txt));
+        PopupManager.Instance.StartPopupSequence(popupTextList);
+    }
+
     void ChangeNestDescriptionIfUnlocked()
     {
         if (isNestUnlocked)
@@ -278,7 +285,9 @@ public class UnlockingUIManager : MonoBehaviour
             Transform imageTransform = NestBuildingBar.transform.Find("Image");
             imageTransform.gameObject.SetActive(true);
 
-            PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(nestUnlockingText));
+            //PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(nestUnlockingText));
+
+            triggerPopup(nestUnlockingText);
         }
     }
 
@@ -295,7 +304,7 @@ public class UnlockingUIManager : MonoBehaviour
             Transform imageTransform = FarmlandBuildingBar.transform.Find("Image");
             imageTransform.gameObject.SetActive(true);
 
-            PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(farmlandUnlockingText));
+            triggerPopup(farmlandUnlockingText);
         }
     }
 
@@ -312,7 +321,7 @@ public class UnlockingUIManager : MonoBehaviour
             Transform imageTransform = GoldenCornBuildingBar.transform.Find("Image");
             imageTransform.gameObject.SetActive(true);
 
-            PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(goldenCornUnlockingText));
+            triggerPopup(goldenCornUnlockingText);
         }
     }
 
@@ -329,7 +338,7 @@ public class UnlockingUIManager : MonoBehaviour
             Transform imageTransform = PlaygroundBuildingBar.transform.Find("Image");
             imageTransform.gameObject.SetActive(true);
 
-            PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(playgroundUnlockingText));
+            triggerPopup(playgroundUnlockingText);
         }
     }
 
@@ -346,7 +355,7 @@ public class UnlockingUIManager : MonoBehaviour
             Transform imageTransform = CompostsiteBuildingBar.transform.Find("Image");
             imageTransform.gameObject.SetActive(true);
 
-            PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(compostsiteUnlockingText));
+            triggerPopup(compostsiteUnlockingText);
         }
     }
 
@@ -363,7 +372,7 @@ public class UnlockingUIManager : MonoBehaviour
             Transform imageTransform = SecreteSiteBuildingBar.transform.Find("Image");
             imageTransform.gameObject.SetActive(true);
 
-            PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(secreteSiteUnlockingText));
+            triggerPopup(secreteSiteUnlockingText);
         }
     }
 
@@ -380,7 +389,7 @@ public class UnlockingUIManager : MonoBehaviour
             Transform imageTransform = HammerSawBuildingBar.transform.Find("Image");
             imageTransform.gameObject.SetActive(true);
 
-            PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(hammerSawUnlockingText));
+            triggerPopup(hammerSawUnlockingText);
         }
     }
 
@@ -397,7 +406,7 @@ public class UnlockingUIManager : MonoBehaviour
             Transform imageTransform = StrawCraftBuildingBar.transform.Find("Image");
             imageTransform.gameObject.SetActive(true);
 
-            PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(strawCraftUnlockingText));
+            triggerPopup(strawCraftUnlockingText);
         }
     }
 
@@ -414,7 +423,7 @@ public class UnlockingUIManager : MonoBehaviour
             Transform imageTransform = AltarBuildingBar.transform.Find("Image");
             imageTransform.gameObject.SetActive(true);
 
-            PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(altarUnlockingText));
+            triggerPopup(altarUnlockingText);
         }
     }
 
@@ -431,7 +440,7 @@ public class UnlockingUIManager : MonoBehaviour
             Transform imageTransform = DrumBuildingBar.transform.Find("Image");
             imageTransform.gameObject.SetActive(true);
 
-            PopupUnlokcingTextManager.instance.ShowText(FormatUnlockingText(drumUnlockingText));
+            triggerPopup(drumUnlockingText);
         }
     }
 

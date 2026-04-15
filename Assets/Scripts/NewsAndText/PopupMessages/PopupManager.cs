@@ -9,11 +9,19 @@ public struct PopupMessageData
     [TextArea(2, 5)]
     public string textContent;
     public Vector2 targetPosition;
+
+    public PopupMessageData(string textContent)
+    {
+        this.textContent = textContent;
+        targetPosition = Vector2.zero;
+    }
 }
 
 public class PopupManager : MonoBehaviour
 {
     public static PopupManager Instance;
+
+    public bool active = false;
 
     [SerializeField] private GameObject popupContainer;
     [SerializeField] private RectTransform popupRect;
@@ -40,10 +48,21 @@ public class PopupManager : MonoBehaviour
     {
         if (messages == null || messages.Count == 0) return;
 
-        currentMessages = messages;
-        currentIndex = 0;
-
-        TimeManager.reference.AddPause();
+        if (!active)
+        {
+            currentMessages = messages;
+            currentIndex = 0;
+            active = true;
+        }
+        else
+        {
+            foreach (PopupMessageData message in messages)
+            {
+                currentMessages.Add(message);
+            }
+        }
+  
+        if (Time.timeScale != 0) TimeManager.reference.AddPause();
 
         popupContainer.SetActive(true);
         DisplayCurrentMessage();
@@ -52,6 +71,8 @@ public class PopupManager : MonoBehaviour
     private void OnNextMessageClicked()
     {
         currentIndex++;
+
+        print("Message clicked! Displaying message " + currentIndex + "/" + currentMessages.Count);
 
         if (currentIndex < currentMessages.Count)
         {
@@ -74,7 +95,8 @@ public class PopupManager : MonoBehaviour
     private void ClosePopup()
     {
         popupContainer.SetActive(false);
-        currentMessages.Clear();
         TimeManager.reference.RemovePause();
+        active = false;
+        currentMessages.Clear();
     }
 }
