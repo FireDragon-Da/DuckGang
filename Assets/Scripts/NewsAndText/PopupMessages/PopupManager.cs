@@ -72,7 +72,7 @@ public class PopupManager : MonoBehaviour
     {
         currentIndex++;
 
-        print("Message clicked! Displaying message " + currentIndex + "/" + currentMessages.Count);
+        //print("Message clicked! Displaying message " + currentIndex + "/" + currentMessages.Count);
 
         if (currentIndex < currentMessages.Count)
         {
