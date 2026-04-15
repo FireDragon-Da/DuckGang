@@ -16,6 +16,7 @@ public class PublicInfo : MonoBehaviour
     public int duckCollideBuildingTimes = 0;
     public List<Building> curBuildingList = new();
     public List<DiningHall> diningHalls = new();
+    public List<CompostSite> activeSites = new();
 
     void Awake()
     {
