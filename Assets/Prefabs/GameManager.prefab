@@ -5714,6 +5714,7 @@ GameObject:
   - component: {fileID: 5976628600133048580}
   - component: {fileID: 5048398436573190464}
   - component: {fileID: 5649838348706985392}
+  - component: {fileID: 3807108252572105549}
   m_Layer: 5
   m_Name: MainUI
   m_TagString: Untagged
@@ -5832,6 +5833,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectToggleAccessor
   target: {fileID: 8593918748071252192}
+--- !u!114 &3807108252572105549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8593918748071252192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3de59fbb8d2174c974320154aba03d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GlobalHungerDisplay
+  hungerSlider: {fileID: 5192445136936697908}
+  averageHungerText: {fileID: 0}
+  updateInterval: 0.5
 --- !u!1 &8822655991121655181
 GameObject:
   m_ObjectHideFlags: 0
@@ -7372,11 +7388,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1767459464883057603, guid: 70027459b1cddd14ead682ff1d4ae945, type: 3}
       propertyPath: m_Size
-      value: 0.6666667
+      value: 0.66666675
       objectReference: {fileID: 0}
     - target: {fileID: 1767459464883057603, guid: 70027459b1cddd14ead682ff1d4ae945, type: 3}
       propertyPath: m_Value
-      value: 1.0000037
+      value: 1.0000039
       objectReference: {fileID: 0}
     - target: {fileID: 3290813905839133965, guid: 70027459b1cddd14ead682ff1d4ae945, type: 3}
       propertyPath: m_text
