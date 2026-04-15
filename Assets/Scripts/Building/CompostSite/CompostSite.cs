@@ -12,6 +12,9 @@ public class CompostSite : Building
 
     [SerializeField] float poopTime = 2f;
 
+    public static List<CompostSite> activeSites = new();
+    List<Farmlike> boostedFarms = new();
+
     protected override void UpdateBehavior()
     {
         base.UpdateBehavior();
@@ -42,12 +45,29 @@ public class CompostSite : Building
             yield return StartCoroutine(WaitWithProgress(poopTime, duck.ProgressBar));
             poopCount++;
             decayTimer = defaultDecayTimer;
+
+            StartBoostProduction();
         }
         else if (poopCount < maxPoopCount)
         {
             yield return StartCoroutine(WaitWithProgress(poopTime, duck.ProgressBar));
             poopCount++;
         }
+    }
+
+    void StartBoostProduction()
+    {
+        activeSites.Add(this);
+    }
+
+    List<Farmlike> GetInRange()
+    {
+        return null;
+    }
+
+    bool IsInRange(Farmlike farmlike)
+    {
+        return false;
     }
 
 }
