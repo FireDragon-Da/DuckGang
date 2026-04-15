@@ -5603,6 +5603,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DuckDragger
   dragSpeed: 100
+  nonDragThrough:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &2545802020297177650
 MonoBehaviour:
   m_ObjectHideFlags: 0
