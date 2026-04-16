@@ -6,8 +6,8 @@ public class PopupTriggerTest : MonoBehaviour
     [SerializeField] private QuacxiconSO quacxiconSO;
     [SerializeField] private string targetCategory;
     [SerializeField] private List<Vector2> customPositions = new List<Vector2>();
-
-    public bool triggerOnStart = false;
+    
+    [SerializeField] bool triggerOnStart = false;
 
     [ContextMenu("Trigger Popup")]
 
