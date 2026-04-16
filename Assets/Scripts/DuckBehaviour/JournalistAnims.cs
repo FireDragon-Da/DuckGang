@@ -26,6 +26,7 @@ public class JournalistAnims : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public void OnPointerEnter(PointerEventData eventData)
     {
         journalist.SetActive(false);
+        SoundSystem.instance.PlaySound("note-popup");
     }
 
     public void OnPointerExit(PointerEventData eventData)

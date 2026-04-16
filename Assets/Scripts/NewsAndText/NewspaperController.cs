@@ -351,4 +351,17 @@ public class NewspaperController : MonoBehaviour
             currentPhotoIndex = 0;
         }
     }
+
+    public void PlayNewsPaperSound()
+    {
+        if (gameObject.activeSelf)
+        {
+            SoundSystem.instance.PlaySound("open-news");
+
+        }
+        else {
+            SoundSystem.instance.PlaySound("close-news");
+
+        }
+    }
 }
