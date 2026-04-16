@@ -7,6 +7,9 @@ public class TimeManager : MonoBehaviour
     [SerializeField] int monthsPerMeeting = 5;
     [SerializeField] float duckMonthLength;
 
+    DuckSocietyManager dsm;
+    ArticleCreator ac;
+
     int monthsPassed;
     public float curMonthTime;
 
@@ -15,6 +18,16 @@ public class TimeManager : MonoBehaviour
     void Awake()
     {
         reference = this;
+        
+    }
+
+    private void Start()
+    {
+        dsm = DuckSocietyManager.reference;
+        ac = ArticleCreator.reference;
+        if (dsm == null) print("dsm null");
+        if (ac == null) print("ac null");
+        dsm.articles.Add(ac.namedArticles["newMayorArticle"]);
     }
 
     void Update()
@@ -39,19 +52,19 @@ public class TimeManager : MonoBehaviour
         curMonthTime -= duckMonthLength;
 
         //add two random fluff articles to article list in case nothing else happened
-        DuckSocietyManager.reference.articles.Add(ArticleCreator.reference.fluffArticles[Random.Range(0, ArticleCreator.reference.fluffArticles.Count)]);
-        DuckSocietyManager.reference.articles.Add(ArticleCreator.reference.fluffArticles[Random.Range(0, ArticleCreator.reference.fluffArticles.Count)]);
+        dsm.articles.Add(ac.fluffArticles[Random.Range(0, ac.fluffArticles.Count)]);
+        dsm.articles.Add(ac.fluffArticles[Random.Range(0, ac.fluffArticles.Count)]);
 
         NewspaperController.reference.UpdateNewspaper(
             0,0,"",
-            DuckSocietyManager.reference.newbornDuckNames,
-            DuckSocietyManager.reference.recentDeaths,
-            DuckSocietyManager.reference.articles
+            dsm.newbornDuckNames,
+            dsm.recentDeaths,
+            dsm.articles
         );
 
-        DuckSocietyManager.reference.newbornDuckNames = new();
-        DuckSocietyManager.reference.recentDeaths = new();
-        DuckSocietyManager.reference.articles = new();
+        dsm.newbornDuckNames = new();
+        dsm.recentDeaths = new();
+        dsm.articles = new();
     }
 
     public void AddPause()
