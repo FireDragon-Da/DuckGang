@@ -25,6 +25,7 @@ public class DiningHall : Building
         {
             if (CrumbManager.reference.ConsumeCrumbs(foodGainPerHit)) {
                 SoundSystem.instance.PlaySound("dining-colliding-loop");
+                CrumbManager.reference.SpawnCrumbiePopupDecrease(transform.position, foodGainPerHit);
                 yield return StartCoroutine(WaitWithProgress(fillTime, duck.ProgressBar));
                 heldFood += foodGainPerHit;
                 SoundSystem.instance.StopSound("dining-colliding-loop");
