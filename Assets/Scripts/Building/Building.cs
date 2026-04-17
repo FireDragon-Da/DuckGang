@@ -149,6 +149,8 @@ public class Building : MonoBehaviour
             //show the crumbie decrease popup animation
             CrumbManager.reference.SpawnCrumbiePopupDecrease(transform.position, BuildCost);
 
+            SoundSystem.instance.PlaySound("building-process-loop");
+
             if (vfxHandler != null) vfxHandler.PlayEffect(interactVFX);
 
             // Capture the last builder's name
@@ -166,9 +168,11 @@ public class Building : MonoBehaviour
             yield return StartCoroutine(WaitWithProgress(buildTime, duck.ProgressBar));
 
             AddConstruct();
+            SoundSystem.instance.StopSound("building-process-loop");
             if (constructionCount >= constructionNeeded)
             {
                 Build();
+                SoundSystem.instance.PlaySound("building-finished");
             }
 
             yield break;
