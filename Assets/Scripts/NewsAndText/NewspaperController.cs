@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -349,6 +348,19 @@ public class NewspaperController : MonoBehaviour
         {
             duckPhotoImage2.sprite = photoSprite;
             currentPhotoIndex = 0;
+        }
+    }
+
+    public void PlayNewsPaperSound()
+    {
+        if (gameObject.activeSelf)
+        {
+            SoundSystem.instance.PlaySound("open-news");
+
+        }
+        else {
+            SoundSystem.instance.PlaySound("close-news");
+
         }
     }
 }

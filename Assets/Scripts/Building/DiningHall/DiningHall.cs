@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -24,11 +23,12 @@ public class DiningHall : Building
 
         if (heldFood + interacting.Count <= foodCap)
         {
-            int foodGainNow = Math.Min(foodGainPerHit,foodCap-heldFood);
-
-            if (CrumbManager.reference.ConsumeCrumbs(foodGainNow)) {
+            if (CrumbManager.reference.ConsumeCrumbs(foodGainPerHit)) {
+                SoundSystem.instance.PlaySound("dining-colliding-loop");
+                CrumbManager.reference.SpawnCrumbiePopupDecrease(transform.position, foodGainPerHit);
                 yield return StartCoroutine(WaitWithProgress(fillTime, duck.ProgressBar));
-                heldFood += foodGainNow;
+                heldFood += foodGainPerHit;
+                SoundSystem.instance.StopSound("dining-colliding-loop");
             }
         }
     }
@@ -54,6 +54,7 @@ public class DiningHall : Building
     public void TakeFood(int amount)
     {
         heldFood -= amount;
+        SoundSystem.instance.PlaySound("dining-hall-active");
     }
 
 }

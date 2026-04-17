@@ -156,6 +156,7 @@ public class DuckWalk : MonoBehaviour
             if (UnityEngine.Random.value > 0.5f)
             {
                 CrumbManager.reference.GainCrumbs(2);
+
             }
         }
 

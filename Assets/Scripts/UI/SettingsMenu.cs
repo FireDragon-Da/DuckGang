@@ -18,6 +18,15 @@ public class SettingsMenu : MonoBehaviour
 
     public void BackGame()
     {
-        TimeManager.reference.RemovePause();
+        if (StartMenuUI.reference != null)
+        {
+            StartMenuUI.reference.OnBackFromSettings();
+        }
+        else
+        {
+            TimeManager.reference.RemovePause();
+        }
+
+        gameObject.SetActive(false);
     }
 }

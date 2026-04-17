@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 50b59a66a6c0506499c3b23e6b811c0a
+guid: dfbab6ba518ad3440babe025876238d7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7166040820216069768
-    second: Trash_Cursor3_0
-  - first:
-      213: 7425330529492787872
-    second: Trash_Cursor3_1
+      213: -4395330943053303255
+    second: start_menu_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Trash_Cursor3_0
+      name: start_menu_0
       rect:
         serializedVersion: 2
-        x: 86
-        y: 621
-        width: 356
-        height: 323
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 88e7dee9824e27360800000000000000
-      internalID: 7166040820216069768
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Trash_Cursor3_1
-      rect:
-        serializedVersion: 2
-        x: 193
-        y: 61
-        width: 657
-        height: 768
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0a2e74686c21c0760800000000000000
-      internalID: 7425330529492787872
+      spriteID: 92276057bc5a003c0800000000000000
+      internalID: -4395330943053303255
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Trash_Cursor3_0: 7166040820216069768
-      Trash_Cursor3_1: 7425330529492787872
+      start_menu_0: -4395330943053303255
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
