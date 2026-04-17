@@ -63,12 +63,15 @@ public class Farmland : Building , Farmlike
         {
             if (curCropCount > 0)
             {
+                duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.Harvest);
                 yield return StartCoroutine(WaitWithProgress(harvestTime, duck.ProgressBar));
                 TakeCrop(duck);
             }
             else
             {
+                duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.Water);
                 yield return StartCoroutine(WaitWithProgress(waterTime, duck.ProgressBar));
+                duck.gameObject.GetComponentInChildren<DuckActionIndicator>().ClearAction();
                 WaterCrop();
             }
         }
@@ -94,6 +97,8 @@ public class Farmland : Building , Farmlike
 
         //SFX
         SoundSystem.instance.PlaySound("collide-crop");
+        duck.gameObject.GetComponentInChildren<DuckActionIndicator>().ClearAction(); 
+
 
         if (curCropCount <= 0)
         {
@@ -110,6 +115,7 @@ public class Farmland : Building , Farmlike
     void WaterCrop()
     {
         CropGrow(cropWaterGain);
+
     }
 
     void CropGrow(float amount)

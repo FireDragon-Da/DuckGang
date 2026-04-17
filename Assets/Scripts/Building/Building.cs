@@ -150,6 +150,7 @@ public class Building : MonoBehaviour
             CrumbManager.reference.SpawnCrumbiePopupDecrease(transform.position, BuildCost);
 
             SoundSystem.instance.PlaySound("building-process-loop");
+            duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.Build);
 
             if (vfxHandler != null) vfxHandler.PlayEffect(interactVFX);
 
@@ -169,6 +170,7 @@ public class Building : MonoBehaviour
 
             AddConstruct();
             SoundSystem.instance.StopSound("building-process-loop");
+            duck.gameObject.GetComponentInChildren<DuckActionIndicator>().ClearAction();
             if (constructionCount >= constructionNeeded)
             {
                 Build();
