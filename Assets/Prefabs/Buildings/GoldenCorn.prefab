@@ -623,7 +623,7 @@ MonoBehaviour:
   buildCompleteVFX: {fileID: 0}
   removeHitVFX: {fileID: 0}
   progressBar: {fileID: 3149917625053071788}
-  defaultWitherTimer: 45
+  defaultWitherTimer: 30
   hornRange: {fileID: 2936249175253164532}
 --- !u!61 &455469100539282678
 BoxCollider2D:
