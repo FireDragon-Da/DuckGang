@@ -1,0 +1,1781 @@
+fileFormatVersion: 2
+guid: 93961b6b64613e54a88dd7230e570397
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1117526642709399727
+    second: construction-4x2_0
+  - first:
+      213: 9008596481008054162
+    second: construction-4x2_1
+  - first:
+      213: -2697487531860774732
+    second: construction-4x2_2
+  - first:
+      213: -16983109250854974
+    second: construction-4x2_3
+  - first:
+      213: -5721314643240020539
+    second: construction-4x2_4
+  - first:
+      213: 5545556682178912155
+    second: construction-4x2_5
+  - first:
+      213: 813929266886874814
+    second: construction-4x2_6
+  - first:
+      213: 7041418561904145770
+    second: construction-4x2_7
+  - first:
+      213: -8444298845443438183
+    second: construction-4x2_8
+  - first:
+      213: -5247365197499302066
+    second: construction-4x2_9
+  - first:
+      213: -4154221274979390567
+    second: construction-4x2_10
+  - first:
+      213: -712527180863723697
+    second: construction-4x2_11
+  - first:
+      213: -3742219917723379127
+    second: construction-4x2_12
+  - first:
+      213: 8364503160736191121
+    second: construction-4x2_13
+  - first:
+      213: -5395239198950909243
+    second: construction-4x2_14
+  - first:
+      213: -9152591048217529966
+    second: construction-4x2_15
+  - first:
+      213: 77193293438752159
+    second: construction-4x2_16
+  - first:
+      213: 8406343386671652479
+    second: construction-4x2_17
+  - first:
+      213: -1419580102726880564
+    second: construction-4x2_18
+  - first:
+      213: -4501454632991141520
+    second: construction-4x2_19
+  - first:
+      213: 4806933010374725888
+    second: construction-4x2_20
+  - first:
+      213: 6162435820770621352
+    second: construction-4x2_21
+  - first:
+      213: 3386271828993967277
+    second: construction-4x2_22
+  - first:
+      213: 4995709292810792547
+    second: construction-4x2_23
+  - first:
+      213: 992558777152941791
+    second: construction-4x2_24
+  - first:
+      213: -4387841340005474847
+    second: construction-4x2_25
+  - first:
+      213: 7701846394113467215
+    second: construction-4x2_26
+  - first:
+      213: -2786832312914992264
+    second: construction-4x2_27
+  - first:
+      213: -1207131990085603777
+    second: construction-4x2_28
+  - first:
+      213: 9197627484471379143
+    second: construction-4x2_29
+  - first:
+      213: 4157376519970976891
+    second: construction-4x2_30
+  - first:
+      213: -8273826454866220489
+    second: construction-4x2_31
+  - first:
+      213: 8739999893247967300
+    second: construction-4x2_32
+  - first:
+      213: -3699962208145250795
+    second: construction-4x2_33
+  - first:
+      213: -6272930666973101332
+    second: construction-4x2_34
+  - first:
+      213: -2565605196645849161
+    second: construction-4x2_35
+  - first:
+      213: -4489221237274215389
+    second: construction-4x2_36
+  - first:
+      213: -1821243611848153589
+    second: construction-4x2_37
+  - first:
+      213: 5723784122340332641
+    second: construction-4x2_38
+  - first:
+      213: 6580081329834987843
+    second: construction-4x2_39
+  - first:
+      213: -5245609989562004026
+    second: construction-4x2_40
+  - first:
+      213: 7515397234321849287
+    second: construction-4x2_41
+  - first:
+      213: -5976921151260222453
+    second: construction-4x2_42
+  - first:
+      213: 474077027388540536
+    second: construction-4x2_43
+  - first:
+      213: 5999379767434797600
+    second: construction-4x2_44
+  - first:
+      213: 8214997991495257623
+    second: construction-4x2_45
+  - first:
+      213: -4983287278482885697
+    second: construction-4x2_46
+  - first:
+      213: 4691218313536360301
+    second: construction-4x2_47
+  - first:
+      213: 4239031501776932022
+    second: construction-4x2_48
+  - first:
+      213: -585075642613381779
+    second: construction-4x2_49
+  - first:
+      213: 8877830301439529704
+    second: construction-4x2_50
+  - first:
+      213: -2826860173959238009
+    second: construction-4x2_51
+  - first:
+      213: 6752042292327524805
+    second: construction-4x2_52
+  - first:
+      213: 7315547744233488475
+    second: construction-4x2_53
+  - first:
+      213: -3830125723576363574
+    second: construction-4x2_54
+  - first:
+      213: 7371043549387309276
+    second: construction-4x2_55
+  - first:
+      213: 6185296211778265508
+    second: construction-4x2_56
+  - first:
+      213: -7453724035429184913
+    second: construction-4x2_57
+  - first:
+      213: 4609568996561242302
+    second: construction-4x2_58
+  - first:
+      213: -5146218341914436426
+    second: construction-4x2_59
+  - first:
+      213: -5659187140884553774
+    second: construction-4x2_60
+  - first:
+      213: -6026320291102759471
+    second: construction-4x2_61
+  - first:
+      213: -6785439718571804891
+    second: construction-4x2_62
+  - first:
+      213: -4947199577373966231
+    second: construction-4x2_63
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: construction-4x2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 461
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 157754a707fbd70f0800000000000000
+      internalID: -1117526642709399727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 489
+        width: 38
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29fa15715c6f40d70800000000000000
+      internalID: 9008596481008054162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_2
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 490
+        width: 38
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b0b465b169909ad0800000000000000
+      internalID: -2697487531860774732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 490
+        width: 39
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cfcbedb3f9a3cff0800000000000000
+      internalID: -16983109250854974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_4
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 490
+        width: 37
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c5107115aec990b0800000000000000
+      internalID: -5721314643240020539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_5
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 490
+        width: 37
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9f511bbb66c5fc40800000000000000
+      internalID: 5545556682178912155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_6
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 489
+        width: 37
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb616191b58ab4b00800000000000000
+      internalID: 813929266886874814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_7
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 490
+        width: 39
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a65732100e428b160800000000000000
+      internalID: 7041418561904145770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_8
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 490
+        width: 37
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9994a1c90f2dfca80800000000000000
+      internalID: -8444298845443438183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_9
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 490
+        width: 38
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4f7e44972d9d27b0800000000000000
+      internalID: -5247365197499302066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_10
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 490
+        width: 40
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99bab7aa2cd3956c0800000000000000
+      internalID: -4154221274979390567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_11
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 489
+        width: 38
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f47aecbdd489c16f0800000000000000
+      internalID: -712527180863723697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_12
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 490
+        width: 39
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94ad4bcdfc6f01cc0800000000000000
+      internalID: -3742219917723379127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_13
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 490
+        width: 40
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1921052ce4fa41470800000000000000
+      internalID: 8364503160736191121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_14
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 490
+        width: 37
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ca9444a8824025b0800000000000000
+      internalID: -5395239198950909243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_15
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 490
+        width: 39
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 291f2942fe67bf080800000000000000
+      internalID: -9152591048217529966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_16
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 491
+        width: 40
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f95957234ee321100800000000000000
+      internalID: 77193293438752159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_17
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 491
+        width: 39
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7e948e75c459a470800000000000000
+      internalID: 8406343386671652479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_18
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 490
+        width: 38
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc270c6fa63ac4ce0800000000000000
+      internalID: -1419580102726880564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_19
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 490
+        width: 38
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 071d60c6cde9781c0800000000000000
+      internalID: -4501454632991141520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_20
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 491
+        width: 37
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0011c7eca18a5b240800000000000000
+      internalID: 4806933010374725888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_21
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 483
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a7fc20aabe558550800000000000000
+      internalID: 6162435820770621352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 413
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da4091889447efe20800000000000000
+      internalID: 3386271828993967277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_23
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 24
+        width: 622
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36eea172223545540800000000000000
+      internalID: 4995709292810792547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_24
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 60
+        width: 379
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdea5e2f2f646cd00800000000000000
+      internalID: 992558777152941791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_25
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 440
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ed133e8c814b13c0800000000000000
+      internalID: -4387841340005474847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_26
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 364
+        width: 20
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f43a1c34d7472ea60800000000000000
+      internalID: 7701846394113467215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_27
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 392
+        width: 20
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8732f14d6ce2359d0800000000000000
+      internalID: -2786832312914992264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_28
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 314
+        width: 20
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3eefe5c9d76f3fe0800000000000000
+      internalID: -1207131990085603777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_29
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 344
+        width: 20
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c4494c477984af70800000000000000
+      internalID: 9197627484471379143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_30
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 266
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b747b6e0be7f1b930800000000000000
+      internalID: 4157376519970976891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_31
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 295
+        width: 20
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73a28780da67d2d80800000000000000
+      internalID: -8273826454866220489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 216
+        width: 22
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4404ffda897ba4970800000000000000
+      internalID: 8739999893247967300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_33
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 249
+        width: 20
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 516e12599f717acc0800000000000000
+      internalID: -3699962208145250795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_34
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 169
+        width: 22
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce20a663bc212f8a0800000000000000
+      internalID: -6272930666973101332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_35
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 200
+        width: 22
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b72704baa3256cd0800000000000000
+      internalID: -2565605196645849161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 118
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32c7122d11513b1c0800000000000000
+      internalID: -4489221237274215389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_37
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 150
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b06675a9594a9b6e0800000000000000
+      internalID: -1821243611848153589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_38
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 69
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 164dd175557fe6f40800000000000000
+      internalID: 5723784122340332641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_39
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 22
+        width: 139
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3419ef15b15215b50800000000000000
+      internalID: 6580081329834987843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_40
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 100
+        width: 21
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd8ae5c189d337b0800000000000000
+      internalID: -5245609989562004026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_41
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 24
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cbf4b167fd0c4860800000000000000
+      internalID: 7515397234321849287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_42
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 54
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0c9d9841e5bd0da0800000000000000
+      internalID: -5976921151260222453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_43
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 2
+        width: 39
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 876caad6b82449600800000000000000
+      internalID: 474077027388540536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_44
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 1
+        width: 40
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 022ed96cc14124350800000000000000
+      internalID: 5999379767434797600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_45
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 39
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71e4f99f529810270800000000000000
+      internalID: 8214997991495257623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_46
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 1
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb3fd407f9ec7dab0800000000000000
+      internalID: -4983287278482885697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_47
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 1
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f4426733e8a1140800000000000000
+      internalID: 4691218313536360301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_48
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bcca1701b014da30800000000000000
+      internalID: 4239031501776932022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_49
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1
+        width: 39
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d65cb4b8dc461e7f0800000000000000
+      internalID: -585075642613381779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_50
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 0
+        width: 39
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e290855f93643b70800000000000000
+      internalID: 8877830301439529704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_51
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 0
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78ee57d26a9f4c8d0800000000000000
+      internalID: -2826860173959238009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_52
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 0
+        width: 39
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c9a896e0b214bd50800000000000000
+      internalID: 6752042292327524805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_53
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 1
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b508278f9eb068560800000000000000
+      internalID: 7315547744233488475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_54
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 1
+        width: 38
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac5152182f8a8dac0800000000000000
+      internalID: -3830125723576363574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_55
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 0
+        width: 36
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd04a210e053b4660800000000000000
+      internalID: 7371043549387309276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_56
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 1
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a1ec9d222696d550800000000000000
+      internalID: 6185296211778265508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_57
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 0
+        width: 36
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ac3763b7d0f8890800000000000000
+      internalID: -7453724035429184913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_58
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 1
+        width: 38
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8cfaf649a78ff30800000000000000
+      internalID: 4609568996561242302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_59
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 1
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bc17911fa5f498b0800000000000000
+      internalID: -5146218341914436426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_60
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 1
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df1e1e67478671b0800000000000000
+      internalID: -5659187140884553774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_61
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 0
+        width: 40
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d56712cf953e5ca0800000000000000
+      internalID: -6026320291102759471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_62
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 0
+        width: 38
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52773b9d68645d1a0800000000000000
+      internalID: -6785439718571804891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction-4x2_63
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 6
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96089ad1234085bb0800000000000000
+      internalID: -4947199577373966231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      construction-4x2_0: -1117526642709399727
+      construction-4x2_1: 9008596481008054162
+      construction-4x2_10: -4154221274979390567
+      construction-4x2_11: -712527180863723697
+      construction-4x2_12: -3742219917723379127
+      construction-4x2_13: 8364503160736191121
+      construction-4x2_14: -5395239198950909243
+      construction-4x2_15: -9152591048217529966
+      construction-4x2_16: 77193293438752159
+      construction-4x2_17: 8406343386671652479
+      construction-4x2_18: -1419580102726880564
+      construction-4x2_19: -4501454632991141520
+      construction-4x2_2: -2697487531860774732
+      construction-4x2_20: 4806933010374725888
+      construction-4x2_21: 6162435820770621352
+      construction-4x2_22: 3386271828993967277
+      construction-4x2_23: 4995709292810792547
+      construction-4x2_24: 992558777152941791
+      construction-4x2_25: -4387841340005474847
+      construction-4x2_26: 7701846394113467215
+      construction-4x2_27: -2786832312914992264
+      construction-4x2_28: -1207131990085603777
+      construction-4x2_29: 9197627484471379143
+      construction-4x2_3: -16983109250854974
+      construction-4x2_30: 4157376519970976891
+      construction-4x2_31: -8273826454866220489
+      construction-4x2_32: 8739999893247967300
+      construction-4x2_33: -3699962208145250795
+      construction-4x2_34: -6272930666973101332
+      construction-4x2_35: -2565605196645849161
+      construction-4x2_36: -4489221237274215389
+      construction-4x2_37: -1821243611848153589
+      construction-4x2_38: 5723784122340332641
+      construction-4x2_39: 6580081329834987843
+      construction-4x2_4: -5721314643240020539
+      construction-4x2_40: -5245609989562004026
+      construction-4x2_41: 7515397234321849287
+      construction-4x2_42: -5976921151260222453
+      construction-4x2_43: 474077027388540536
+      construction-4x2_44: 5999379767434797600
+      construction-4x2_45: 8214997991495257623
+      construction-4x2_46: -4983287278482885697
+      construction-4x2_47: 4691218313536360301
+      construction-4x2_48: 4239031501776932022
+      construction-4x2_49: -585075642613381779
+      construction-4x2_5: 5545556682178912155
+      construction-4x2_50: 8877830301439529704
+      construction-4x2_51: -2826860173959238009
+      construction-4x2_52: 6752042292327524805
+      construction-4x2_53: 7315547744233488475
+      construction-4x2_54: -3830125723576363574
+      construction-4x2_55: 7371043549387309276
+      construction-4x2_56: 6185296211778265508
+      construction-4x2_57: -7453724035429184913
+      construction-4x2_58: 4609568996561242302
+      construction-4x2_59: -5146218341914436426
+      construction-4x2_6: 813929266886874814
+      construction-4x2_60: -5659187140884553774
+      construction-4x2_61: -6026320291102759471
+      construction-4x2_62: -6785439718571804891
+      construction-4x2_63: -4947199577373966231
+      construction-4x2_7: 7041418561904145770
+      construction-4x2_8: -8444298845443438183
+      construction-4x2_9: -5247365197499302066
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

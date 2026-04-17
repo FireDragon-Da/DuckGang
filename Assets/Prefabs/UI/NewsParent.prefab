@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6433768833845126512}
   - component: {fileID: 2975875634588159521}
-  - component: {fileID: 3518106673410900953}
   m_Layer: 5
   m_Name: NewsParent
   m_TagString: Untagged
@@ -52,19 +51,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectToggleAccessor
   target: {fileID: 5220383609653079340}
---- !u!114 &3518106673410900953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194457798893135674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bcf86f2df1edde41b51924476b0d0d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::JournalistAnims
-  journalist: {fileID: 5626441484036704306}
 --- !u!1 &4039028413595547802
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +405,7 @@ GameObject:
   - component: {fileID: 6276888839915912656}
   - component: {fileID: 7628031420592243012}
   - component: {fileID: 1677202446471097260}
+  - component: {fileID: 3097693052245871468}
   m_Layer: 5
   m_Name: Journal
   m_TagString: Untagged
@@ -550,6 +537,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3097693052245871468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5220383609653079340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bcf86f2df1edde41b51924476b0d0d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JournalistAnims
+  journalist: {fileID: 5626441484036704306}
 --- !u!1 &5626441484036704306
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,7 +638,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 7c98aa81c4dce564bad53a20ad5a9b17, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0

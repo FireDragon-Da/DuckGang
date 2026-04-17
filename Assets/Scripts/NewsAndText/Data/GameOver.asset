@@ -16,6 +16,26 @@ MonoBehaviour:
   - categoryName: GameOver
     contentList:
     - Oh my god! What have you done! Ducklings are gone!
-    sourceTxtFile: {fileID: 0}
+    - Ducks are now in better places, unfortunately they aren't gonna be here anymore.
+    - John Quackna stole all of your ducks.
+    - You are now officially fired from Quack land.
+    - No:(.
+    - Bad Mayor!
+    - I can believe I have to fire a bad mayor twice.
+    - Go find another job.
+    - Open your mind Mr.Kennedy.
+    - This shall be your final fantasy Mr. Mayor.
+    - It's a beautiful day outside. Birds are singing, flowers are blooming. . .
+      On days like these, mayors like you. . . Should be burning in hell.
+    - I guess you are not quacklified enough.
+    - This ends, right here*KATANA NOISES*.
+    - You are the worst egg in the nest.
+    - Get more quacky and come back.
+    - "You are so quack\u2019in stupid, why?"
+    - Oh quack, seriously?
+    - For the love of the crumbs, how did you do this?
+    - "Well, you can\u2019t expect to win them all."
+    - Hey chat, what should we do now?
+    sourceTxtFile: {fileID: 4900000, guid: ee8b2c18071d0384aab22c7e146711a2, type: 3}
     targetCategoryName: 
     clearExistingContent: 0

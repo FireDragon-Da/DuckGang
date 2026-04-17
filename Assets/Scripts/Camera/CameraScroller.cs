@@ -17,31 +17,46 @@ public class CameraScroller : MonoBehaviour
 
     [SerializeField] Tilemap tilemap;
 
+    Vector3 worldMin;
+    Vector3 worldMax;
+
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
         targetSize = cam.orthographicSize;
+
+        Bounds worldBounds = tilemap.localBounds;
+        worldMin = tilemap.transform.TransformPoint(worldBounds.min);
+        worldMax = tilemap.transform.TransformPoint(worldBounds.max);
+
+        //Bandaid for weird issue with map size
+        worldMin.x++;
+        worldMax.x--;
+        worldMax.y--;
     }
 
     void Update()
     {
-        Vector2 moveInput = playerInput.actions["Move"].ReadValue<Vector2>();
-
-        Vector3 newPos = transform.position + speed * Time.deltaTime * (Vector3)moveInput;
-
         float zoomInput = playerInput.actions["Zoom"].ReadValue<float>();
+
 
         if (zoomInput != 0 && !EventSystem.current.IsPointerOverGameObject())
         {
+            Vector3 mouseWorldBefore = cam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+
             targetSize -= zoomInput * zoomSpeed * Time.deltaTime;
             targetSize = Mathf.Clamp(targetSize, minSize, maxSize);
+
+            float oldSize = cam.orthographicSize;
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetSize, Time.deltaTime * 10);
+
+            float sizeRatio = cam.orthographicSize / oldSize;
+            transform.position = mouseWorldBefore + (transform.position - mouseWorldBefore) * sizeRatio;
         }
 
-        cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetSize, Time.deltaTime * 10);
+        Vector2 moveInput = playerInput.actions["Move"].ReadValue<Vector2>();
 
-        Bounds worldBounds = tilemap.localBounds;
-        Vector3 worldMin = tilemap.transform.TransformPoint(worldBounds.min);
-        Vector3 worldMax = tilemap.transform.TransformPoint(worldBounds.max);
+        Vector3 newPos = transform.position + speed * Time.deltaTime * (Vector3)moveInput;
 
         float verticalExtent = cam.orthographicSize;
         float horizontalExtent = cam.orthographicSize * cam.aspect;

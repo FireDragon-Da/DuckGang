@@ -17,8 +17,8 @@ public class JournalistAnims : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     IEnumerator changeAnim()
     {
-        yield return new WaitForSeconds(Random.Range(3, 3));
-        int clip = Random.Range(10, 30);        
+        yield return new WaitForSeconds(Random.Range(10, 30));
+        int clip = Random.Range(0, 3);        
         jAnimator.SetInteger("clip", clip);
         StartCoroutine(changeAnim());
     }
