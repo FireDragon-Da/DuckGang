@@ -373,7 +373,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 5078010475414672080, guid: f8beca9a6ea05e641a7dc5ba577e9a3b, type: 3}
+  m_Sprite: {fileID: -1005545888958309581, guid: f25d1f1766659c447afb8cb90e6d8667, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -541,8 +541,8 @@ MonoBehaviour:
   quacxiconSO: {fileID: 11400000, guid: d9affd977097b284db68ee2e6313957e, type: 2}
   buildingName: Dininghall
   infoTextBox: {fileID: 0}
-  constructionNeeded: 5
-  placeCost: 10
+  constructionNeeded: 2
+  placeCost: 6
   buildCost: 2
   removeHitsRequired: 2
   buildTime: 2
