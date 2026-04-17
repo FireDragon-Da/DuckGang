@@ -23,11 +23,13 @@ public class GoldenCorn : Building
 
     public override Vector2 UnqiueBounce(DuckWalk target)
     {
+        SoundSystem.instance.PlaySound("golden-corn-collide");
         return GetClosestFarmlike(target);
     }
 
     void ForceFarm()
     {
+        SoundSystem.instance.PlaySound("golden-corn-active");
         List<Collider2D> hits = new();
         hornRange.Overlap(hits);
 
