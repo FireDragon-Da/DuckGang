@@ -122,41 +122,36 @@ MonoBehaviour:
     clearExistingContent: 0
   - categoryName: Golden CornDes
     contentList:
-    - Golden Corn Unlocked! Ducks have learnt the necessity of agriculture after
-      building some farmlands, so they figured out Golden Corn to remind their farming
-      agencies! (Click Twice to close)
+    - Have you ever heard of golden corn? Building it can remind ducks to farm!
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: PlaygroundDes
     contentList:
-    - Playground unlocked! Ducks found that they started to become unhappy when there
-      were too many ducks in the society. They are losing happiness because of the
-      massive duck population and because of their work! They figured out the playground
-      as a way to entertain themselves. (Click Twice to close)
+    - Hey, people are starting to get unhappy...I drew up some plans for a playground.
+      Maybe that will cheer them up?
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Compost SiteDes
     contentList:
-    - Compost Site unlocked! Ducks have learnt that farmlands can produce more crumbies
-      if they throw their pops to the farmlands! (Click Twice to close)
+    - 'Hey, your citizens remembered something else about farming: compost!
+
+      ...gross!'
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Secret SiteDes
     contentList:
-    - 'Mr Duckson''s Secret Site unlocked! Ducks have learnt the foundation of the
-      business: invest, lend, store, and harvest by collecting a relatively huge
-      amount of crumbies! (Click Twice to close)'
+    - Your citizens have learned about investment banking! If you set aside some
+      crumbs for a Mr. Duckson, I've heard he might give you a hefty return.
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Hammer SawDes
     contentList:
-    - Symbol of Hammer and Saw unlocked! Ducks have learnt the necessity of habitat
-      construction after building some buildings, so they figured out Symbol of Hammer
-      and Saw to remind their constructing agencies! (Click Twice to close)
+    - Have you ever heard of the symbol of the hammer and saw? Building it can remind
+      your ducks to construct new buildings!
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
