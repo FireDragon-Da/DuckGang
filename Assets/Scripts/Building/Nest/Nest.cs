@@ -57,6 +57,7 @@ public class Nest : Building
 
                 //TODO Duck Egg Cooldown
 
+                SoundSystem.instance.PlaySound("duck-spawn-egg");
                 nestBusy = false;
                 empty = false;
                 StartCoroutine(WaitEgg());
@@ -99,6 +100,7 @@ public class Nest : Building
         progressBar.HideBar();
 
         DuckSocietyManager.reference.SpawnDuck(transform.position);
+        SoundSystem.instance.PlaySound("egg-spawn-baby-duck");
         empty = true;
         timesUsed++;
         if (timesUsed >= totalUses)

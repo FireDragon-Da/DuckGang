@@ -24,8 +24,10 @@ public class DiningHall : Building
         if (heldFood + interacting.Count <= foodCap)
         {
             if (CrumbManager.reference.ConsumeCrumbs(foodGainPerHit)) {
+                SoundSystem.instance.PlaySound("dining-colliding-loop");
                 yield return StartCoroutine(WaitWithProgress(fillTime, duck.ProgressBar));
                 heldFood += foodGainPerHit;
+                SoundSystem.instance.StopSound("dining-colliding-loop");
             }
         }
     }
@@ -51,6 +53,7 @@ public class DiningHall : Building
     public void TakeFood(int amount)
     {
         heldFood -= amount;
+        SoundSystem.instance.PlaySound("dining-hall-active");
     }
 
 }
