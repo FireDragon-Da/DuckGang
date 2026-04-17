@@ -155,18 +155,27 @@ public class BuildingPlacer : MonoBehaviour
     {
         active = true;
         removeToggled = false;
+        MouseCursor.reference.SetSprite(MouseCursor.CursorType.None);
     }
 
     public void DisableBuildAndRemove()
     {
         active = false;
         removeToggled = false;
+        MouseCursor.reference.SetSprite(MouseCursor.CursorType.Normal);
     }
 
     public void RemoveToggle()
     {
         removeToggled = !removeToggled;
         active = false;
+        if (removeToggled)
+        {
+            MouseCursor.reference.SetSprite(MouseCursor.CursorType.Trash);
+        } else
+        {
+            MouseCursor.reference.SetSprite(MouseCursor.CursorType.Normal);
+        }
     }
 
 }

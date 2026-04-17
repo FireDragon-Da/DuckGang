@@ -30,6 +30,7 @@ public class DuckDragger : MonoBehaviour
                         {
                             curDuck = tempCurDuck;
                             curDuck.beingDragged = true;
+                            MouseCursor.reference.SetSprite(MouseCursor.CursorType.Grab);
                         }
                     }
                 }
@@ -47,6 +48,7 @@ public class DuckDragger : MonoBehaviour
                 curDuck.Place();
 
                 curDuck = null;
+                MouseCursor.reference.SetSprite(MouseCursor.CursorType.Normal);
             }
             else
             {
