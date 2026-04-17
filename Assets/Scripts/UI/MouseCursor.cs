@@ -4,7 +4,8 @@ using UnityEngine.UI;
 public class MouseCursor : MonoBehaviour
 {
     [Header("References")]
-    RectTransform cursorRect;
+    [SerializeField] RectTransform holderRect;
+    RectTransform imageObject;
     Image image;
 
     [SerializeField] Sprite normalSprite;
@@ -26,20 +27,19 @@ public class MouseCursor : MonoBehaviour
     void Awake()
     {
         reference = this;
-        cursorRect = GetComponent<RectTransform>();
+        imageObject = GetComponent<RectTransform>();
         image = GetComponent<Image>();
     }
 
     void Start()
     {
-        curType = CursorType.Normal;
         Cursor.visible = false;
-        image.sprite = normalSprite;
+        SetSprite(CursorType.Normal);
     }
 
     void Update()
     {
-        cursorRect.position = Input.mousePosition;
+        holderRect.position = Input.mousePosition;
     }
 
     void OnDestroy() => Cursor.visible = true;
@@ -57,15 +57,18 @@ public class MouseCursor : MonoBehaviour
         {
             case CursorType.Normal:
                 image.sprite = normalSprite;
+                imageObject.anchoredPosition = new(20,-20);
                 break;
             case CursorType.None:
                 image.enabled = false;
                 break;
             case CursorType.Trash:
                 image.sprite = trashSprite;
+                imageObject.anchoredPosition = new(20,-20);
                 break;
             case CursorType.Grab:
                 image.sprite = grabSprite;
+                imageObject.anchoredPosition = Vector3.zero;
                 break;
                 
         }
