@@ -8,7 +8,7 @@ Quackland In Despair
 //content
 MentalHealthCrisis
 &
-newMayorArticle //MAKE SURE THIS GETS ADDED AT START BY SOMETHING
+newMayorArticle
 New Mayor Installed
 //content
 Required
