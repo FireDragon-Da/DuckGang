@@ -29,7 +29,11 @@ public class GameMenu : MonoBehaviour
     {
         if (!paused)
         {
-            speed = 1;
+            if (speed == 0)
+            {
+                speed = 1;
+            }
+            Time.timeScale = speed;
         }
         else
         {

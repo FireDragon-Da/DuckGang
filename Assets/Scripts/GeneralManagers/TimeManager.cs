@@ -76,6 +76,11 @@ public class TimeManager : MonoBehaviour
     public void RemovePause()
     {
         pauses--;
+        if (pauses < 0)
+        {
+            Debug.LogWarning("TimeManager: Pause counter went negative, resetting to 0");
+            pauses = 0;
+        }
         if (pauses == 0)
         {
             Time.timeScale = GameMenu.reference.Speed;

@@ -31,7 +31,10 @@ public class StartMenuUI : MonoBehaviour
             settingsPanel.SetActive(false);
         }
 
-        Time.timeScale = 0;
+        if (TimeManager.reference != null)
+        {
+            TimeManager.reference.AddPause();
+        }
         gameStarted = false;
     }
 
@@ -42,7 +45,10 @@ public class StartMenuUI : MonoBehaviour
             startMenuPanel.SetActive(false);
         }
 
-        Time.timeScale = 1;
+        if (TimeManager.reference != null)
+        {
+            TimeManager.reference.RemovePause();
+        }
         gameStarted = true;
 
         if (GameMenu.reference != null)

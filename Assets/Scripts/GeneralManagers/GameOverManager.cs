@@ -52,7 +52,11 @@ public class GameOverManager : MonoBehaviour
         if (gameOverTriggered) return;
 
         gameOverTriggered = true;
-        Time.timeScale = 0;
+
+        if (TimeManager.reference != null)
+        {
+            TimeManager.reference.AddPause();
+        }
 
         if (gameOverPanel != null)
         {
@@ -72,14 +76,20 @@ public class GameOverManager : MonoBehaviour
 
     public void RestartGame()
     {
-        Time.timeScale = 1;
+        if (TimeManager.reference != null)
+        {
+            TimeManager.reference.RemovePause();
+        }
         gameOverTriggered = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void QuitGame()
     {
-        Time.timeScale = 1;
+        if (TimeManager.reference != null)
+        {
+            TimeManager.reference.RemovePause();
+        }
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
