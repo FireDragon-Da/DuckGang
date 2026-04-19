@@ -33,7 +33,10 @@ public class GameMenu : MonoBehaviour
             {
                 speed = 1;
             }
-            Time.timeScale = speed;
+            if (TimeManager.reference != null && TimeManager.reference.GetPauseCount() == 0)
+            {
+                Time.timeScale = speed;
+            }
         }
         else
         {
@@ -47,6 +50,20 @@ public class GameMenu : MonoBehaviour
     public void FastForwardGame()
     {
         speed = 2;
+        if (TimeManager.reference != null && TimeManager.reference.GetPauseCount() == 0)
+        {
+            Time.timeScale = speed;
+        }
+        AudioListener.pause = false;
+    }
+
+    public void NormalSpeedGame()
+    {
+        speed = 1;
+        if (TimeManager.reference != null && TimeManager.reference.GetPauseCount() == 0)
+        {
+            Time.timeScale = speed;
+        }
         AudioListener.pause = false;
     }
 

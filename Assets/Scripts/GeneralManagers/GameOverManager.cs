@@ -22,6 +22,7 @@ public class GameOverManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            return;
         }
 
         gameOverTriggered = false;
@@ -29,6 +30,8 @@ public class GameOverManager : MonoBehaviour
         {
             gameOverPanel.SetActive(false);
         }
+
+        Debug.Log("[GameOverManager] Initialized. gameOverTriggered: " + gameOverTriggered);
     }
 
     void Update()
@@ -49,13 +52,22 @@ public class GameOverManager : MonoBehaviour
 
     public void TriggerGameOver()
     {
-        if (gameOverTriggered) return;
+        if (gameOverTriggered)
+        {
+            Debug.LogWarning("[GameOverManager] TriggerGameOver called but already triggered!");
+            return;
+        }
 
         gameOverTriggered = true;
+        Debug.Log("[GameOverManager] Game Over triggered!");
 
         if (TimeManager.reference != null)
         {
             TimeManager.reference.AddPause();
+        }
+        else
+        {
+            Debug.LogError("[GameOverManager] TimeManager.reference is NULL!");
         }
 
         if (gameOverPanel != null)
@@ -76,10 +88,13 @@ public class GameOverManager : MonoBehaviour
 
     public void RestartGame()
     {
+        Debug.Log("[GameOverManager] Restarting game...");
+
         if (TimeManager.reference != null)
         {
             TimeManager.reference.RemovePause();
         }
+
         gameOverTriggered = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
