@@ -15,36 +15,26 @@ public class GameOverManager : MonoBehaviour
 
     void Awake()
     {
-        if (reference == null)
-        {
-            reference = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-
+        reference = this;
         gameOverTriggered = false;
+
         if (gameOverPanel != null)
         {
             gameOverPanel.SetActive(false);
         }
+    }
 
-        Debug.Log("[GameOverManager] Initialized. gameOverTriggered: " + gameOverTriggered);
+    void OnDestroy()
+    {
+        if (reference == this)
+        {
+            reference = null;
+        }
     }
 
     void Update()
     {
-        if (!gameOverTriggered && PublicInfo.reference != null)
-        {
-            CheckGameOver();
-        }
-    }
-
-    void CheckGameOver()
-    {
-        if (PublicInfo.reference.duckList.Count <= 0)
+        if (!gameOverTriggered && PublicInfo.reference != null && PublicInfo.reference.duckList.Count <= 0)
         {
             TriggerGameOver();
         }
@@ -54,20 +44,14 @@ public class GameOverManager : MonoBehaviour
     {
         if (gameOverTriggered)
         {
-            Debug.LogWarning("[GameOverManager] TriggerGameOver called but already triggered!");
             return;
         }
 
         gameOverTriggered = true;
-        Debug.Log("[GameOverManager] Game Over triggered!");
 
         if (TimeManager.reference != null)
         {
             TimeManager.reference.AddPause();
-        }
-        else
-        {
-            Debug.LogError("[GameOverManager] TimeManager.reference is NULL!");
         }
 
         if (gameOverPanel != null)
@@ -88,8 +72,6 @@ public class GameOverManager : MonoBehaviour
 
     public void RestartGame()
     {
-        Debug.Log("[GameOverManager] Restarting game...");
-
         if (TimeManager.reference != null)
         {
             TimeManager.reference.RemovePause();

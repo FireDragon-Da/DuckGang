@@ -23,8 +23,16 @@ public class TimeManager : MonoBehaviour
     void Awake()
     {
         reference = this;
-        pauses = 0; 
-        Debug.Log("[TimeManager] Awake - Reset pause counter to 0");
+        pauses = 0;
+        Time.timeScale = 1;
+    }
+
+    void OnDestroy()
+    {
+        if (reference == this)
+        {
+            reference = null;
+        }
     }
 
     private void Start()
@@ -77,7 +85,6 @@ public class TimeManager : MonoBehaviour
     {
         pauses++;
         Time.timeScale = 0;
-        Debug.Log($"[TimeManager] AddPause called. Pauses: {pauses}, Time.timeScale: {Time.timeScale}");
     }
 
     public void RemovePause()
@@ -85,17 +92,11 @@ public class TimeManager : MonoBehaviour
         pauses--;
         if (pauses < 0)
         {
-            Debug.LogWarning("TimeManager: Pause counter went negative, resetting to 0");
             pauses = 0;
         }
         if (pauses == 0)
         {
             Time.timeScale = GameMenu.reference.Speed;
-            Debug.Log($"[TimeManager] RemovePause - resuming. Pauses: {pauses}, Time.timeScale: {Time.timeScale}, GameMenu.Speed: {GameMenu.reference.Speed}");
-        }
-        else
-        {
-            Debug.Log($"[TimeManager] RemovePause - still paused. Pauses: {pauses}, Time.timeScale: {Time.timeScale}");
         }
     }
 

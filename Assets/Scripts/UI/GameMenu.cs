@@ -15,6 +15,16 @@ public class GameMenu : MonoBehaviour
     void Awake()
     {
         reference = this;
+        paused = false;
+        speed = 1;
+    }
+
+    void OnDestroy()
+    {
+        if (reference == this)
+        {
+            reference = null;
+        }
     }
 
     public void PauseGame()

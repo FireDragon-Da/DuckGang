@@ -1922,6 +1922,7 @@ GameObject:
   - component: {fileID: 5205411326721554890}
   - component: {fileID: 7074297348475415174}
   - component: {fileID: 2986617274075996763}
+  - component: {fileID: 4273257747333013414}
   m_Layer: 5
   m_Name: GameOverCanvas
   m_TagString: Untagged
@@ -2012,6 +2013,25 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4273257747333013414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2865864759150056508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2c3d4e5f6789abcdef01234567890a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameOverUI
+  gameOverPanel: {fileID: 5664805613673354031}
+  titleText: {fileID: 3570352057071812801}
+  messageText: {fileID: 7417847697173140533}
+  restartButton: {fileID: 5410002659740776205}
+  quitButton: {fileID: 5201107452346089114}
+  titleString: Game Over
+  quacxiconSO: {fileID: 11400000, guid: c5230599a02267e49a326de818b7a127, type: 2}
 --- !u!1 &3021853068696903768
 GameObject:
   m_ObjectHideFlags: 0
@@ -3239,7 +3259,6 @@ GameObject:
   - component: {fileID: 92940899586911073}
   - component: {fileID: 6716742989305376843}
   - component: {fileID: 2680916760805347571}
-  - component: {fileID: 3330367235136803162}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -3308,25 +3327,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3330367235136803162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5664805613673354031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b2c3d4e5f6789abcdef01234567890a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameOverUI
-  gameOverPanel: {fileID: 5664805613673354031}
-  titleText: {fileID: 3570352057071812801}
-  messageText: {fileID: 7417847697173140533}
-  restartButton: {fileID: 5410002659740776205}
-  quitButton: {fileID: 5201107452346089114}
-  titleString: Game Over
-  quacxiconSO: {fileID: 11400000, guid: c5230599a02267e49a326de818b7a127, type: 2}
 --- !u!1 &5677067582648356416
 GameObject:
   m_ObjectHideFlags: 0
@@ -6960,7 +6960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1767459464883057603, guid: 70027459b1cddd14ead682ff1d4ae945, type: 3}
       propertyPath: m_Value
-      value: 0.9999997
+      value: 0.9999994
       objectReference: {fileID: 0}
     - target: {fileID: 3290813905839133965, guid: 70027459b1cddd14ead682ff1d4ae945, type: 3}
       propertyPath: m_text
@@ -6972,7 +6972,7 @@ PrefabInstance:
       objectReference: {fileID: 5702199441414199652}
     - target: {fileID: 5677003561348275820, guid: 70027459b1cddd14ead682ff1d4ae945, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000076293945
+      value: 0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 8525642233439995914, guid: 70027459b1cddd14ead682ff1d4ae945, type: 3}
       propertyPath: m_Name

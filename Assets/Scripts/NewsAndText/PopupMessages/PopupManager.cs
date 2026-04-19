@@ -58,11 +58,6 @@ public class PopupManager : MonoBehaviour
             if (TimeManager.reference != null)
             {
                 TimeManager.reference.AddPause();
-                Debug.Log("[PopupManager] Called AddPause. Pauses count should be incremented.");
-            }
-            else
-            {
-                Debug.LogError("[PopupManager] TimeManager.reference is NULL! Cannot pause!");
             }
         }
         else
