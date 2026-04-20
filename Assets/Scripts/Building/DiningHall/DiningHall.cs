@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class DiningHall : Building
 {
-
+    [Header("DiningHall")]
     [SerializeField] int foodCap;
     [SerializeField] int foodGainPerHit;
-    int heldFood;
+    [SerializeField] int heldFood;
 
     [SerializeField] static float range = 20f;
     public static float Range => range;
