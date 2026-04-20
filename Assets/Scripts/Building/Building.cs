@@ -15,8 +15,14 @@ public class Building : MonoBehaviour
     [SerializeField] protected SpriteRenderer foundationSpriteRenderer;
     [SerializeField] protected bool walkable;
     [SerializeField] protected QuacxiconSO quacxiconSO;
-    [SerializeField] protected string buildingName;
-    [SerializeField] private TextBox infoTextBox;
+
+    [Header("Text and unlock")]
+    [SerializeField] public string buildingName;
+    protected string description;
+    protected string unlockText;
+    [SerializeField] public GameObject buildingBar;
+
+    private TextBox infoTextBox;
 
     protected bool continueBehavior; //Flag for passing if Interact should continue
     string textinfo;
@@ -102,6 +108,22 @@ public class Building : MonoBehaviour
         get
         {
             return hasUniqueBounce;
+        }
+    }
+
+    public string Description
+    {
+        get
+        {
+            return description;
+        }
+    }
+
+    public string UnlockText
+    {
+        get
+        {
+            return unlockText;
         }
     }
 
@@ -208,7 +230,7 @@ public class Building : MonoBehaviour
         foundationSpriteRenderer.enabled = false;
         spriteRenderer.enabled = true;
 
-        textinfo = quacxiconSO.GetRandomLogFromCategory(buildingName);
+        textinfo = quacxiconSO.GetSpecificLogFromCategory(buildingName, 0);
 
         //Debug.Log($"[Building] Build() called. textinfo: '{textinfo}', lastBuilderName: '{lastBuilderName}'");
         //Debug.Log($"[Building] infoTextBox is null: {infoTextBox == null}");
@@ -336,6 +358,9 @@ public class Building : MonoBehaviour
     protected virtual void Start()
     {
         infoTextBox = TextBox.reference;
+
+        description = quacxiconSO.GetSpecificLogFromCategory(buildingName, 1);
+        unlockText = quacxiconSO.GetSpecificLogFromCategory(buildingName, 2);
     }
 
     public Vector2Int GetBottomLeftTile()

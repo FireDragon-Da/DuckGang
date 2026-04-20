@@ -7,6 +7,34 @@ using UnityEngine.UI;
 
 public class UnlockingUIManager : MonoBehaviour
 {
+
+    public QuacxiconSO quacxiconSO;
+
+    struct building
+    {
+        public string name;
+        public bool isUnlocked;
+        public Building prefab;
+        public GameObject buildingBar;
+        public string description;
+        public string unlockText;
+
+        public building(GameObject pre)
+        {
+            prefab = pre.GetComponent<Building>();
+
+            name = prefab.buildingName;
+            isUnlocked = false;
+            description = prefab.Description;
+            unlockText = prefab.UnlockText;
+
+            buildingBar = prefab.buildingBar;
+        }
+
+    }
+
+    public List<GameObject> buildingList = new List<GameObject>();
+
     public bool isNestUnlocked;
     public bool isFarmlandUnlocked;
     public bool isGoldenCornUnlocked;
@@ -57,7 +85,6 @@ public class UnlockingUIManager : MonoBehaviour
     private string altarUnlockingText;
     private string drumUnlockingText;
 
-    public QuacxiconSO quacxiconSO;
 
     private void Awake()
     {
@@ -91,6 +118,9 @@ public class UnlockingUIManager : MonoBehaviour
         return raw
             .Replace(" Cost:", "\nCost:")
             .Replace(" Unlocking Condition:", "\nUnlocking Condition:");
+           // .Replace()
+
+      //  [b][c]
     }
 
     string FormatUnlockingText(string raw)
