@@ -21,8 +21,7 @@ MonoBehaviour:
     clearExistingContent: 0
   - categoryName: Nest
     contentList:
-    - "Nest: Two ducks can breed and hatch a baby! \n[b]\n[c]\nUnlocking Condition:
-      Build 1 Farmland."
+    - "Nest: Two ducks can breed and hatch a baby! \n[b]\n[c]"
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
