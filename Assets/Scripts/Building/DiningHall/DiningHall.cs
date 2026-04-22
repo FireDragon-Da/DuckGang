@@ -55,6 +55,7 @@ public class DiningHall : Building
     {
         heldFood -= amount;
         SoundSystem.instance.PlaySound("dining-hall-active");
+        PlayInteractBounce();
     }
 
 }

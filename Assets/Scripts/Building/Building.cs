@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
@@ -56,6 +57,16 @@ public class Building : MonoBehaviour
     [SerializeField] protected BuildingVFXSO removeHitVFX;
 
     [SerializeField] protected ProgressBar progressBar;
+
+    [Header("Bounce Effect")]
+    [SerializeField] protected bool useInteractBounce = true;
+    [SerializeField] protected float bounceDuration = 0.12f;
+    [SerializeField] protected Vector3 bounceScale = new Vector3(1.32f, 1.3f, 1.4f);
+
+    protected Vector3 builtVisualOriginalScale;
+    protected Vector3 foundationVisualOriginalScale;
+
+    protected Coroutine bounceCoroutine;
 
     public int Width
     {
@@ -123,6 +134,7 @@ public class Building : MonoBehaviour
     public virtual IEnumerator BuildingInteract(DuckWalk duck)
     {
         continueBehavior = false;
+        PlayInteractBounce();
         if (removing)
         {
             if (vfxHandler != null) vfxHandler.PlayEffect(removeHitVFX);
@@ -336,6 +348,16 @@ public class Building : MonoBehaviour
     protected virtual void Start()
     {
         infoTextBox = TextBox.reference;
+
+        if (spriteRenderer != null)
+        {
+            builtVisualOriginalScale = spriteRenderer.transform.localScale;
+        }
+
+        if (foundationSpriteRenderer != null)
+        {
+            foundationVisualOriginalScale = foundationSpriteRenderer.transform.localScale;
+        }
     }
 
     public Vector2Int GetBottomLeftTile()
@@ -346,6 +368,82 @@ public class Building : MonoBehaviour
         tilePos.y -= height / 2f;
 
         return MapManager.reference.TransformPosToTilemapPos(tilePos);
+    }
+
+    protected Transform GetCurrentVisualTransform()
+    {
+        if (built && spriteRenderer != null)
+        {
+            return spriteRenderer.transform;
+        }
+
+        if (!built && foundationSpriteRenderer != null)
+        {
+            return foundationSpriteRenderer.transform;
+        }
+
+        return transform;
+    }
+    protected void PlayInteractBounce()
+    {
+        if (!useInteractBounce) return;
+
+        Transform visual = GetCurrentVisualTransform();
+        if (visual == null) return;
+
+        Vector3 originalScale = GetCurrentVisualOriginalScale();
+
+        if (bounceCoroutine != null)
+        {
+            StopCoroutine(bounceCoroutine);
+        }
+
+        visual.localScale = originalScale;
+        bounceCoroutine = StartCoroutine(BounceRoutine(visual, originalScale));
+    }
+
+    protected IEnumerator BounceRoutine(Transform target, Vector3 originalScale)
+    {
+        Vector3 bouncedScale = Vector3.Scale(originalScale, bounceScale);
+
+        float halfDuration = bounceDuration * 0.5f;
+        float timer = 0f;
+
+        while (timer < halfDuration)
+        {
+            timer += Time.deltaTime;
+            float t = timer / halfDuration;
+            target.localScale = Vector3.Lerp(originalScale, bouncedScale, t);
+            yield return null;
+        }
+
+        timer = 0f;
+
+        while (timer < halfDuration)
+        {
+            timer += Time.deltaTime;
+            float t = timer / halfDuration;
+            target.localScale = Vector3.Lerp(bouncedScale, originalScale, t);
+            yield return null;
+        }
+
+        target.localScale = originalScale;
+        bounceCoroutine = null;
+    }
+
+    protected Vector3 GetCurrentVisualOriginalScale()
+    {
+        if (built && spriteRenderer != null)
+        {
+            return builtVisualOriginalScale;
+        }
+
+        if (!built && foundationSpriteRenderer != null)
+        {
+            return foundationVisualOriginalScale;
+        }
+
+        return Vector3.one;
     }
 
 }

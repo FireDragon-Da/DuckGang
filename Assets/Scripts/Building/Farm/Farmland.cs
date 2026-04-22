@@ -61,6 +61,8 @@ public class Farmland : Building , Farmlike
         }
         else
         {
+            PlayInteractBounce();
+
             if (curCropCount > 0)
             {
                 duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.Harvest);
@@ -97,7 +99,7 @@ public class Farmland : Building , Farmlike
 
         //SFX
         SoundSystem.instance.PlaySound("collide-crop");
-        duck.gameObject.GetComponentInChildren<DuckActionIndicator>().ClearAction(); 
+        duck.gameObject.GetComponentInChildren<DuckActionIndicator>().ClearAction();
 
 
         if (curCropCount <= 0)
