@@ -3,50 +3,19 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
 
-
+//looking for a bunch of code that isn't here anymore? 
+//most of it is now being handled either within the Building script, or a new script called ConstructionPageGen,
+//and the specific unlock conditions are handled in individual building scripts
 
 public class UnlockingUIManager : MonoBehaviour
 {
     public static UnlockingUIManager reference;
     public QuacxiconSO quacxiconSO;
 
-    struct building
-    {
-        public string name;
-        public bool isUnlocked;
-        public Building script;
-        public GameObject buildingBar;
-        public string description;
-        public string unlockText;
-
-        public building(Building b)
-        {
-            script = b.GetComponent<Building>();
-
-            name = script.buildingName;
-            isUnlocked = false;
-            description = script.Description;
-            unlockText = script.UnlockText;
-
-            buildingBar = script.buildingBar;
-        }
-
-        public building(GameObject b)
-        {
-            script = b.GetComponent<Building>();
-
-            name = script.buildingName;
-            isUnlocked = false;
-            description = script.Description;
-            unlockText = script.UnlockText;
-
-            buildingBar = script.buildingBar;
-        }
-
-    }
-    public List<Building> buildingList = new List<Building>();
     public List<GameObject> buildingListGO = new List<GameObject>();
+    public List<Building> buildingList = new List<Building>();
 
+    /*
     public bool isNestUnlocked;
     public bool isFarmlandUnlocked;
     public bool isGoldenCornUnlocked;
@@ -57,10 +26,11 @@ public class UnlockingUIManager : MonoBehaviour
     public bool isStrawCraftUnlocked;
     public bool isAltarUnlcoked;
     public bool isDrumUnlocked;
+    */
+    //private bool hasOpened = false;
+    private bool unlockAllForDebug = false;
 
-    private bool hasOpened = false;
-    private bool hasunlocked = false;
-
+    public string lockedString;
     /*
     public GameObject NestBuildingBar;
     public GameObject FarmlandBuildingBar;
@@ -72,8 +42,8 @@ public class UnlockingUIManager : MonoBehaviour
     public GameObject StrawCraftBuildingBar;
     public GameObject AltarBuildingBar;
     public GameObject DrumBuildingBar;
-    */
-    private string lockedString;
+    
+
 
     private string NestDescription;
     private string FarmlandDescription;
@@ -96,11 +66,11 @@ public class UnlockingUIManager : MonoBehaviour
     private string strawCraftUnlockingText;
     private string altarUnlockingText;
     private string drumUnlockingText;
-
+    */
 
     private void Awake()
     {
-        lockedString = quacxiconSO.GetRandomLogFromCategory("Locked");
+        /*
         NestDescription = quacxiconSO.GetRandomLogFromCategory("Nest");
         FarmlandDescription = quacxiconSO.GetRandomLogFromCategory("Farmland");
         GoldenCornDescription = quacxiconSO.GetRandomLogFromCategory("Golden Corn");
@@ -120,25 +90,46 @@ public class UnlockingUIManager : MonoBehaviour
         hammerSawUnlockingText = quacxiconSO.GetRandomLogFromCategory("Hammer SawDes");
         strawCraftUnlockingText = quacxiconSO.GetRandomLogFromCategory("Straw CraftDes");
         altarUnlockingText = quacxiconSO.GetRandomLogFromCategory("AltarDes");
-        drumUnlockingText = quacxiconSO.GetRandomLogFromCategory("DrumDes");
+        drumUnlockingText = quacxiconSO.GetRandomLogFromCategory("DrumDes");*/
 
         if (reference == null) reference = this;
         else Destroy(this);
+
+        lockedString = quacxiconSO.GetRandomLogFromCategory("Locked");
     }
-}
 
-    /*
-
-    string FormatDescription(string raw)
+    void Start()
     {
-        return raw
-            .Replace(" Cost:", "\nCost:")
-            .Replace(" Unlocking Condition:", "\nUnlocking Condition:");
-           // .Replace()
+        foreach(GameObject g in buildingListGO)
+        {
+            buildingList.Add(g.GetComponent<Building>());
+        }
+
+        if (unlockAllForDebug)
+        {
+            foreach (Building b in buildingList)
+            {
+                unlock(b);
+            }
+        }
+    }
+
+    string FormatDescription(Building b)
+    {
+        int totalCost = (int)(b.ConstructionNeeded * b.BuildCost) + b.PlaceCost;
+
+        return b.Description
+            .Replace("[b]", "\n" + (int)b.ConstructionNeeded + " effort needed\n")
+            
+            .Replace("[c]", totalCost + " crumbs needed");
 
       //  [b][c]
+      // repeated text should also go here
     }
 
+
+
+/*
     string FormatUnlockingText(string raw)
     {
         return raw
@@ -184,9 +175,43 @@ public class UnlockingUIManager : MonoBehaviour
         }
         
     }
-
-    void SetAllBuildingsDescriptionLocked()
+    */
+    //this MUST be tied to the open construction button!! if it isn't literally nothing will work!!!!
+    public void checkAllUnlocks()
     {
+        foreach (Building b in buildingList)
+        {
+            if (b.checkIfUnlocked()) { unlock(b); }
+        }
+    }
+
+    void triggerPopup(string txt)
+    {
+        List<PopupMessageData> popupTextList = new();
+        popupTextList.Add(new PopupMessageData(txt));
+        PopupManager.Instance.StartPopupSequence(popupTextList);
+    }
+
+    //unlock and change description
+    void unlock(Building b)
+    {
+        b.unlocked = true;
+
+        b.buildingBar.GetComponentInChildren<TextMeshProUGUI>().text = FormatDescription(b);
+
+        Button btn = b.buildingBar.GetComponent<Button>();
+        btn.interactable = true;
+
+        Transform imageTransform = b.buildingBar.transform.Find("Image");
+        imageTransform.gameObject.SetActive(true);
+
+        triggerPopup(b.UnlockText);
+    }
+
+    /*
+    public void SetAllBuildingsDescriptionLocked()
+    {
+        
         TextMeshProUGUI nestTmp = NestBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
         nestTmp.text = lockedString;
 
@@ -216,9 +241,9 @@ public class UnlockingUIManager : MonoBehaviour
 
         TextMeshProUGUI drumTmp = DrumBuildingBar.GetComponentInChildren<TextMeshProUGUI>();
         drumTmp.text = lockedString;
-
-    }
-
+        
+    }*/
+    /*
     void TestIfNestIsUnlocked()
     {
         if (!isNestUnlocked && PublicInfo.reference.farmList.Count >= 1)
@@ -309,15 +334,10 @@ public class UnlockingUIManager : MonoBehaviour
             isDrumUnlocked = true;
             ChangeDrumDescriptionIfUnlocked();
         }
-    }
+    }*/
 
-    void triggerPopup(string txt)
-    {
-        List<PopupMessageData> popupTextList = new();
-        popupTextList.Add(new PopupMessageData(txt));
-        PopupManager.Instance.StartPopupSequence(popupTextList);
-    }
 
+    /*
     void ChangeNestDescriptionIfUnlocked()
     {
         if (isNestUnlocked)
@@ -489,5 +509,5 @@ public class UnlockingUIManager : MonoBehaviour
             triggerPopup(drumUnlockingText);
         }
     }
-
-}*/
+*/
+}

@@ -22,6 +22,11 @@ public class Altar : Building
         altarGrabber.gameObject.SetActive(true);
     }
 
+    public override bool checkIfUnlocked()
+    {
+        return base.checkIfUnlocked();
+    }
+
     public override IEnumerator BuildingInteract(DuckWalk duck)
     {
         yield return StartCoroutine(base.BuildingInteract(duck));

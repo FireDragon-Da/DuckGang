@@ -21,6 +21,7 @@ public class Building : MonoBehaviour
     protected string description;
     protected string unlockText;
     [SerializeField] public GameObject buildingBar;
+    public bool unlocked = false;
 
     private TextBox infoTextBox;
 
@@ -95,6 +96,14 @@ public class Building : MonoBehaviour
         }
     }
 
+    public float ConstructionNeeded
+    {
+        get
+        {
+            return constructionNeeded;
+        }
+    }
+
     public SpriteRenderer SpriteRenderer
     {
         get
@@ -140,6 +149,11 @@ public class Building : MonoBehaviour
     public void EndInteracting(DuckWalk duck)
     {
         interacting.Remove(duck);
+    }
+
+    public virtual bool checkIfUnlocked()
+    {
+        return unlocked;
     }
 
     public virtual IEnumerator BuildingInteract(DuckWalk duck)

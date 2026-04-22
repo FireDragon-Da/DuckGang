@@ -56,8 +56,6 @@ public class TimeManager : MonoBehaviour
                 MeetingManager.reference.StartMeeting();
             }
         }
-        //HENRY
-       // print(curMonthTime);
     }
 
     void MonthPassed()
