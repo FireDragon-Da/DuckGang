@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1709184086563096457, guid: 35c1f606f1779cb4fba759dcfeb9c4f7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4af974fbca21d424cb245e84c67c6b2d, type: 3}
+    - target: {fileID: 4476916997608862580, guid: 35c1f606f1779cb4fba759dcfeb9c4f7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4635587048273447740, guid: 35c1f606f1779cb4fba759dcfeb9c4f7, type: 3}
       propertyPath: heldFood
       value: 20
@@ -54,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8082505532341099964, guid: 35c1f606f1779cb4fba759dcfeb9c4f7, type: 3}
       propertyPath: m_Name
-      value: StartingHall
+      value: StartingDiningHall
       objectReference: {fileID: 0}
     - target: {fileID: 8082505532341099964, guid: 35c1f606f1779cb4fba759dcfeb9c4f7, type: 3}
       propertyPath: m_IsActive
