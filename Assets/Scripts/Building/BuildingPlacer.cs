@@ -141,7 +141,7 @@ public class BuildingPlacer : MonoBehaviour
             {
                 Vector2Int arrayPos = MapManager.reference.TilemapPosToArrayPos(new(startX+i,startY+j));
 
-                if (!MapManager.reference.IsArrayPosValid(arrayPos) || !MapManager.reference.IsBuildingPosEmpty(arrayPos))
+                if (!MapManager.reference.IsArrayPosValid(arrayPos) || !MapManager.reference.IsBuildingPosEmpty(arrayPos) || MapManager.reference.waterArray[arrayPos.x,arrayPos.y])
                 {
                     return false;
                 }

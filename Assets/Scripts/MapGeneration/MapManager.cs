@@ -50,7 +50,7 @@ public class MapManager : MonoBehaviour
     [Header("Public Info")]
 
     [HideInInspector] public List<List<Vector2Int>> sectionLists;
-    [HideInInspector] public int[,] mapArray; //Currently unused
+    [HideInInspector] public bool[,] waterArray;
     [HideInInspector] public Building[,] buildingArray;
 
     public static MapManager reference;
@@ -65,13 +65,22 @@ public class MapManager : MonoBehaviour
         mapBottom = -mapHeight / 2;
 
         //This is only here for testing purposes
-        mapArray = new int[mapWidth,mapHeight];
+        waterArray = new bool[mapWidth,mapHeight];
         buildingArray = new Building[mapWidth,mapHeight];
     }
 
     void Start()
     {
-
+        for (int i = 0; i < mapWidth; i++)
+        {
+            for (int j = 0; j < mapHeight; j++)
+            {
+                if (map.GetTile<Tile>(new(mapLeft+i,mapTop-j-1)).gameObject != null)
+                {
+                    waterArray[i,j] = true;print("water");
+                }
+            }
+        }
     }
 
     void Update()
@@ -446,7 +455,7 @@ public class MapManager : MonoBehaviour
             }
         }
 
-        this.mapArray = new int[mapWidth,mapHeight];
+        waterArray = new bool[mapWidth,mapHeight];
         buildingArray = new Building[mapWidth,mapHeight];
 
         currentlyGenerating = false;
