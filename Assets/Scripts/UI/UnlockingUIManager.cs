@@ -83,4 +83,9 @@ public class UnlockingUIManager : MonoBehaviour
         Transform imageTransform = b.buildingBar.transform.Find("Image");
         imageTransform.gameObject.SetActive(true);
     }
+
+    private void Update()
+    {
+        
+    }
 }

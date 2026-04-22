@@ -141,3 +141,13 @@ MonoBehaviour:
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
+  - categoryName: Playground
+    contentList:
+    - built somewhere to play!
+    - "Playground: playing here will keep ducks happy and distract them from work!
+      \n[b]\n[c]\nUnlock Condition: have six ducks."
+    - Playground unlocked! Citizens can now keep their spirits up by taking a break
+      to play!
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0

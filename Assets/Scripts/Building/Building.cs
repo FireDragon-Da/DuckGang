@@ -158,6 +158,7 @@ public class Building : MonoBehaviour
 
     protected void Unlock()
     {
+        print(buildingName + "unlocked!!");
         unlocked = true;
         UnlockingUIManager.reference.triggerPopup(UnlockText);
     }
@@ -340,6 +341,7 @@ public class Building : MonoBehaviour
         //until building is unlocked, check if it is & then unlock it
         if (!unlocked)
         {
+            Debug.Log("checking for unlock...");
             if (checkIfUnlocked()) Unlock();
         }
         

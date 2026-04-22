@@ -14,8 +14,9 @@ public class FarmHolder : Building
         }
     }
 
-    public override bool checkIfUnlocked()
+    public static bool checkIfUnlocked()
     {
+        Debug.Log("checking for unlock from child");
         if (PublicInfo.reference.crumbieGainedFromGrass >= 10) return true;
         else return false;
     }
