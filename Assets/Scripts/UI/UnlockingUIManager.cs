@@ -7,33 +7,45 @@ using UnityEngine.UI;
 
 public class UnlockingUIManager : MonoBehaviour
 {
-
+    public static UnlockingUIManager reference;
     public QuacxiconSO quacxiconSO;
 
     struct building
     {
         public string name;
         public bool isUnlocked;
-        public Building prefab;
+        public Building script;
         public GameObject buildingBar;
         public string description;
         public string unlockText;
 
-        public building(GameObject pre)
+        public building(Building b)
         {
-            prefab = pre.GetComponent<Building>();
+            script = b.GetComponent<Building>();
 
-            name = prefab.buildingName;
+            name = script.buildingName;
             isUnlocked = false;
-            description = prefab.Description;
-            unlockText = prefab.UnlockText;
+            description = script.Description;
+            unlockText = script.UnlockText;
 
-            buildingBar = prefab.buildingBar;
+            buildingBar = script.buildingBar;
+        }
+
+        public building(GameObject b)
+        {
+            script = b.GetComponent<Building>();
+
+            name = script.buildingName;
+            isUnlocked = false;
+            description = script.Description;
+            unlockText = script.UnlockText;
+
+            buildingBar = script.buildingBar;
         }
 
     }
-
-    public List<GameObject> buildingList = new List<GameObject>();
+    public List<Building> buildingList = new List<Building>();
+    public List<GameObject> buildingListGO = new List<GameObject>();
 
     public bool isNestUnlocked;
     public bool isFarmlandUnlocked;
@@ -49,7 +61,7 @@ public class UnlockingUIManager : MonoBehaviour
     private bool hasOpened = false;
     private bool hasunlocked = false;
 
-
+    /*
     public GameObject NestBuildingBar;
     public GameObject FarmlandBuildingBar;
     public GameObject GoldenCornBuildingBar;
@@ -60,7 +72,7 @@ public class UnlockingUIManager : MonoBehaviour
     public GameObject StrawCraftBuildingBar;
     public GameObject AltarBuildingBar;
     public GameObject DrumBuildingBar;
-
+    */
     private string lockedString;
 
     private string NestDescription;
@@ -109,9 +121,13 @@ public class UnlockingUIManager : MonoBehaviour
         strawCraftUnlockingText = quacxiconSO.GetRandomLogFromCategory("Straw CraftDes");
         altarUnlockingText = quacxiconSO.GetRandomLogFromCategory("AltarDes");
         drumUnlockingText = quacxiconSO.GetRandomLogFromCategory("DrumDes");
+
+        if (reference == null) reference = this;
+        else Destroy(this);
     }
+}
 
-
+    /*
 
     string FormatDescription(string raw)
     {
@@ -474,4 +490,4 @@ public class UnlockingUIManager : MonoBehaviour
         }
     }
 
-}
+}*/
