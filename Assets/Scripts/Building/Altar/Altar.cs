@@ -24,7 +24,8 @@ public class Altar : Building
 
     public override bool checkIfUnlocked()
     {
-        return base.checkIfUnlocked();
+        if (PublicInfo.reference.duckList.Count >= 20) return true;
+        else return false;
     }
 
     public override IEnumerator BuildingInteract(DuckWalk duck)

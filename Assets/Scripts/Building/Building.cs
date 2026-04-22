@@ -156,6 +156,12 @@ public class Building : MonoBehaviour
         return unlocked;
     }
 
+    protected void Unlock()
+    {
+        unlocked = true;
+        UnlockingUIManager.reference.triggerPopup(UnlockText);
+    }
+
     public virtual IEnumerator BuildingInteract(DuckWalk duck)
     {
         continueBehavior = false;
@@ -330,6 +336,13 @@ public class Building : MonoBehaviour
         if (!built || removing) {return;}
 
         UpdateBehavior();
+
+        //until building is unlocked, check if it is & then unlock it
+        if (!unlocked)
+        {
+            if (checkIfUnlocked()) Unlock();
+        }
+        
     }
 
     protected virtual void UpdateBehavior()

@@ -33,6 +33,12 @@ public class DiningHall : Building
         }
     }
 
+    public override bool checkIfUnlocked()
+    {
+        if (PublicInfo.reference.farmList.Count >= 12) return true;
+        else return false;
+    }
+
     public override void Build()
     {
         base.Build();

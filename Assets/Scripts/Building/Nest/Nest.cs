@@ -34,6 +34,12 @@ public class Nest : Building
         effectApplier.gameObject.SetActive(true);
     }
 
+    public override bool checkIfUnlocked()
+    {
+        if (PublicInfo.reference.farmList.Count >= 1) return true;
+        else return false;
+    }
+
     public override void StartDeconstruction()
     {
         PublicInfo.reference.nestList.Remove(this);

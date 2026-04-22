@@ -28,4 +28,10 @@ public class StrawCraft : Building
         }
     }
 
+    public override bool checkIfUnlocked()
+    {
+        if (PublicInfo.reference.crumbieGainedFromFarmland >= 200) return true;
+        else return false;
+    }
+
 }

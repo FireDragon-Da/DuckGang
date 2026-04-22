@@ -14,6 +14,12 @@ public class FarmHolder : Building
         }
     }
 
+    public override bool checkIfUnlocked()
+    {
+        if (PublicInfo.reference.crumbieGainedFromGrass >= 10) return true;
+        else return false;
+    }
+
     public override void StartDeconstruction()
     {
         if (removing) {return;}

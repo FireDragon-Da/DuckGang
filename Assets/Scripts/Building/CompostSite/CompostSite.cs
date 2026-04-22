@@ -18,6 +18,10 @@ public class CompostSite : Building
     [SerializeField] float rangeNum;
     [SerializeField] Collider2D range;
 
+    public override bool checkIfUnlocked()
+    {
+        return true;
+    }
     protected override void UpdateBehavior()
     {
         base.UpdateBehavior();

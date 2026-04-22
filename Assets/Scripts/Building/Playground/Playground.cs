@@ -22,4 +22,10 @@ public class Playground : Building
         hitDuck.ModifyHappiness(TuningManager.reference.playgroundGainInteract);
         
     }
+
+    public override bool checkIfUnlocked()
+    {
+        if (PublicInfo.reference.duckList.Count >= 5) return true;
+        else return false;
+    }
 }

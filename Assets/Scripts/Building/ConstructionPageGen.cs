@@ -12,7 +12,6 @@ public class ConstructionPageGen : MonoBehaviour
     
     void Start()
     {
-        //gameobject ver
 
         buildingListGO = UnlockingUIManager.reference.buildingListGO;
 
@@ -29,5 +28,7 @@ public class ConstructionPageGen : MonoBehaviour
             imageTransform.gameObject.GetComponent<Image>().sprite= b.SpriteRenderer.sprite;
             
         }
+
+        this.gameObject.SetActive(false);
     }
 }
