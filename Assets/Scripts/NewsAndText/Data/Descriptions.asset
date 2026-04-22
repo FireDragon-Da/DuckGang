@@ -21,88 +21,98 @@ MonoBehaviour:
     clearExistingContent: 0
   - categoryName: Nest
     contentList:
-    - 'Nest: spawn eggs here, hutch kid ducks after a few moments.  Cost: $15 ($5
-      + 5 * $2), total $15; foundation costs $5; requires 5 times to build, each
-      costs $2 . Unlocking Condition: Build 1 Farmland.'
+    - "Nest: Two ducks can breed and hatch a baby! \n[b]\n[c]"
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Farmland
     contentList:
-    - 'Farmland: grow some crops, ducks can collect them when harvest, or water them
-      when not. Cost: $30 ($6 + 8 * $3), total $30; foundation costs $6; requires
-      8 times to build, each costs $3. Unlocking Condition: Collect 10 crumbies from
-      the grass!'
+    - "Farmland: Grows crops. Ducks can collect them when it's time to harvest, or
+      water them when not! \n[b]\n[c]\nUnlocking Condition: Collect 10 crumbies from
+      the grass!"
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Golden Corn
     contentList:
-    - 'Golden Corn: the ducks will go straight to the nearest farm or grass when
-      touching it or when the horn blows. Cost: $40 ($10 + 10 * $3), total $40; foundation
-      costs $10; requires 10 times to build, each costs $3. Unlocking Condition:
-      Build 2 farmlands.'
+    - "Golden Corn: Ducks will go straight to the nearest farm or grass when touching
+      it or when the horn blows. \n[b]\n[c]\nUnlocking Condition: Build 2 farmlands."
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Playground
     contentList:
-    - 'Playground: a playground could improve the happiness of the duck collided.
-      Cost: $26 ($20 + 2 * $3), total $26; foundation costs $20; requires 10 times
-      to build, each costs $3. Unlocking Condition: Have 5 ducks.'
+    - 'Playground: A place for ducks to relax after working hard. Boost happiness
+      of ducks!
+
+      [b]
+
+      [c]
+
+      Unlocking Condition: Have 5 ducks.'
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Compost Site
     contentList:
-    - 'Compost Site: when there are poops inside, every farm or grass within its
-      range will produce more crumbies. Cost: $60 ($12 + 12 * $4), total $60; foundation
-      costs $12; requires 12 times to build, each costs $4. Unlock Condition: Build
-      3 Farmland.'
+    - 'Compost Site: Every farm or grass within its range will produce more crumbies
+      when ducks collide with it.
+
+      [b]
+
+      [c]
+
+      Unlock Condition:
+      Build 3 Farmland.'
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Secret Site
     contentList:
-    - 'Mr Duckson''s Secret Site: can store crumbies here. After a few moments, it
-      will return the ducks with more crumbies. Cost: Cost:$100 ($25 + 15 * $5),
-      total $100; foundation costs $25; requires 15 times to build, each costs $5.
-      Unlock Condition: Collect 300 crumbies from all sources.'
+    - "Mr Duckson's Secret Site: Ducks can stores crumbies here. \n[b]\n[c]\nUnlock
+      Condition: Collect 300 crumbies from all sources."
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Hammer Saw
     contentList:
-    - 'Hammer & Saw Symmbol: the ducks will go straight to the nearest construction
-      site when touching it. Cost: $40 ($10 + 10 * $3), total $40; foundation costs
-      $10; requires 10 times to build, each costs $3. Unlock Condition: Build 3 buildings
-      in total.'
+    - 'Hammer & Saw Symmbol: Ducks will go straight to the nearest construction site
+      when they make contact.
+
+      [b]
+
+      [c]
+
+      Unlock Condition: Build
+      3 buildings in total.'
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Straw Craft
     contentList:
-    - 'Straw Craft: the duck will be forced to labor in it for a few moments, not
-      able to get away, but will produce some crumbies when finished. Cost: $30 ($6
-      + 8 * $3), total $30; foundation costs $6; requires 8 times to build, each
-      costs $3. Unlock Condition: Collect 30 crumbies from Farmland in total.'
+    - "Straw Craft: This will force ducks to stay in a work area for several duck
+      minutes and produce crumbies. \n[b]\n[c]\nUnlock Condition: Collect 30 crumbies
+      from Farmland in total."
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Altar
     contentList:
-    - 'Altar: sacrifice one duck to produce more crumbies. Cost: $10 ($2 + 2 * $4),
-      total $10; foundation costs $2; requires 2 times to build, each costs $4. Unlock
-      Condition: Have 6 ducks.'
+    - "Altar: Sacrifice one duck to produce more crumbies. \n[b]\n[c]\nUnlock Condition:
+      Have 6 ducks.\nCan only be placed once."
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Drum
     contentList:
-    - 'Duck duck Drum: speed up the ducks that collide with it or when the drum roars.
-      Cost: $50 ($10 + 10 * $4), total $50; foundation costs $10; requires 10 times
-      to build, each costs $4. Unlock Condition: ducks collide buildings 20 times
-      in total.'
+    - 'Duck duck Drum: When the drum roars the speed of ducks increase!
+
+      [b]
+
+      [c]
+
+      Unlock
+      Condition: Ducks collide buildings 20 times in total.'
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
@@ -159,7 +169,7 @@ MonoBehaviour:
     contentList:
     - 'Straw Craft unlocked! Ducks have learnt a new way to produce more crumbies:
       doing labors and making the raw materials into advanced products, after collecting
-      many raw materials from the farmlands! (Click Twice to close)'
+      many raw materials from the farmlands!'
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
@@ -167,14 +177,13 @@ MonoBehaviour:
     contentList:
     - Altar unlocked! Overpopulation is dangerous! Ducks have figured out a way to
       deal with this problem... Their Gods will reward them for building this altar!
-      (Click Twice to close)
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: DrumDes
     contentList:
-    - Duck duck drum unlocked! Ducks have learnt the benefit of walking like a New
-      Yorker after working enough times in different buildings. (Click Twice to close)
+    - 'Duck duck drum unlocked! Ducks have learnt the benefit of walking like a New
+      Yorker after working enough times in different buildings. '
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
