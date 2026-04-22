@@ -21,7 +21,8 @@ public class ArticleCreator : MonoBehaviour
 
     public Dictionary<string, ArticleEvent> namedArticles = new Dictionary<string, ArticleEvent>();
     public List<ArticleEvent> fluffArticles = new List<ArticleEvent>();
-    public TextAsset textFile;
+
+    public QuacxiconSO quacxicon;
    
     void Awake()
     {
@@ -30,13 +31,13 @@ public class ArticleCreator : MonoBehaviour
 
     void Start()
     {
-        if (textFile == null)
+        if (quacxicon == null)
         {
-            print("No text file attached to articleCreator! articles will not work :(");
+            print("No quaxicon attached to articleCreator! articles will not work :(");
             return;
         }
 
-        string[] articles = textFile.text.Split(new[] { "&" }, StringSplitOptions.RemoveEmptyEntries);
+        string[] articles = quacxicon.GetRandomLogFromCategory("Articles").Split(new[] { "&" }, StringSplitOptions.RemoveEmptyEntries);
         foreach (string article in articles)
         {
             createArticle(article.Trim());
