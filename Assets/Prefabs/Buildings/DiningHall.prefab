@@ -172,7 +172,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1005545888958309581, guid: f25d1f1766659c447afb8cb90e6d8667, type: 3}
+  m_Sprite: {fileID: 5078010475414672080, guid: f8beca9a6ea05e641a7dc5ba577e9a3b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -253,6 +253,10 @@ MonoBehaviour:
   progressBar: {fileID: 5035101416814977789}
   foodCap: 20
   foodGainPerHit: 5
+  heldFood: 0
+  fullSprite: {fileID: 5251315426124692467, guid: b8735838331217346bdff81abae1a293, type: 3}
+  halfSprite: {fileID: -1005545888958309581, guid: f25d1f1766659c447afb8cb90e6d8667, type: 3}
+  emptySprite: {fileID: 5078010475414672080, guid: f8beca9a6ea05e641a7dc5ba577e9a3b, type: 3}
   fillTime: 1
 --- !u!61 &455469100539282678
 BoxCollider2D:

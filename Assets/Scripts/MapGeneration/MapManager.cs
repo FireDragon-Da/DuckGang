@@ -77,7 +77,7 @@ public class MapManager : MonoBehaviour
             {
                 if (map.GetTile<Tile>(new(mapLeft+i,mapTop-j-1)).gameObject != null)
                 {
-                    waterArray[i,j] = true;print("water");
+                    waterArray[i,j] = true;
                 }
             }
         }
