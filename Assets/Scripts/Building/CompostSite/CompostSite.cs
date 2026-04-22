@@ -53,6 +53,7 @@ public class CompostSite : Building
         }
         
         yield return StartCoroutine(WaitWithProgress(poopTime, duck.ProgressBar));
+        PlayInteractBounce();
         if (poopCount == 0)
         {
             poopCount++;
