@@ -106,8 +106,10 @@ public class Nest : Building
         timesUsed++;
         if (timesUsed >= totalUses)
         {
+            PublicInfo.reference.nestList.Remove(this);
             Remove();
-        } else
+        }
+        else
         {
             spriteRenderer.sprite = sprites[timesUsed * 2];
         }

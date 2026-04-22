@@ -15,14 +15,14 @@ PrefabInstance:
     - target: {fileID: 2946973571977379682, guid: 35c1f606f1779cb4fba759dcfeb9c4f7, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 5251315426124692467, guid: b8735838331217346bdff81abae1a293, type: 3}
+      objectReference: {fileID: -1005545888958309581, guid: f25d1f1766659c447afb8cb90e6d8667, type: 3}
     - target: {fileID: 4476916997608862580, guid: 35c1f606f1779cb4fba759dcfeb9c4f7, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4635587048273447740, guid: 35c1f606f1779cb4fba759dcfeb9c4f7, type: 3}
       propertyPath: heldFood
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5374785850930341481, guid: 35c1f606f1779cb4fba759dcfeb9c4f7, type: 3}
       propertyPath: m_LocalPosition.x

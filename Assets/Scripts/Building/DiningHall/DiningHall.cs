@@ -25,7 +25,7 @@ public class DiningHall : Building
             yield break;
         }
 
-        if (heldFood + interacting.Count * foodGainPerHit <= foodCap)
+        if (heldFood + (interacting.Count-1) * foodGainPerHit <= foodCap)
         {
             int amountNeeded = (foodGainPerHit + heldFood > foodCap) ? (foodCap - heldFood) : foodGainPerHit;
 
