@@ -13,13 +13,11 @@ MonoBehaviour:
   m_Name: Building
   m_EditorClassIdentifier: Assembly-CSharp::QuacxiconSO
   categories:
-  - categoryName: Altar
+  - categoryName: Locked
     contentList:
-    - has triggered the apocolypse.
-    - "Altar: Sacrifice one duck to produce more crumbies. \n[b]\n[c]\nUnlock Condition:
-      Have 6 ducks.\nCan only be placed once."
-    - Altar unlocked! Overpopulation is dangerous! Ducks have figured out a way to
-      deal with this problem... Their Gods will reward them for building this altar!
+    - Haven't learned this yet!
+    - What could this be?
+    - Still discovering...
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
@@ -31,6 +29,40 @@ MonoBehaviour:
       the grass!"
     - Your citizens remembered how to farm! Build and harvest from farms to keep
       them from going hungry.
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Nest
+    contentList:
+    - has just built a love nest
+    - "Nest: Two ducks can breed and hatch a baby! \n[b]\n[c]"
+    - Your ducks remembered how to build nests! Those should be useful in keeping
+      the population from dropping. (Which would be bad.)
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Playground
+    contentList:
+    - wants to play and built a playground. Hurray!
+    - 'Playground: A place for ducks to relax after working hard. Boosts happiness
+      of ducks!
+
+      [b]
+
+      [c]
+
+      Unlocking Condition: Have 5 ducks.'
+    - Hey, people are starting to get unhappy...I drew up some plans for a playground.
+      Maybe that will cheer them up?
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Goldencorn
+    contentList:
+    - just jump into capitalism by finish building the Golden corn
+    - "Golden Corn: Ducks will go straight to the nearest farm or grass when touching
+      it or when the horn blows. \n[b]\n[c]\nUnlocking Condition: Build 2 farmlands."
+    - Have you ever heard of golden corn? Building it can remind ducks to farm!
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
@@ -52,28 +84,13 @@ MonoBehaviour:
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
-  - categoryName: Drum
+  - categoryName: Secretsite
     contentList:
-    - do not know why but made some drums to play
-    - 'Duck duck Drum: When the drum roars the speed of ducks increase!
-
-      [b]
-
-      [c]
-
-      Unlock
-      Condition: Ducks collide buildings 20 times in total.'
-    - 'Duck duck drum unlocked! Ducks have learnt the benefit of walking like a New
-      Yorker after working enough times in different buildings. '
-    sourceTxtFile: {fileID: 0}
-    targetCategoryName: 
-    clearExistingContent: 0
-  - categoryName: Goldencorn
-    contentList:
-    - just jump into capitalism by finish building the Golden corn
-    - "Golden Corn: Ducks will go straight to the nearest farm or grass when touching
-      it or when the horn blows. \n[b]\n[c]\nUnlocking Condition: Build 2 farmlands."
-    - Have you ever heard of golden corn? Building it can remind ducks to farm!
+    - built a secret site for deep dark fantasys.
+    - "Mr Duckson's Secret Site: Ducks can stores crumbies here. \n[b]\n[c]\nUnlock
+      Condition: Collect 300 crumbies from all sources."
+    - Your citizens have learned about investment banking! If you set aside some
+      crumbs for a Mr. Duckson, I've heard he might give you a hefty return.
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
@@ -94,41 +111,6 @@ MonoBehaviour:
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
-  - categoryName: Nest
-    contentList:
-    - has just built a love nest
-    - "Nest: Two ducks can breed and hatch a baby! \n[b]\n[c]"
-    - Your ducks remembered how to build nests! Those should be useful in keeping
-      the population from dropping. (Which would be bad.)
-    sourceTxtFile: {fileID: 0}
-    targetCategoryName: 
-    clearExistingContent: 0
-  - categoryName: Playground
-    contentList:
-    - wants to play and built a playground. Hurray!
-    - 'Playground: A place for ducks to relax after working hard. Boost happiness
-      of ducks!
-
-      [b]
-
-      [c]
-
-      Unlocking Condition: Have 5 ducks.'
-    - Hey, people are starting to get unhappy...I drew up some plans for a playground.
-      Maybe that will cheer them up?
-    sourceTxtFile: {fileID: 0}
-    targetCategoryName: 
-    clearExistingContent: 0
-  - categoryName: Secretsite
-    contentList:
-    - built a secret site for deep dark fantasys.
-    - "Mr Duckson's Secret Site: Ducks can stores crumbies here. \n[b]\n[c]\nUnlock
-      Condition: Collect 300 crumbies from all sources."
-    - Your citizens have learned about investment banking! If you set aside some
-      crumbs for a Mr. Duckson, I've heard he might give you a hefty return.
-    sourceTxtFile: {fileID: 0}
-    targetCategoryName: 
-    clearExistingContent: 0
   - categoryName: Strawcraft
     contentList:
     - built a strawcraft for yourcraft.
@@ -141,13 +123,44 @@ MonoBehaviour:
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
-  - categoryName: Playground
+  - categoryName: Altar
     contentList:
-    - built somewhere to play!
-    - "Playground: playing here will keep ducks happy and distract them from work!
-      \n[b]\n[c]\nUnlock Condition: have six ducks."
-    - Playground unlocked! Citizens can now keep their spirits up by taking a break
-      to play!
+    - has triggered the apocolypse.
+    - "Altar: Sacrifice one duck to produce more crumbies. \n[b]\n[c]\nUnlock Condition:
+      Have 6 ducks.\nCan only be placed once."
+    - Altar unlocked! Overpopulation is dangerous! Ducks have figured out a way to
+      deal with this problem... Their Gods will reward them for building this altar!
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Drum
+    contentList:
+    - do not know why but made some drums to play
+    - 'Duck duck Drum: When the drum roars the speed of ducks increase!
+
+      [b]
+
+      [c]
+
+      Unlock
+      Condition: Ducks collide buildings 20 times in total.'
+    - 'Duck duck drum unlocked! Ducks have learnt the benefit of walking like a New
+      Yorker after working enough times in different buildings. '
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Dininghall
+    contentList:
+    - built another dining hall!
+    - 'Dining Hall: ducks will store crumbs here to eat at the end of the month.
+
+      [b]
+
+      [c]
+
+      Unlock
+      Condition: have six ducks.'
+    - DINING HALL UNLOCK TEXT
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0

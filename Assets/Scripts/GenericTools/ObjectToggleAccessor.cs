@@ -10,6 +10,7 @@ public class ObjectToggleAccessor : MonoBehaviour
 
     public void ForceOn()
     {
+        print("forcing on " +  target.name);
         target.SetActive(true);
     }
 
