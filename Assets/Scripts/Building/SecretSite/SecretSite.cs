@@ -64,6 +64,7 @@ public class SecretSite : Building
 
         producing = false;
         CrumbManager.reference.GainCrumbs(totalGain);
+        PlayInteractBounce();
         CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, totalGain);
 
         spriteRenderer.sprite = regularSprite;

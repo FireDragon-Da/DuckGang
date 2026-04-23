@@ -6,6 +6,7 @@ public class HammerSaw : Building
 
     public override Vector2 UnqiueBounce(DuckWalk target)
     {
+        PlayInteractBounce();
         return GetClosestConstruction(target);
     }
 
@@ -13,6 +14,7 @@ public class HammerSaw : Building
     {
         GameObject nearest = null;
         float nearestSqrDist = float.PositiveInfinity;
+        PlayInteractBounce();
 
         foreach (Building cur in PublicInfo.reference.constructionList)
         {
