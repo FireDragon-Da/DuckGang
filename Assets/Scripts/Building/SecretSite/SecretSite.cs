@@ -42,12 +42,6 @@ public class SecretSite : Building
         
     }
 
-    public override bool checkIfUnlocked()
-    {
-        if (PublicInfo.reference.crumbieEverCollected >= 400) return true;
-        else return false;
-    }
-
     public IEnumerator ProduceCrumbies()
     {
         spriteRenderer.sprite = openSprite;

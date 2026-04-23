@@ -21,12 +21,6 @@ public class GoldenCorn : Building
         }
     }
 
-    public override bool checkIfUnlocked()
-    {
-        if (PublicInfo.reference.farmList.Count >= 8) return true;
-        else return false;
-    }
-
     public override Vector2 UnqiueBounce(DuckWalk target)
     {
         SoundSystem.instance.PlaySound("golden-corn-collide");

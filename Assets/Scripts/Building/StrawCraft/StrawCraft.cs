@@ -27,11 +27,4 @@ public class StrawCraft : Building
             curCapacity--;
         }
     }
-
-    public override bool checkIfUnlocked()
-    {
-        if (PublicInfo.reference.crumbieGainedFromFarmland >= 200) return true;
-        else return false;
-    }
-
 }

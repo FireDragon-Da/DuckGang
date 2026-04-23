@@ -4,12 +4,6 @@ using UnityEngine;
 public class HammerSaw : Building
 {
 
-    public override bool checkIfUnlocked()
-    {
-        if (PublicInfo.reference.curBuildingList.Count >= 5) return true;
-        else return false;
-    }
-
     public override Vector2 UnqiueBounce(DuckWalk target)
     {
         return GetClosestConstruction(target);

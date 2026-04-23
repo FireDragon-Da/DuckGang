@@ -18,9 +18,6 @@ public class Building : MonoBehaviour
 
     [Header("Text and unlock")]
     [SerializeField] public string buildingName;
-    protected string description;
-    protected string unlockText;
-    [SerializeField] public GameObject buildingBar;
     public bool unlocked = false;
 
     private TextBox infoTextBox;
@@ -120,21 +117,6 @@ public class Building : MonoBehaviour
         }
     }
 
-    public string Description
-    {
-        get
-        {
-            return description;
-        }
-    }
-
-    public string UnlockText
-    {
-        get
-        {
-            return unlockText;
-        }
-    }
 
     public bool CanWalkOver()
     {
@@ -149,18 +131,6 @@ public class Building : MonoBehaviour
     public void EndInteracting(DuckWalk duck)
     {
         interacting.Remove(duck);
-    }
-
-    public virtual bool checkIfUnlocked()
-    {
-        return unlocked;
-    }
-
-    public void Unlock()
-    {
-        print(buildingName + "unlocked!!");
-
-        //UnlockingUIManager.reference.updateBuildMenu(this);
     }
 
     public virtual IEnumerator BuildingInteract(DuckWalk duck)
@@ -380,9 +350,6 @@ public class Building : MonoBehaviour
     protected virtual void Start()
     {
         infoTextBox = TextBox.reference;
-
-        description = quacxiconSO.GetSpecificLogFromCategory(buildingName, 1);
-        unlockText = quacxiconSO.GetSpecificLogFromCategory(buildingName, 2);
     }
 
     public Vector2Int GetBottomLeftTile()

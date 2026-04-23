@@ -9,11 +9,15 @@ using UnityEngine.UI;
 
 public class UnlockingUIManager : MonoBehaviour
 {
+
     public static UnlockingUIManager reference;
     public QuacxiconSO quacxiconSO;
+    PublicInfo info;
 
-    public List<GameObject> buildingListGO = new List<GameObject>();
-    public List<Building> buildingList = new List<Building>();
+    public List<GameObject> buildingListGO = new();
+    public List<Building> buildingList = new();
+
+    public Dictionary<string, GameObject> buildingBars = new();
 
     private bool unlockAllForDebug = false;
     [HideInInspector] public string lockedString;
@@ -28,39 +32,56 @@ public class UnlockingUIManager : MonoBehaviour
 
     void Start()
     {
+        info = PublicInfo.reference;
+
         foreach(GameObject g in buildingListGO)
         {
-            buildingList.Add(g.GetComponent<Building>());
+            Building b = g.GetComponent<Building>();
+
+            buildingList.Add(b);
+
+            //unlock dining hall immediately & lock others (because it loves to be evil)
+            if (g.GetComponent<DiningHall>()) { updateBuildMenu(b); } else { b.unlocked = false; }
         }
 
         if (unlockAllForDebug)
         {
             foreach (Building b in buildingList)
             {
-                b.unlocked = true;
+                updateBuildMenu(b);
             }
         }
     }
 
-    string FormatDescription(Building b)
+    string FormatDescription(Building b, string s)
     {
         int totalCost = (int)(b.ConstructionNeeded * b.BuildCost) + b.PlaceCost;
 
-        return b.Description
-            .Replace("[b]", "\n" + (int)b.ConstructionNeeded + " effort needed\n")
-            
+        return s
+            .Replace("[b]", (int)b.ConstructionNeeded + " effort needed")        
             .Replace("[c]", totalCost + " crumbs needed");
-
-      //  [b][c]
-      // repeated text should also go here
     }
 
-    //this MUST be tied to the open construction button!! if it isn't literally nothing will work!!!!
     public void checkAllUnlocks()
     {
         foreach (Building b in buildingList)
         {
-            if (b.checkIfUnlocked()) { updateBuildMenu(b); }
+            if (!b.unlocked)
+            {
+                if ((b.gameObject.GetComponent<FarmHolder>() && info.crumbieGainedFromGrass >= 10) ||
+                    (b.gameObject.GetComponent<Nest>() && info.farmList.Count >= 1) ||
+                    (b.gameObject.GetComponent<Playground>() && info.duckList.Count >= 5) ||
+                    (b.gameObject.GetComponent<GoldenCorn>() && info.farmList.Count >= 8) ||
+                    (b.gameObject.GetComponent<CompostSite>() && info.farmList.Count >= 12) ||
+                    (b.gameObject.GetComponent<SecretSite>() && info.crumbieEverCollected >= 300) ||
+                    (b.gameObject.GetComponent<HammerSaw>() && info.curBuildingList.Count >= 5) ||
+                    (b.gameObject.GetComponent<StrawCraft>() && info.crumbieGainedFromFarmland >= 30) ||
+                    (b.gameObject.GetComponent<Altar>() && info.duckList.Count >= 20) ||
+                    (b.gameObject.GetComponent<Drum>() && info.duckCollideBuildingTimes >= 70))
+                {
+                    updateBuildMenu(b);
+                }
+            }
         }
     }
 
@@ -73,19 +94,25 @@ public class UnlockingUIManager : MonoBehaviour
     }
 
     //unlock and change description - ONLY triggers when build menu is opened
-    void updateBuildMenu(Building b)
+    public void updateBuildMenu(Building b)
     {
-        b.buildingBar.GetComponentInChildren<TextMeshProUGUI>().text = FormatDescription(b);
+        b.unlocked = true;
 
-        Button btn = b.buildingBar.GetComponent<Button>();
+        GameObject bar = buildingBars[b.buildingName];
+
+        bar.GetComponentInChildren<TextMeshProUGUI>().text = FormatDescription(b, quacxiconSO.GetSpecificLogFromCategory(b.buildingName, 1));
+
+        Button btn = bar.GetComponent<Button>();
         btn.interactable = true;
 
-        Transform imageTransform = b.buildingBar.transform.Find("Image");
+        Transform imageTransform = bar.transform.Find("Image");
         imageTransform.gameObject.SetActive(true);
+
+        triggerPopup(quacxiconSO.GetSpecificLogFromCategory(b.buildingName, 2));
     }
 
     private void Update()
     {
-        
+        checkAllUnlocks();
     }
 }

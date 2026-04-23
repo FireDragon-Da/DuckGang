@@ -12,13 +12,6 @@ public class Drum : Building
 
     [SerializeField] Collider2D drumRange;
 
-    public override bool checkIfUnlocked()
-    {
-        Debug.Log("drum is checking if it has been unlocked.....");
-        if (PublicInfo.reference.duckCollideBuildingTimes >= 70) return true;
-        else return false;
-    }
-
     protected override void UpdateBehavior()
     {
         base.UpdateBehavior();

@@ -22,12 +22,6 @@ public class Altar : Building
         altarGrabber.gameObject.SetActive(true);
     }
 
-    public override bool checkIfUnlocked()
-    {
-        if (PublicInfo.reference.duckList.Count >= 20) return true;
-        else return false;
-    }
-
     public override IEnumerator BuildingInteract(DuckWalk duck)
     {
         yield return StartCoroutine(base.BuildingInteract(duck));
