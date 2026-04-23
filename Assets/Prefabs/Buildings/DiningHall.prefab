@@ -237,7 +237,8 @@ MonoBehaviour:
   walkable: 0
   quacxiconSO: {fileID: 11400000, guid: d9affd977097b284db68ee2e6313957e, type: 2}
   buildingName: Dininghall
-  infoTextBox: {fileID: 0}
+  buildingBar: {fileID: 0}
+  unlocked: 1
   constructionNeeded: 2
   placeCost: 6
   buildCost: 2
@@ -253,6 +254,7 @@ MonoBehaviour:
   progressBar: {fileID: 5035101416814977789}
   foodCap: 20
   foodGainPerHit: 5
+  heldFood: 0
   fillTime: 1
 --- !u!61 &455469100539282678
 BoxCollider2D:

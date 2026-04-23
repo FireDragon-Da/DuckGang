@@ -156,11 +156,11 @@ public class Building : MonoBehaviour
         return unlocked;
     }
 
-    protected void Unlock()
+    public void Unlock()
     {
         print(buildingName + "unlocked!!");
-        unlocked = true;
-        UnlockingUIManager.reference.triggerPopup(UnlockText);
+
+        //UnlockingUIManager.reference.updateBuildMenu(this);
     }
 
     public virtual IEnumerator BuildingInteract(DuckWalk duck)
@@ -337,13 +337,6 @@ public class Building : MonoBehaviour
         if (!built || removing) {return;}
 
         UpdateBehavior();
-
-        //until building is unlocked, check if it is & then unlock it
-        if (!unlocked)
-        {
-            Debug.Log("checking for unlock...");
-            if (checkIfUnlocked()) Unlock();
-        }
         
     }
 

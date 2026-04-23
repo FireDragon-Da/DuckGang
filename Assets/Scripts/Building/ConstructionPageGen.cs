@@ -22,7 +22,7 @@ public class ConstructionPageGen : MonoBehaviour
             GameObject newBar = Instantiate(buildBar, content.transform);
             b.buildingBar = newBar;
 
-            newBar.GetComponentInChildren<TextMeshProUGUI>().text = UnlockingUIManager.reference.lockedString;
+            newBar.GetComponentInChildren<TextMeshProUGUI>().text = "fuck you";//UnlockingUIManager.reference.lockedString;
 
             Transform imageTransform = b.buildingBar.transform.Find("Image");
             imageTransform.gameObject.GetComponent<Image>().sprite= b.SpriteRenderer.sprite;
