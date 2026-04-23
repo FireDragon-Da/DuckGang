@@ -2249,6 +2249,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2865197382281362407}
+        m_TargetAssemblyTypeName: UnlockingUIManager, Assembly-CSharp
+        m_MethodName: checkAllUnlocks
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2247893460745452752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5485,6 +5497,7 @@ GameObject:
   - component: {fileID: 6169121046599755092}
   - component: {fileID: 4039424153079914584}
   - component: {fileID: 4288473015694714660}
+  - component: {fileID: 5466896464570984515}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5660,8 +5673,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d968c54cb4788b14b9e874d924d2aff4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnlockingUIManager
-  quacxiconSO: {fileID: 11400000, guid: 15170f8ae2087d949bb27049eb48f50a, type: 2}
-  buildingListGO: []
+  quacxiconSO: {fileID: 11400000, guid: d9affd977097b284db68ee2e6313957e, type: 2}
+  buildingListGO:
+  - {fileID: 8082505532341099964, guid: 35c1f606f1779cb4fba759dcfeb9c4f7, type: 3}
+  - {fileID: 4451300251334575320, guid: 5a3fb6bec21f1c0478ad03e534316d5e, type: 3}
+  - {fileID: 6237899826994094288, guid: 7c04a85c9d111054a9c5e735cb600a65, type: 3}
+  - {fileID: 1187526609237102256, guid: d7afdf3bb28c1dd4b92d11b0e9059586, type: 3}
+  - {fileID: 8082505532341099964, guid: e804da39ad4107549b7d48948ce2a642, type: 3}
+  - {fileID: 1187526609237102256, guid: aa41dde670de9554daec3f508e724dd1, type: 3}
+  - {fileID: 1187526609237102256, guid: e7e2b56d42ff50c48a3c5186d5f4f4fc, type: 3}
+  - {fileID: 1187526609237102256, guid: a9db84bd506f9d5409cc0637bb7a0be1, type: 3}
+  - {fileID: 1187526609237102256, guid: 622f770417184504096035afbd1230ac, type: 3}
+  - {fileID: 1187526609237102256, guid: 6c3d73f84c10f9e4ca499e9d5734e000, type: 3}
+  - {fileID: 8082505532341099964, guid: 3d2433a2ecd923a4d8cd2f702d925559, type: 3}
   buildingList: []
   lockedString: 
 --- !u!114 &6169121046599755092
@@ -5676,7 +5700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc3f392d775691543ae254698a9d8cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArticleCreator
-  quacxicon: {fileID: 0}
+  quacxicon: {fileID: 11400000, guid: 09133a81b003e6946b353cc5c7a34825, type: 2}
 --- !u!114 &4039424153079914584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5711,6 +5735,19 @@ MonoBehaviour:
   targetCategory: TutorialShort
   customPositions: []
   triggerOnStart: 1
+--- !u!114 &5466896464570984515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8419782432875219653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b09446b9c0352f4a9643ea63d747edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectToggleAccessor
+  target: {fileID: 8593918748071252192}
 --- !u!1 &8593918748071252192
 GameObject:
   m_ObjectHideFlags: 0
@@ -6414,6 +6451,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1628695511758800338, guid: cda72d5e04cdbd7419c759a99110c20b, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1711563316267017409, guid: cda72d5e04cdbd7419c759a99110c20b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6541,6 +6582,10 @@ PrefabInstance:
     - target: {fileID: 4051788544063621599, guid: cda72d5e04cdbd7419c759a99110c20b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4200657851574072297, guid: cda72d5e04cdbd7419c759a99110c20b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000081632475
       objectReference: {fileID: 0}
     - target: {fileID: 4498597117050323626, guid: cda72d5e04cdbd7419c759a99110c20b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -7077,11 +7122,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1767459464883057603, guid: 70027459b1cddd14ead682ff1d4ae945, type: 3}
       propertyPath: m_Size
-      value: 0.66666675
+      value: 0.6666667
       objectReference: {fileID: 0}
     - target: {fileID: 1767459464883057603, guid: 70027459b1cddd14ead682ff1d4ae945, type: 3}
       propertyPath: m_Value
-      value: 1.0000004
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3290813905839133965, guid: 70027459b1cddd14ead682ff1d4ae945, type: 3}
       propertyPath: m_text
@@ -7093,7 +7138,7 @@ PrefabInstance:
       objectReference: {fileID: 5702199441414199652}
     - target: {fileID: 5677003561348275820, guid: 70027459b1cddd14ead682ff1d4ae945, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000015258789
+      value: 0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 8525642233439995914, guid: 70027459b1cddd14ead682ff1d4ae945, type: 3}
       propertyPath: m_Name
@@ -7704,6 +7749,10 @@ PrefabInstance:
     - target: {fileID: 1424311532846294462, guid: 17747e6c3f5bd2e4b93c5db5c9cd6c32, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677202446471097260, guid: 17747e6c3f5bd2e4b93c5db5c9cd6c32, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4608567516132534284, guid: 17747e6c3f5bd2e4b93c5db5c9cd6c32, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
