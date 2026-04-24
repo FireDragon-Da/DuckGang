@@ -29,6 +29,8 @@ public class Drum : Building
         List<Collider2D> hits = new();
         drumRange.Overlap(hits);
 
+        PlayInteractBounce();
+
         foreach (Collider2D col in hits)
         {
             if (col.CompareTag("Duck"))
@@ -49,6 +51,7 @@ public class Drum : Building
             yield break;
         }
 
+        PlayInteractBounce();
         duck.GainStatusEffect(Instantiate(effect));
 
     }

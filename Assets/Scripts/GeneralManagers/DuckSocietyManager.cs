@@ -17,6 +17,14 @@ public class DuckSocietyManager : MonoBehaviour
         reference = this;
     }
 
+    void OnDestroy()
+    {
+        if (reference == this)
+        {
+            reference = null;
+        }
+    }
+
     public GameObject SpawnDuck(Vector2 position)
     {
 
@@ -55,13 +63,5 @@ public class DuckSocietyManager : MonoBehaviour
         }
 
         Destroy(duck);
-
-        if (PublicInfo.reference.duckList.Count <= 0)
-        {
-            if (GameOverManager.reference != null)
-            {
-                GameOverManager.reference.TriggerGameOver();
-            }
-        }
     }
 }

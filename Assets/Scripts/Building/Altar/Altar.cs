@@ -37,6 +37,7 @@ public class Altar : Building
             yield return WaitSacrifice();
 
             heldDuck.GetComponent<DuckStats>().Die(DeathReason.Disappeared);
+            PlayInteractBounce();
             CrumbManager.reference.GainCrumbs(productionAmount);
             CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, productionAmount);
 

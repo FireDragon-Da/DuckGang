@@ -15,10 +15,24 @@ public class TimeManager : MonoBehaviour
 
     int pauses;
 
+    public int GetPauseCount()
+    {
+        return pauses;
+    }
+
     void Awake()
     {
         reference = this;
-        
+        pauses = 0;
+        Time.timeScale = 1;
+    }
+
+    void OnDestroy()
+    {
+        if (reference == this)
+        {
+            reference = null;
+        }
     }
 
     private void Start()
@@ -38,8 +52,6 @@ public class TimeManager : MonoBehaviour
         {
             MonthPassed();
         }
-        //HENRY
-       // print(curMonthTime);
     }
 
     void MonthPassed()
@@ -78,6 +90,10 @@ public class TimeManager : MonoBehaviour
     public void RemovePause()
     {
         pauses--;
+        if (pauses < 0)
+        {
+            pauses = 0;
+        }
         if (pauses == 0)
         {
             Time.timeScale = GameMenu.reference.Speed;

@@ -100,13 +100,16 @@ public class Nest : Building
         progressBar.HideBar();
 
         DuckSocietyManager.reference.SpawnDuck(transform.position);
+        PlayInteractBounce();
         SoundSystem.instance.PlaySound("egg-spawn-baby-duck");
         empty = true;
         timesUsed++;
         if (timesUsed >= totalUses)
         {
+            PublicInfo.reference.nestList.Remove(this);
             Remove();
-        } else
+        }
+        else
         {
             spriteRenderer.sprite = sprites[timesUsed * 2];
         }

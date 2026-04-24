@@ -3,13 +3,17 @@ using UnityEngine;
 
 public class DiningHall : Building
 {
-
+    [Header("DiningHall")]
     [SerializeField] int foodCap;
     [SerializeField] int foodGainPerHit;
-    int heldFood;
+    [SerializeField] int heldFood;
 
     [SerializeField] static float range = 20f;
     public static float Range => range;
+
+    [SerializeField] Sprite fullSprite;
+    [SerializeField] Sprite halfSprite;
+    [SerializeField] Sprite emptySprite;
 
     [SerializeField] float fillTime = 2f;
 
@@ -21,17 +25,20 @@ public class DiningHall : Building
             yield break;
         }
 
-        if (heldFood + interacting.Count <= foodCap)
+        if (heldFood + (interacting.Count-1) * foodGainPerHit < foodCap)
         {
-            if (CrumbManager.reference.ConsumeCrumbs(foodGainPerHit)) {
+            int amountNeeded = (foodGainPerHit + heldFood > foodCap) ? (foodCap - heldFood) : foodGainPerHit;
+
+            if (CrumbManager.reference.ConsumeCrumbs(amountNeeded)) {
                 SoundSystem.instance.PlaySound("dining-colliding-loop");
-                CrumbManager.reference.SpawnCrumbiePopupDecrease(transform.position, foodGainPerHit);
+                CrumbManager.reference.SpawnCrumbiePopupDecrease(transform.position, amountNeeded);
                 yield return StartCoroutine(WaitWithProgress(fillTime, duck.ProgressBar));
-                heldFood += foodGainPerHit;
+                GainFood(amountNeeded);
                 SoundSystem.instance.StopSound("dining-colliding-loop");
             }
         }
     }
+
 
     public override void Build()
     {
@@ -55,6 +62,32 @@ public class DiningHall : Building
     {
         heldFood -= amount;
         SoundSystem.instance.PlaySound("dining-hall-active");
+        PlayInteractBounce();
+
+        UpdateVisual();
+    }
+
+    void GainFood(int amount)
+    {
+        heldFood += amount;
+
+        UpdateVisual();
+    }
+
+    void UpdateVisual()
+    {
+        if (heldFood == foodCap)
+        {
+            spriteRenderer.sprite = fullSprite;
+        }
+        else if (heldFood > 0)
+        {
+            spriteRenderer.sprite = halfSprite;
+        }
+        else
+        {
+            spriteRenderer.sprite = emptySprite;
+        }
     }
 
 }

@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -15,33 +14,26 @@ public class GameOverManager : MonoBehaviour
 
     void Awake()
     {
-        if (reference == null)
-        {
-            reference = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-
+        reference = this;
         gameOverTriggered = false;
+
         if (gameOverPanel != null)
         {
             gameOverPanel.SetActive(false);
         }
     }
 
-    void Update()
+    void OnDestroy()
     {
-        if (!gameOverTriggered && PublicInfo.reference != null)
+        if (reference == this)
         {
-            CheckGameOver();
+            reference = null;
         }
     }
 
-    void CheckGameOver()
+    void Update()
     {
-        if (PublicInfo.reference.duckList.Count <= 0)
+        if (!gameOverTriggered && PublicInfo.reference != null && PublicInfo.reference.duckList.Count <= 0)
         {
             TriggerGameOver();
         }
@@ -49,10 +41,17 @@ public class GameOverManager : MonoBehaviour
 
     public void TriggerGameOver()
     {
-        if (gameOverTriggered) return;
+        if (gameOverTriggered)
+        {
+            return;
+        }
 
         gameOverTriggered = true;
-        Time.timeScale = 0;
+
+        if (TimeManager.reference != null)
+        {
+            TimeManager.reference.AddPause();
+        }
 
         if (gameOverPanel != null)
         {
@@ -72,14 +71,21 @@ public class GameOverManager : MonoBehaviour
 
     public void RestartGame()
     {
-        Time.timeScale = 1;
+        if (TimeManager.reference != null)
+        {
+            TimeManager.reference.RemovePause();
+        }
+
         gameOverTriggered = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void QuitGame()
     {
-        Time.timeScale = 1;
+        if (TimeManager.reference != null)
+        {
+            TimeManager.reference.RemovePause();
+        }
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else

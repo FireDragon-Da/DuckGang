@@ -15,6 +15,16 @@ public class GameMenu : MonoBehaviour
     void Awake()
     {
         reference = this;
+        paused = false;
+        speed = 1;
+    }
+
+    void OnDestroy()
+    {
+        if (reference == this)
+        {
+            reference = null;
+        }
     }
 
     public void PauseGame()
@@ -29,7 +39,14 @@ public class GameMenu : MonoBehaviour
     {
         if (!paused)
         {
-            speed = 1;
+            if (speed == 0)
+            {
+                speed = 1;
+            }
+            if (TimeManager.reference != null && TimeManager.reference.GetPauseCount() == 0)
+            {
+                Time.timeScale = speed;
+            }
         }
         else
         {
@@ -43,6 +60,20 @@ public class GameMenu : MonoBehaviour
     public void FastForwardGame()
     {
         speed = 2;
+        if (TimeManager.reference != null && TimeManager.reference.GetPauseCount() == 0)
+        {
+            Time.timeScale = speed;
+        }
+        AudioListener.pause = false;
+    }
+
+    public void NormalSpeedGame()
+    {
+        speed = 1;
+        if (TimeManager.reference != null && TimeManager.reference.GetPauseCount() == 0)
+        {
+            Time.timeScale = speed;
+        }
         AudioListener.pause = false;
     }
 

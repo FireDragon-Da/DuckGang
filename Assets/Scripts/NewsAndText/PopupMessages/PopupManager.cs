@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -53,6 +54,11 @@ public class PopupManager : MonoBehaviour
             currentMessages = messages;
             currentIndex = 0;
             active = true;
+
+            if (TimeManager.reference != null)
+            {
+                TimeManager.reference.AddPause();
+            }
         }
         else
         {
@@ -61,8 +67,6 @@ public class PopupManager : MonoBehaviour
                 currentMessages.Add(message);
             }
         }
-  
-        if (Time.timeScale != 0) TimeManager.reference.AddPause();
 
         popupContainer.SetActive(true);
         DisplayCurrentMessage();
