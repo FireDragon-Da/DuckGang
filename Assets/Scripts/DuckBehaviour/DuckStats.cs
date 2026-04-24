@@ -7,6 +7,7 @@ using UnityEngine;
 public class DuckStats : MonoBehaviour
 {
     private DuckHunger duckHunger;
+    [SerializeField] Corpse corpsePrefab;
 
     [Header("Core Stats")]
     [SerializeField] private int happiness = 80;
@@ -134,6 +135,8 @@ public class DuckStats : MonoBehaviour
         {
             DuckSocietyManager.reference.ProcessDuckDeath(gameObject, reason);
         }
+
+        Instantiate(corpsePrefab,transform.position,new());
     }
 
     IEnumerator passiveHappinessDrop()
