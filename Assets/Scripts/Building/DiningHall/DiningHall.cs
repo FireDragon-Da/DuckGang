@@ -25,6 +25,8 @@ public class DiningHall : Building
             yield break;
         }
 
+        TutorialLines.reference.TryActivate(Tutorials.DiningHall);
+
         if (heldFood + (interacting.Count-1) * foodGainPerHit < foodCap)
         {
             int amountNeeded = (foodGainPerHit + heldFood > foodCap) ? (foodCap - heldFood) : foodGainPerHit;

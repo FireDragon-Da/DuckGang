@@ -33,6 +33,8 @@ public class GameMenu : MonoBehaviour
         TimeManager.reference.AddPause();
         paused = true;
         //AudioListener.pause = true;
+
+        TutorialLines.reference.TryActivate(Tutorials.PlayPauseSpeed);
     }
 
     public void PlayGame()
@@ -55,6 +57,8 @@ public class GameMenu : MonoBehaviour
         }
 
         AudioListener.pause = false;
+
+        TutorialLines.reference.TryActivate(Tutorials.PlayPauseSpeed);
     }
 
     public void FastForwardGame()
@@ -65,6 +69,8 @@ public class GameMenu : MonoBehaviour
             Time.timeScale = speed;
         }
         AudioListener.pause = false;
+
+        TutorialLines.reference.TryActivate(Tutorials.PlayPauseSpeed);
     }
 
     public void NormalSpeedGame()
@@ -75,6 +81,8 @@ public class GameMenu : MonoBehaviour
             Time.timeScale = speed;
         }
         AudioListener.pause = false;
+
+        TutorialLines.reference.TryActivate(Tutorials.PlayPauseSpeed);
     }
 
     //Unused now

@@ -44,3 +44,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a38c3767fef3e942bd84ac654ade706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialLines
+  texts:
+  - self: 0
+    triggered: 0
+    lines:
+    - When you click on a duck you will get to see their age, hunger level, and how
+      happy they are.
+    - You can also click and hold to grab a duck and drag them around.
+    - "It\u2019s pretty bare around here though, click the hammer when you are ready
+      to build something."
+  - self: 1
+    triggered: 0
+    lines:
+    - This is the general happiness of Quacklands.
+    - On top is the general hunger and below is the time until the next duck month.
+    - There is also a calendar if you want more information.
+  - self: 2
+    triggered: 0
+    lines:
+    - Crumbies are earned in passing by ducks and the amount of crumbies you have
+      is in the top left corner.
+  - self: 3
+    triggered: 0
+    lines:
+    - Here are plans for buildings that can be created to spruce up the place.
+    - "Each build has a requirement that will benefit our \u201Clovely\u201D community."
+    - "Each build costs a certain amount of crumbies so don\u2019t get too trigger
+      happy."
+  - self: 4
+    triggered: 0
+    lines:
+    - This is your journal which gives you access to the newspaper and your notepad.
+    - The newspaper shows what you have done for the community and gets updated after
+      every duck month.
+    - The notepad will give you the juicy gossip of the day to day life of your ducks!
+      My specialty.
+  - self: 5
+    triggered: 0
+    lines:
+    - If you ever need a breather just press the pause button to stop time.
+    - If you ever get one of those days where you feel like time is just dragging
+      on just use this fast forward to kick things up a notch.
+  - self: 6
+    triggered: 0
+    lines:
+    - Here is the dining hall where the ducks come to eat the crumbies we have collected.
+    - When the dining hall is empty ducks need to deposit crumbies into it.

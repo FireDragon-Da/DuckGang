@@ -5,7 +5,7 @@ using UnityEngine;
 public enum Tutorials
 {
     DuckClicked,
-    TopLeftInfo,
+    GeneralInfo,
     Crumbies,
     Building,
     Journal,
@@ -19,27 +19,33 @@ public class TutorialLines : MonoBehaviour
 
     [Serializable] struct TutorialText
     {
-        public bool triggered;
+        [SerializeField] Tutorials self;
         public string[] lines;
     }
 
-    [SerializeField] TutorialText duckClicked;
+    [SerializeField] TutorialText[] texts;
+    bool[] textWasTriggered;
 
     void Awake()
     {
         reference = this;
     }
 
+    void Start()
+    {
+        textWasTriggered = new bool[texts.Length];
+    }
+
     public void TryActivate(Tutorials tutorial)
     {
-        switch (tutorial)
-        {
-            case Tutorials.DuckClicked:
-                if (!duckClicked.triggered) {
-                    TriggerMyPopup(duckClicked.lines);
-                    duckClicked.triggered = true;
-                }
-                break;
+        int num = (int)tutorial;
+        if (num < 0 || num >= texts.Length) {return;}
+
+        TutorialText text = texts[num];
+
+        if (!textWasTriggered[num]) {
+            TriggerMyPopup(text.lines);
+            textWasTriggered[num] = true;
         }
     }
 

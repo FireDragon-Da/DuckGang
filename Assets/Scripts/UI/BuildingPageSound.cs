@@ -6,6 +6,7 @@ public class BuildingPageSound : MonoBehaviour
     {
         SoundSystem.instance.PlaySound("open-building-ui");
 
+        TutorialLines.reference.TryActivate(Tutorials.Building);
     }
 
     public void PlayBuildingPageCloseSound()

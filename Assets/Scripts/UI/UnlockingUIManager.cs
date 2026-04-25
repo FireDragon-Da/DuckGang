@@ -108,7 +108,7 @@ public class UnlockingUIManager : MonoBehaviour
         Transform imageTransform = bar.transform.Find("Image");
         imageTransform.gameObject.SetActive(true);
 
-        triggerPopup(quacxiconSO.GetSpecificLogFromCategory(b.buildingName, 2));
+        //triggerPopup(quacxiconSO.GetSpecificLogFromCategory(b.buildingName, 2));
     }
 
     private void Update()

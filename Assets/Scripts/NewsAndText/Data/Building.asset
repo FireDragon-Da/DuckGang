@@ -160,7 +160,6 @@ MonoBehaviour:
 
       Unlock
       Condition: have six ducks.'
-    - DINING HALL UNLOCK TEXT
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
