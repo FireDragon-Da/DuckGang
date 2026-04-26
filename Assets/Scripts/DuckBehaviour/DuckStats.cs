@@ -36,6 +36,8 @@ public class DuckStats : MonoBehaviour
     [SerializeField] int sadThreshold = 30;
     [SerializeField] int hungryThreshold = 30;
 
+    bool wasBothTriggered = false;
+
     [Header("Happiness")]
     [SerializeField] int minWorkHappiness = -1;
 
@@ -214,10 +216,9 @@ public class DuckStats : MonoBehaviour
 
     public void GetOld()
     {
-       isOld = true;
-        curLife = lifespan;
+        isOld = true;
+        curLife = lifespan * 0.8f;
         animator.SetBool("isOld", true);
-
     }
 
     void UpdateEmotionalStates()
@@ -227,31 +228,40 @@ public class DuckStats : MonoBehaviour
 
         if (shouldBeSad && shouldBeHungry)
         {
-            if (UnityEngine.Random.value > 0.5f)
+            if (!wasBothTriggered)
+            {
+                wasBothTriggered = true;
+                if (UnityEngine.Random.value > 0.5f)
+                {
+                    SetSad(true);
+                    SetHungry(false);
+                }
+                else
+                {
+                    SetSad(false);
+                    SetHungry(true);
+                }
+            }
+        }
+        else
+        {
+            wasBothTriggered = false;
+
+            if (shouldBeSad)
             {
                 SetSad(true);
                 SetHungry(false);
             }
-            else
+            else if (shouldBeHungry)
             {
                 SetSad(false);
                 SetHungry(true);
             }
-        }
-        else if (shouldBeSad)
-        {
-            SetSad(true);
-            SetHungry(false);
-        }
-        else if (shouldBeHungry)
-        {
-            SetSad(false);
-            SetHungry(true);
-        }
-        else
-        {
-            SetSad(false);
-            SetHungry(false);
+            else
+            {
+                SetSad(false);
+                SetHungry(false);
+            }
         }
     }
 
