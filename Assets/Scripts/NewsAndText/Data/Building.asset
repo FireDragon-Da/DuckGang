@@ -160,6 +160,7 @@ MonoBehaviour:
 
       Unlock
       Condition: have six ducks.'
+    - 
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0

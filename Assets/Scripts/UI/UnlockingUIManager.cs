@@ -88,6 +88,8 @@ public class UnlockingUIManager : MonoBehaviour
     //this is used by building!
     public void triggerPopup(string txt)
     {
+        if (txt == "") {return;}
+        
         List<PopupMessageData> popupTextList = new();
         popupTextList.Add(new PopupMessageData(txt));
         PopupManager.Instance.StartPopupSequence(popupTextList);
@@ -108,7 +110,7 @@ public class UnlockingUIManager : MonoBehaviour
         Transform imageTransform = bar.transform.Find("Image");
         imageTransform.gameObject.SetActive(true);
 
-        //triggerPopup(quacxiconSO.GetSpecificLogFromCategory(b.buildingName, 2));
+        triggerPopup(quacxiconSO.GetSpecificLogFromCategory(b.buildingName, 2));
     }
 
     private void Update()
