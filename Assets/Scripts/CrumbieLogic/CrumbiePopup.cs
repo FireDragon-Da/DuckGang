@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine;
 public class CrumbiePopup : MonoBehaviour
 {
 

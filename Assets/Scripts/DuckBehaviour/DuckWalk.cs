@@ -89,7 +89,7 @@ public class DuckWalk : MonoBehaviour
         for (int i = 0; i < 100; i++) { //100 attempt limit to prevent infinite loop
 
             //Wall hits
-            RaycastHit2D wallHit = Physics2D.Raycast((Vector2)transform.position, direction, col.radius + distance, LayerMask.GetMask("Floor"));
+            RaycastHit2D wallHit = Physics2D.CircleCast(transform.position, col.radius, direction, distance, LayerMask.GetMask("Floor"));
 
             if (wallHit)
             {
@@ -100,7 +100,7 @@ public class DuckWalk : MonoBehaviour
             }
 
             //Duck hits
-            RaycastHit2D[] duckHits = Physics2D.RaycastAll((Vector2)transform.position+direction, direction, distance, LayerMask.GetMask("Ducks"));
+            RaycastHit2D[] duckHits = Physics2D.CircleCastAll(transform.position, col.radius, direction, distance, LayerMask.GetMask("Ducks"));
 
             foreach (RaycastHit2D duckHit in duckHits)
             {
@@ -183,7 +183,7 @@ public class DuckWalk : MonoBehaviour
                 if (ranNum <= 0)
                 {
                     Vector2 effectDir = curEffect.Activate(gameObject);
-                    if (effectDir != Vector2.zero)
+                    if (effectDir == Vector2.zero)
                     {
                         StandardBounce(targetDirection);
                     }
@@ -216,7 +216,7 @@ public class DuckWalk : MonoBehaviour
                 if (ranNum < 0)
                 {
                     Vector2 effectDir = curEffect.Activate(gameObject);
-                    if (effectDir != Vector2.zero)
+                    if (effectDir == Vector2.zero)
                     {
                         StandardBounce(targetDirection);
                     }
@@ -224,6 +224,7 @@ public class DuckWalk : MonoBehaviour
                     {
                         ChangeDirection(effectDir);
                     }
+                    break;
                 }
             }
 
@@ -259,6 +260,7 @@ public class DuckWalk : MonoBehaviour
         {
             direction = Vector2.up;
         }
+        else
         {
             direction = newDirection;
         }
@@ -355,7 +357,7 @@ public class DuckWalk : MonoBehaviour
 
             if (col.IsTouching(targetBuilding.Col))
             {
-                interacting = curBuilding; //Force interacting to ensure no issues
+                interacting = targetBuilding; //Force interacting to ensure no issues
                 interacting.StartInteracting(this);
                 StartCoroutine(BuildingInteraction(targetBuilding));
                 break;

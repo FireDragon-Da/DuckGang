@@ -17,6 +17,7 @@ public class TuningManager : MonoBehaviour
     [Header("Debug")]
     public bool instaKillHappiness = false;
 
+    
 
     void Awake()
     {

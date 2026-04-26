@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5acf2cf32a9b1134ea7a8b6ad6b27ae6, type: 3}
-  m_Name: Descriptions
+  m_Name: DescriptionsDONTUSE
   m_EditorClassIdentifier: Assembly-CSharp::QuacxiconSO
   categories:
   - categoryName: Locked

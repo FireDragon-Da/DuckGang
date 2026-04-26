@@ -31,6 +31,8 @@ public class DuckDragger : MonoBehaviour
                             curDuck = tempCurDuck;
                             curDuck.beingDragged = true;
                             MouseCursor.reference.SetSprite(MouseCursor.CursorType.Grab);
+
+                            TutorialLines.reference.TryActivate(Tutorials.DuckClicked);
                         }
                     }
                 }

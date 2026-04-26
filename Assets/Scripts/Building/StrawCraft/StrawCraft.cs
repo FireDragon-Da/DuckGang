@@ -27,5 +27,4 @@ public class StrawCraft : Building
             curCapacity--;
         }
     }
-
 }

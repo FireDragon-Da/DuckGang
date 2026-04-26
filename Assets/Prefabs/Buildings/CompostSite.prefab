@@ -193,7 +193,8 @@ MonoBehaviour:
   walkable: 0
   quacxiconSO: {fileID: 11400000, guid: d9affd977097b284db68ee2e6313957e, type: 2}
   buildingName: Compostsite
-  infoTextBox: {fileID: 0}
+  buildingBar: {fileID: 0}
+  unlocked: 0
   constructionNeeded: 8
   placeCost: 12
   buildCost: 4
@@ -293,7 +294,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: bbb10c03d8fc4434aa2e6416cc77ed6f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4af974fbca21d424cb245e84c67c6b2d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
