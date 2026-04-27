@@ -1620,7 +1620,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 727d01b0b5e98a9459d286f1351794d9, type: 2}
   - {fileID: 11400000, guid: 6e2806070a15315419a629e945f4e99a, type: 2}
   optionCount: 3
-  upgradeButtons: []
+  upgradeButtons:
+  - {fileID: 1501071391300310125}
+  - {fileID: 1342738066943053907}
+  - {fileID: 2818672713411321613}
 --- !u!222 &4205060888170282545
 CanvasRenderer:
   m_ObjectHideFlags: 0
