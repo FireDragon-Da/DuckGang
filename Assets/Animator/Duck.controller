@@ -43,6 +43,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: isHungry
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isBaby
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2417006582400643485}
   m_Solo: 0
@@ -97,6 +100,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: isHungry
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isOld
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2644107365380087677}
   m_Solo: 0
@@ -124,6 +130,9 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: isSad
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isBaby
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4777334618280352181}
@@ -153,6 +162,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: isHungry
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isOld
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5208788030577526186}
   m_Solo: 0
@@ -180,6 +192,9 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: isSad
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isOld
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1357807825351298660}
@@ -234,6 +249,9 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: isHungry
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isBaby
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 668950218241087373}
@@ -390,6 +408,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: isHungry
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isOld
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 122469991962445734}
   m_Solo: 0
@@ -447,6 +468,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: isHungry
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isOld
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7922012228904987065}
   m_Solo: 0
@@ -474,6 +498,9 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: isSad
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isOld
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -9189753485948572531}
