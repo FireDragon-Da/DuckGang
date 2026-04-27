@@ -38,6 +38,9 @@ public class DuckStats : MonoBehaviour
 
     bool wasBothTriggered = false;
 
+    bool isDangling = false;
+    public bool IsDangling => isDangling;
+
     [Header("Happiness")]
     [SerializeField] int minWorkHappiness = -1;
 
@@ -281,6 +284,13 @@ public class DuckStats : MonoBehaviour
             isHungry = value;
             animator.SetBool("isHungry", value);
         }
+    }
+
+    public void SetDangling(bool value)
+    {
+        if (isDangling == value) return;
+        isDangling = value;
+        animator.SetBool("isDangling", value);
     }
 
     public void SetHappiness(int amount)

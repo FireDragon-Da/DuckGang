@@ -22,18 +22,16 @@ public class OnClickDuck : MonoBehaviour
 
     private void OnMouseDown()
     {
-       // duckStats.ModifyHappiness(TuningManager.reference.onPet);
+        duckStats.ModifyHappiness(10);
+        duckStats.SetDangling(true);
 
-       // DuckStatDisplay.reference.displayStats(this.gameObject.GetComponent<DuckNameGen>().CurrentDuckName, duckStats);
+        DuckStatDisplay.reference.displayStats(this.gameObject.GetComponent<DuckNameGen>().CurrentDuckName, duckStats);
+        //ShowStatSliders();
     }
 
-    private void OnMouseOver()
+    private void OnMouseUp()
     {
-        if(Input.GetMouseButtonDown(1)){
-            duckStats.ModifyHappiness(TuningManager.reference.onPet);
-
-            DuckStatDisplay.reference.displayStats(this.gameObject.GetComponent<DuckNameGen>().CurrentDuckName, duckStats);
-        }
+        duckStats.SetDangling(false);
     }
 
     private void ShowStatSliders()
