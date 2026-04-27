@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class TimeManager : MonoBehaviour
@@ -69,8 +70,20 @@ public class TimeManager : MonoBehaviour
         dsm.articles.Add(ac.fluffArticles[Random.Range(0, ac.fluffArticles.Count)]);
         dsm.articles.Add(ac.fluffArticles[Random.Range(0, ac.fluffArticles.Count)]);
 
+        //calculate average happiness & hunger
+        int happiness = 0;
+        int hunger = 0;
+        foreach(GameObject duck in PublicInfo.reference.duckList)
+        {
+            happiness += duck.GetComponent<DuckStats>().Happiness;
+            hunger += duck.GetComponent<DuckStats>().Hunger;
+        }
+
+        happiness /= PublicInfo.reference.duckList.Count;
+        hunger /= PublicInfo.reference.duckList.Count;
+
         NewspaperController.reference.UpdateNewspaper(
-            0,0,"",
+            hunger,happiness,"",
             dsm.newbornDuckNames,
             dsm.recentDeaths,
             dsm.articles

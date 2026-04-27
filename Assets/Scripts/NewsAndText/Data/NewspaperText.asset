@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5acf2cf32a9b1134ea7a8b6ad6b27ae6, type: 3}
+  m_Name: NewspaperText
+  m_EditorClassIdentifier: Assembly-CSharp::QuacxiconSO
+  categories:
+  - categoryName: BirthActions
+    contentList:
+    - was born.
+    - appeared.
+    - hatched.
+    - wandered in.
+    - is alive now.
+    - defeated their shell.
+    - escaped captivity.
+    - became alive.
+    - avoided hard-boiling.
+    - was born.
+    - appeared.
+    - hatched.
+    - wandered in.
+    - is alive now.
+    - defeated their shell.
+    - escaped captivity.
+    - became alive.
+    - avoided hard-boiling.
+    sourceTxtFile: {fileID: 4900000, guid: acbbe767797bb454fbb595d46a104fe8, type: 3}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Death_OldAge
+    contentList:
+    - '''s biological clock ran out.'
+    - reached terminal maturity.
+    - aged into oblivion.
+    - became a fossil.
+    - was buried naturally.
+    sourceTxtFile: {fileID: 4900000, guid: d178ba50705015f409d0282926709530, type: 3}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Death_Suicide
+    contentList:
+    - wanted to take a long nap.
+    - chose to find greener fields.
+    - went to the great pond in the sky.
+    sourceTxtFile: {fileID: 4900000, guid: bb11372a014ff7f499719c8ea1922684, type: 3}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Death_Starvation
+    contentList:
+    - went to find food elsewhere.
+    - ran out of edible material.
+    - went too long without lunch.
+    - got too hungry.
+    - self-cannibalized.
+    sourceTxtFile: {fileID: 4900000, guid: 4bac031e687418340aae0a9029502d39, type: 3}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Death_General
+    contentList:
+    - found their way to duck heaven.
+    - moved on from this plane.
+    sourceTxtFile: {fileID: 4900000, guid: bd1aee684e279eb488716f78c2dc9da8, type: 3}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Quotes
+    contentList:
+    - "It couldn\u2019t be worse\u2026"
+    - Where have the good days gone?
+    - "It\u2019s tough times out here."
+    - Things have taken a turn.
+    - "It\u2019s certainly been better."
+    - "It\u2019s certainly been worse."
+    - Not bad, really not too bad
+    - Things are going swimmingly.
+    - A fantastic time to be a duck
+    - "It couldn\u2019t be better!"
+    - "It couldn\u2019t be worse\u2026"
+    - Where have the good days gone?
+    - "It\u2019s tough times out here."
+    - Things have taken a turn.
+    - "It\u2019s certainly been better."
+    - "It\u2019s certainly been worse."
+    - Not bad, really not too bad
+    - Things are going swimmingly.
+    - A fantastic time to be a duck
+    - "It couldn\u2019t be better!"
+    - "It couldn\u2019t be worse\u2026"
+    - Where have the good days gone?
+    - "It\u2019s tough times out here."
+    - Things have taken a turn.
+    - "It\u2019s certainly been better."
+    - "It\u2019s certainly been worse."
+    - Not bad, really not too bad
+    - Things are going swimmingly.
+    - A fantastic time to be a duck
+    - "It couldn\u2019t be better!"
+    sourceTxtFile: {fileID: 4900000, guid: 7ec3eac24940e7c44818fb380628911d, type: 3}
+    targetCategoryName: 
+    clearExistingContent: 0

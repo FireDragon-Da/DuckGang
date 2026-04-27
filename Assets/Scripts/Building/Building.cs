@@ -20,6 +20,7 @@ public class Building : MonoBehaviour
     [Header("Text and unlock")]
     [SerializeField] public string buildingName;
     public bool unlocked = false;
+    
 
     private TextBox infoTextBox;
 
