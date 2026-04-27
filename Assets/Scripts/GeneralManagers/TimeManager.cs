@@ -52,10 +52,6 @@ public class TimeManager : MonoBehaviour
         if (curMonthTime >= duckMonthLength)
         {
             MonthPassed();
-            if (monthsPassed % monthsPerMeeting == 0)
-            {
-                MeetingManager.reference.StartMeeting();
-            }
         }
     }
 
@@ -63,6 +59,12 @@ public class TimeManager : MonoBehaviour
     {
         monthsPassed++;
         curMonthTime -= duckMonthLength;
+
+        //Moved meeting trigger to before newpaper update
+        if (monthsPassed % monthsPerMeeting == 0)
+        {
+            MeetingManager.reference.StartMeeting();
+        }
 
         //add two random fluff articles to article list in case nothing else happened
         dsm.articles.Add(ac.fluffArticles[Random.Range(0, ac.fluffArticles.Count)]);

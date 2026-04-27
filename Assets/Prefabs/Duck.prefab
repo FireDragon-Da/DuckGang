@@ -488,6 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47696f20a339f0b46804b6ba2d408d65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DuckStats
+  corpsePrefab: {fileID: 1371391080494700126, guid: eec1904f64c9d364788eb87a948553db, type: 3}
   happiness: 80
   energy: 70
   health: 90

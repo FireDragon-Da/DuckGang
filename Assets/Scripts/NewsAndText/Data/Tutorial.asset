@@ -67,25 +67,10 @@ MonoBehaviour:
     clearExistingContent: 1
   - categoryName: TutorialShort
     contentList:
-    - "Whew! I\u2019m so glad you finally made it!"
-    - "If you\u2019re gonna be the mayor you have to make sure that everyone gets
-      fed and that no one gets too unhappy."
-    - If you ever want to see how someone is doing, you can click on them to find
-      out.
-    - "It\u2019s looking glum right now, but there are lots of buildings you could
-      create to spruce up the place."
-    - "Nothing\u2019s free, though! And things take time to be built before they
-      can be used, so don\u2019t get too trigger happy."
-    - A good mayor takes feedback! Every month your citizens will hold a meeting
-      and give you some suggestions.
-    - "As your trusty journalist, I\u2019ll keep you updated on all goings-on. From
-      boring political news to juicy gossip!"
-    - "I\u2019ll update my newspaper every month so you can see all of the developments
-      that you and the community have done."
-    - But, if you want something more personal, just check out my notepad. I have
-      ears everywhere.
-    - "That should be everything! Good luck boss, and remember I\u2019m watching
-      you."
-    sourceTxtFile: {fileID: 4900000, guid: a584cf32f1dad5640a5a71eeae981272, type: 3}
+    - Whew! I am so glad you finally made it!
+    - "Welcome to Quacklands! We\u2019re happy to have you as our new mayor."
+    - "Be sure to try your best, you don\u2019t want to end up like the last guy."
+    - Click a duck if you want to learn more about us.
+    sourceTxtFile: {fileID: 4900000, guid: bc2c5ee6f1facd343b9e4f9f9c13badd, type: 3}
     targetCategoryName: 
     clearExistingContent: 1

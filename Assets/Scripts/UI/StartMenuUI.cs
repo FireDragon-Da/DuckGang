@@ -50,11 +50,6 @@ public class StartMenuUI : MonoBehaviour
             TimeManager.reference.RemovePause();
         }
         gameStarted = true;
-
-        if (GameMenu.reference != null)
-        {
-            GameMenu.reference.PlayGame();
-        }
     }
 
     public void OnSettingsButton()

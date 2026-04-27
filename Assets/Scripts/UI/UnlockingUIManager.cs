@@ -88,6 +88,8 @@ public class UnlockingUIManager : MonoBehaviour
     //this is used by building!
     public void triggerPopup(string txt)
     {
+        if (txt == "") {return;}
+        
         List<PopupMessageData> popupTextList = new();
         popupTextList.Add(new PopupMessageData(txt));
         PopupManager.Instance.StartPopupSequence(popupTextList);
