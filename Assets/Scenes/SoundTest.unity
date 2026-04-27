@@ -72498,7 +72498,7 @@ PrefabInstance:
       objectReference: {fileID: 867384806}
     - target: {fileID: 5741726068280216701, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: duckMonthLength
-      value: 5
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 7788263312815577062, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchorMax.x
