@@ -6,6 +6,7 @@ public class Obstacle : Building
     {
         BasicBuild();
         UpdateBuildingGrid();
+        useInteractBounce = false;
     }
 
     void UpdateBuildingGrid()
