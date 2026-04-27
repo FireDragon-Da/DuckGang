@@ -138,6 +138,8 @@ public class NewspaperController : MonoBehaviour
         List<DeathEvent> recentDeaths,
         List<ArticleEvent> currentEvents)
     {
+
+        //current stack frame
         UpdateQuote(currentHappiness, currentHunger);
         UpdateChangeInQuackland(currentQuacklandChange);
         UpdateLifeSection(newbornDuckNames);
@@ -151,10 +153,7 @@ public class NewspaperController : MonoBehaviour
 
         int quoteLevel = Mathf.Clamp(Mathf.FloorToInt(averageStat / 10f), 0, 9);
 
-        print("happiness " + happiness + ", hunger " + hunger + ", quoteLevel " + quoteLevel);
-
-        string categoryName = "Quotes";//$"Quote_Level_{quoteLevel}";
-        string quoteStr = quacxiconSO.GetSpecificLogFromCategory(categoryName, quoteLevel);
+        string quoteStr = quacxiconSO.GetSpecificLogFromCategory("Quotes", quoteLevel);
 
         if (!string.IsNullOrEmpty(quoteStr))
         {

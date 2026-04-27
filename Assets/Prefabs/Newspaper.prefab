@@ -1473,7 +1473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a7cb26a83525b047a708cb1d37a6038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewspaperController
-  quacxiconSO: {fileID: 11400000, guid: 411214ab902dc6a498c87d68513d43b1, type: 2}
+  quacxiconSO: {fileID: 11400000, guid: 4877861134e1d214b910754527b93ae9, type: 2}
   quoteText: {fileID: 2082235906126608134}
   changeInQuacklandText: {fileID: 2093638417114130201}
   welcomeToLifeContent: {fileID: 1339378928732869028}
@@ -1488,6 +1488,7 @@ MonoBehaviour:
   photoWidth: 370
   photoHeight: 195
   photoCaptureZoom: 3
+  dt: {fileID: 0}
 --- !u!114 &3790887154377196170
 MonoBehaviour:
   m_ObjectHideFlags: 0
