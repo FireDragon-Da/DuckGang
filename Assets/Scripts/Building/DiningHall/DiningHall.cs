@@ -33,10 +33,13 @@ public class DiningHall : Building
 
             if (CrumbManager.reference.ConsumeCrumbs(amountNeeded)) {
                 SoundSystem.instance.PlaySound("dining-colliding-loop");
+                duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.FillDiningHall);
                 CrumbManager.reference.SpawnCrumbiePopupDecrease(transform.position, amountNeeded);
                 yield return StartCoroutine(WaitWithProgress(fillTime, duck.ProgressBar));
                 GainFood(amountNeeded);
                 SoundSystem.instance.StopSound("dining-colliding-loop");
+                duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.None);
+
             }
         }
     }
