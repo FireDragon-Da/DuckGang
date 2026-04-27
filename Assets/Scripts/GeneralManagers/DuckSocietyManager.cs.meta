@@ -1,2 +1,13 @@
 fileFormatVersion: 2
 guid: 2db614e5aa2ec9041aa8028946b88a64
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - duckPrefab: {instanceID: 0}
+  - quacxiconSO: {fileID: 11400000, guid: 349bc717b8ea5ac48a292c6f2cd2b980, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
