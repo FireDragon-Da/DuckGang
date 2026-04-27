@@ -24,6 +24,8 @@ public class SecretSite : Building
             yield break;
         }
 
+        duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.Invest);
+
         if (producing) {yield break;}
 
         if (CrumbManager.reference.ConsumeCrumbs(takePerTouch))

@@ -16,6 +16,7 @@ public class Playground : Building
         }
 
         DuckStats hitDuck = duck.gameObject.GetComponent<DuckStats>();
+        duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.Playground);
 
         yield return StartCoroutine(WaitWithProgress(playTime, duck.ProgressBar));
 

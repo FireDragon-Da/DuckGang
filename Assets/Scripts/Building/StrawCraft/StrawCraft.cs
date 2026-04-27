@@ -17,6 +17,7 @@ public class StrawCraft : Building
         {
             yield break;
         }
+        duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.StrawCraft);
 
         if (curCapacity < totalCapacity)
         {

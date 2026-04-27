@@ -52,6 +52,7 @@ public class Nest : Building
         {
             if ((!nestBusy) && empty)
             {
+                duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.LayNest);
                 nestBusy = true;
                 yield return StartCoroutine(WaitWithProgress(layTime, duck.ProgressBar));
 
