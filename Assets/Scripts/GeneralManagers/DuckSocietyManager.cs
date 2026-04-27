@@ -12,6 +12,10 @@ public class DuckSocietyManager : MonoBehaviour
     public List<DeathEvent> recentDeaths = new();
     public List<ArticleEvent> articles = new();
 
+    [Header("Death Announcement")]
+    [SerializeField] private QuacxiconSO quacxiconSO;
+    [SerializeField] private string deathCategoryName = "Death";
+
     void Awake()
     {
         reference = this;
@@ -57,6 +61,21 @@ public class DuckSocietyManager : MonoBehaviour
             reason = reason
         };
         recentDeaths.Add(newEvent);
+
+        if (TextBox.reference != null)
+        {
+            string deathLine = quacxiconSO != null
+                ? quacxiconSO.GetRandomLogFromCategory(deathCategoryName)
+                : null;
+
+            string message = string.IsNullOrEmpty(deathLine)
+                ? $"<color=red>{duckName} has died.</color>"
+                : $"<color=red>{duckName}: {deathLine}</color>";
+
+            TextBox.reference.gameObject.SetActive(true);
+            TextBox.reference.AddLine(message);
+        }
+
         if (PublicInfo.reference != null && PublicInfo.reference.duckList != null)
         {
             PublicInfo.reference.duckList.Remove(duck);

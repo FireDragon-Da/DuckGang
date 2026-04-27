@@ -7,6 +7,7 @@ using UnityEngine;
 public class DuckStats : MonoBehaviour
 {
     private DuckHunger duckHunger;
+    [SerializeField] Corpse corpsePrefab;
 
     [Header("Core Stats")]
     [SerializeField] private int happiness = 80;
@@ -17,13 +18,25 @@ public class DuckStats : MonoBehaviour
     [SerializeField] float averageLifespan;
     [SerializeField] float lifespanVariance;
     float lifespan;
-    float curLife;
+    float  curLife;
 
     [Header("Baby Settings")]
     [SerializeField] bool isBaby = true;
+    [SerializeField] bool isOld = false;
     public bool IsBaby => isBaby;
+    public bool IsOld => isOld;
     [SerializeField] float babyDuration = 60f;
     [SerializeField] Animator animator;
+
+    [Header("Emotional States")]
+    [SerializeField] bool isSad = false;
+    [SerializeField] bool isHungry = false;
+    public bool IsSad => isSad;
+    public bool IsHungry => isHungry;
+    [SerializeField] int sadThreshold = 30;
+    [SerializeField] int hungryThreshold = 30;
+
+    bool wasBothTriggered = false;
 
     [Header("Happiness")]
     [SerializeField] int minWorkHappiness = -1;
@@ -73,6 +86,9 @@ public class DuckStats : MonoBehaviour
         if (!isBaby)
         {
             GrowUp();
+        } else if (isOld)
+        {
+            GetOld();
         }
         else
         {
@@ -92,6 +108,13 @@ public class DuckStats : MonoBehaviour
         {
             GrowUp();
         }
+
+        if (curLife > lifespan * 0.8f && !isOld)
+        {
+            GetOld();
+        }
+
+        UpdateEmotionalStates();
 
         if (curLife >= lifespan)
         {
@@ -134,6 +157,8 @@ public class DuckStats : MonoBehaviour
         {
             DuckSocietyManager.reference.ProcessDuckDeath(gameObject, reason);
         }
+
+        Instantiate(corpsePrefab,transform.position,new());
     }
 
     IEnumerator passiveHappinessDrop()
@@ -187,6 +212,75 @@ public class DuckStats : MonoBehaviour
         isBaby = false;
         curLife = babyDuration;
         animator.SetBool("isBaby", false);
+    }
+
+    public void GetOld()
+    {
+        isOld = true;
+        curLife = lifespan * 0.8f;
+        animator.SetBool("isOld", true);
+    }
+
+    void UpdateEmotionalStates()
+    {
+        bool shouldBeSad = happiness <= sadThreshold;
+        bool shouldBeHungry = Hunger <= hungryThreshold;
+
+        if (shouldBeSad && shouldBeHungry)
+        {
+            if (!wasBothTriggered)
+            {
+                wasBothTriggered = true;
+                if (UnityEngine.Random.value > 0.5f)
+                {
+                    SetSad(true);
+                    SetHungry(false);
+                }
+                else
+                {
+                    SetSad(false);
+                    SetHungry(true);
+                }
+            }
+        }
+        else
+        {
+            wasBothTriggered = false;
+
+            if (shouldBeSad)
+            {
+                SetSad(true);
+                SetHungry(false);
+            }
+            else if (shouldBeHungry)
+            {
+                SetSad(false);
+                SetHungry(true);
+            }
+            else
+            {
+                SetSad(false);
+                SetHungry(false);
+            }
+        }
+    }
+
+    void SetSad(bool value)
+    {
+        if (isSad != value)
+        {
+            isSad = value;
+            animator.SetBool("isSad", value);
+        }
+    }
+
+    void SetHungry(bool value)
+    {
+        if (isHungry != value)
+        {
+            isHungry = value;
+            animator.SetBool("isHungry", value);
+        }
     }
 
     public void SetHappiness(int amount)
