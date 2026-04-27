@@ -23,9 +23,15 @@ public class OnClickDuck : MonoBehaviour
     private void OnMouseDown()
     {
         duckStats.ModifyHappiness(10);
+        duckStats.SetDangling(true);
 
         DuckStatDisplay.reference.displayStats(this.gameObject.GetComponent<DuckNameGen>().CurrentDuckName, duckStats);
         //ShowStatSliders();
+    }
+
+    private void OnMouseUp()
+    {
+        duckStats.SetDangling(false);
     }
 
     private void ShowStatSliders()
