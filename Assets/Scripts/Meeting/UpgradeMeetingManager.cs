@@ -15,6 +15,20 @@ public class UpgradeMeetingManager : MonoBehaviour
 
     [SerializeField] List<UpgradeButton> upgradeButtons;
 
+    public float SpeedIncrease = 1;
+    public float LoveIncrease;
+    public float SaddnessResistance = 1;
+    public float HungerResistance = 1;
+    public int BuildingDecrease;
+    public int ObstacleDestructionReduction;
+    public int FarmlandBuff;
+    public int HappinessIncrease;
+    public int NestDurability;
+    public float FoodBuff = 1;
+    public int StrawCraftBuff;
+    public int AltarBuff;
+    public int DucksonSiteBuff;
+
     void Awake()
     {
         reference = this;
@@ -51,7 +65,7 @@ public class UpgradeMeetingManager : MonoBehaviour
 
     void EndMeeting(int choice)
     {
-        optionUpgrades[choice].LevelUp();
+        LevelUp(optionUpgrades[choice]);
         gameObject.SetActive(false);
 
         TimeManager.reference.RemovePause();
@@ -67,6 +81,53 @@ public class UpgradeMeetingManager : MonoBehaviour
         if (curSelected != -1)
         {
             EndMeeting(curSelected);
+        }
+    }
+
+    public void LevelUp(DuckUpgrade target)
+    {
+        target.LevelUp();
+        switch (target.Type)
+        {
+            case DuckUpgrade.UpgradeType.SpeedIncrease:
+                SpeedIncrease += 0.05f;
+                break;
+            case DuckUpgrade.UpgradeType.LoveIncrease:
+                LoveIncrease += 0.05f;
+                break;
+            case DuckUpgrade.UpgradeType.SaddnessResistance:
+                SaddnessResistance /= 1.05f;
+                break;
+            case DuckUpgrade.UpgradeType.HungerResistance:
+                HungerResistance /= 1.05f;
+                break;
+            case DuckUpgrade.UpgradeType.BuildingDecrease:
+                BuildingDecrease++;
+                break;
+            case DuckUpgrade.UpgradeType.ObstacleDestructionReduction:
+                ObstacleDestructionReduction -= 2;
+                break;
+            case DuckUpgrade.UpgradeType.FarmlandBuff:
+                FarmlandBuff++;
+                break;
+            case DuckUpgrade.UpgradeType.HappinessIncrease:
+                HappinessIncrease += 5;
+                break;
+            case DuckUpgrade.UpgradeType.NestDurability:
+                NestDurability++;
+                break;
+            case DuckUpgrade.UpgradeType.FoodBuff:
+                FoodBuff *= 1.05f;
+                break;
+            case DuckUpgrade.UpgradeType.StrawCraftBuff:
+                StrawCraftBuff += 2;
+                break;
+            case DuckUpgrade.UpgradeType.AltarBuff:
+                AltarBuff += 10;
+                break;
+            case DuckUpgrade.UpgradeType.DucksonSiteBuff:
+                DucksonSiteBuff += 25;
+                break;
         }
     }
 

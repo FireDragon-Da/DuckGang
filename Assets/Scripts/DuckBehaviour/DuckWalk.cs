@@ -60,6 +60,13 @@ public class DuckWalk : MonoBehaviour
         {
             ChangeDirection(direction.normalized);
         }
+
+        InitializeStats();
+    }
+
+    void InitializeStats()
+    {
+        
     }
 
     void Update()
@@ -71,7 +78,7 @@ public class DuckWalk : MonoBehaviour
 
         if (interacting == null)
         {
-            MoveForward(effectiveSpeed * Time.deltaTime);
+            MoveForward(effectiveSpeed * Time.deltaTime * UpgradeMeetingManager.reference.SpeedIncrease);
         }
 
         for (int i = statusEffects.Count-1; i >= 0; i--)
@@ -144,6 +151,8 @@ public class DuckWalk : MonoBehaviour
             {
                 curLoveChance += 0.2f;
             }
+
+            curLoveChance += UpgradeMeetingManager.reference.LoveIncrease;
 
             if (PublicInfo.reference.AnyNestEmpty() && UnityEngine.Random.Range(0,1) < curLoveChance)
             {
