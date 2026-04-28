@@ -65,8 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[EXAMPLE] This afternoon, Chork and Bork came back, having switched names
-    through an apparent misunderstanding.'
+  m_text: You might also be real! But frankly, that's none of our business.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e209f4e1eb56b046863da84278082cd, type: 2}
   m_sharedMaterial: {fileID: -6309410853451603294, guid: 0e209f4e1eb56b046863da84278082cd, type: 2}
@@ -353,16 +352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'They were born.
-
-    It was born.
-
-    He was born.
-
-    She was born.
-
-    We
-    were born.'
+  m_text: Nothing of note...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e209f4e1eb56b046863da84278082cd, type: 2}
   m_sharedMaterial: {fileID: -6309410853451603294, guid: 0e209f4e1eb56b046863da84278082cd, type: 2}
@@ -468,7 +458,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.897, y: 477}
+  m_AnchoredPosition: {x: 1.897, y: 467}
   m_SizeDelta: {x: 912.687, y: 67.515}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1183893339318024052
@@ -680,7 +670,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.0686, y: 436}
+  m_AnchoredPosition: {x: 5.0686, y: 426}
   m_SizeDelta: {x: 1026, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5505072407301530502
@@ -859,6 +849,150 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &3994733695145088775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7976090942528781546}
+  - component: {fileID: 5461766093279064323}
+  - component: {fileID: 1463706892704566245}
+  - component: {fileID: 6426535989831787937}
+  m_Layer: 5
+  m_Name: CloseButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7976090942528781546
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3994733695145088775}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.3999999, y: 2.3999999, z: 2.3999999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8962274340286089547}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 386, y: 506}
+  m_SizeDelta: {x: 18, y: 18}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5461766093279064323
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3994733695145088775}
+  m_CullTransparentMesh: 1
+--- !u!114 &1463706892704566245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3994733695145088775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -8179769451779765987, guid: d9d680e9196b05b4884c9664693c7e2f, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6426535989831787937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3994733695145088775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.6830188, g: 0.6739978, b: 0.6739978, a: 1}
+    m_PressedColor: {r: 0.4188679, g: 0.4188679, b: 0.4188679, a: 1}
+    m_SelectedColor: {r: 0.2754717, g: 0.2754717, b: 0.2754717, a: 1}
+    m_DisabledColor: {r: 0.7056604, g: 0.7056604, b: 0.7056604, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1463706892704566245}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3790887154377196170}
+        m_TargetAssemblyTypeName: ObjectToggleAccessor, Assembly-CSharp
+        m_MethodName: ForceOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ObjectToggleAccessor, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4043533708458972772
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,7 +1060,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Top Priority Article
+  m_text: We're All Here
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4fd1e3028b16e184a8d486d9da88edf6, type: 2}
   m_sharedMaterial: {fileID: 363212537927149047, guid: 4fd1e3028b16e184a8d486d9da88edf6, type: 2}
@@ -1063,7 +1197,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -5694345126262229014, guid: 3776938c07c67a947b07b0b6524e3dff, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1391,6 +1525,7 @@ RectTransform:
   - {fileID: 7874137528037403489}
   - {fileID: 6261441721145252625}
   - {fileID: 8033170564868379676}
+  - {fileID: 7976090942528781546}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1473,7 +1608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a7cb26a83525b047a708cb1d37a6038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewspaperController
-  quacxiconSO: {fileID: 11400000, guid: 411214ab902dc6a498c87d68513d43b1, type: 2}
+  quacxiconSO: {fileID: 11400000, guid: 4877861134e1d214b910754527b93ae9, type: 2}
   quoteText: {fileID: 2082235906126608134}
   changeInQuacklandText: {fileID: 2093638417114130201}
   welcomeToLifeContent: {fileID: 1339378928732869028}
@@ -1566,8 +1701,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[EXAMPLE] This morning, beloved community members Bork and Chork walked
-    away, never to be seen again.'
+  m_text: Yes, it's true. Against all the odds, Quackland is real.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e209f4e1eb56b046863da84278082cd, type: 2}
   m_sharedMaterial: {fileID: -6309410853451603294, guid: 0e209f4e1eb56b046863da84278082cd, type: 2}
@@ -1704,15 +1838,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'They died.
-
-    It died.
-
-    He died.
-
-    She died.
-
-    We died.'
+  m_text: Nothing of note...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e209f4e1eb56b046863da84278082cd, type: 2}
   m_sharedMaterial: {fileID: -6309410853451603294, guid: 0e209f4e1eb56b046863da84278082cd, type: 2}
@@ -1818,7 +1944,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 403}
+  m_AnchoredPosition: {x: 2, y: 393}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5433350666610309143
@@ -1988,7 +2114,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Second Priority Article
+  m_text: You're...Also Here?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4fd1e3028b16e184a8d486d9da88edf6, type: 2}
   m_sharedMaterial: {fileID: 363212537927149047, guid: 4fd1e3028b16e184a8d486d9da88edf6, type: 2}

@@ -33,8 +33,12 @@ public class Altar : Building
         if (heldDuck == null)
         {
             heldDuck = duck;
+            duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.Sacrifice);
+
             heldDuck.transform.position = transform.position;
             yield return WaitSacrifice();
+
+            duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.None);
 
             heldDuck.GetComponent<DuckStats>().Die(DeathReason.Disappeared);
             PlayInteractBounce();
@@ -65,6 +69,7 @@ public class Altar : Building
         {
             duck.transform.position = transform.position + (Vector3)spotOffsets[curWatchers.Count];
             curWatchers.Add(duck);
+            duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.WatchSacrifice);
         }
     }
 

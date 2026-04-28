@@ -51,7 +51,8 @@ public class CompostSite : Building
         {
             yield break;
         }
-        
+        duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.Compost);
+
         yield return StartCoroutine(WaitWithProgress(poopTime, duck.ProgressBar));
         PlayInteractBounce();
         if (poopCount == 0)
