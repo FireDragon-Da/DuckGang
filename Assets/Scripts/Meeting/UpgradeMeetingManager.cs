@@ -17,12 +17,12 @@ public class UpgradeMeetingManager : MonoBehaviour
 
     public float SpeedIncrease = 1;
     public float LoveIncrease;
-    public float SaddnessResistance = 1;
+    public float SadnessResistance = 1;
     public float HungerResistance = 1;
     public int BuildingDecrease;
     public int ObstacleDestructionReduction;
     public int FarmlandBuff;
-    public int HappinessIncrease;
+    public float PlaygroundBuff = 1;
     public int NestDurability;
     public float FoodBuff = 1;
     public int StrawCraftBuff;
@@ -95,8 +95,8 @@ public class UpgradeMeetingManager : MonoBehaviour
             case DuckUpgrade.UpgradeType.LoveIncrease:
                 LoveIncrease += 0.05f;
                 break;
-            case DuckUpgrade.UpgradeType.SaddnessResistance:
-                SaddnessResistance /= 1.05f;
+            case DuckUpgrade.UpgradeType.SadnessResistance:
+                SadnessResistance /= 1.05f;
                 break;
             case DuckUpgrade.UpgradeType.HungerResistance:
                 HungerResistance /= 1.05f;
@@ -111,7 +111,7 @@ public class UpgradeMeetingManager : MonoBehaviour
                 FarmlandBuff++;
                 break;
             case DuckUpgrade.UpgradeType.HappinessIncrease:
-                HappinessIncrease += 5;
+                PlaygroundBuff += 0.05f;
                 break;
             case DuckUpgrade.UpgradeType.NestDurability:
                 NestDurability++;

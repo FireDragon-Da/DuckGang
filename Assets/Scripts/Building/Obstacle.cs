@@ -1,7 +1,10 @@
+using System.Collections;
 using UnityEngine;
 
 public class Obstacle : Building
 {
+    float actualRemoveHitsRequired => removeHitsRequired - UpgradeMeetingManager.reference.ObstacleDestructionReduction;
+
     protected override void Start()
     {
         BasicBuild();
@@ -26,5 +29,33 @@ public class Obstacle : Building
                 }
             }
         }
+    }
+
+    public override IEnumerator BuildingInteract(DuckWalk duck)
+    {
+        continueBehavior = false;
+        PlayInteractBounce();
+        if (removing)
+        {
+            if (vfxHandler != null) vfxHandler.PlayEffect(removeHitVFX);
+
+            //Add 1 remove
+            yield return StartCoroutine(WaitWithProgress(removeTime, duck.ProgressBar));
+
+            AddRemove();
+            if (removeCounter >= actualRemoveHitsRequired)
+            {
+                Remove();
+            }
+
+            yield break;
+        }
+    }
+
+    void AddRemove()
+    {
+        removeCounter++;
+
+        progressBar.ChangeFill((float)removeCounter/actualRemoveHitsRequired);
     }
 }

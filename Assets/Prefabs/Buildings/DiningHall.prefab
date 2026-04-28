@@ -237,7 +237,6 @@ MonoBehaviour:
   walkable: 0
   quacxiconSO: {fileID: 11400000, guid: d9affd977097b284db68ee2e6313957e, type: 2}
   buildingName: Dininghall
-  buildingBar: {fileID: 0}
   unlocked: 1
   constructionNeeded: 2
   placeCost: 6
@@ -252,6 +251,9 @@ MonoBehaviour:
   buildCompleteVFX: {fileID: 0}
   removeHitVFX: {fileID: 0}
   progressBar: {fileID: 5035101416814977789}
+  useInteractBounce: 1
+  bounceDuration: 0.12
+  bounceScale: {x: 1.32, y: 1.3, z: 1.4}
   foodCap: 20
   foodGainPerHit: 5
   heldFood: 0

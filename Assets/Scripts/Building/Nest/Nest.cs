@@ -14,6 +14,7 @@ public class Nest : Building
     [SerializeField] float layTime = 2f;
 
     [SerializeField] int totalUses;
+    int actualTotalUses => totalUses + UpgradeMeetingManager.reference.NestDurability;
     int timesUsed;
 
     [SerializeField] List<Sprite> sprites;
@@ -64,7 +65,9 @@ public class Nest : Building
                 StartCoroutine(WaitEgg());
                 duck.RemoveEffect<LoveEffect>();
 
-                spriteRenderer.sprite = sprites[timesUsed * 2 + 1];
+                float percentage = timesUsed / actualTotalUses;
+                int spriteNum = (int)(percentage * 3);
+                spriteRenderer.sprite = sprites[spriteNum * 2 + 1];
             }
         }
 
@@ -105,14 +108,16 @@ public class Nest : Building
         SoundSystem.instance.PlaySound("egg-spawn-baby-duck");
         empty = true;
         timesUsed++;
-        if (timesUsed >= totalUses)
+        if (timesUsed >= actualTotalUses)
         {
             PublicInfo.reference.nestList.Remove(this);
             Remove();
         }
         else
         {
-            spriteRenderer.sprite = sprites[timesUsed * 2];
+            float percentage = timesUsed / actualTotalUses;
+            int spriteNum = (int)(percentage * 3);
+            spriteRenderer.sprite = sprites[spriteNum * 2];
         }
     }
 

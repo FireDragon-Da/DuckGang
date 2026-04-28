@@ -32,6 +32,7 @@ public class Building : MonoBehaviour
 
     [Header("Construction")]
     [SerializeField] protected float constructionNeeded;
+    float actualConstructionNeeded => constructionNeeded - UpgradeMeetingManager.reference.BuildingDecrease;
     protected float constructionCount;
     protected bool built;
     public bool Built => built;
@@ -43,10 +44,10 @@ public class Building : MonoBehaviour
 
 
     protected bool removing;
-    [SerializeField] int removeHitsRequired = 2;
-    int removeCounter;
+    [SerializeField] protected int removeHitsRequired = 2;
+    protected int removeCounter;
     [SerializeField] float buildTime = 2f;
-    [SerializeField] float removeTime = 2f;
+    [SerializeField] protected float removeTime = 2f;
 
     [Header("Other")]
 
@@ -187,7 +188,7 @@ public class Building : MonoBehaviour
                 lastBuilderName = duckNameGen.CurrentDuckName;
             }
 
-            if (constructionCount >= constructionNeeded - 1)
+            if (constructionCount >= actualConstructionNeeded - 1)
             {
                 hasFinalBuilder = true;
             }
@@ -197,7 +198,7 @@ public class Building : MonoBehaviour
             AddConstruct();
             SoundSystem.instance.StopSound("building-process-loop");
             duck.gameObject.GetComponentInChildren<DuckActionIndicator>().ClearAction();
-            if (constructionCount >= constructionNeeded)
+            if (constructionCount >= actualConstructionNeeded)
             {
                 Build();
                 SoundSystem.instance.PlaySound("building-finished");
@@ -211,7 +212,7 @@ public class Building : MonoBehaviour
     void AddConstruct() //Only does the visuals
     {
         constructionCount++;
-        progressBar.ChangeFill(constructionCount/constructionNeeded);
+        progressBar.ChangeFill(constructionCount/actualConstructionNeeded);
     }
 
     void AddRemove()

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cff31cab58d69fc4b8b668a079b9141f, type: 3}
   m_Name: DucksonSiteBuff
   m_EditorClassIdentifier: Assembly-CSharp::DuckUpgrade
-  upgradeText: 
-  descriptionText: 
+  upgradeText: All or Nothing
+  descriptionText: "Permanently increase the output of Mr. Duckson\u2019s Secret
+    Sites by 25"
   type: 12

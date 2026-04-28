@@ -166,7 +166,8 @@ public class DuckStats : MonoBehaviour
 
     IEnumerator passiveHappinessDrop()
     {
-        yield return new WaitForSeconds(1);
+        //SaddnessResistance affects how often this procs
+        yield return new WaitForSeconds(1 * UpgradeMeetingManager.reference.SadnessResistance);
         phd += TuningManager.reference.passiveDrop * (PublicInfo.reference.duckList.Count + 1);
 
         if (phd > 1)

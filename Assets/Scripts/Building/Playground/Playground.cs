@@ -20,7 +20,7 @@ public class Playground : Building
 
         yield return StartCoroutine(WaitWithProgress(playTime, duck.ProgressBar));
 
-        hitDuck.ModifyHappiness(TuningManager.reference.playgroundGainInteract);
+        hitDuck.ModifyHappiness((int)(TuningManager.reference.playgroundGainInteract * UpgradeMeetingManager.reference.PlaygroundBuff));
         
     }
 }

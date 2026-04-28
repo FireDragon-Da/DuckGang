@@ -65,9 +65,13 @@ public class SecretSite : Building
         progressBar.HideBar();
 
         producing = false;
-        CrumbManager.reference.GainCrumbs(totalGain);
+
+        int curGain = totalGain;
+        totalGain += UpgradeMeetingManager.reference.DucksonSiteBuff;
+
+        CrumbManager.reference.GainCrumbs(curGain);
         PlayInteractBounce();
-        CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, totalGain);
+        CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, curGain);
 
         spriteRenderer.sprite = regularSprite;
     }
