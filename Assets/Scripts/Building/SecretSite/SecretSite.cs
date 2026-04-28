@@ -41,7 +41,10 @@ public class SecretSite : Building
                 StartCoroutine(ProduceCrumbies());
             }
         }
-        
+
+        duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.None);
+
+
     }
 
     public IEnumerator ProduceCrumbies()

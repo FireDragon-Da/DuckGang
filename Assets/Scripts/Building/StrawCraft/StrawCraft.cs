@@ -27,5 +27,7 @@ public class StrawCraft : Building
             CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, productionAmount);
             curCapacity--;
         }
+        duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.None);
+
     }
 }

@@ -66,6 +66,8 @@ public class CompostSite : Building
         {
             poopCount++;
         }
+        duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.None);
+
     }
 
     void StartBoostProduction()

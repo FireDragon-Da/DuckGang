@@ -19,6 +19,7 @@ public class Playground : Building
         duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.Playground);
 
         yield return StartCoroutine(WaitWithProgress(playTime, duck.ProgressBar));
+        duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.None);
 
         hitDuck.ModifyHappiness(TuningManager.reference.playgroundGainInteract);
         
