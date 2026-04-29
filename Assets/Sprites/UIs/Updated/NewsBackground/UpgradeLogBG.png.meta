@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: d4e7a254340d27749934f9608e2f77a5
+guid: 06767e400303ae44088e8943c2c63119
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1002769055298514557
-    second: UpgradeLog_0
+      213: -447084186260124634
+    second: UpgradeLogBG_0
   - first:
-      213: -1926093313187161576
-    second: UpgradeLog_1
+      213: -2315069001406369221
+    second: UpgradeLogBG_1
   - first:
-      213: -2675498815047635520
-    second: UpgradeLog_2
+      213: 5466092648033830832
+    second: UpgradeLogBG_2
   - first:
-      213: -206676456180024660
-    second: UpgradeLog_3
+      213: -6477591895331009440
+    second: UpgradeLogBG_3
   - first:
-      213: 4122673930779046284
-    second: UpgradeLog_4
+      213: 8628847100384632566
+    second: UpgradeLogBG_4
   - first:
-      213: -3569570386509878851
-    second: UpgradeLog_5
+      213: 3657483817638302318
+    second: UpgradeLogBG_5
   - first:
-      213: 4532589287858747695
-    second: UpgradeLog_6
+      213: 979697210843690176
+    second: UpgradeLogBG_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -118,7 +118,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UpgradeLog_0
+      name: UpgradeLogBG_0
       rect:
         serializedVersion: 2
         x: 592
@@ -133,14 +133,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7e62d4942d8aed00800000000000000
-      internalID: 1002769055298514557
+      spriteID: 62c45452d43abc9f0800000000000000
+      internalID: -447084186260124634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeLog_1
+      name: UpgradeLogBG_1
       rect:
         serializedVersion: 2
         x: 1372
@@ -155,14 +155,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81a593726542545e0800000000000000
-      internalID: -1926093313187161576
+      spriteID: b32b7ac42093fdfd0800000000000000
+      internalID: -2315069001406369221
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeLog_2
+      name: UpgradeLogBG_2
       rect:
         serializedVersion: 2
         x: 1364
@@ -177,14 +177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0cd6b1cc008bedad0800000000000000
-      internalID: -2675498815047635520
+      spriteID: 0b74e638d467bdb40800000000000000
+      internalID: 5466092648033830832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeLog_3
+      name: UpgradeLogBG_3
       rect:
         serializedVersion: 2
         x: 1364
@@ -199,14 +199,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: caaf3fdabdcb12df0800000000000000
-      internalID: -206676456180024660
+      spriteID: 06c88dead78fa16a0800000000000000
+      internalID: -6477591895331009440
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeLog_4
+      name: UpgradeLogBG_4
       rect:
         serializedVersion: 2
         x: 1364
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c8139d0e81ea63930800000000000000
-      internalID: 4122673930779046284
+      spriteID: 6fed59f58b2dfb770800000000000000
+      internalID: 8628847100384632566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeLog_5
+      name: UpgradeLogBG_5
       rect:
         serializedVersion: 2
         x: 490
@@ -243,14 +243,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: db9235755a6567ec0800000000000000
-      internalID: -3569570386509878851
+      spriteID: e62121a672ef1c230800000000000000
+      internalID: 3657483817638302318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpgradeLog_6
+      name: UpgradeLogBG_6
       rect:
         serializedVersion: 2
         x: 1441
@@ -265,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f29bf8f41fdf6ee30800000000000000
-      internalID: 4532589287858747695
+      spriteID: 0c477cf2c65989d00800000000000000
+      internalID: 979697210843690176
       vertices: []
       indices: 
       edges: []
@@ -285,13 +285,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      UpgradeLog_0: 1002769055298514557
-      UpgradeLog_1: -1926093313187161576
-      UpgradeLog_2: -2675498815047635520
-      UpgradeLog_3: -206676456180024660
-      UpgradeLog_4: 4122673930779046284
-      UpgradeLog_5: -3569570386509878851
-      UpgradeLog_6: 4532589287858747695
+      UpgradeLogBG_0: -447084186260124634
+      UpgradeLogBG_1: -2315069001406369221
+      UpgradeLogBG_2: 5466092648033830832
+      UpgradeLogBG_3: -6477591895331009440
+      UpgradeLogBG_4: 8628847100384632566
+      UpgradeLogBG_5: 3657483817638302318
+      UpgradeLogBG_6: 979697210843690176
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
