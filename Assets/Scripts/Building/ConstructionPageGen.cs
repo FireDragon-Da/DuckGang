@@ -34,6 +34,7 @@ public class ConstructionPageGen : MonoBehaviour
 
             Transform imageTransform = newBar.transform.Find("Image");
             imageTransform.gameObject.GetComponent<Image>().sprite= b.SpriteRenderer.sprite;
+            imageTransform.gameObject.SetActive(false);
 
             UnlockingUIManager.reference.buildingBars.Add(b.buildingName, newBar);
             
