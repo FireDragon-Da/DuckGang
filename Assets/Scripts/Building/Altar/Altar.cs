@@ -47,6 +47,7 @@ public class Altar : Building
             crumbieGain += UpgradeMeetingManager.reference.AltarBuff;
             CrumbManager.reference.GainCrumbs(crumbieGain);
             CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, crumbieGain);
+            SoundSystem.instance.PlaySound("altar-sacrifice");
 
             foreach (DuckWalk curDuck in curWatchers)
             {
