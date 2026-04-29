@@ -29,7 +29,7 @@ public class DiningHall : Building
 
         TutorialLines.reference.TryActivate(Tutorials.DiningHall);
 
-        if (heldFood + (interacting.Count-1) * foodGainPerHit < foodCap)
+        if (heldFood + foodToGainSoon < foodCap)
         {
             int effectivelyHeldFood = heldFood + foodToGainSoon;
             int amountNeeded = (foodGainPerHit + effectivelyHeldFood > foodCap) ? (foodCap - effectivelyHeldFood) : foodGainPerHit;
