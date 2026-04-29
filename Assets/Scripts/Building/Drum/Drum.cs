@@ -53,7 +53,7 @@ public class Drum : Building
 
         PlayInteractBounce();
         duck.GainStatusEffect(Instantiate(effect));
-
+        SoundSystem.instance.PlaySound("duck-drum");
     }
 
 }
