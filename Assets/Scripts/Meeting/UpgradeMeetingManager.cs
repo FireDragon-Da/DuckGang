@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UpgradeMeetingManager : MonoBehaviour
 {
@@ -37,6 +38,9 @@ public class UpgradeMeetingManager : MonoBehaviour
 
     public void StartMeeting()
     {
+        //General clean up
+        BuildingPlacer.reference.DisableBuildAndRemove();
+
         optionUpgrades.Clear();
         List<DuckUpgrade> possibleChoices = new();
         possibleChoices.AddRange(allUpgrades);
@@ -68,12 +72,22 @@ public class UpgradeMeetingManager : MonoBehaviour
         LevelUp(optionUpgrades[choice]);
         gameObject.SetActive(false);
 
+        foreach (UpgradeButton button in upgradeButtons)
+        {
+            button.UnSelect();
+        }
+
         TimeManager.reference.RemovePause();
     }
 
     public void SelectUpgrade(int index)
     {
+        if (curSelected != -1)
+        {
+            upgradeButtons[curSelected].UnSelect();
+        }
         curSelected = index;
+        upgradeButtons[index].Select();
     }
 
     public void EndMeetingButton()

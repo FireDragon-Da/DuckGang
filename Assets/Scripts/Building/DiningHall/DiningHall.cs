@@ -17,6 +17,8 @@ public class DiningHall : Building
 
     [SerializeField] float fillTime = 2f;
 
+    int foodToGainSoon;
+
     public override IEnumerator BuildingInteract(DuckWalk duck)
     {
         yield return StartCoroutine(base.BuildingInteract(duck));
@@ -29,9 +31,13 @@ public class DiningHall : Building
 
         if (heldFood + (interacting.Count-1) * foodGainPerHit < foodCap)
         {
-            int amountNeeded = (foodGainPerHit + heldFood > foodCap) ? (foodCap - heldFood) : foodGainPerHit;
+            int effectivelyHeldFood = heldFood + foodToGainSoon;
+            int amountNeeded = (foodGainPerHit + effectivelyHeldFood > foodCap) ? (foodCap - effectivelyHeldFood) : foodGainPerHit;
 
             if (CrumbManager.reference.ConsumeCrumbs(amountNeeded)) {
+
+                foodToGainSoon += amountNeeded;
+
                 SoundSystem.instance.PlaySound("dining-colliding-loop");
                 duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.FillDiningHall);
                 CrumbManager.reference.SpawnCrumbiePopupDecrease(transform.position, amountNeeded);
@@ -39,6 +45,8 @@ public class DiningHall : Building
                 GainFood(amountNeeded);
                 SoundSystem.instance.StopSound("dining-colliding-loop");
                 duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.None);
+
+                foodToGainSoon -= amountNeeded;
 
             }
         }
@@ -81,7 +89,7 @@ public class DiningHall : Building
 
     void UpdateVisual()
     {
-        if (heldFood == foodCap)
+        if (heldFood >= foodCap)
         {
             spriteRenderer.sprite = fullSprite;
         }
