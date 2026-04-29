@@ -44,6 +44,7 @@ public class Altar : Building
             PlayInteractBounce();
             CrumbManager.reference.GainCrumbs(productionAmount);
             CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, productionAmount);
+            SoundSystem.instance.PlaySound("altar-sacrifice");
 
             foreach (DuckWalk curDuck in curWatchers)
             {

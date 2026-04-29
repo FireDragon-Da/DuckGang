@@ -7,6 +7,7 @@ public class HammerSaw : Building
     public override Vector2 UnqiueBounce(DuckWalk target)
     {
         PlayInteractBounce();
+        SoundSystem.instance.PlaySound("saw-hammer-collide");
         return GetClosestConstruction(target);
     }
 

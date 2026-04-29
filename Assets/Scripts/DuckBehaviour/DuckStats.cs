@@ -162,6 +162,7 @@ public class DuckStats : MonoBehaviour
         }
 
         Instantiate(corpsePrefab,transform.position,new());
+        SoundSystem.instance.PlaySound("duck-dead");
     }
 
     IEnumerator passiveHappinessDrop()

@@ -18,6 +18,7 @@ public class StrawCraft : Building
             yield break;
         }
         duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.StrawCraft);
+        SoundSystem.instance.PlaySound("strawcraft");
 
         if (curCapacity < totalCapacity)
         {
@@ -28,6 +29,7 @@ public class StrawCraft : Building
             curCapacity--;
         }
         duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.None);
+        SoundSystem.instance.StopSound("strawcraft");
 
     }
 }

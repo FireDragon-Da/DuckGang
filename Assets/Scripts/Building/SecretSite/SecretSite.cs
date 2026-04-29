@@ -71,6 +71,7 @@ public class SecretSite : Building
         CrumbManager.reference.GainCrumbs(totalGain);
         PlayInteractBounce();
         CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, totalGain);
+        SoundSystem.instance.PlaySound("ducksons-secret-site");
 
         spriteRenderer.sprite = regularSprite;
     }
