@@ -136900,7 +136900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4164969681927187003, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0011376594
+      value: -0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 5716779658420469607, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchorMax.x
@@ -136938,9 +136938,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8649229051226270795, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649229051226270795, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649229051226270795, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9134085688117941406, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00004220504
+      value: 0.0000076293945
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

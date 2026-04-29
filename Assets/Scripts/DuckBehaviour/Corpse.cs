@@ -30,7 +30,6 @@ public class Corpse : MonoBehaviour
             Color tempColor = spriteRenderer.color;
             tempColor.a = (disappearTime-(curTime-stayTime))/disappearTime;
             spriteRenderer.color = tempColor;
-            print(tempColor);
         }
     }
 }
