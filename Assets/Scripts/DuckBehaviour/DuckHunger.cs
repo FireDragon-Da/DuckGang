@@ -30,7 +30,8 @@ public class DuckHunger : MonoBehaviour
 
     void Update()
     {
-        curHungerTimer -= Time.deltaTime;
+        //Hunger resistance changes how long it takes for hunger to decrease by 1
+        curHungerTimer -= Time.deltaTime * UpgradeMeetingManager.reference.HungerResistance;
         if (curHungerTimer <= 0)
         {
             curHungerTimer += hungerRate;
@@ -61,6 +62,8 @@ public class DuckHunger : MonoBehaviour
         {
             fillThisCrumb += 5;
         }
+
+        fillThisCrumb *= UpgradeMeetingManager.reference.FoodBuff;
 
         satiety += fillThisCrumb;
         if (satiety > satietyMax)

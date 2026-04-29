@@ -10,7 +10,7 @@ public class DuckUpgrade : ScriptableObject
     {
         SpeedIncrease,
         LoveIncrease,
-        SaddnessResistance,
+        SadnessResistance,
         HungerResistance,
         BuildingDecrease,
         ObstacleDestructionReduction,
@@ -24,6 +24,7 @@ public class DuckUpgrade : ScriptableObject
     }
 
     [SerializeField] string upgradeText;
+    [TextArea(3, 10)] 
     [SerializeField] string descriptionText;
     public string UpgradeText => upgradeText;
     public string DescriptionText => descriptionText;

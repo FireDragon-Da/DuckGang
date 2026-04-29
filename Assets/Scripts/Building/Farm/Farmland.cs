@@ -87,6 +87,8 @@ public class Farmland : Building , Farmlike
         int gain = cropCrumbGain;
         gain += compostBoost;
 
+        gain += UpgradeMeetingManager.reference.FarmlandBuff;
+
         if (MeetingManager.reference.hasSerfdomSystem)
         {
             gain *= 2;

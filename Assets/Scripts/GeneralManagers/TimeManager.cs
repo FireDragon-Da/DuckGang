@@ -63,7 +63,7 @@ public class TimeManager : MonoBehaviour
         //Moved meeting trigger to before newpaper update
         if (monthsPassed % monthsPerMeeting == 0)
         {
-            MeetingManager.reference.StartMeeting();
+            UpgradeMeetingManager.reference.StartMeeting();
         }
 
         //add two random fluff articles to article list in case nothing else happened

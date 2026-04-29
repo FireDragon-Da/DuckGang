@@ -61,7 +61,7 @@ public class DuckActionIndicator : MonoBehaviour
                 animator.Play("StrawCraft");
                 break;
             case DuckActionType.FillDiningHall:
-                animator.Play("FillingDiningHall");
+                animator.Play("FillDiningHall");
                 break;
             case DuckActionType.Compost:
                 animator.Play("Compost");

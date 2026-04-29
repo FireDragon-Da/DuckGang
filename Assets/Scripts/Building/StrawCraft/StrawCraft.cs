@@ -17,14 +17,23 @@ public class StrawCraft : Building
         {
             yield break;
         }
+        duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.StrawCraft);
+        SoundSystem.instance.PlaySound("strawcraft");
 
         if (curCapacity < totalCapacity)
         {
             curCapacity++;
             yield return StartCoroutine(WaitWithProgress(productionTime, duck.ProgressBar));
-            CrumbManager.reference.GainCrumbs(productionAmount);
-            CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, productionAmount);
+
+            int crumbieGain = productionAmount;
+            crumbieGain += UpgradeMeetingManager.reference.StrawCraftBuff;
+
+            CrumbManager.reference.GainCrumbs(crumbieGain);
+            CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, crumbieGain);
             curCapacity--;
         }
+        duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.None);
+        SoundSystem.instance.StopSound("strawcraft");
+
     }
 }

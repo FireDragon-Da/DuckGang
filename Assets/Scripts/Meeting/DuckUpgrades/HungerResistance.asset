@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cff31cab58d69fc4b8b668a079b9141f, type: 3}
   m_Name: HungerResistance
   m_EditorClassIdentifier: Assembly-CSharp::DuckUpgrade
-  upgradeText: 
-  descriptionText: 
+  upgradeText: Breakfast in Quackland
+  descriptionText: Permanently decrease the hunger rate by 5%
   type: 3
