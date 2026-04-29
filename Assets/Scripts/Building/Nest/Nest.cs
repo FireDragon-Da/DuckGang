@@ -66,7 +66,7 @@ public class Nest : Building
                 StartCoroutine(WaitEgg());
                 duck.RemoveEffect<LoveEffect>();
 
-                float percentage = timesUsed / actualTotalUses;
+                float percentage = (float)timesUsed / actualTotalUses;
                 int spriteNum = (int)(percentage * 3);
                 spriteRenderer.sprite = sprites[spriteNum * 2 + 1];
             }
@@ -116,7 +116,7 @@ public class Nest : Building
         }
         else
         {
-            float percentage = timesUsed / actualTotalUses;
+            float percentage = (float)timesUsed / actualTotalUses;
             int spriteNum = (int)(percentage * 3);
             spriteRenderer.sprite = sprites[spriteNum * 2];
         }
