@@ -18,6 +18,7 @@ public class StrawCraft : Building
             yield break;
         }
         duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.StrawCraft);
+        SoundSystem.instance.PlaySound("strawcraft");
 
         if (curCapacity < totalCapacity)
         {
@@ -31,5 +32,8 @@ public class StrawCraft : Building
             CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, crumbieGain);
             curCapacity--;
         }
+        duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.None);
+        SoundSystem.instance.StopSound("strawcraft");
+
     }
 }

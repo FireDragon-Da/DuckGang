@@ -60,6 +60,7 @@ public class Nest : Building
                 //TODO Duck Egg Cooldown
 
                 SoundSystem.instance.PlaySound("duck-spawn-egg");
+                duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.None);
                 nestBusy = false;
                 empty = false;
                 StartCoroutine(WaitEgg());
