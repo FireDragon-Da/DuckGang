@@ -5,11 +5,18 @@ using UnityEngine.UI;
 
 public class ConstructionPageGen : MonoBehaviour
 {
+    public static ConstructionPageGen reference;
 
     [SerializeField] GameObject content;
     [SerializeField] GameObject buildBar;
-    List<GameObject> buildingListGO; 
-    
+    List<GameObject> buildingListGO;
+
+    private void Awake()
+    {
+        if (reference == null) reference = this;
+        else Destroy(this);
+    }
+
     void Start()
     {
 
@@ -23,14 +30,16 @@ public class ConstructionPageGen : MonoBehaviour
 
             newBar.GetComponent<BuildingBar>().myBuilding = b;
             newBar.GetComponentInChildren<TextMeshProUGUI>().text = UnlockingUIManager.reference.lockedString;
+            newBar.GetComponent<Button>().interactable = false;
 
             Transform imageTransform = newBar.transform.Find("Image");
             imageTransform.gameObject.GetComponent<Image>().sprite= b.SpriteRenderer.sprite;
+            imageTransform.gameObject.SetActive(false);
 
             UnlockingUIManager.reference.buildingBars.Add(b.buildingName, newBar);
             
         }
 
-        this.gameObject.SetActive(false);
+       this.gameObject.SetActive(false);
     }
 }
