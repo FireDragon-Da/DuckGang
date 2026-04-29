@@ -4,7 +4,16 @@ public enum DuckActionType
     None,
     Build,
     Water,
-    Harvest
+    Harvest,
+    Sacrifice,
+    Deconstruct,
+    StrawCraft,
+    FillDiningHall,
+    Compost,
+    WatchSacrifice,
+    Playground,
+    Invest,
+    LayNest
 }
 
 public class DuckActionIndicator : MonoBehaviour
@@ -41,6 +50,33 @@ public class DuckActionIndicator : MonoBehaviour
                 break;
             case DuckActionType.Harvest:
                 animator.Play("Harvest");
+                break;
+            case DuckActionType.Sacrifice:
+                animator.Play("Sacrifice");
+                break;
+            case DuckActionType.Deconstruct:
+                animator.Play("Deconstruct");
+                break;
+            case DuckActionType.StrawCraft:
+                animator.Play("StrawCraft");
+                break;
+            case DuckActionType.FillDiningHall:
+                animator.Play("FillDiningHall");
+                break;
+            case DuckActionType.Compost:
+                animator.Play("Compost");
+                break;
+            case DuckActionType.WatchSacrifice:
+                animator.Play("WatchSacrifice");
+                break;
+            case DuckActionType.Playground:
+                animator.Play("Playground");
+                break;
+            case DuckActionType.Invest:
+                animator.Play("Invest");
+                break;
+            case DuckActionType.LayNest:
+                animator.Play("LayNest");
                 break;
         }
     }

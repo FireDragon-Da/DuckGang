@@ -162,11 +162,13 @@ public class DuckStats : MonoBehaviour
         }
 
         Instantiate(corpsePrefab,transform.position,new());
+        SoundSystem.instance.PlaySound("duck-dead");
     }
 
     IEnumerator passiveHappinessDrop()
     {
-        yield return new WaitForSeconds(1);
+        //SaddnessResistance affects how often this procs
+        yield return new WaitForSeconds(1 * UpgradeMeetingManager.reference.SadnessResistance);
         phd += TuningManager.reference.passiveDrop * (PublicInfo.reference.duckList.Count + 1);
 
         if (phd > 1)

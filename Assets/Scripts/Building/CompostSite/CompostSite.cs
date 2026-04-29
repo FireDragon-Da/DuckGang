@@ -51,7 +51,9 @@ public class CompostSite : Building
         {
             yield break;
         }
-        
+        duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.Compost);
+        SoundSystem.instance.PlaySound("compost-site");
+
         yield return StartCoroutine(WaitWithProgress(poopTime, duck.ProgressBar));
         PlayInteractBounce();
         if (poopCount == 0)
@@ -65,6 +67,10 @@ public class CompostSite : Building
         {
             poopCount++;
         }
+        duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.None);
+        SoundSystem.instance.StopSound("compost-site");
+
+
     }
 
     void StartBoostProduction()

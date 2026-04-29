@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cff31cab58d69fc4b8b668a079b9141f, type: 3}
   m_Name: StrawCraftBuff
   m_EditorClassIdentifier: Assembly-CSharp::DuckUpgrade
-  upgradeText: 
-  descriptionText: 
+  upgradeText: Wild Wild West
+  descriptionText: Permanently increase the output of straw craft workshops by 2
   type: 10

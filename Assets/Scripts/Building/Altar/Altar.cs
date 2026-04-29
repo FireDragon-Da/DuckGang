@@ -33,13 +33,21 @@ public class Altar : Building
         if (heldDuck == null)
         {
             heldDuck = duck;
+            duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.Sacrifice);
+
             heldDuck.transform.position = transform.position;
             yield return WaitSacrifice();
 
+            duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.None);
+
             heldDuck.GetComponent<DuckStats>().Die(DeathReason.Disappeared);
             PlayInteractBounce();
-            CrumbManager.reference.GainCrumbs(productionAmount);
-            CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, productionAmount);
+
+            int crumbieGain = productionAmount;
+            crumbieGain += UpgradeMeetingManager.reference.AltarBuff;
+            CrumbManager.reference.GainCrumbs(crumbieGain);
+            CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, crumbieGain);
+            SoundSystem.instance.PlaySound("altar-sacrifice");
 
             foreach (DuckWalk curDuck in curWatchers)
             {
@@ -65,6 +73,7 @@ public class Altar : Building
         {
             duck.transform.position = transform.position + (Vector3)spotOffsets[curWatchers.Count];
             curWatchers.Add(duck);
+            duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.WatchSacrifice);
         }
     }
 

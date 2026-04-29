@@ -24,6 +24,8 @@ public class SecretSite : Building
             yield break;
         }
 
+        duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.Invest);
+
         if (producing) {yield break;}
 
         if (CrumbManager.reference.ConsumeCrumbs(takePerTouch))
@@ -63,9 +65,14 @@ public class SecretSite : Building
         progressBar.HideBar();
 
         producing = false;
-        CrumbManager.reference.GainCrumbs(totalGain);
+
+        int curGain = totalGain;
+        totalGain += UpgradeMeetingManager.reference.DucksonSiteBuff;
+
+        CrumbManager.reference.GainCrumbs(curGain);
         PlayInteractBounce();
-        CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, totalGain);
+        CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, curGain);
+        SoundSystem.instance.PlaySound("ducksons-secret-site");
 
         spriteRenderer.sprite = regularSprite;
     }

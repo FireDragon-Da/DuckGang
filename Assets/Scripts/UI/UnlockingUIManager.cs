@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 //looking for a bunch of code that isn't here anymore? 
 //most of it is now being handled either within the Building script, or a new script called ConstructionPageGen,
@@ -19,7 +20,7 @@ public class UnlockingUIManager : MonoBehaviour
 
     public Dictionary<string, GameObject> buildingBars = new();
 
-    private bool unlockAllForDebug = false;
+    public bool unlockAllForDebug = false;
     [HideInInspector] public string lockedString;
 
     private void Awake()
@@ -40,8 +41,7 @@ public class UnlockingUIManager : MonoBehaviour
 
             buildingList.Add(b);
 
-            //unlock dining hall immediately & lock others (because it loves to be evil)
-            if (g.GetComponent<DiningHall>()) { updateBuildMenu(b); } else { b.unlocked = false; }
+            b.unlocked = false;
         }
 
         if (unlockAllForDebug)
@@ -77,7 +77,8 @@ public class UnlockingUIManager : MonoBehaviour
                     (b.gameObject.GetComponent<HammerSaw>() && info.curBuildingList.Count >= 5) ||
                     (b.gameObject.GetComponent<StrawCraft>() && info.crumbieGainedFromFarmland >= 30) ||
                     (b.gameObject.GetComponent<Altar>() && info.duckList.Count >= 20) ||
-                    (b.gameObject.GetComponent<Drum>() && info.duckCollideBuildingTimes >= 70))
+                    (b.gameObject.GetComponent<Drum>() && info.duckCollideBuildingTimes >= 70) ||
+                    (b.gameObject.GetComponent<DiningHall>() && buildingBars.Count > 0))
                 {
                     updateBuildMenu(b);
                 }
@@ -104,8 +105,7 @@ public class UnlockingUIManager : MonoBehaviour
 
         bar.GetComponentInChildren<TextMeshProUGUI>().text = FormatDescription(b, quacxiconSO.GetSpecificLogFromCategory(b.buildingName, 1));
 
-        Button btn = bar.GetComponent<Button>();
-        btn.interactable = true;
+        bar.GetComponent<Button>().interactable = true;
 
         Transform imageTransform = bar.transform.Find("Image");
         imageTransform.gameObject.SetActive(true);
