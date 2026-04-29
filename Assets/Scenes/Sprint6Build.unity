@@ -136847,7 +136847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: unlockAllForDebug
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2922072152565152049, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_Size

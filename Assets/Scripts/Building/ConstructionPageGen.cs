@@ -39,6 +39,6 @@ public class ConstructionPageGen : MonoBehaviour
             
         }
 
-       // this.gameObject.SetActive(false);
+       this.gameObject.SetActive(false);
     }
 }
