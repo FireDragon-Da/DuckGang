@@ -367,7 +367,6 @@ public class DuckWalk : MonoBehaviour
             if (col.IsTouching(targetBuilding.Col))
             {
                 interacting = targetBuilding; //Force interacting to ensure no issues
-                interacting.StartInteracting(this);
                 StartCoroutine(BuildingInteraction(targetBuilding));
                 break;
             }
@@ -437,6 +436,13 @@ public class DuckWalk : MonoBehaviour
         foreach (Collider2D curHit in hits)
         {
             OnTriggerEnter2D(curHit);
+
+            Grass temp = curHit.GetComponent<Grass>();
+
+            if (temp)
+            {
+                temp.UseGrass();
+            }
         }
 
     }
