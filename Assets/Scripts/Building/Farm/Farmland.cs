@@ -22,6 +22,8 @@ public class Farmland : Building , Farmlike
 
     int compostBoost;
 
+    bool disabled;
+
     public override void StartBuild()
     {
         gameObject.SetActive(false);
@@ -39,6 +41,8 @@ public class Farmland : Building , Farmlike
     {
         base.UpdateBehavior();
 
+        if (disabled) {return;}
+
         if (growTimer > 0)
         {
             CropGrow(Time.deltaTime);
@@ -55,6 +59,8 @@ public class Farmland : Building , Farmlike
 
     public override IEnumerator BuildingInteract(DuckWalk duck)
     {
+        if (disabled) {yield break;}
+
         if (!built) //Doesn't have regular building behavior
         {
             yield break;
@@ -181,8 +187,14 @@ public class Farmland : Building , Farmlike
         spriteRenderer.color = tempColor;
     }
 
-    public override void StartDeconstruction() //Farm holder deals with this
+    public override void StartDeconstruction()
     {
+        disabled = true;
+    }
+
+    public override void UnStartDeconstruction()
+    {
+        disabled = false;
     }
 
     public void GainBoost()

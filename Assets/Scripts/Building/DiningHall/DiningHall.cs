@@ -66,6 +66,12 @@ public class DiningHall : Building
         base.StartDeconstruction();
     }
 
+    public override void UnStartDeconstruction()
+    {
+        PublicInfo.reference.diningHalls.Add(this);
+        base.UnStartDeconstruction();
+    }
+
     public bool HasFood(int amount)
     {
         return heldFood >= amount;
