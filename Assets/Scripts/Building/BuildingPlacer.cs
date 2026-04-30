@@ -35,7 +35,11 @@ public class BuildingPlacer : MonoBehaviour
 
     void Update()
     {
-        if (removeToggled && !EventSystem.current.IsPointerOverGameObject())
+        if (removeToggled && Input.GetMouseButtonDown(1))
+        {
+            DisableBuildAndRemove();
+        }
+        else if (removeToggled && !EventSystem.current.IsPointerOverGameObject())
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D[] hits;
