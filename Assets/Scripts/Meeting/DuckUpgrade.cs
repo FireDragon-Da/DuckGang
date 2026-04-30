@@ -39,4 +39,9 @@ public class DuckUpgrade : ScriptableObject
         level++;
     }
 
+    public void ResetLevel()
+    {
+        level = 0;
+    }
+
 }

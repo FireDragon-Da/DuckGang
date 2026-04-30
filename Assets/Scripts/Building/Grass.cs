@@ -51,31 +51,36 @@ public class Grass : Building , Farmlike
                 return;
             }
 
-            if (!hasFood)
-            {
-                return;
-            }
+            UseGrass();
+        }
+    }
 
-            int gain = 1;
-            gain += compostBoost;
+    public void UseGrass()
+    {
+        if (!hasFood)
+        {
+            return;
+        }
 
-            if (MeetingManager.reference.hasGatherSociety)
-            {
-                gain += 1;
-            }
+        int gain = 1;
+        gain += compostBoost;
 
-            CrumbManager.reference.GainCrumbs(gain);
-            PublicInfo.reference.crumbieGainedFromGrass += gain;
-            SoundSystem.instance.PlaySound("grass");
-            CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, gain);
+        if (MeetingManager.reference.hasGatherSociety)
+        {
+            gain += 1;
+        }
 
-            hits++;
-            if (hits >= maxHits)
-            {
-                hasFood = false;
-                curGrowTimer = growTime;
-                spriteRenderer.sprite = emptySprite;
-            }
+        CrumbManager.reference.GainCrumbs(gain);
+        PublicInfo.reference.crumbieGainedFromGrass += gain;
+        SoundSystem.instance.PlaySound("grass");
+        CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, gain);
+
+        hits++;
+        if (hits >= maxHits)
+        {
+            hasFood = false;
+            curGrowTimer = growTime;
+            spriteRenderer.sprite = emptySprite;
         }
     }
 
