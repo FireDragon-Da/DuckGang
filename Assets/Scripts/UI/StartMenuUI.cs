@@ -5,6 +5,7 @@ public class StartMenuUI : MonoBehaviour
     public static StartMenuUI reference;
 
     [SerializeField] GameObject startMenuPanel;
+    [SerializeField] GameObject buttons;
     [SerializeField] GameObject settingsPanel;
 
     bool gameStarted;
@@ -64,7 +65,7 @@ public class StartMenuUI : MonoBehaviour
         {
             if (startMenuPanel != null)
             {
-                startMenuPanel.SetActive(false);
+                buttons.SetActive(false);
             }
 
             settingsPanel.SetActive(true);
@@ -82,7 +83,7 @@ public class StartMenuUI : MonoBehaviour
         {
             if (startMenuPanel != null)
             {
-                startMenuPanel.SetActive(true);
+                buttons.SetActive(true);
             }
         }
         else

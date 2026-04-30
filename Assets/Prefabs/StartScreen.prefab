@@ -532,6 +532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartMenuUI
   startMenuPanel: {fileID: 5869403691108604061}
+  buttons: {fileID: 4343682194505014918}
   settingsPanel: {fileID: 398511170006765485}
 --- !u!1 &6579957691432044014
 GameObject:
