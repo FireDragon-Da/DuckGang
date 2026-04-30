@@ -24,6 +24,12 @@ public class StartMenuUI : MonoBehaviour
         if (startMenuPanel != null)
         {
             startMenuPanel.SetActive(true);
+
+            // 让开始界面的所有Animator在时间暂停时仍能正常播放动画
+            foreach (Animator animator in startMenuPanel.GetComponentsInChildren<Animator>(true))
+            {
+                animator.updateMode = AnimatorUpdateMode.UnscaledTime;
+            }
         }
 
         if (settingsPanel != null)
