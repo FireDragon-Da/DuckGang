@@ -16,13 +16,23 @@ public class FarmHolder : Building
 
     public override void StartDeconstruction()
     {
-        if (removing) {return;}
-
         base.StartDeconstruction();
+
+        if (!removing) {return;}
 
         foreach (Farmland farmPiece in farmland)
         {
-            farmPiece.Remove();   
+            farmPiece.StartDeconstruction();   
+        }
+    }
+
+    public override void UnStartDeconstruction()
+    {
+        base.UnStartDeconstruction();
+
+        foreach (Farmland farmPiece in farmland)
+        {
+            farmPiece.TryUnStartDeconstruction();   
         }
     }
 
@@ -36,7 +46,7 @@ public class FarmHolder : Building
     }
 
     public override void TryStartRemove()
-    {print("proc");
+    {
         if (interacting.Count == 0)
         {
             foreach (Farmland farm in farmland)
@@ -49,5 +59,16 @@ public class FarmHolder : Building
             StartDeconstruction();
         }
     }
+
+    public override void Remove()
+    {
+        PublicInfo.reference.constructionList.Remove(this);
+        foreach (Farmland farmPiece in farmland)
+        {
+            farmPiece.Remove();   
+        }
+        Destroy(gameObject);
+    }
+
 
 }

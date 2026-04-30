@@ -34,12 +34,18 @@ public class UpgradeMeetingManager : MonoBehaviour
     {
         reference = this;
         gameObject.SetActive(false);
+
+        foreach (DuckUpgrade upgrade in allUpgrades)
+        {
+            upgrade.ResetLevel();
+        }
     }
 
     public void StartMeeting()
     {
         //General clean up
         BuildingPlacer.reference.DisableBuildAndRemove();
+        UIElementAccessor.reference.ForceAllOff();
 
         optionUpgrades.Clear();
         List<DuckUpgrade> possibleChoices = new();
@@ -76,6 +82,8 @@ public class UpgradeMeetingManager : MonoBehaviour
         {
             button.UnSelect();
         }
+
+        UpdateLog.reference.RefreshList();
 
         TimeManager.reference.RemovePause();
     }
