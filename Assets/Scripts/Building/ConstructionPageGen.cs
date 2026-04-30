@@ -33,7 +33,19 @@ public class ConstructionPageGen : MonoBehaviour
             newBar.GetComponent<Button>().interactable = false;
 
             Transform imageTransform = newBar.transform.Find("Image");
-            imageTransform.gameObject.GetComponent<Image>().sprite= b.SpriteRenderer.sprite;
+            imageTransform.gameObject.GetComponent<Image>().sprite = b.SpriteRenderer.sprite;
+
+            //fix sizing
+            if (b.Width > b.Height)
+            {
+                float scale = (float)b.Height / (float)b.Width;
+                imageTransform.localScale = new Vector3(imageTransform.localScale.x, imageTransform.localScale.x * scale, 0);
+            }
+            else if (b.Width < b.Height)
+            {
+                float scale = (float)b.Width / (float)b.Height; 
+                imageTransform.localScale = new Vector3(imageTransform.localScale.y * scale, imageTransform.localScale.y, 0);
+            }
             imageTransform.gameObject.SetActive(false);
 
             UnlockingUIManager.reference.buildingBars.Add(b.buildingName, newBar);
