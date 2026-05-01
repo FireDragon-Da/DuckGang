@@ -63386,9 +63386,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraScroller
   cam: {fileID: 730886731}
   speed: 15
-  zoomSpeed: 500
+  zoomSpeed: 1000
   minSize: 4
-  maxSize: 10
+  maxSize: 15
   tilemap: {fileID: 1303183969}
 --- !u!114 &389357173
 MonoBehaviour:
@@ -67424,11 +67424,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7204972533377679507, guid: 89992ff3af29cde46bcb0d9c24ff4d28, type: 3}
   m_PrefabInstance: {fileID: 868263115}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &880289371 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2176041366712178410, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
-  m_PrefabInstance: {fileID: 6410375465495123799}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &880343816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68049,17 +68044,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7204972533377679507, guid: 89992ff3af29cde46bcb0d9c24ff4d28, type: 3}
   m_PrefabInstance: {fileID: 955871548}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &963500702 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1511615096407903239, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
-  m_PrefabInstance: {fileID: 6410375465495123799}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b09446b9c0352f4a9643ea63d747edd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectToggleAccessor
 --- !u!1001 &965443145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136822,17 +136806,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 259298585267966559, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
-      propertyPath: startMenuPanel
-      value: 
-      objectReference: {fileID: 880289371}
-    - target: {fileID: 378210676133132849, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1144618833250589911, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521376805479881728, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_Size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521376805479881728, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: m_Value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1531058157115479153, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchorMax.x
@@ -136858,10 +136842,6 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
-      propertyPath: unlockAllForDebug
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2922072152565152049, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_Size
       value: 1
@@ -136869,6 +136849,15 @@ PrefabInstance:
     - target: {fileID: 2922072152565152049, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_Value
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147153386012875650, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: 'texts.Array.data[0].lines.Array.data[0]'
+      value: When you right-click on a duck you will get to see their age, hunger
+        level, and how happy they are.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147153386012875650, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: 'texts.Array.data[0].lines.Array.data[1]'
+      value: You can also left-click and hold to grab a duck and drag them around.
       objectReference: {fileID: 0}
     - target: {fileID: 3229418350418843075, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -136920,7 +136909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4164969681927187003, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000091552734
+      value: -0.000023214809
       objectReference: {fileID: 0}
     - target: {fileID: 5716779658420469607, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchorMax.x
@@ -136950,14 +136939,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8178509703118682588, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_Target
-      value: 
-      objectReference: {fileID: 963500702}
-    - target: {fileID: 8178509703118682588, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
-      value: ForceOn
-      objectReference: {fileID: 0}
     - target: {fileID: 8419782432875219653, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -136976,7 +136957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9134085688117941406, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0000076293945
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -35,7 +35,7 @@ public class DuckSocietyManager : MonoBehaviour
         int totalHappiness = 0;
         foreach (GameObject duck in PublicInfo.reference.duckList)
         {
-            totalHappiness += duck.GetComponent<DuckStats>().Happiness;
+            totalHappiness += duck.GetComponent<DuckStats>().Happiness > 40 ? duck.GetComponent<DuckStats>().Happiness : 50 ;
         }
 
         int averageHappiness = totalHappiness / PublicInfo.reference.duckList.Count;

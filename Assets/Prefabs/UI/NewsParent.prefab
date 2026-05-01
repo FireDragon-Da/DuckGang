@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6433768833845126512}
   - component: {fileID: 2975875634588159521}
+  - component: {fileID: 3765677518972448243}
   m_Layer: 5
   m_Name: NewsParent
   m_TagString: Untagged
@@ -52,6 +53,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectToggleAccessor
   target: {fileID: 5220383609653079340}
+--- !u!114 &3765677518972448243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194457798893135674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c68c6106a4dbe448632c1c82410eed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewspaperTimeToggle
+  newspaper: {fileID: 0}
 --- !u!1 &4039028413595547802
 GameObject:
   m_ObjectHideFlags: 0

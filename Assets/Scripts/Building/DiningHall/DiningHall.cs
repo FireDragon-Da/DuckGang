@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class DiningHall : Building
@@ -16,6 +17,8 @@ public class DiningHall : Building
     [SerializeField] Sprite emptySprite;
 
     [SerializeField] float fillTime = 2f;
+
+    [SerializeField] TextMeshProUGUI displayFood;
 
     int foodToGainSoon;
 
@@ -107,6 +110,17 @@ public class DiningHall : Building
         {
             spriteRenderer.sprite = emptySprite;
         }
+    }
+
+    void OnMouseOver()
+    {
+        displayFood.enabled = true;
+        displayFood.text = heldFood + "/" + foodCap;
+    }
+
+    void OnMouseExit()
+    {
+        displayFood.enabled = false;
     }
 
 }

@@ -9,6 +9,7 @@ public class TimeManager : MonoBehaviour
 
     [SerializeField] int monthsPerMeeting = 5;
     [SerializeField] float duckMonthLength;
+    [SerializeField] TextMeshProUGUI monthCount;
 
     [Header("Duck Photo Capture")]
     [SerializeField] private float photoCaptureInterval = 60f;
@@ -91,6 +92,7 @@ public class TimeManager : MonoBehaviour
     {
         monthsPassed++;
         curMonthTime -= duckMonthLength;
+        monthCount.text = monthsPassed.ToString();
 
         //Moved meeting trigger to before newpaper update
         if (monthsPassed % monthsPerMeeting == 0)

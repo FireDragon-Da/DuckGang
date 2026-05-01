@@ -70,7 +70,7 @@ public class UnlockingUIManager : MonoBehaviour
             {
                 if ((b.gameObject.GetComponent<FarmHolder>() && info.crumbieGainedFromGrass >= 10) ||
                     (b.gameObject.GetComponent<Nest>() && info.farmList.Count >= 1) ||
-                    (b.gameObject.GetComponent<Playground>() && info.duckList.Count >= 5) ||
+                    (b.gameObject.GetComponent<Playground>() && info.crumbieEverCollected >= 50) ||
                     (b.gameObject.GetComponent<GoldenCorn>() && info.farmList.Count >= 8) ||
                     (b.gameObject.GetComponent<CompostSite>() && info.farmList.Count >= 12) ||
                     (b.gameObject.GetComponent<SecretSite>() && info.crumbieEverCollected >= 300) ||

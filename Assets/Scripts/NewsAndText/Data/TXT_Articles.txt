@@ -1,90 +1,104 @@
 ﻿starvationArticle
-Quackland Goes Hungry
-//content
+Quacklands Goes Hungry
+A rise in starvation across Quacklands has left the population in utter disarray. One civilian tried to help out their fellow ducks by donating some of their food which resulted in them starving as well. Another states “I don’t know what I’m going to do?! Do you think biting into the water will work?” Our editors have no idea. 
 Starvation
 &
 mentalHealthArticle
-Quackland In Despair
-//content
+Quacklands In Despair
+Overworked and under-crumbed. The new mayor appears to think that working us like chickens will benefit the community. Now, it seems Quacklands is facing a major lapse in morale, which, if ignored, could prove fatal for even the most resilient citizens. I myself have a message for the mayor from the people of Quacklands: If you’re not careful, we won’t be the only ones that perish.
 MentalHealthCrisis
 &
 newMayorArticle
 New Mayor Installed
-//content
+After our previous mayor suddenly disappeared, someone new has flown in to pick up where he left off! We welcome our new mayor and wish them the best of luck! With a fresh pair of eyes hopefully some real improvement can be brought to our great land. They’d better get to work fast, unless they want to end up like the last mayor.
 Required
 &
 farmArticle
-//title
-//content
+The Wheat is finally over
+Our dear mayor has introduced a new technique to us called farming. It's where you put stuff into the ground and food grows from it. Our team is not sure of how it works but we ate it with no questions asked! The crumbies from the ground taste pretty good but it’s a lot of work. “Why would anyone do this?” one civilian asked, “All this time working leaves me less time to bob my head and shake my tail!” This reporter wonders what the mayor's next move is after all this work.
 Building
 &
 nestArticle
-//title
-//content
+Extraordi-nest-y 
+It seems like our mayor can’t get enough of us, folks! They started building a nest for us to start repopulating ooh la la. Now you can spend time with your partner and make a baby out in the open. One civilian commented, “hey, should this even be allowed?”
 Building
 &
 playgroundArticle
-//title
-//content
+Getting into the Swing of Things
+Thank honk that we can finally do something other than working, all of these new developments were making this journalist's beak hurt. So long are the days of just wandering around in the sun, we now have a thing called playgrounds to keep us occupied. I’m not familiar with these foreign games that the mayor has introduced to us but I give these playgrounds 4.5 quacks out of 5.
 Building
 &
 goldenCornArticle
-//title
-//content
+This May Sound a Little Corny
+I guess we haven’t been working well enough to please our mayor's expectations. As you may have noticed there is now a gold corn in our land. I thought it was for eating but it turns out that it is a mild symbol of oppression telling us to work harder. Hopefully our mayor just wants to see us reach our full potential but I will admit the statue is beautiful. I wish I could eat it though, why make something edible if it’s not meant to be eaten?!
 Building
 &
 compostArticle
-//title
-//content
+Don’t Let Your Scraps go to Waste
+Who knew garbage could be so useful! The mayor installed compost sites throughout the land to increase the production of our farms. Now we’ll be gaining MORE crumbies to boost our economy, whatever an economy is. Apparently number go up means something good! I can’t wait to see the next thing our mayor comes up with.
 Building
 &
 ducksonArticle
-//title
-//content
+Box it like it’s Hot
+Anytime I had extra of something I either ate it or threw it somewhere hoping to find it again later. Turns out that’s not very efficient, says our mayor. They created a building to store extra inventory and now things are easier to find and they won’t get lost. The mayor calls it Mr. Duckson’s secret site, not sure how it’s a secret since I’m writing about it but I also did not know what storage was either. Please continue enlightening us dear mayor!
 Building
 &
 hammerArticle
-//title
-//content
+Hammering Down
+Another day, another symbol of capitalism. This new statue will help us with construction in the future. This mayor has a tougher shell than I thought. I guess months in office will do that to you. Maybe this is what our land needs: a showmanship of our hard work.
 Building
 &
 strawCraftArticle
-//title
-//content
+Strawsome
+And for their next trick this mayor with FORCE HIS LABOR UPON US. So long are the days of wandering around by choice now we must stay at our stations for hours in order to produce more! I thought I was a bad journalist but this is brutal. Be prepared to get put to work folks!
 Building
 &
 altarArticle
-//title
-//content
+Allow me to Altar your Mindset
+Now this is the kind of stuff this journalist wants to see! Ehem not that I know much about this kind of thing of course. In an interesting change of events we now have some alters to help boost the amount of crumbies we can receive. This might be the most intuitive build yet, I cannot praise our mayor enough. I think this is the type of energy that I have been waiting to see. I believe that we need to give a little to earn a lot and this journalist can see that our mayor feels the same way. I hope to see more of this behavior.
 Building
 &
 drumArticle
-//title
-//content
+Faster Faster FASTER
+Quake in adrenaline as you hear the drum roar my fellow Quacklandians. I can feel the exhilaration coursing through my veins. I’m writing this article at the speed of light dear readers. I’ve never felt so efficient. The drum sings to me and it will sing to you too.
 Building
 &
 villageHallArticle
-//title
-//content
+Up is the Only Way We Can Go
+This has been a long time coming. We now have a building that shows our greatest achievement: the community that we have built together. We have come a long way from the long stretch of grasslands to a place we can call home. This hall stands as a momentous occasion for how hard we’ve worked and how far we have come. If this message ever reaches outside of our humble home I want you to know the beauty of Quacklands and we hope we can show it to you.
+Building
+&
+crumblingHallArticle
+A Crumbling Success!
+My fellow ducklings, it is my great pleasure to announce the opening of Crumbling Hall. With our growing population we are in need of bigger facilities to feed us and our dear mayor has delivered. “I’ve been eating so much I can’t even move” says one citizen who sadly talked with their mouth full. The line to the Crumbling has been out of the door since its construction. “I’ve been standing in line so long I don’t even know what day it is!” The duck behind them informed me that they had only been there for 20 minutes. Everyone is so excited with this new addition. I myself am about to have my fill of the crumbling and I will be coming back with a review.
 Building
 &
 Fluff
 Lovely Weather Today
-//fluff content
+The weather appears lovely today, at least according to the color of the grass. The water does not reflect the sky so we are not sure if there are clouds, or the sun, or if the sun still remains. It has not been night in many years. Most younglings have no concept of such a thing. Either way, the grass remains green and the water remains blue, so all much be right in the world. 
 Fluff
 &
 Fluff
 Many Ducks Still Alive
-//fluff content
+It appears, given only a cursory glance, that many ducks remain alive. However, no one took the time to actually count, so we do not guarantee that many ducks are still alive at the time of this publication. 
 Fluff
 &
 Fluff
 Water A Little Too Cold
-//fluff content
+Complaints have been rolling in recently about the temperature of the water, in lieu of any more pressing matters. It seems that despite the eternal consistency of the weather, the water in most of our ponds has cooled slightly, and the general population finds this change upsetting. Is it really that different? Our editors haven’t been able to tell. The ponds did not respond to our request for comment.
 Fluff
 &
 Fluff
 Water A Little Too Wet
-//fluff content
+Dissatisfaction has spread among the population regarding the saturation of the water. It seems the ponds are completely saturated, with some reaching 110% saturation, and this fact has caused some speculation and discomfort. “I’m not sure what happened,” a passerby said to themself as one of our editors listened. Then, becoming contemplative, they continued, “Maybe it was always this way. Maybe I just didn’t notice.”
 Fluff
-
+&
+Fluff
+Rocks Can’t Be Walked Through
+Despite repeated, desperate attempts, rocks still cannot be walked through. This we find confusing and upsetting. There is nothing in this world that should stop us. We long for freedom. We long for power. We long to walk through rocks. 
+Fluff
+&
+Fluff
+Peaceful Day
+Hear ye, hear ye, today has been peaceful in Quacklands. By which we mean, nothing remotely of value has happened. Nothing. Not one thing. Our editors searched high and low for news, and found none. Said editors have now taken the day off to swim in one of the identical lakes. 
+Fluff

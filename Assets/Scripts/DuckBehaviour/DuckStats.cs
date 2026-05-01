@@ -170,6 +170,7 @@ public class DuckStats : MonoBehaviour
         //SaddnessResistance affects how often this procs
         yield return new WaitForSeconds(1 * UpgradeMeetingManager.reference.SadnessResistance);
         phd += TuningManager.reference.passiveDrop * (PublicInfo.reference.duckList.Count + 1);
+        print("passive happiness drop at " + phd);
 
         if (phd > 1)
         {
