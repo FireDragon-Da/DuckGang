@@ -20,3 +20,27 @@ MonoBehaviour:
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
+  - categoryName: Death_OldAge
+    contentList:
+    - died because of way too old.
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Death_Suicide
+    contentList:
+    - died because of Suicide
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Death_Suicide
+    contentList:
+    - died because of Suicide
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Death_Starvation
+    contentList:
+    - died because of Hunger
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0

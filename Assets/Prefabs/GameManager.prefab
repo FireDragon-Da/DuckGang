@@ -4177,7 +4177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DuckSocietyManager
   duckPrefab: {fileID: 3206033706706982381, guid: 882e0b9f48f4a774ba90fa02f7bb69d2, type: 3}
   newbornDuckNames: []
-  quacxiconSO: {fileID: 0}
+  quacxiconSO: {fileID: 11400000, guid: 349bc717b8ea5ac48a292c6f2cd2b980, type: 2}
   deathCategoryName: Death
 --- !u!114 &5741726068280216701
 MonoBehaviour:
@@ -4936,11 +4936,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1628695511758800338, guid: cda72d5e04cdbd7419c759a99110c20b, type: 3}
       propertyPath: m_Size
-      value: 0.30850902
+      value: 0.308509
       objectReference: {fileID: 0}
     - target: {fileID: 1628695511758800338, guid: cda72d5e04cdbd7419c759a99110c20b, type: 3}
       propertyPath: m_Value
-      value: 1.0000006
+      value: 1.0000004
       objectReference: {fileID: 0}
     - target: {fileID: 1711563316267017409, guid: cda72d5e04cdbd7419c759a99110c20b, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5758,7 +5758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1767459464883057603, guid: 70027459b1cddd14ead682ff1d4ae945, type: 3}
       propertyPath: m_Size
-      value: 0.66666675
+      value: 0.6666667
       objectReference: {fileID: 0}
     - target: {fileID: 1767459464883057603, guid: 70027459b1cddd14ead682ff1d4ae945, type: 3}
       propertyPath: m_Value

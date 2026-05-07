@@ -53,8 +53,11 @@ public class TextBox : MonoBehaviour
                 var viewportImage = viewport.GetComponent<Image>();
                 if (viewportImage != null)
                 {
+                    // Make viewport interactable for scrolling and set a readable, non-bright
+                    // semi-opaque background so text is easy to read.
                     viewportImage.raycastTarget = true;
-                    viewportImage.color = Color.clear;
+                    // Soft dark background (not bright)
+                    viewportImage.color = new Color(0.08f, 0.08f, 0.10f, 0.9f);
                 }
             }
 
@@ -71,6 +74,9 @@ public class TextBox : MonoBehaviour
             textComponent.overflowMode = TextOverflowModes.Overflow;
 
             textComponent.alignment = TextAlignmentOptions.TopLeft;
+            // Ensure text color is readable against the chosen dark viewport background.
+            // Use an off-white/soft color (not a harsh bright white).
+            textComponent.color = new Color(0.95f, 0.95f, 0.90f, 1f);
         }
 
         gameObject.SetActive(false);
