@@ -1822,6 +1822,7 @@ RectTransform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5103653300660297152}
   - {fileID: 3714232965977114461}
   - {fileID: 546350067273588546}
   m_Father: {fileID: 6395297000398351160}
@@ -1874,11 +1875,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3714232965977114461}
+  m_Father: {fileID: 8281934852920608784}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150.1, y: 82.2}
+  m_AnchoredPosition: {x: 82.01133, y: -53.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4767144689441927396
@@ -2864,7 +2865,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5103653300660297152}
   - {fileID: 8930754950401710391}
   m_Father: {fileID: 8281934852920608784}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3066,7 +3066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4139469443381886227
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4936,11 +4936,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1628695511758800338, guid: cda72d5e04cdbd7419c759a99110c20b, type: 3}
       propertyPath: m_Size
-      value: 0.308509
+      value: 0.30850902
       objectReference: {fileID: 0}
     - target: {fileID: 1628695511758800338, guid: cda72d5e04cdbd7419c759a99110c20b, type: 3}
       propertyPath: m_Value
-      value: 1.0000004
+      value: 1.0000006
       objectReference: {fileID: 0}
     - target: {fileID: 1711563316267017409, guid: cda72d5e04cdbd7419c759a99110c20b, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5758,7 +5758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1767459464883057603, guid: 70027459b1cddd14ead682ff1d4ae945, type: 3}
       propertyPath: m_Size
-      value: 0.6666667
+      value: 0.66666675
       objectReference: {fileID: 0}
     - target: {fileID: 1767459464883057603, guid: 70027459b1cddd14ead682ff1d4ae945, type: 3}
       propertyPath: m_Value
