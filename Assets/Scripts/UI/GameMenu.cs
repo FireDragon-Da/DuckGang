@@ -31,6 +31,7 @@ public class GameMenu : MonoBehaviour
     {
         if (paused) {return;}
         TimeManager.reference.AddPause();
+        SoundSystem.instance.StopAllSounds();
         paused = true;
         //AudioListener.pause = true;
 

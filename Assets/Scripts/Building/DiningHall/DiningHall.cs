@@ -109,6 +109,7 @@ public class DiningHall : Building
         else
         {
             spriteRenderer.sprite = emptySprite;
+            SoundSystem.instance.PlaySound("dining-hall-empty");
         }
     }
 
