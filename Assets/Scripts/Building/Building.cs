@@ -123,6 +123,14 @@ public class Building : MonoBehaviour
         }
     }
 
+    public SpriteRenderer FoundationSpriteRenderer
+    {
+        get
+        {
+            return foundationSpriteRenderer;
+        }
+    }
+
     public bool HasUniqueBounce
     {
         get
@@ -310,6 +318,8 @@ public class Building : MonoBehaviour
             UnStartDeconstruction();
         }
     }
+
+    public bool CanRemoveInput => !removing || removeCounter == 0;
 
     public virtual void UnStartDeconstruction()
     {
