@@ -222,6 +222,15 @@ public class BuildingPlacer : MonoBehaviour
                 curObstacle.FoundationSpriteRenderer.color = Color.red;
             }
         }
+
+        foreach (Grass curGrass in PublicInfo.reference.grassList)
+        {
+            if (curGrass.CanRemoveInput)
+            {
+                curGrass.SpriteRenderer.color = Color.red;
+                curGrass.FoundationSpriteRenderer.color = Color.red;
+            }
+        }
     }
 
     void TurnRemoveOff()
@@ -245,6 +254,12 @@ public class BuildingPlacer : MonoBehaviour
         {
             curObstacle.SpriteRenderer.color = Color.white;
             curObstacle.FoundationSpriteRenderer.color = Color.white;
+        }
+
+        foreach (Grass curGrass in PublicInfo.reference.grassList)
+        {
+            curGrass.SpriteRenderer.color = Color.white;
+            curGrass.FoundationSpriteRenderer.color = Color.white;
         }
     }
 

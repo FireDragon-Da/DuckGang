@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Grass : Building , Farmlike
@@ -18,6 +19,8 @@ public class Grass : Building , Farmlike
     //Ideally alot of this stuff would have been done in mapgen
     protected override void Start()
     {
+        base.Start();
+
         Vector2Int arrayPos = MapManager.reference.TilemapPosToArrayPos(
             MapManager.reference.TransformPosToTilemapPos(transform.position)
         );
@@ -41,18 +44,16 @@ public class Grass : Building , Farmlike
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    public override IEnumerator BuildingInteract(DuckWalk duck)
     {
-        if (collision.CompareTag("Duck"))
+        yield return StartCoroutine(base.BuildingInteract(duck));
+        if (!continueBehavior)
         {
-            
-            if (collision.GetComponent<DuckWalk>().beingDragged)
-            {
-                return;
-            }
-
-            UseGrass();
+            yield break;
         }
+
+        yield return 2f;
+        UseGrass();
     }
 
     public void UseGrass()
@@ -108,6 +109,18 @@ public class Grass : Building , Farmlike
     public void RemoveBoost()
     {
         compostBoost--;
+    }
+
+    public override void StartDeconstruction()
+    {
+        PublicInfo.reference.grassList.Remove(this);
+        base.StartDeconstruction();
+    }
+
+    public override void UnStartDeconstruction()
+    {
+        PublicInfo.reference.grassList.Add(this);
+        base.UnStartDeconstruction();
     }
 
 }

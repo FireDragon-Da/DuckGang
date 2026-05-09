@@ -436,15 +436,7 @@ public class DuckWalk : MonoBehaviour
         foreach (Collider2D curHit in hits)
         {
             OnTriggerEnter2D(curHit);
-
-            Grass temp = curHit.GetComponent<Grass>();
-
-            if (temp)
-            {
-                temp.UseGrass();
-            }
         }
-
     }
 
 }
