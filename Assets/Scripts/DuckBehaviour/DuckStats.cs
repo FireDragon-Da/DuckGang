@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(DuckHunger))]
 public class DuckStats : MonoBehaviour
@@ -170,7 +171,8 @@ public class DuckStats : MonoBehaviour
         //SaddnessResistance affects how often this procs
         yield return new WaitForSeconds(1 * UpgradeMeetingManager.reference.SadnessResistance);
         phd += TuningManager.reference.passiveDrop * (PublicInfo.reference.duckList.Count + 1);
-        print("passive happiness drop at " + phd);
+        phd = Mathf.Clamp(phd, 0, 100);
+        //print("passive happiness drop at " + phd);
 
         if (phd > 1)
         {
@@ -189,16 +191,16 @@ public class DuckStats : MonoBehaviour
         switch (otherHappiness)
         {
             case > 70:
-                happyMod = 2;
+                happyMod = Random.Range(-1, 4);
                 break;
             case > 50:
-                happyMod = 1;
+                happyMod = Random.Range(-2, 3);
                 break;
             case > 30:
-                happyMod = -2;
+                happyMod = Random.Range(-2, 2);
                 break;
             default:
-                happyMod = -3;
+                happyMod = Random.Range(-4, 1);
                 break;
         }
 

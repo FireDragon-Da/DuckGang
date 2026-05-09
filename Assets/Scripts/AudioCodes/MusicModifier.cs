@@ -21,12 +21,12 @@ public class MusicModifier : MonoBehaviour
 
     public void SwitchToFast()
     {
-        MainTheme.pitch = 2;
+        //MainTheme.pitch = 2;
     }
 
     public void SwitchToPaused()
     {
-        MainTheme.pitch = .6f;
+        //MainTheme.pitch = .6f;
     }
 
     public void SwitchToNeutral()
