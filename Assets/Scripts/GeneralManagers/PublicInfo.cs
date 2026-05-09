@@ -17,6 +17,7 @@ public class PublicInfo : MonoBehaviour
     public List<Building> curBuildingList = new();
     public List<DiningHall> diningHalls = new();
     public List<CompostSite> activeSites = new();
+    public List<Obstacle> obstacleList = new();
 
     void Awake()
     {
