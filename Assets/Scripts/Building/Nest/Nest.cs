@@ -19,6 +19,8 @@ public class Nest : Building
 
     [SerializeField] List<Sprite> sprites;
 
+    [SerializeField] int usageChangePerUse = 1;
+
     public bool Empty
     {
         get
@@ -115,7 +117,7 @@ public class Nest : Building
         PlayInteractBounce();
         SoundSystem.instance.PlaySound("egg-spawn-baby-duck");
         empty = true;
-        timesUsed++;
+        timesUsed += usageChangePerUse;
         if (timesUsed >= actualTotalUses)
         {
             PublicInfo.reference.nestList.Remove(this);
