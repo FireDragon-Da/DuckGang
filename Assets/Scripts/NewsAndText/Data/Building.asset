@@ -23,7 +23,7 @@ MonoBehaviour:
     clearExistingContent: 0
   - categoryName: Farm
     contentList:
-    - has become the farmer with the last kick.
+    - has mastered the farmland.
     - "Farmland: Grows crops. Ducks can collect them when it's time to harvest, or
       water them when not! \n[b]\n[c]\nUnlocking Condition: Collect 10 crumbies from
       the grass!"
@@ -34,8 +34,8 @@ MonoBehaviour:
     clearExistingContent: 0
   - categoryName: Nest
     contentList:
-    - has just built a love nest
-    - "Nest: Two ducks can breed and hatch a baby! \n[b]\n[c]"
+    - has just built a love nest!
+    - "Nest: Two ducks can fall in love and hatch a baby! \n[b]\n[c]"
     - Your ducks remembered how to build nests! Those should be useful in keeping
       the population from dropping. (Which would be bad.)
     sourceTxtFile: {fileID: 0}
@@ -59,7 +59,7 @@ MonoBehaviour:
     clearExistingContent: 0
   - categoryName: Goldencorn
     contentList:
-    - just jump into capitalism by finish building the Golden corn
+    - just jumped into capitalism by building the Golden corn.
     - "Golden Corn: Ducks will go straight to the nearest farm or grass when touching
       it or when the horn blows. \n[b]\n[c]\nUnlocking Condition: Build 2 farmlands."
     - Have you ever heard of golden corn? Building it can remind ducks to farm!
@@ -86,9 +86,15 @@ MonoBehaviour:
     clearExistingContent: 0
   - categoryName: Secretsite
     contentList:
-    - built a secret site for deep dark fantasys.
-    - "Mr Duckson's Secret Site: Ducks can stores crumbies here. \n[b]\n[c]\nUnlock
-      Condition: Collect 300 crumbies from all sources."
+    - built a secret site..
+    - 'Mr Duckson''s Secret Site: Ducks can stores crumbies here for a great return!
+
+      [b]
+
+      [c]
+
+      Unlock
+      Condition: Collect 300 crumbies from all sources.'
     - Your citizens have learned about investment banking! If you set aside some
       crumbs for a Mr. Duckson, I've heard he might give you a hefty return.
     sourceTxtFile: {fileID: 0}
@@ -96,7 +102,7 @@ MonoBehaviour:
     clearExistingContent: 0
   - categoryName: Hammersaw
     contentList:
-    - has just built a hammersaw
+    - has just built a new statue.
     - 'Hammer & Saw Symmbol: Ducks will go straight to the nearest construction site
       when they make contact.
 
@@ -117,25 +123,24 @@ MonoBehaviour:
     - "Straw Craft: This will force ducks to stay in a work area for several duck
       minutes and produce crumbies. \n[b]\n[c]\nUnlock Condition: Collect 30 crumbies
       from Farmland in total."
-    - 'Straw Craft unlocked! Ducks have learnt a new way to produce more crumbies:
-      doing labors and making the raw materials into advanced products, after collecting
-      many raw materials from the farmlands!'
+    - 'I think we could use some more crumbs, don''t you? A straw craft workshop
+      could get us there... '
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Altar
     contentList:
-    - has triggered the apocolypse.
+    - has initiated the ritual...
     - "Altar: Sacrifice one duck to produce more crumbies. \n[b]\n[c]\nUnlock Condition:
       Have 6 ducks.\nCan only be placed once."
-    - Altar unlocked! Overpopulation is dangerous! Ducks have figured out a way to
-      deal with this problem... Their Gods will reward them for building this altar!
+    - Overpopulation could be dangerous...I've drawn up a way we could fix that.
+      And it's lucrative!
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Drum
     contentList:
-    - do not know why but made some drums to play
+    - made some drums to play.
     - 'Duck duck Drum: When the drum roars the speed of ducks increase!
 
       [b]
@@ -144,8 +149,8 @@ MonoBehaviour:
 
       Unlock
       Condition: Ducks collide buildings 20 times in total.'
-    - 'Duck duck drum unlocked! Ducks have learnt the benefit of walking like a New
-      Yorker after working enough times in different buildings. '
+    - Your ducks have discovered music! Some drums could speed things up, don't you
+      think?
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
@@ -161,6 +166,37 @@ MonoBehaviour:
       Unlock
       Condition: have six ducks.'
     - 
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Statue
+    contentList:
+    - built something beautiful.
+    - 'Statue: a beautiful, beautiful, BEAUTIFUL statue.
+
+      [b]
+
+      [c]
+
+      Unlock
+      Condition: earn 10,000 crumbs.'
+    - Riches beyond imagination!!  ...maybe we could build something new with them?
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: InfiNest
+    contentList:
+    - built a forever love.
+    - 'PermaNest: a nest that never deteriorates! A love that lasts forever!
+
+      [b]
+
+      [c]
+
+      Unlock
+      Condition: have 30 ducks.'
+    - Those nests your ducks build seem a little fragile, don't they? ...I've drawn
+      up an alternative.
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0

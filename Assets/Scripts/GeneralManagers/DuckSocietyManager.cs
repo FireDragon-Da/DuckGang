@@ -35,7 +35,7 @@ public class DuckSocietyManager : MonoBehaviour
         int totalHappiness = 0;
         foreach (GameObject duck in PublicInfo.reference.duckList)
         {
-            totalHappiness += duck.GetComponent<DuckStats>().Happiness;
+            totalHappiness += duck.GetComponent<DuckStats>().Happiness > 40 ? duck.GetComponent<DuckStats>().Happiness : 50 ;
         }
 
         int averageHappiness = totalHappiness / PublicInfo.reference.duckList.Count;
@@ -64,13 +64,38 @@ public class DuckSocietyManager : MonoBehaviour
 
         if (TextBox.reference != null)
         {
-            string deathLine = quacxiconSO != null
-                ? quacxiconSO.GetRandomLogFromCategory(deathCategoryName)
-                : null;
+            string deathLine = null;
 
-            string message = string.IsNullOrEmpty(deathLine)
-                ? $"<color=red>{duckName} has died.</color>"
-                : $"<color=red>{duckName}: {deathLine}</color>";
+            if (quacxiconSO != null)
+            {
+                string categoryToSearch = "";
+                switch (reason)
+                {
+                    case DeathReason.OldAge:
+                        categoryToSearch = "Death_OldAge";
+                        break;
+                    case DeathReason.Starvation:
+                        categoryToSearch = "Death_Starvation";
+                        break;
+                    case DeathReason.Disappeared:
+                        categoryToSearch = "Death_Disappeared";
+                        break;
+                    case DeathReason.Suicide:
+                        categoryToSearch = "Death_Suicide";
+                        break;
+                    default:
+                        categoryToSearch = "Death";
+                        break;
+                }
+
+                deathLine = quacxiconSO.GetRandomLogFromCategory(categoryToSearch);
+            }
+
+            string message;
+            if (string.IsNullOrEmpty(deathLine))
+                message = $"<color=#B22727>{duckName} has died.</color>";
+            else
+                message = $"<color=#B22727>{duckName} {deathLine}</color>";
 
             TextBox.reference.gameObject.SetActive(true);
             TextBox.reference.AddLine(message);

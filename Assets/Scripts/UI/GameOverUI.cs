@@ -51,7 +51,7 @@ public class GameOverUI : MonoBehaviour
             string endingText = quacxiconSO.GetRandomLogFromCategory("GameOver");
             if (string.IsNullOrEmpty(endingText))
             {
-                endingText = "Every ducks are gone...\n\nHere ends the Quack Land\n\nHope you will be better£¬\nIn the next Journey";
+                endingText = "Every ducks are gone...\n\nHere ends the Quack Land\n\nHope you will be betterï¿½ï¿½\nIn the next Journey";
             }
             messageText.text = endingText;
         }

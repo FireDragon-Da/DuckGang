@@ -5,6 +5,7 @@ public class StartMenuUI : MonoBehaviour
     public static StartMenuUI reference;
 
     [SerializeField] GameObject startMenuPanel;
+    [SerializeField] GameObject buttons;
     [SerializeField] GameObject settingsPanel;
 
     bool gameStarted;
@@ -24,6 +25,12 @@ public class StartMenuUI : MonoBehaviour
         if (startMenuPanel != null)
         {
             startMenuPanel.SetActive(true);
+
+            // 让开始界面的所有Animator在时间暂停时仍能正常播放动画
+            foreach (Animator animator in startMenuPanel.GetComponentsInChildren<Animator>(true))
+            {
+                animator.updateMode = AnimatorUpdateMode.UnscaledTime;
+            }
         }
 
         if (settingsPanel != null)
@@ -58,7 +65,7 @@ public class StartMenuUI : MonoBehaviour
         {
             if (startMenuPanel != null)
             {
-                startMenuPanel.SetActive(false);
+                buttons.SetActive(false);
             }
 
             settingsPanel.SetActive(true);
@@ -76,7 +83,7 @@ public class StartMenuUI : MonoBehaviour
         {
             if (startMenuPanel != null)
             {
-                startMenuPanel.SetActive(true);
+                buttons.SetActive(true);
             }
         }
         else

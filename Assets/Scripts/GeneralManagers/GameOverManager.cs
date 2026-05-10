@@ -67,6 +67,8 @@ public class GameOverManager : MonoBehaviour
             }
             gameOverMessageText.text = endingText;
         }
+
+        MouseCursor.reference.SetSprite(MouseCursor.CursorType.Normal);
     }
 
     public void RestartGame()

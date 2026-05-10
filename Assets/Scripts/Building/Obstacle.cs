@@ -10,6 +10,7 @@ public class Obstacle : Building
         BasicBuild();
         UpdateBuildingGrid();
         useInteractBounce = false;
+        PublicInfo.reference.obstacleList.Add(this);
     }
 
     void UpdateBuildingGrid()
@@ -58,4 +59,11 @@ public class Obstacle : Building
 
         progressBar.ChangeFill((float)removeCounter/actualRemoveHitsRequired);
     }
+
+    public override void Remove()
+    {
+        PublicInfo.reference.obstacleList.Remove(this);
+        Destroy(gameObject);
+    }
+
 }

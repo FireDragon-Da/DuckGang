@@ -19,6 +19,8 @@ public class Nest : Building
 
     [SerializeField] List<Sprite> sprites;
 
+    [SerializeField] int usageChangePerUse = 1;
+
     public bool Empty
     {
         get
@@ -40,6 +42,13 @@ public class Nest : Building
         PublicInfo.reference.nestList.Remove(this);
         base.StartDeconstruction();
     }
+
+    public override void UnStartDeconstruction()
+    {
+        PublicInfo.reference.nestList.Add(this);
+        base.UnStartDeconstruction();
+    }
+
 
     public override IEnumerator BuildingInteract(DuckWalk duck)
     {
@@ -66,7 +75,7 @@ public class Nest : Building
                 StartCoroutine(WaitEgg());
                 duck.RemoveEffect<LoveEffect>();
 
-                float percentage = timesUsed / actualTotalUses;
+                float percentage = (float)timesUsed / actualTotalUses;
                 int spriteNum = (int)(percentage * 3);
                 spriteRenderer.sprite = sprites[spriteNum * 2 + 1];
             }
@@ -108,7 +117,7 @@ public class Nest : Building
         PlayInteractBounce();
         SoundSystem.instance.PlaySound("egg-spawn-baby-duck");
         empty = true;
-        timesUsed++;
+        timesUsed += usageChangePerUse;
         if (timesUsed >= actualTotalUses)
         {
             PublicInfo.reference.nestList.Remove(this);
@@ -116,7 +125,7 @@ public class Nest : Building
         }
         else
         {
-            float percentage = timesUsed / actualTotalUses;
+            float percentage = (float)timesUsed / actualTotalUses;
             int spriteNum = (int)(percentage * 3);
             spriteRenderer.sprite = sprites[spriteNum * 2];
         }

@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class DiningHall : Building
@@ -17,6 +18,8 @@ public class DiningHall : Building
 
     [SerializeField] float fillTime = 2f;
 
+    [SerializeField] TextMeshProUGUI displayFood;
+
     int foodToGainSoon;
 
     public override IEnumerator BuildingInteract(DuckWalk duck)
@@ -29,7 +32,7 @@ public class DiningHall : Building
 
         TutorialLines.reference.TryActivate(Tutorials.DiningHall);
 
-        if (heldFood + (interacting.Count-1) * foodGainPerHit < foodCap)
+        if (heldFood + foodToGainSoon < foodCap)
         {
             int effectivelyHeldFood = heldFood + foodToGainSoon;
             int amountNeeded = (foodGainPerHit + effectivelyHeldFood > foodCap) ? (foodCap - effectivelyHeldFood) : foodGainPerHit;
@@ -66,6 +69,12 @@ public class DiningHall : Building
         base.StartDeconstruction();
     }
 
+    public override void UnStartDeconstruction()
+    {
+        PublicInfo.reference.diningHalls.Add(this);
+        base.UnStartDeconstruction();
+    }
+
     public bool HasFood(int amount)
     {
         return heldFood >= amount;
@@ -100,7 +109,19 @@ public class DiningHall : Building
         else
         {
             spriteRenderer.sprite = emptySprite;
+            SoundSystem.instance.PlaySound("dining-hall-empty");
         }
+    }
+
+    void OnMouseOver()
+    {
+        displayFood.enabled = true;
+        displayFood.text = heldFood + "/" + foodCap;
+    }
+
+    void OnMouseExit()
+    {
+        displayFood.enabled = false;
     }
 
 }

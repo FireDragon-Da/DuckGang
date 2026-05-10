@@ -33,6 +33,8 @@ public class DuckDragger : MonoBehaviour
                             MouseCursor.reference.SetSprite(MouseCursor.CursorType.Grab);
 
                             TutorialLines.reference.TryActivate(Tutorials.DuckClicked);
+
+                            curDuck.GetComponent<DuckStats>().SetDangling(true);
                         }
                     }
                 }
@@ -46,6 +48,7 @@ public class DuckDragger : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 curDuck.beingDragged = false;
+                curDuck.GetComponent<DuckStats>().SetDangling(false);
 
                 curDuck.Place();
 

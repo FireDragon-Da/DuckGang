@@ -246,8 +246,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -121, y: -354}
-  m_SizeDelta: {x: 370, y: 195}
+  m_AnchoredPosition: {x: -121, y: -330.81}
+  m_SizeDelta: {x: 370, y: 241.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4767490828378897723
 CanvasRenderer:
@@ -595,8 +595,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22, y: -84}
-  m_SizeDelta: {x: 368.788, y: 195.229}
+  m_AnchoredPosition: {x: -22, y: -72.765}
+  m_SizeDelta: {x: 368.788, y: 217.699}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6671379106549052622
 CanvasRenderer:
@@ -1613,16 +1613,16 @@ MonoBehaviour:
   changeInQuacklandText: {fileID: 2093638417114130201}
   welcomeToLifeContent: {fileID: 1339378928732869028}
   goodbyeFromLifeContent: {fileID: 1366798135807445167}
+  lifeDeathOverflowThreshold: 50
+  lifeDeathMaxShownWhenOverflow: 10
+  birthOverflowSuffixFormat: and {0} ducks were born
+  deathOverflowSuffixFormat: and {0} ducks died
   topPriorityTitleText: {fileID: 7848066495884907706}
   topPriorityContentText: {fileID: 1692435558532987046}
   secondPriorityTitleText: {fileID: 5373015446105427502}
   secondPriorityContentText: {fileID: 5161985125893049035}
   duckPhotoImage1: {fileID: 3755345851288018447}
   duckPhotoImage2: {fileID: 7079727641845414455}
-  photoCaptureInterval: 60
-  photoWidth: 370
-  photoHeight: 195
-  photoCaptureZoom: 3
 --- !u!114 &3790887154377196170
 MonoBehaviour:
   m_ObjectHideFlags: 0

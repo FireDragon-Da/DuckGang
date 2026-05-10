@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -84,6 +83,14 @@ public class NewspaperController : MonoBehaviour
     [SerializeField] private TMP_Text welcomeToLifeContent;
     [SerializeField] private TMP_Text goodbyeFromLifeContent;
 
+    [Header("Life & Death List Limits")]
+    [Tooltip("When the birth or death count is greater than this, only the first few lines are shown and the rest are summarized.")]
+    [SerializeField] private int lifeDeathOverflowThreshold = 50;
+    [Tooltip("How many entries to show when the list overflows the threshold.")]
+    [SerializeField] private int lifeDeathMaxShownWhenOverflow = 10;
+    [SerializeField] private string birthOverflowSuffixFormat = "and {0} ducks were born";
+    [SerializeField] private string deathOverflowSuffixFormat = "and {0} ducks died";
+
     [Header("UI References - Articles")]
     [SerializeField] private TMP_Text topPriorityTitleText;
     [SerializeField] private TMP_Text topPriorityContentText;
@@ -94,15 +101,10 @@ public class NewspaperController : MonoBehaviour
     [SerializeField] private Image duckPhotoImage1;
     [SerializeField] private Image duckPhotoImage2;
 
-    [Header("Photo Capture Settings")]
-    [SerializeField] private float photoCaptureInterval = 60f;
-    [SerializeField] private int photoWidth = 512;
-    [SerializeField] private int photoHeight = 512;
-    [SerializeField] private float photoCaptureZoom = 3f;
-
-    private float photoTimer;
-    private Camera mainCamera;
-    private int currentPhotoIndex = 0;
+    // Static storage for captured photos - populated by TimeManager, persists across newspaper open/close
+    public static Sprite LatestPhoto1;
+    public static Sprite LatestPhoto2;
+    public static int latestPhotoIndex = 0;
 
     void Awake()
     {
@@ -114,19 +116,6 @@ public class NewspaperController : MonoBehaviour
         else
         {
             Destroy(gameObject);
-        }
-
-        mainCamera = Camera.main;
-        photoTimer = photoCaptureInterval;
-    }
-
-    void Update()
-    {
-        photoTimer -= Time.deltaTime;
-        if (photoTimer <= 0f)
-        {
-            photoTimer = photoCaptureInterval;
-            CaptureDuckPhoto();
         }
     }
 
@@ -145,6 +134,7 @@ public class NewspaperController : MonoBehaviour
         UpdateLifeSection(newbornDuckNames);
         UpdateDeathSection(recentDeaths);
         UpdateArticles(currentEvents);
+        RefreshDuckPhotos();
     }
 
     public void UpdateQuote(float happiness, float hunger)
@@ -178,12 +168,23 @@ public class NewspaperController : MonoBehaviour
             return;
         }
 
+        int total = newbornDuckNames.Count;
+        bool overflow = total > lifeDeathOverflowThreshold;
+        int showCount = overflow ? Mathf.Min(lifeDeathMaxShownWhenOverflow, total) : total;
+
         StringBuilder sb = new StringBuilder();
-        foreach (string duckName in newbornDuckNames)
+        for (int i = 0; i < showCount; i++)
         {
             string birthAction = quacxiconSO.GetRandomLogFromCategory("BirthActions");
-            sb.AppendLine($"{duckName} {birthAction}");
+            sb.AppendLine($"{newbornDuckNames[i]} {birthAction}");
         }
+
+        if (overflow)
+        {
+            int remainder = total - showCount;
+            sb.AppendLine(string.Format(birthOverflowSuffixFormat, remainder));
+        }
+
         welcomeToLifeContent.text = sb.ToString();
     }
 
@@ -195,33 +196,43 @@ public class NewspaperController : MonoBehaviour
             return;
         }
 
-        StringBuilder sb = new StringBuilder();
-        foreach (var death in recentDeaths)
-        {
-            string categoryToSearch = "";
-            switch (death.reason)
-            {
-                case DeathReason.OldAge:
-                    categoryToSearch = "Death_OldAge";
-                    break;
-                case DeathReason.Starvation:
-                    categoryToSearch = "Death_Starvation";
-                    break;
-                case DeathReason.Disappeared:
-                    categoryToSearch = "Death_Disappeared";
-                    break;
-                case DeathReason.Suicide:
-                    categoryToSearch = "Death_Suicide";
-                    break;
-                default:
-                    categoryToSearch = "Death_General";
-                    break;
-            }
+        int total = recentDeaths.Count;
+        bool overflow = total > lifeDeathOverflowThreshold;
+        int showCount = overflow ? Mathf.Min(lifeDeathMaxShownWhenOverflow, total) : total;
 
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < showCount; i++)
+        {
+            var death = recentDeaths[i];
+            string categoryToSearch = GetDeathLogCategory(death.reason);
             string deathAction = quacxiconSO.GetRandomLogFromCategory(categoryToSearch);
             sb.AppendLine($"{death.duckName} {deathAction}");
         }
+
+        if (overflow)
+        {
+            int remainder = total - showCount;
+            sb.AppendLine(string.Format(deathOverflowSuffixFormat, remainder));
+        }
+
         goodbyeFromLifeContent.text = sb.ToString();
+    }
+
+    private static string GetDeathLogCategory(DeathReason reason)
+    {
+        switch (reason)
+        {
+            case DeathReason.OldAge:
+                return "Death_OldAge";
+            case DeathReason.Starvation:
+                return "Death_Starvation";
+            case DeathReason.Disappeared:
+                return "Death_Disappeared";
+            case DeathReason.Suicide:
+                return "Death_Suicide";
+            default:
+                return "Death_General";
+        }
     }
 
     public void UpdateArticles(List<ArticleEvent> candidateArticles)
@@ -262,91 +273,23 @@ public class NewspaperController : MonoBehaviour
     }
 
     //---------------------------------------------------------------------------------
-    // Duck Photo Capture System
+    // Duck Photo Display
     //---------------------------------------------------------------------------------
 
-    private void CaptureDuckPhoto()
+    /// <summary>
+    /// Reads the latest captured sprites from DuckPhotoCaptureManager and applies them to the UI images.
+    /// Called on newspaper open and whenever a new capture arrives while the newspaper is open.
+    /// </summary>
+    public void RefreshDuckPhotos()
     {
-        GameObject randomDuck = GetRandomDuck();
-        if (randomDuck == null)
+        if (duckPhotoImage1 != null && LatestPhoto1 != null)
         {
-            Debug.Log("No ducks available for photo capture");
-            return;
+            duckPhotoImage1.sprite = LatestPhoto1;
         }
 
-        StartCoroutine(CaptureScreenshotCoroutine(randomDuck));
-    }
-
-    private GameObject GetRandomDuck()
-    {
-        GameObject[] allDucks = GameObject.FindGameObjectsWithTag("Duck");
-        if (allDucks.Length == 0)
+        if (duckPhotoImage2 != null && LatestPhoto2 != null)
         {
-            return null;
-        }
-
-        return allDucks[Random.Range(0, allDucks.Length)];
-    }
-
-    private IEnumerator CaptureScreenshotCoroutine(GameObject targetDuck)
-    {
-        if (mainCamera == null)
-        {
-            mainCamera = Camera.main;
-        }
-
-        Vector3 originalPosition = mainCamera.transform.position;
-        float originalSize = mainCamera.orthographicSize;
-
-        Vector3 duckPosition = targetDuck.transform.position;
-        mainCamera.transform.position = new Vector3(duckPosition.x, duckPosition.y, mainCamera.transform.position.z);
-        mainCamera.orthographicSize = photoCaptureZoom;
-
-        yield return new WaitForEndOfFrame();
-
-        RenderTexture renderTexture = new RenderTexture(photoWidth, photoHeight, 24);
-        RenderTexture currentRT = RenderTexture.active;
-        mainCamera.targetTexture = renderTexture;
-
-        mainCamera.Render();
-
-        RenderTexture.active = renderTexture;
-        Texture2D screenshot = new Texture2D(photoWidth, photoHeight, TextureFormat.RGB24, false);
-        screenshot.ReadPixels(new Rect(0, 0, photoWidth, photoHeight), 0, 0);
-        screenshot.Apply();
-
-        mainCamera.targetTexture = null;
-        RenderTexture.active = currentRT;
-        Destroy(renderTexture);
-
-        mainCamera.transform.position = originalPosition;
-        mainCamera.orthographicSize = originalSize;
-
-        UpdateDuckPhoto(screenshot);
-    }
-
-    private void UpdateDuckPhoto(Texture2D photoTexture)
-    {
-        if (photoTexture == null)
-        {
-            return;
-        }
-
-        Sprite photoSprite = Sprite.Create(
-            photoTexture,
-            new Rect(0, 0, photoTexture.width, photoTexture.height),
-            new Vector2(0.5f, 0.5f)
-        );
-
-        if (currentPhotoIndex == 0 && duckPhotoImage1 != null)
-        {
-            duckPhotoImage1.sprite = photoSprite;
-            currentPhotoIndex = 1;
-        }
-        else if (currentPhotoIndex == 1 && duckPhotoImage2 != null)
-        {
-            duckPhotoImage2.sprite = photoSprite;
-            currentPhotoIndex = 0;
+            duckPhotoImage2.sprite = LatestPhoto2;
         }
     }
 

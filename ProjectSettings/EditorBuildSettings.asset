@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Sprint 5 Build.unity
     guid: 60654b9d08414704591b84c1711f09ed
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Sprint6Build.unity
     guid: 18d8ebec40767ac44913759f457aa9e1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SoundTest.unity
     guid: 4f7a22a7cc19152489caf580d0e4667b
   m_configObjects:

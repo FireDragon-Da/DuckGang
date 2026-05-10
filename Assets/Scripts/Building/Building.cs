@@ -36,6 +36,7 @@ public class Building : MonoBehaviour
     protected float constructionCount;
     protected bool built;
     public bool Built => built;
+    int currentlyBuilding;
     bool hasFinalBuilder;
     [SerializeField] protected int placeCost;
     [SerializeField] protected int buildCost;
@@ -122,6 +123,14 @@ public class Building : MonoBehaviour
         }
     }
 
+    public SpriteRenderer FoundationSpriteRenderer
+    {
+        get
+        {
+            return foundationSpriteRenderer;
+        }
+    }
+
     public bool HasUniqueBounce
     {
         get
@@ -188,12 +197,16 @@ public class Building : MonoBehaviour
                 lastBuilderName = duckNameGen.CurrentDuckName;
             }
 
-            if (constructionCount >= actualConstructionNeeded - 1)
+            if (constructionCount + currentlyBuilding >= actualConstructionNeeded - 1)
             {
                 hasFinalBuilder = true;
             }
 
+            currentlyBuilding++;
+
             yield return StartCoroutine(WaitWithProgress(buildTime, duck.ProgressBar));
+
+            currentlyBuilding--;
 
             AddConstruct();
             SoundSystem.instance.StopSound("building-process-loop");
@@ -287,13 +300,33 @@ public class Building : MonoBehaviour
 
     public virtual void StartDeconstruction()
     {
-        if (removing) {return;}
+        if (removing) {
+            TryUnStartDeconstruction();
+            return;
+        }
 
         removing = true;
         progressBar.ShowBar();
         progressBar.ChangeFill(0);
         PublicInfo.reference.constructionList.Add(this);
         PublicInfo.reference.curBuildingList.Remove(this);
+    }
+
+    public virtual void TryUnStartDeconstruction()
+    {
+        if (removeCounter == 0 && built) {
+            UnStartDeconstruction();
+        }
+    }
+
+    public bool CanRemoveInput => !removing || removeCounter == 0;
+
+    public virtual void UnStartDeconstruction()
+    {
+        removing = false;
+        progressBar.HideBar();
+        PublicInfo.reference.constructionList.Remove(this);
+        PublicInfo.reference.curBuildingList.Add(this);
     }
 
     public virtual void StartBuild()

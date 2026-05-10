@@ -44,11 +44,11 @@ public class CameraScroller : MonoBehaviour
         {
             Vector3 mouseWorldBefore = cam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
 
-            targetSize -= zoomInput * zoomSpeed * Time.deltaTime;
+            targetSize -= zoomInput * zoomSpeed * Time.unscaledDeltaTime;
             targetSize = Mathf.Clamp(targetSize, minSize, maxSize);
 
             float oldSize = cam.orthographicSize;
-            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetSize, Time.deltaTime * 10);
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetSize, Time.unscaledDeltaTime * 10);
 
             float sizeRatio = cam.orthographicSize / oldSize;
             transform.position = mouseWorldBefore + (transform.position - mouseWorldBefore) * sizeRatio;
@@ -56,7 +56,7 @@ public class CameraScroller : MonoBehaviour
 
         Vector2 moveInput = playerInput.actions["Move"].ReadValue<Vector2>();
 
-        Vector3 newPos = transform.position + speed * Time.deltaTime * (Vector3)moveInput;
+        Vector3 newPos = transform.position + speed * Time.unscaledDeltaTime * (Vector3)moveInput;
 
         float verticalExtent = cam.orthographicSize;
         float horizontalExtent = cam.orthographicSize * cam.aspect;
@@ -69,6 +69,7 @@ public class CameraScroller : MonoBehaviour
 
         newPos.x = Mathf.Clamp(newPos.x, minX, maxX);
         newPos.y = Mathf.Clamp(newPos.y, minY, maxY);
+        newPos.z = 0;
 
         transform.position = newPos;
 

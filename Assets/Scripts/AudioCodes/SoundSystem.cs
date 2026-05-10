@@ -284,7 +284,18 @@ public class SoundSystem : MonoBehaviour
     public void StopAllSounds()
     {
 
-        foreach (AudioSource s in soundEffectsSources) { s.Stop(); }
+        if (soundEffectsSources == null)
+        {
+            return;
+        }
+
+        foreach (AudioSource source in soundEffectsSources)
+        {
+            if (source != null)
+            {
+                source.Stop();
+            }
+        }
 
     }
 }

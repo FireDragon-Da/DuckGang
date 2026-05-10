@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Grass : Building , Farmlike
@@ -18,6 +19,8 @@ public class Grass : Building , Farmlike
     //Ideally alot of this stuff would have been done in mapgen
     protected override void Start()
     {
+        base.Start();
+
         Vector2Int arrayPos = MapManager.reference.TilemapPosToArrayPos(
             MapManager.reference.TransformPosToTilemapPos(transform.position)
         );
@@ -41,41 +44,44 @@ public class Grass : Building , Farmlike
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    public override IEnumerator BuildingInteract(DuckWalk duck)
     {
-        if (collision.CompareTag("Duck"))
+        yield return StartCoroutine(base.BuildingInteract(duck));
+        if (!continueBehavior)
         {
-            
-            if (collision.GetComponent<DuckWalk>().beingDragged)
-            {
-                return;
-            }
+            yield break;
+        }
 
-            if (!hasFood)
-            {
-                return;
-            }
+        yield return 2f;
+        UseGrass();
+    }
 
-            int gain = 1;
-            gain += compostBoost;
+    public void UseGrass()
+    {
+        if (!hasFood)
+        {
+            return;
+        }
 
-            if (MeetingManager.reference.hasGatherSociety)
-            {
-                gain += 1;
-            }
+        int gain = 1;
+        gain += compostBoost;
 
-            CrumbManager.reference.GainCrumbs(gain);
-            PublicInfo.reference.crumbieGainedFromGrass += gain;
-            SoundSystem.instance.PlaySound("grass");
-            CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, gain);
+        if (MeetingManager.reference.hasGatherSociety)
+        {
+            gain += 1;
+        }
 
-            hits++;
-            if (hits >= maxHits)
-            {
-                hasFood = false;
-                curGrowTimer = growTime;
-                spriteRenderer.sprite = emptySprite;
-            }
+        CrumbManager.reference.GainCrumbs(gain);
+        PublicInfo.reference.crumbieGainedFromGrass += gain;
+        SoundSystem.instance.PlaySound("grass");
+        CrumbManager.reference.SpawnCrumbiePopupIncrease(transform.position, gain);
+
+        hits++;
+        if (hits >= maxHits)
+        {
+            hasFood = false;
+            curGrowTimer = growTime;
+            spriteRenderer.sprite = emptySprite;
         }
     }
 
@@ -103,6 +109,18 @@ public class Grass : Building , Farmlike
     public void RemoveBoost()
     {
         compostBoost--;
+    }
+
+    public override void StartDeconstruction()
+    {
+        PublicInfo.reference.grassList.Remove(this);
+        base.StartDeconstruction();
+    }
+
+    public override void UnStartDeconstruction()
+    {
+        PublicInfo.reference.grassList.Add(this);
+        base.UnStartDeconstruction();
     }
 
 }

@@ -35,7 +35,11 @@ public class BuildingPlacer : MonoBehaviour
 
     void Update()
     {
-        if (removeToggled && !EventSystem.current.IsPointerOverGameObject())
+        if ((active || removeToggled) && Input.GetMouseButtonDown(1))
+        {
+            DisableBuildAndRemove();
+        }
+        else if (removeToggled && !EventSystem.current.IsPointerOverGameObject())
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D[] hits;
@@ -154,27 +158,108 @@ public class BuildingPlacer : MonoBehaviour
     public void EnableBuild()
     {
         active = true;
-        removeToggled = false;
+        TurnRemoveOff();
         MouseCursor.reference.SetSprite(MouseCursor.CursorType.None);
     }
 
     public void DisableBuildAndRemove()
     {
         active = false;
-        removeToggled = false;
+        TurnRemoveOff();
         MouseCursor.reference.SetSprite(MouseCursor.CursorType.Normal);
     }
 
     public void RemoveToggle()
     {
-        removeToggled = !removeToggled;
+        if (removeToggled)
+        {
+            TurnRemoveOff();
+        }
+        else
+        {
+            TurnRemoveOn();
+        }
         active = false;
+
         if (removeToggled)
         {
             MouseCursor.reference.SetSprite(MouseCursor.CursorType.Trash);
-        } else
+        }
+        else
         {
             MouseCursor.reference.SetSprite(MouseCursor.CursorType.Normal);
+        }
+    }
+
+    void TurnRemoveOn()
+    {
+        removeToggled = true;
+
+        //Highlight all options red
+        foreach (Building curBuilding in PublicInfo.reference.curBuildingList)
+        {
+            if (curBuilding.CanRemoveInput)
+            {
+                curBuilding.SpriteRenderer.color = Color.red;
+                curBuilding.FoundationSpriteRenderer.color = Color.red;
+            }
+        }
+
+        foreach (Building curBuilding in PublicInfo.reference.constructionList)
+        {
+            if (curBuilding.CanRemoveInput)
+            {
+                curBuilding.SpriteRenderer.color = Color.red;
+                curBuilding.FoundationSpriteRenderer.color = Color.red;
+            }
+        }
+
+        foreach (Obstacle curObstacle in PublicInfo.reference.obstacleList)
+        {
+            if (curObstacle.CanRemoveInput)
+            {
+                curObstacle.SpriteRenderer.color = Color.red;
+                curObstacle.FoundationSpriteRenderer.color = Color.red;
+            }
+        }
+
+        foreach (Grass curGrass in PublicInfo.reference.grassList)
+        {
+            if (curGrass.CanRemoveInput)
+            {
+                curGrass.SpriteRenderer.color = Color.red;
+                curGrass.FoundationSpriteRenderer.color = Color.red;
+            }
+        }
+    }
+
+    void TurnRemoveOff()
+    {
+        removeToggled = false;
+
+        //Unhighlight all buildings
+        foreach (Building curBuilding in PublicInfo.reference.curBuildingList)
+        {
+            curBuilding.SpriteRenderer.color = Color.white;
+            curBuilding.FoundationSpriteRenderer.color = Color.white;
+        }
+
+        foreach (Building curBuilding in PublicInfo.reference.constructionList)
+        {
+            curBuilding.SpriteRenderer.color = Color.white;
+            curBuilding.FoundationSpriteRenderer.color = Color.white;
+        }
+
+        foreach (Obstacle curObstacle in PublicInfo.reference.obstacleList)
+        {
+            curObstacle.SpriteRenderer.color = Color.white;
+            curObstacle.FoundationSpriteRenderer.color = Color.white;
+        }
+
+        foreach (Grass curGrass in PublicInfo.reference.grassList)
+        {
+            curGrass.SpriteRenderer.color = Color.white;
+            curGrass.FoundationSpriteRenderer.color = Color.white;
         }
     }
 
