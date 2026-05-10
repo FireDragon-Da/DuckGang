@@ -376,7 +376,7 @@ MonoBehaviour:
   buildingName: Statue
   unlocked: 0
   constructionNeeded: 2
-  placeCost: 100
+  placeCost: 10000
   buildCost: 0
   removeHitsRequired: 2
   buildTime: 2

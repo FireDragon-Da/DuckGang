@@ -76,9 +76,11 @@ public class UnlockingUIManager : MonoBehaviour
                     (b.gameObject.GetComponent<SecretSite>() && info.crumbieEverCollected >= 300) ||
                     (b.gameObject.GetComponent<HammerSaw>() && info.curBuildingList.Count >= 5) ||
                     (b.gameObject.GetComponent<StrawCraft>() && info.crumbieGainedFromFarmland >= 30) ||
-                    (b.gameObject.GetComponent<Altar>() && info.duckList.Count >= 20) ||
+                    (b.gameObject.GetComponent<Altar>() && info.duckList.Count >= 35) ||
                     (b.gameObject.GetComponent<Drum>() && info.duckCollideBuildingTimes >= 70) ||
-                    (b.gameObject.GetComponent<DiningHall>() && buildingBars.Count > 0))
+                    (b.gameObject.GetComponent<DiningHall>() && buildingBars.Count > 0) ||
+                    (b.gameObject.GetComponent<Building>().buildingName == "InfiNest" && info.duckList.Count >= 20) ||
+                    (b.gameObject.GetComponent<Building>().buildingName == "Statue" && CrumbManager.reference.Crumbs > 9999))
                 {
                     updateBuildMenu(b);
                 }

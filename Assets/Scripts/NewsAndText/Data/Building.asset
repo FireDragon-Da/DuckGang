@@ -169,7 +169,7 @@ MonoBehaviour:
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
-  - categoryName: HortonStatue
+  - categoryName: Statue
     contentList:
     - built something beautiful.
     - 'Statue: a beautiful, beautiful, BEAUTIFUL statue.
@@ -180,11 +180,11 @@ MonoBehaviour:
 
       Unlock
       Condition: earn 10,000 crumbs.'
-    - Riches beyond imagination... maybe we could build something new with them?
+    - Riches beyond imagination!!  ...maybe we could build something new with them?
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
-  - categoryName: PermaNest
+  - categoryName: InfiNest
     contentList:
     - built a forever love.
     - 'PermaNest: a nest that never deteriorates! A love that lasts forever!
