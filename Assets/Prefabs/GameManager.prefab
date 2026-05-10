@@ -4163,6 +4163,7 @@ MonoBehaviour:
   curBuildingList: []
   diningHalls: []
   activeSites: []
+  obstacleList: []
 --- !u!114 &3064272729836684732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4936,11 +4937,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1628695511758800338, guid: cda72d5e04cdbd7419c759a99110c20b, type: 3}
       propertyPath: m_Size
-      value: 0.30850902
+      value: 0.26875776
       objectReference: {fileID: 0}
     - target: {fileID: 1628695511758800338, guid: cda72d5e04cdbd7419c759a99110c20b, type: 3}
       propertyPath: m_Value
-      value: 1.0000006
+      value: 1.0000005
       objectReference: {fileID: 0}
     - target: {fileID: 1711563316267017409, guid: cda72d5e04cdbd7419c759a99110c20b, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5767,6 +5768,10 @@ PrefabInstance:
     - target: {fileID: 3290813905839133965, guid: 70027459b1cddd14ead682ff1d4ae945, type: 3}
       propertyPath: m_text
       value: Welcome, mayor!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3290813905839133965, guid: 70027459b1cddd14ead682ff1d4ae945, type: 3}
+      propertyPath: m_margin.z
+      value: 28.368881
       objectReference: {fileID: 0}
     - target: {fileID: 4594348320736551504, guid: 70027459b1cddd14ead682ff1d4ae945, type: 3}
       propertyPath: toggleButton

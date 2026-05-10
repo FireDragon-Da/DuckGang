@@ -16,31 +16,31 @@ MonoBehaviour:
   - categoryName: Death
     contentList:
     - has gone.
-    - Left to duck duck heaven
+    - has died.
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Death_OldAge
     contentList:
-    - died because of way too old.
+    - died of old age.
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Death_Suicide
     contentList:
-    - died because of Suicide
-    sourceTxtFile: {fileID: 0}
-    targetCategoryName: 
-    clearExistingContent: 0
-  - categoryName: Death_Suicide
-    contentList:
-    - died because of Suicide
+    - died of unhappiness.
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Death_Starvation
     contentList:
-    - died because of Hunger
+    - died of starvation.
+    sourceTxtFile: {fileID: 0}
+    targetCategoryName: 
+    clearExistingContent: 0
+  - categoryName: Death_Disappeared
+    contentList:
+    - disappeared forever.
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
