@@ -93,9 +93,9 @@ public class DuckSocietyManager : MonoBehaviour
 
             string message;
             if (string.IsNullOrEmpty(deathLine))
-                message = $"<color=blue>{duckName} has died.</color>";
+                message = $"<color=#B22727>{duckName} has died.</color>";
             else
-                message = $"<color=blue>{duckName} {deathLine}</color>";
+                message = $"<color=#B22727>{duckName} {deathLine}</color>";
 
             TextBox.reference.gameObject.SetActive(true);
             TextBox.reference.AddLine(message);
