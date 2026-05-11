@@ -84,9 +84,9 @@ public class UnlockingUIManager : MonoBehaviour
                     (b.gameObject.GetComponent<Playground>() && happiness <= 70) ||
                     (b.gameObject.GetComponent<GoldenCorn>() && info.farmList.Count >= (12 * 4)) ||
                     (b.gameObject.GetComponent<CompostSite>() && info.farmList.Count >= (5 * 4)) ||
-                    (b.gameObject.GetComponent<SecretSite>() && CrumbManager.reference.Crumbs >= 100) ||
+                    (b.gameObject.GetComponent<SecretSite>() && CrumbManager.reference.Crumbs >= 200) ||
                     (b.gameObject.GetComponent<HammerSaw>() && info.curBuildingList.Count >= 20) ||
-                    (b.gameObject.GetComponent<StrawCraft>() && info.crumbieGainedFromFarmland >= 200) ||
+                    (b.gameObject.GetComponent<StrawCraft>() && info.crumbieGainedFromFarmland >= 500) ||
                     (b.gameObject.GetComponent<Altar>() && info.duckList.Count >= 50) ||
                     (b.gameObject.GetComponent<Drum>() && info.duckList.Count >= 5) ||
                     (b.gameObject.GetComponent<DiningHall>() && buildingBars.Count > 0) ||
