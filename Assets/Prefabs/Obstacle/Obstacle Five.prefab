@@ -119,7 +119,7 @@ MonoBehaviour:
   constructionNeeded: 0
   placeCost: 0
   buildCost: 0
-  removeHitsRequired: 40
+  removeHitsRequired: 30
   buildTime: 2
   removeTime: 2
   filledSpots: 01010101

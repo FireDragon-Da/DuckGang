@@ -108,8 +108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db990c128f29774b920e265848ac22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  width: 2
-  height: 2
+  width: 3
+  height: 3
   spriteRenderer: {fileID: 8441657926999870883}
   foundationSpriteRenderer: {fileID: 8441657926999870883}
   walkable: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
   constructionNeeded: 0
   placeCost: 0
   buildCost: 0
-  removeHitsRequired: 40
+  removeHitsRequired: 90
   buildTime: 2
   removeTime: 2
   filledSpots: 01010101
@@ -176,7 +176,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
 --- !u!114 &-7284090793509697484
 MonoBehaviour:
@@ -217,7 +217,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4497072422537156931}
