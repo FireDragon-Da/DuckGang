@@ -74,7 +74,7 @@ MonoBehaviour:
       My specialty.
     - The newspaper shows what you have done for the community and gets updated after
       every duck month.
-    - The upgrade log shows you what upgrades your civilization has gotten.
+    - The upgrade log shows you what upgrades your ducks have gotten.
   - self: 5
     lines:
     - If you ever need a breather just press the pause button to stop time.
