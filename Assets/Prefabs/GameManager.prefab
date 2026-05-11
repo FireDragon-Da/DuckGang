@@ -4259,17 +4259,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UnlockingUIManager
   quacxiconSO: {fileID: 11400000, guid: d9affd977097b284db68ee2e6313957e, type: 2}
   buildingListGO:
+  - {fileID: 6237899826994094288, guid: 7c04a85c9d111054a9c5e735cb600a65, type: 3}
   - {fileID: 8082505532341099964, guid: 35c1f606f1779cb4fba759dcfeb9c4f7, type: 3}
   - {fileID: 4451300251334575320, guid: 5a3fb6bec21f1c0478ad03e534316d5e, type: 3}
-  - {fileID: 6237899826994094288, guid: 7c04a85c9d111054a9c5e735cb600a65, type: 3}
   - {fileID: 1187526609237102256, guid: d7afdf3bb28c1dd4b92d11b0e9059586, type: 3}
-  - {fileID: 8082505532341099964, guid: e804da39ad4107549b7d48948ce2a642, type: 3}
+  - {fileID: 8082505532341099964, guid: 3d2433a2ecd923a4d8cd2f702d925559, type: 3}
   - {fileID: 1187526609237102256, guid: aa41dde670de9554daec3f508e724dd1, type: 3}
   - {fileID: 1187526609237102256, guid: e7e2b56d42ff50c48a3c5186d5f4f4fc, type: 3}
+  - {fileID: 8082505532341099964, guid: e804da39ad4107549b7d48948ce2a642, type: 3}
   - {fileID: 1187526609237102256, guid: a9db84bd506f9d5409cc0637bb7a0be1, type: 3}
   - {fileID: 1187526609237102256, guid: 622f770417184504096035afbd1230ac, type: 3}
+  - {fileID: 6237899826994094288, guid: a989c8e67d39597409329fc5e2fe1012, type: 3}
   - {fileID: 1187526609237102256, guid: 6c3d73f84c10f9e4ca499e9d5734e000, type: 3}
-  - {fileID: 8082505532341099964, guid: 3d2433a2ecd923a4d8cd2f702d925559, type: 3}
+  - {fileID: 8082505532341099964, guid: 5abc16c3b26a8a14fb0f7d5450c2bee7, type: 3}
   buildingList: []
   unlockAllForDebug: 0
   lockedString: 

@@ -136710,18 +136710,6 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
-      propertyPath: buildingListGO.Array.size
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
-      propertyPath: 'buildingListGO.Array.data[11]'
-      value: 
-      objectReference: {fileID: 6237899826994094288, guid: a989c8e67d39597409329fc5e2fe1012, type: 3}
-    - target: {fileID: 2865197382281362407, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
-      propertyPath: 'buildingListGO.Array.data[12]'
-      value: 
-      objectReference: {fileID: 8082505532341099964, guid: 5abc16c3b26a8a14fb0f7d5450c2bee7, type: 3}
     - target: {fileID: 2922072152565152049, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_Size
       value: 1
@@ -136784,7 +136772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4164969681927187003, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00076217967
+      value: -0.00010294263
       objectReference: {fileID: 0}
     - target: {fileID: 5716779658420469607, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchorMax.x
@@ -136840,7 +136828,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9134085688117941406, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000015258789
+      value: 0.000014961399
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
