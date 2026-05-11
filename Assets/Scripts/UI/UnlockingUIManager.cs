@@ -60,8 +60,8 @@ public class UnlockingUIManager : MonoBehaviour
         int totalCost = (int)(b.ConstructionNeeded * b.BuildCost) + b.PlaceCost;
 
         return s
-            .Replace("[b]", (int)b.ConstructionNeeded + " effort needed")        
-            .Replace("[c]", totalCost + " crumbs needed");
+            .Replace("[b]", "\n\n\t" + totalCost)   
+            .Replace("[c]", "\t\t" + (int)b.ConstructionNeeded);
     }
 
     public void checkAllUnlocks()
