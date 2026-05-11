@@ -323,7 +323,7 @@ public class DuckWalk : MonoBehaviour
         }
 
         //decrease happiness on interacting if it's not an obstacle
-        if (curBuilding.GetComponent<Obstacle>() == null) 
+        if (curBuilding.GetComponent<Obstacle>() == null && curBuilding.GetComponent<Grass>() == null) 
         {
             stats.ModifyHappiness(TuningManager.reference.loseOnWork);
         } 

@@ -24,8 +24,9 @@ MonoBehaviour:
   - categoryName: Farm
     contentList:
     - has mastered the farmland.
-    - 'Farmland: Grows crops. Ducks can collect them when it''s time to harvest,
-      or water them when not! [b][c]'
+    - 'Farmland
+
+      Water & harvest to produce crumbs. [b][c]'
     - Your citizens remembered how to farm! Build and harvest from farms to keep
       them from going hungry.
     sourceTxtFile: {fileID: 0}
@@ -34,17 +35,19 @@ MonoBehaviour:
   - categoryName: Nest
     contentList:
     - has just built a love nest!
-    - 'Nest: Two ducks can fall in love and hatch a baby! [b][c]'
-    - Your ducks remembered how to build nests! Those should be useful in keeping
-      the population from dropping. (Which would be bad.)
+    - 'Nest
+
+      Two ducks can fall in love and hatch a baby! [b][c]'
+    - 
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Playground
     contentList:
     - wants to play and built a playground. Hurray!
-    - 'Playground: A place for ducks to relax after working hard. Boosts happiness
-      of ducks![b][c]'
+    - 'Playground
+
+      A place for ducks to relax! Boosts happiness of ducks.[b][c]'
     - Hey, people are starting to get unhappy...I drew up some plans for a playground.
       Maybe that will cheer them up?
     sourceTxtFile: {fileID: 0}
@@ -53,8 +56,9 @@ MonoBehaviour:
   - categoryName: Goldencorn
     contentList:
     - just jumped into capitalism by building the Golden corn.
-    - 'Golden Corn: Ducks will go straight to the nearest farm or grass when touching
-      it or when the horn blows. [b][c]'
+    - 'Golden Corn
+
+      Ducks will go straight to the nearest farm or grass. [b][c]'
     - Have you ever heard of golden corn? Building it can remind ducks to farm!
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
@@ -62,8 +66,10 @@ MonoBehaviour:
   - categoryName: Compostsite
     contentList:
     - has made the gorgeous Compostsite
-    - 'Compost Site: Every farm or grass within its range will produce more crumbies
-      when ducks collide with it.[b][c]'
+    - 'Compost Site
+
+      Every farm or grass within its range will produce more
+      crumbs.[b][c]'
     - 'Hey, your citizens remembered something else about farming: compost!
 
       ...gross!'
@@ -73,7 +79,9 @@ MonoBehaviour:
   - categoryName: Secretsite
     contentList:
     - built a secret site..
-    - 'Mr Duckson''s Secret Site: Ducks can stores crumbies here for a great return![b][c]'
+    - 'Mr Duckson''s Secret Site
+
+      Ducks can store crumbs here for a great return![b][c]'
     - Your citizens have learned about investment banking! If you set aside some
       crumbs for a Mr. Duckson, I've heard he might give you a hefty return.
     sourceTxtFile: {fileID: 0}
@@ -82,8 +90,10 @@ MonoBehaviour:
   - categoryName: Hammersaw
     contentList:
     - has just built a new statue.
-    - 'Hammer & Saw Symmbol: Ducks will go straight to the nearest construction site
-      when they make contact.[b][c]'
+    - 'Hammer & Saw Symbol
+
+      Ducks will go straight to the nearest construction
+      site.[b][c]'
     - Have you ever heard of the symbol of the hammer and saw? Building it can remind
       your ducks to construct new buildings!
     sourceTxtFile: {fileID: 0}
@@ -92,8 +102,8 @@ MonoBehaviour:
   - categoryName: Strawcraft
     contentList:
     - built a strawcraft for yourcraft.
-    - 'Straw Craft: This will force ducks to stay in a work area for several duck
-      minutes and produce crumbies.[b][c]'
+    - "Straw Craft \nDucks will stay in a work area for several duck minutes and
+      produce crumbs.[b][c]"
     - 'I think we could use some more crumbs, don''t you? A straw craft workshop
       could get us there... '
     sourceTxtFile: {fileID: 0}
@@ -102,10 +112,9 @@ MonoBehaviour:
   - categoryName: Altar
     contentList:
     - has initiated the ritual...
-    - 'Altar: Sacrifice one duck to produce more crumbies.[b][c]
+    - 'Altar
 
-      Can only
-      be placed once.'
+      Sacrifice one duck to produce crumbs. Can only be placed once.[b][c]'
     - Overpopulation could be dangerous...I've drawn up a way we could fix that.
       And it's lucrative!
     sourceTxtFile: {fileID: 0}
@@ -114,7 +123,9 @@ MonoBehaviour:
   - categoryName: Drum
     contentList:
     - made some drums to play.
-    - 'Duck duck Drum: When the drum roars the speed of ducks increase![b][c]'
+    - 'Duck Duck Drum
+
+      When the drum roars the speed of ducks increase![b][c]'
     - Your ducks have discovered music! Some drums could speed things up, don't you
       think?
     sourceTxtFile: {fileID: 0}
@@ -123,7 +134,9 @@ MonoBehaviour:
   - categoryName: Dininghall
     contentList:
     - built another dining hall!
-    - 'Dining Hall: ducks will store crumbs here to eat at the end of the month.[b][c]'
+    - 'Dining Hall
+
+      Ducks will store crumbs here to eat.[b][c]'
     - 
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
@@ -131,7 +144,9 @@ MonoBehaviour:
   - categoryName: Statue
     contentList:
     - built something beautiful.
-    - 'Statue: a beautiful, beautiful, BEAUTIFUL statue.[b][c]'
+    - 'Horton Statue
+
+      A beautiful, beautiful, BEAUTIFUL statue.[b][c]'
     - Riches beyond imagination!!  ...maybe we could build something new with them?
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
@@ -139,7 +154,9 @@ MonoBehaviour:
   - categoryName: InfiNest
     contentList:
     - built a forever love.
-    - 'PermaNest: a nest that never deteriorates! A love that lasts forever![b][c]'
+    - 'InfiNest
+
+      A nest that never deteriorates! A love that lasts forever![b][c]'
     - Those nests your ducks build seem a little fragile, don't they? ...I've drawn
       up an alternative.
     sourceTxtFile: {fileID: 0}

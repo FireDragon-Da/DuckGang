@@ -239,12 +239,12 @@ MonoBehaviour:
   quacxiconSO: {fileID: 11400000, guid: d9affd977097b284db68ee2e6313957e, type: 2}
   buildingName: InfiNest
   unlocked: 0
-  constructionNeeded: 2
-  placeCost: 5
-  buildCost: 5
+  constructionNeeded: 4
+  placeCost: 200
+  buildCost: 0
   removeHitsRequired: 2
   buildTime: 2
-  removeTime: 3
+  removeTime: 2
   filledSpots: 01
   hasUniqueBounce: 0
   vfxHandler: {fileID: 0}

@@ -66,23 +66,32 @@ public class UnlockingUIManager : MonoBehaviour
 
     public void checkAllUnlocks()
     {
+        //calculate average happiness
+        int happiness = 0;
+        foreach (GameObject duck in PublicInfo.reference.duckList)
+        {
+            happiness += duck.GetComponent<DuckStats>().Happiness;
+        }
+
+        happiness /= PublicInfo.reference.duckList.Count;
+
         foreach (Building b in buildingList)
         {
             if (!b.unlocked)
             {
                 if ((b.gameObject.GetComponent<FarmHolder>() && info.crumbieGainedFromGrass >= 10) ||
-                    (b.gameObject.GetComponent<Nest>() && info.farmList.Count >= 1) ||
-                    (b.gameObject.GetComponent<Playground>() && info.crumbieEverCollected >= 50) ||
-                    (b.gameObject.GetComponent<GoldenCorn>() && info.farmList.Count >= 8) ||
-                    (b.gameObject.GetComponent<CompostSite>() && info.farmList.Count >= 12) ||
-                    (b.gameObject.GetComponent<SecretSite>() && info.crumbieEverCollected >= 300) ||
-                    (b.gameObject.GetComponent<HammerSaw>() && info.curBuildingList.Count >= 5) ||
-                    (b.gameObject.GetComponent<StrawCraft>() && info.crumbieGainedFromFarmland >= 30) ||
-                    (b.gameObject.GetComponent<Altar>() && info.duckList.Count >= 35) ||
-                    (b.gameObject.GetComponent<Drum>() && info.duckCollideBuildingTimes >= 70) ||
+                    (b.gameObject.GetComponent<Building>().buildingName == "Nest" && buildingBars.Count > 0) ||
+                    (b.gameObject.GetComponent<Playground>() && happiness <= 70) ||
+                    (b.gameObject.GetComponent<GoldenCorn>() && info.farmList.Count >= (12 * 4)) ||
+                    (b.gameObject.GetComponent<CompostSite>() && info.farmList.Count >= (5 * 4)) ||
+                    (b.gameObject.GetComponent<SecretSite>() && CrumbManager.reference.Crumbs >= 100) ||
+                    (b.gameObject.GetComponent<HammerSaw>() && info.curBuildingList.Count >= 20) ||
+                    (b.gameObject.GetComponent<StrawCraft>() && info.crumbieGainedFromFarmland >= 200) ||
+                    (b.gameObject.GetComponent<Altar>() && info.duckList.Count >= 50) ||
+                    (b.gameObject.GetComponent<Drum>() && info.duckList.Count >= 5) ||
                     (b.gameObject.GetComponent<DiningHall>() && buildingBars.Count > 0) ||
-                    (b.gameObject.GetComponent<Building>().buildingName == "InfiNest" && info.duckList.Count >= 20) ||
-                    (b.gameObject.GetComponent<Building>().buildingName == "Statue" && CrumbManager.reference.Crumbs > 9999))
+                    (b.gameObject.GetComponent<Building>().buildingName == "InfiNest" && info.duckList.Count >= 25) ||
+                    (b.gameObject.GetComponent<Building>().buildingName == "Statue" && CrumbManager.reference.Crumbs >= 1000))
                 {
                     updateBuildMenu(b);
                 }

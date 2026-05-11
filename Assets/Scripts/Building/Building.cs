@@ -184,7 +184,7 @@ public class Building : MonoBehaviour
             }
 
             //show the crumbie decrease popup animation
-            CrumbManager.reference.SpawnCrumbiePopupDecrease(transform.position, BuildCost);
+            //CrumbManager.reference.SpawnCrumbiePopupDecrease(transform.position, BuildCost);
 
             SoundSystem.instance.PlaySound("building-process-loop");
             duck.gameObject.GetComponentInChildren<DuckActionIndicator>().SetAction(DuckActionType.Build);

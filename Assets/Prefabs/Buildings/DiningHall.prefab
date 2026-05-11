@@ -376,8 +376,8 @@ MonoBehaviour:
   buildingName: Dininghall
   unlocked: 1
   constructionNeeded: 2
-  placeCost: 6
-  buildCost: 2
+  placeCost: 30
+  buildCost: 0
   removeHitsRequired: 2
   buildTime: 2
   removeTime: 2

@@ -306,13 +306,13 @@ MonoBehaviour:
   walkable: 0
   quacxiconSO: {fileID: 11400000, guid: d9affd977097b284db68ee2e6313957e, type: 2}
   buildingName: Goldencorn
-  infoTextBox: {fileID: 0}
-  constructionNeeded: 6
-  placeCost: 10
-  buildCost: 3
+  unlocked: 1
+  constructionNeeded: 2
+  placeCost: 100
+  buildCost: 0
   removeHitsRequired: 5
   buildTime: 2
-  removeTime: 3
+  removeTime: 2
   filledSpots: 010101
   hasUniqueBounce: 1
   vfxHandler: {fileID: 0}
@@ -320,6 +320,9 @@ MonoBehaviour:
   buildCompleteVFX: {fileID: 0}
   removeHitVFX: {fileID: 0}
   progressBar: {fileID: 1711686222011827219}
+  useInteractBounce: 1
+  bounceDuration: 0.12
+  bounceScale: {x: 1.32, y: 1.3, z: 1.4}
   defaultWitherTimer: 30
   hornRange: {fileID: 2936249175253164532}
 --- !u!61 &455469100539282678

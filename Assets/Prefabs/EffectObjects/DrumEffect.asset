@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: DrumEffect
   m_EditorClassIdentifier: Assembly-CSharp::DrumEffect
   chance: 0
-  duration: 10
+  duration: 100
   speedPercentIncrease: 0.2

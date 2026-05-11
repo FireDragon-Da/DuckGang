@@ -238,13 +238,13 @@ MonoBehaviour:
   walkable: 1
   quacxiconSO: {fileID: 11400000, guid: d9affd977097b284db68ee2e6313957e, type: 2}
   buildingName: Nest
-  infoTextBox: {fileID: 0}
-  constructionNeeded: 2
+  unlocked: 0
+  constructionNeeded: 1
   placeCost: 5
-  buildCost: 5
+  buildCost: 0
   removeHitsRequired: 2
   buildTime: 2
-  removeTime: 3
+  removeTime: 2
   filledSpots: 01
   hasUniqueBounce: 0
   vfxHandler: {fileID: 0}
@@ -252,6 +252,9 @@ MonoBehaviour:
   buildCompleteVFX: {fileID: 0}
   removeHitVFX: {fileID: 0}
   progressBar: {fileID: 1560123294479746760}
+  useInteractBounce: 1
+  bounceDuration: 0.12
+  bounceScale: {x: 1.32, y: 1.3, z: 1.4}
   effectApplier: {fileID: 7290271145044701039}
   defaultEggTime: 15
   layTime: 2
@@ -263,6 +266,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f879b07885cf7ed4183a8ef3ad43fd54, type: 3}
   - {fileID: 21300000, guid: 9f284cf572a077343813f0beb0a74e69, type: 3}
   - {fileID: 21300000, guid: 0a601389c94407a4397ad139bda2b1bd, type: 3}
+  usageChangePerUse: 1
 --- !u!61 &2121938604369957597
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -374,11 +374,11 @@ MonoBehaviour:
   walkable: 0
   quacxiconSO: {fileID: 11400000, guid: d9affd977097b284db68ee2e6313957e, type: 2}
   buildingName: Statue
-  unlocked: 0
-  constructionNeeded: 2
+  unlocked: 1
+  constructionNeeded: 1
   placeCost: 10000
   buildCost: 0
-  removeHitsRequired: 2
+  removeHitsRequired: 50
   buildTime: 2
   removeTime: 2
   filledSpots: 010101010101
