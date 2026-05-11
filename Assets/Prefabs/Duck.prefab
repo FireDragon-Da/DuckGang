@@ -420,8 +420,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: -0.017189503, y: -0.045122027}
+  m_Radius: 0.6654476
 --- !u!114 &7495717710325007669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,8 +495,13 @@ MonoBehaviour:
   averageLifespan: 240
   lifespanVariance: 60
   isBaby: 1
+  isOld: 0
   babyDuration: 60
   animator: {fileID: 4222849990296066770}
+  isSad: 0
+  isHungry: 0
+  sadThreshold: 30
+  hungryThreshold: 30
   minWorkHappiness: 20
 --- !u!114 &5534468101817164839
 MonoBehaviour:

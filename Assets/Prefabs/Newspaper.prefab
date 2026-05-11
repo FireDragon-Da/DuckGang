@@ -65,12 +65,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Once upon a time there was an article of a useful length and itw as about
-    ducks the ducks lived so long and forever almost one could almost picture them
-    living forever mamaybe if the floor were made of lava we could make lava out
-    of the laval chicken have you ever had a burger so good it remonded you of a
-    burger i remember burger bruger i miss having a burger on a saturday afternoon
-    in the sun on a warm warm day i miss.
+  m_text: After a disasterous four minutes under previous leadership, change seems
+    almost inevitable in Quacklands. Although spirits are still low from the devestating
+    tragedy many citizens faced under the failures of the last mayor, some citizens
+    are keeping up their morale by imagining a better future. "Food," one said, wistfully,
+    "and a modicum of joy."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e209f4e1eb56b046863da84278082cd, type: 2}
   m_sharedMaterial: {fileID: -6309410853451603294, guid: 0e209f4e1eb56b046863da84278082cd, type: 2}
@@ -889,8 +888,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 386, y: 506}
-  m_SizeDelta: {x: 18, y: 18}
+  m_AnchoredPosition: {x: 401.9, y: 501.5}
+  m_SizeDelta: {x: 23, y: 23.1784}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5461766093279064323
 CanvasRenderer:
@@ -913,7 +912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8415094, g: 0.77254575, b: 0.70972586, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -987,12 +986,12 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ObjectToggleAccessor, Assembly-CSharp
-        m_MethodName: 
+        m_TargetAssemblyTypeName: TimeManager, Assembly-CSharp
+        m_MethodName: RemovePause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1065,7 +1064,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: We're All Here
+  m_text: New Mayor Installed
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4fd1e3028b16e184a8d486d9da88edf6, type: 2}
   m_sharedMaterial: {fileID: 363212537927149047, guid: 4fd1e3028b16e184a8d486d9da88edf6, type: 2}
@@ -1706,12 +1705,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Once upon a time there was an article of a useful length and itw as about
-    ducks the ducks lived so long and forever almost one could almost picture them
-    living forever mamaybe if the floor were made of lava we could make lava out
-    of the laval chicken have you ever had a burger so good it remonded you of a
-    burger i remember burger bruger i miss having a burger on a saturday afternoon
-    in the sun on a warm warm day i miss.
+  m_text: "After our previous mayor suddenly disappeared, someone new has flown in
+    to pick up where he left off! We welcome our new mayor and wish them the best
+    of luck! With a fresh pair of eyes hopefully some real improvement can be brought
+    to our great land. They\u2019d better get to work fast, unless they want to end
+    up like the last mayor."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e209f4e1eb56b046863da84278082cd, type: 2}
   m_sharedMaterial: {fileID: -6309410853451603294, guid: 0e209f4e1eb56b046863da84278082cd, type: 2}
@@ -2124,7 +2122,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You're...Also Here?
+  m_text: Change in Quacklands?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4fd1e3028b16e184a8d486d9da88edf6, type: 2}
   m_sharedMaterial: {fileID: 363212537927149047, guid: 4fd1e3028b16e184a8d486d9da88edf6, type: 2}

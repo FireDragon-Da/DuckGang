@@ -88,7 +88,7 @@ public class UnlockingUIManager : MonoBehaviour
                     (b.gameObject.GetComponent<HammerSaw>() && info.curBuildingList.Count >= 20) ||
                     (b.gameObject.GetComponent<StrawCraft>() && info.crumbieGainedFromFarmland >= 500) ||
                     (b.gameObject.GetComponent<Altar>() && info.duckList.Count >= 50) ||
-                    (b.gameObject.GetComponent<Drum>() && info.duckList.Count >= 5) ||
+                    (b.gameObject.GetComponent<Drum>() && info.duckList.Count >= 7) ||
                     (b.gameObject.GetComponent<DiningHall>() && buildingBars.Count > 0) ||
                     (b.gameObject.GetComponent<Building>().buildingName == "InfiNest" && info.duckList.Count >= 25) ||
                     (b.gameObject.GetComponent<Building>().buildingName == "Statue" && CrumbManager.reference.Crumbs >= 1000))

@@ -38,7 +38,7 @@ MonoBehaviour:
     clearExistingContent: 0
   - categoryName: Death_OldAge
     contentList:
-    - '''s biological clock ran out.'
+    - ran out of time.
     - reached terminal maturity.
     - aged into oblivion.
     - became a fossil.
@@ -48,16 +48,16 @@ MonoBehaviour:
     clearExistingContent: 0
   - categoryName: Death_Suicide
     contentList:
-    - wanted to take a long nap.
-    - chose to find greener fields.
-    - went to the great pond in the sky.
+    - took a long nap.
+    - found greener fields.
+    - chose the pond in the sky.
     sourceTxtFile: {fileID: 4900000, guid: bb11372a014ff7f499719c8ea1922684, type: 3}
     targetCategoryName: 
     clearExistingContent: 0
   - categoryName: Death_Starvation
     contentList:
-    - went to find food elsewhere.
-    - ran out of edible material.
+    - starved.
+    - ran out of edible things.
     - went too long without lunch.
     - got too hungry.
     - self-cannibalized.
@@ -66,8 +66,8 @@ MonoBehaviour:
     clearExistingContent: 0
   - categoryName: Death_General
     contentList:
-    - found their way to duck heaven.
-    - moved on from this plane.
+    - went to duck heaven.
+    - moved on.
     sourceTxtFile: {fileID: 4900000, guid: bd1aee684e279eb488716f78c2dc9da8, type: 3}
     targetCategoryName: 
     clearExistingContent: 0

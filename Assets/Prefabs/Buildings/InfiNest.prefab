@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1915005523519250865}
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 8c699c660ea864e47b692d68fe082dbf, type: 3}
+  m_Sprite: {fileID: -4100751702738139679, guid: 3f4ec2e9b10b94643af50f9d61deb5f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -260,12 +260,12 @@ MonoBehaviour:
   layTime: 2
   totalUses: 3
   sprites:
-  - {fileID: 21300000, guid: 8c699c660ea864e47b692d68fe082dbf, type: 3}
-  - {fileID: 21300000, guid: 0c971375f38c84240a7159ae8cd1f2f8, type: 3}
-  - {fileID: 21300000, guid: ab5e7b365cd55524e9a586ed65fc88e0, type: 3}
-  - {fileID: 21300000, guid: f879b07885cf7ed4183a8ef3ad43fd54, type: 3}
-  - {fileID: 21300000, guid: 9f284cf572a077343813f0beb0a74e69, type: 3}
-  - {fileID: 21300000, guid: 0a601389c94407a4397ad139bda2b1bd, type: 3}
+  - {fileID: -4100751702738139679, guid: 3f4ec2e9b10b94643af50f9d61deb5f9, type: 3}
+  - {fileID: 7711836499386410521, guid: 8ebec9c0fa683144799f766d1dbd51de, type: 3}
+  - {fileID: -4100751702738139679, guid: 3f4ec2e9b10b94643af50f9d61deb5f9, type: 3}
+  - {fileID: 7711836499386410521, guid: 8ebec9c0fa683144799f766d1dbd51de, type: 3}
+  - {fileID: -4100751702738139679, guid: 3f4ec2e9b10b94643af50f9d61deb5f9, type: 3}
+  - {fileID: 7711836499386410521, guid: 8ebec9c0fa683144799f766d1dbd51de, type: 3}
   usageChangePerUse: 0
 --- !u!61 &2121938604369957597
 BoxCollider2D:

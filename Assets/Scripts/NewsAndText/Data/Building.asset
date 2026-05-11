@@ -34,7 +34,7 @@ MonoBehaviour:
     clearExistingContent: 0
   - categoryName: Nest
     contentList:
-    - has just built a love nest!
+    - built a love nest!
     - 'Nest
 
       Two ducks can fall in love and hatch a baby! [b][c]'
@@ -44,7 +44,7 @@ MonoBehaviour:
     clearExistingContent: 0
   - categoryName: Playground
     contentList:
-    - wants to play and built a playground. Hurray!
+    - built a playground. Hurray!
     - 'Playground
 
       A place for ducks to relax! Boosts happiness of ducks.[b][c]'
@@ -55,7 +55,7 @@ MonoBehaviour:
     clearExistingContent: 0
   - categoryName: Goldencorn
     contentList:
-    - just jumped into capitalism by building the Golden corn.
+    - jumped into capitalism.
     - 'Golden Corn
 
       Ducks will go straight to the nearest farm or grass. [b][c]'
@@ -65,7 +65,7 @@ MonoBehaviour:
     clearExistingContent: 0
   - categoryName: Compostsite
     contentList:
-    - has made the gorgeous Compostsite
+    - made compost.
     - 'Compost Site
 
       Every farm or grass within its range will produce more
@@ -89,7 +89,7 @@ MonoBehaviour:
     clearExistingContent: 0
   - categoryName: Hammersaw
     contentList:
-    - has just built a new statue.
+    - built a new statue.
     - 'Hammer & Saw Symbol
 
       Ducks will go straight to the nearest construction
@@ -101,7 +101,7 @@ MonoBehaviour:
     clearExistingContent: 0
   - categoryName: Strawcraft
     contentList:
-    - built a strawcraft for yourcraft.
+    - is making big moves.
     - "Straw Craft \nDucks will stay in a work area for several duck minutes and
       produce crumbs.[b][c]"
     - 'I think we could use some more crumbs, don''t you? A straw craft workshop
