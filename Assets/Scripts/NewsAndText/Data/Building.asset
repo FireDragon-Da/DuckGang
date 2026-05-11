@@ -48,7 +48,7 @@ MonoBehaviour:
     - 'Playground
 
       A place for ducks to relax! Boosts happiness of ducks.[b][c]'
-    - Hey, people are starting to get unhappy...I drew up some plans for a playground.
+    - Hey, someone's starting to get unhappy...I drew up some plans for a playground.
       Maybe that will cheer them up?
     sourceTxtFile: {fileID: 0}
     targetCategoryName: 
