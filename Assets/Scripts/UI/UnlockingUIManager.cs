@@ -68,12 +68,12 @@ public class UnlockingUIManager : MonoBehaviour
     {
         //calculate average happiness
         int happiness = 0;
-        foreach (GameObject duck in PublicInfo.reference.duckList)
+        /*foreach (GameObject duck in PublicInfo.reference.duckList)
         {
             happiness += duck.GetComponent<DuckStats>().Happiness;
         }
 
-        happiness /= PublicInfo.reference.duckList.Count;
+        happiness /= PublicInfo.reference.duckList.Count;*/
 
         foreach (Building b in buildingList)
         {
@@ -81,7 +81,7 @@ public class UnlockingUIManager : MonoBehaviour
             {
                 if ((b.gameObject.GetComponent<FarmHolder>() && info.crumbieGainedFromGrass >= 10) ||
                     (b.gameObject.GetComponent<Building>().buildingName == "Nest" && buildingBars.Count > 0) ||
-                    (b.gameObject.GetComponent<Playground>() && happiness <= 70) ||
+                    (b.gameObject.GetComponent<Playground>() && info.duckList[0].GetComponent<DuckStats>().Happiness <= 70) ||
                     (b.gameObject.GetComponent<GoldenCorn>() && info.farmList.Count >= (12 * 4)) ||
                     (b.gameObject.GetComponent<CompostSite>() && info.farmList.Count >= (5 * 4)) ||
                     (b.gameObject.GetComponent<SecretSite>() && CrumbManager.reference.Crumbs >= 200) ||
