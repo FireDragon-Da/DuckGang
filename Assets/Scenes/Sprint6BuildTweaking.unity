@@ -136857,6 +136857,10 @@ PrefabInstance:
       propertyPath: m_Value
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3064272729836684732, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
+      propertyPath: quacxiconSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 349bc717b8ea5ac48a292c6f2cd2b980, type: 2}
     - target: {fileID: 3229418350418843075, guid: 38d15f6f52b501a41b82ee647f77fdc7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

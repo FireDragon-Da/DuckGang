@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 29f9fa6c84cfdd542889a1cd75657e83
+guid: 3f4ec2e9b10b94643af50f9d61deb5f9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9163208734046413493
-    second: rock-1x1_0
+      213: -4100751702738139679
+    second: nest_unbreakable1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rock-1x1_0
+      name: nest_unbreakable1_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 5
-        width: 254
-        height: 150
+        x: 9
+        y: 71
+        width: 240
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5b2e79b7bc14a2f70800000000000000
-      internalID: 9163208734046413493
+      spriteID: 1e507369d043717c0800000000000000
+      internalID: -4100751702738139679
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rock-1x1_0: 9163208734046413493
+      nest_unbreakable1_0: -4100751702738139679
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

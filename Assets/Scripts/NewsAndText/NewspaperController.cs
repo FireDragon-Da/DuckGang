@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -84,6 +83,14 @@ public class NewspaperController : MonoBehaviour
     [SerializeField] private TMP_Text welcomeToLifeContent;
     [SerializeField] private TMP_Text goodbyeFromLifeContent;
 
+    [Header("Life & Death List Limits")]
+    [Tooltip("When the birth or death count is greater than this, only the first few lines are shown and the rest are summarized.")]
+    [SerializeField] private int lifeDeathOverflowThreshold = 50;
+    [Tooltip("How many entries to show when the list overflows the threshold.")]
+    [SerializeField] private int lifeDeathMaxShownWhenOverflow = 10;
+    [SerializeField] private string birthOverflowSuffixFormat = "and {0} ducks were born";
+    [SerializeField] private string deathOverflowSuffixFormat = "and {0} ducks died";
+
     [Header("UI References - Articles")]
     [SerializeField] private TMP_Text topPriorityTitleText;
     [SerializeField] private TMP_Text topPriorityContentText;
@@ -161,12 +168,23 @@ public class NewspaperController : MonoBehaviour
             return;
         }
 
+        int total = newbornDuckNames.Count;
+        bool overflow = total > lifeDeathOverflowThreshold;
+        int showCount = overflow ? Mathf.Min(lifeDeathMaxShownWhenOverflow, total) : total;
+
         StringBuilder sb = new StringBuilder();
-        foreach (string duckName in newbornDuckNames)
+        for (int i = 0; i < showCount; i++)
         {
             string birthAction = quacxiconSO.GetRandomLogFromCategory("BirthActions");
-            sb.AppendLine($"{duckName} {birthAction}");
+            sb.AppendLine($"{newbornDuckNames[i]} {birthAction}");
         }
+
+        if (overflow)
+        {
+            int remainder = total - showCount;
+            sb.AppendLine(string.Format(birthOverflowSuffixFormat, remainder));
+        }
+
         welcomeToLifeContent.text = sb.ToString();
     }
 
@@ -178,33 +196,43 @@ public class NewspaperController : MonoBehaviour
             return;
         }
 
-        StringBuilder sb = new StringBuilder();
-        foreach (var death in recentDeaths)
-        {
-            string categoryToSearch = "";
-            switch (death.reason)
-            {
-                case DeathReason.OldAge:
-                    categoryToSearch = "Death_OldAge";
-                    break;
-                case DeathReason.Starvation:
-                    categoryToSearch = "Death_Starvation";
-                    break;
-                case DeathReason.Disappeared:
-                    categoryToSearch = "Death_Disappeared";
-                    break;
-                case DeathReason.Suicide:
-                    categoryToSearch = "Death_Suicide";
-                    break;
-                default:
-                    categoryToSearch = "Death_General";
-                    break;
-            }
+        int total = recentDeaths.Count;
+        bool overflow = total > lifeDeathOverflowThreshold;
+        int showCount = overflow ? Mathf.Min(lifeDeathMaxShownWhenOverflow, total) : total;
 
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < showCount; i++)
+        {
+            var death = recentDeaths[i];
+            string categoryToSearch = GetDeathLogCategory(death.reason);
             string deathAction = quacxiconSO.GetRandomLogFromCategory(categoryToSearch);
             sb.AppendLine($"{death.duckName} {deathAction}");
         }
+
+        if (overflow)
+        {
+            int remainder = total - showCount;
+            sb.AppendLine(string.Format(deathOverflowSuffixFormat, remainder));
+        }
+
         goodbyeFromLifeContent.text = sb.ToString();
+    }
+
+    private static string GetDeathLogCategory(DeathReason reason)
+    {
+        switch (reason)
+        {
+            case DeathReason.OldAge:
+                return "Death_OldAge";
+            case DeathReason.Starvation:
+                return "Death_Starvation";
+            case DeathReason.Disappeared:
+                return "Death_Disappeared";
+            case DeathReason.Suicide:
+                return "Death_Suicide";
+            default:
+                return "Death_General";
+        }
     }
 
     public void UpdateArticles(List<ArticleEvent> candidateArticles)

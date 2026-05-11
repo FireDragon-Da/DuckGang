@@ -1618,6 +1618,10 @@ MonoBehaviour:
   changeInQuacklandText: {fileID: 2093638417114130201}
   welcomeToLifeContent: {fileID: 1339378928732869028}
   goodbyeFromLifeContent: {fileID: 1366798135807445167}
+  lifeDeathOverflowThreshold: 50
+  lifeDeathMaxShownWhenOverflow: 10
+  birthOverflowSuffixFormat: and {0} ducks were born
+  deathOverflowSuffixFormat: and {0} ducks died
   topPriorityTitleText: {fileID: 7848066495884907706}
   topPriorityContentText: {fileID: 1692435558532987046}
   secondPriorityTitleText: {fileID: 5373015446105427502}
