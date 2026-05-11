@@ -121,6 +121,7 @@ public class Nest : Building
         if (timesUsed >= actualTotalUses)
         {
             PublicInfo.reference.nestList.Remove(this);
+            PublicInfo.reference.curBuildingList.Remove(this);
             Remove();
         }
         else

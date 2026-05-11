@@ -61,9 +61,8 @@ public class TextBox : MonoBehaviour
                 }
             }
 
-                 scrollRect.vertical = true;
+            scrollRect.vertical = true;
             scrollRect.horizontal = false;
-            scrollRect.scrollSensitivity = 20f;
         }
         if (textComponent != null)
         {
