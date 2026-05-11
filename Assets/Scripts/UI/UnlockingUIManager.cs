@@ -42,6 +42,8 @@ public class UnlockingUIManager : MonoBehaviour
             buildingList.Add(b);
 
             b.unlocked = false;
+
+            PublicInfo.reference.buildingEverBuilt.Add(b.buildingName, false);
         }
 
         if (unlockAllForDebug)

@@ -18,6 +18,7 @@ public class PublicInfo : MonoBehaviour
     public List<DiningHall> diningHalls = new();
     public List<CompostSite> activeSites = new();
     public List<Obstacle> obstacleList = new();
+    public Dictionary<string, bool> buildingEverBuilt = new Dictionary<string, bool>();
 
     void Awake()
     {

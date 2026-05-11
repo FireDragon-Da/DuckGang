@@ -136751,6 +136751,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartingDiningHall
       objectReference: {fileID: 0}
+    - target: {fileID: 3238501230594012513, guid: 5125a17809c3d554f85ad4a176c2f805, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -250,6 +251,15 @@ public class Building : MonoBehaviour
 
         textinfo = quacxiconSO.GetSpecificLogFromCategory(buildingName, 0);
 
+        if (PublicInfo.reference.buildingEverBuilt.ContainsKey(buildingName))
+        {
+            if (!PublicInfo.reference.buildingEverBuilt[buildingName])
+            {
+                PublicInfo.reference.buildingEverBuilt[buildingName] = true;
+                DuckSocietyManager.reference.articles.Add(ArticleCreator.reference.namedArticles[buildingName]);
+            }
+        }
+
         //Debug.Log($"[Building] Build() called. textinfo: '{textinfo}', lastBuilderName: '{lastBuilderName}'");
         //Debug.Log($"[Building] infoTextBox is null: {infoTextBox == null}");
 
@@ -258,7 +268,7 @@ public class Building : MonoBehaviour
             string outputMessage = textinfo;
             if (!string.IsNullOrEmpty(lastBuilderName))
             {
-                outputMessage = $"<color=green>{lastBuilderName + " " + textinfo}</color>";
+                outputMessage = $"<color=#473510>{lastBuilderName + " " + textinfo}</color>";
             }
 
             //Debug.Log($"[Building] Attempting to add line to TextBox: '{outputMessage}'");
@@ -276,7 +286,7 @@ public class Building : MonoBehaviour
                 string outputMessage = textinfo;
                 if (!string.IsNullOrEmpty(lastBuilderName))
                 {
-                    outputMessage = $"<color=green>{lastBuilderName + " " + textinfo}</color>";
+                    outputMessage = $"<color=#473510>{lastBuilderName + " " + textinfo}</color>";
                 }
                 infoTextBox.AddLine(outputMessage);
             }

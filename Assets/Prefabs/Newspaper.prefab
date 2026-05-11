@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 44, y: -328.60785}
+  m_AnchoredPosition: {x: 70, y: -331}
   m_SizeDelta: {x: 543.65, y: 191.0303}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3385832449135167470
@@ -65,7 +65,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You might also be real! But frankly, that's none of our business.
+  m_text: Once upon a time there was an article of a useful length and itw as about
+    ducks the ducks lived so long and forever almost one could almost picture them
+    living forever mamaybe if the floor were made of lava we could make lava out
+    of the laval chicken have you ever had a burger so good it remonded you of a
+    burger i remember burger bruger i miss having a burger on a saturday afternoon
+    in the sun on a warm warm day i miss.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e209f4e1eb56b046863da84278082cd, type: 2}
   m_sharedMaterial: {fileID: -6309410853451603294, guid: 0e209f4e1eb56b046863da84278082cd, type: 2}
@@ -105,7 +110,7 @@ MonoBehaviour:
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -131,7 +136,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 156.25903, w: 60.597385}
+  m_margin: {x: 0, y: 0, z: 150.35132, w: 60.597385}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -164,14 +169,14 @@ RectTransform:
   m_GameObject: {fileID: 2300817534167260391}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7138, y: 1, z: 1}
+  m_LocalScale: {x: 0.84942204, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8962274340286089547}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -108}
+  m_AnchoredPosition: {x: -6, y: -73}
   m_SizeDelta: {x: 1026, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7895895099411174195
@@ -246,7 +251,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -121, y: -354}
+  m_AnchoredPosition: {x: -121, y: -411}
   m_SizeDelta: {x: 370, y: 195}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4767490828378897723
@@ -321,7 +326,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75.097046, y: -146.123}
+  m_AnchoredPosition: {x: 75.097046, y: -115}
   m_SizeDelta: {x: 342.194, y: 164.246}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7932428668253607974
@@ -595,7 +600,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22, y: -84}
+  m_AnchoredPosition: {x: 4, y: -88}
   m_SizeDelta: {x: 368.788, y: 195.229}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6671379106549052622
@@ -746,7 +751,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -273, y: 244}
+  m_AnchoredPosition: {x: -273, y: 305}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6068581939504860646
@@ -1029,7 +1034,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -94, y: -66}
+  m_AnchoredPosition: {x: -94, y: 1}
   m_SizeDelta: {x: 372.119, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8558595639734334761
@@ -1241,7 +1246,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30.945, y: 320}
+  m_AnchoredPosition: {x: 30.945, y: 660}
   m_SizeDelta: {x: 943.888, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5996820301085984701
@@ -1272,7 +1277,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'CHANGE IN QUACKLAND? '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e209f4e1eb56b046863da84278082cd, type: 2}
   m_sharedMaterial: {fileID: -6309410853451603294, guid: 0e209f4e1eb56b046863da84278082cd, type: 2}
@@ -1379,7 +1384,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 247, y: 244}
+  m_AnchoredPosition: {x: 247, y: 305}
   m_SizeDelta: {x: 372.119, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7807099366902079358
@@ -1619,10 +1624,6 @@ MonoBehaviour:
   secondPriorityContentText: {fileID: 5161985125893049035}
   duckPhotoImage1: {fileID: 3755345851288018447}
   duckPhotoImage2: {fileID: 7079727641845414455}
-  photoCaptureInterval: 60
-  photoWidth: 370
-  photoHeight: 195
-  photoCaptureZoom: 3
 --- !u!114 &3790887154377196170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1701,7 +1702,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Yes, it's true. Against all the odds, Quackland is real.
+  m_text: Once upon a time there was an article of a useful length and itw as about
+    ducks the ducks lived so long and forever almost one could almost picture them
+    living forever mamaybe if the floor were made of lava we could make lava out
+    of the laval chicken have you ever had a burger so good it remonded you of a
+    burger i remember burger bruger i miss having a burger on a saturday afternoon
+    in the sun on a warm warm day i miss.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e209f4e1eb56b046863da84278082cd, type: 2}
   m_sharedMaterial: {fileID: -6309410853451603294, guid: 0e209f4e1eb56b046863da84278082cd, type: 2}
@@ -1741,7 +1747,7 @@ MonoBehaviour:
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -1807,7 +1813,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10.961945, y: -146.123}
+  m_AnchoredPosition: {x: -10.961945, y: -111}
   m_SizeDelta: {x: 342.194, y: 164.246}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3023238787830657285
@@ -2083,7 +2089,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 242, y: -52}
+  m_AnchoredPosition: {x: 209, y: 15}
   m_SizeDelta: {x: 372.119, y: 24.364}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1640906772311497510
