@@ -82,6 +82,7 @@ MonoBehaviour:
   minSize: 4
   maxSize: 15
   tilemap: {fileID: 0}
+  edgeScrollThreshold: 100
 --- !u!1 &5807344522596764138
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,14 @@ public class DuckDragger : MonoBehaviour
     [SerializeField] float dragSpeed = 15f;
     [SerializeField] LayerMask nonDragThrough;
 
+    public static DuckDragger reference;
+    public bool InUse => curDuck != null;
+
+    void Awake()
+    {
+        reference = this;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -81,8 +89,5 @@ public class DuckDragger : MonoBehaviour
 
             }
         }
-
-
-
     }
 }
