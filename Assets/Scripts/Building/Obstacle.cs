@@ -63,7 +63,7 @@ public class Obstacle : Building
     public override void Remove()
     {
         PublicInfo.reference.obstacleList.Remove(this);
-        Destroy(gameObject);
+        base.Remove();
     }
 
 }

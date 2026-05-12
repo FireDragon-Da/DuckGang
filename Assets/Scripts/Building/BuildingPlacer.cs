@@ -198,6 +198,8 @@ public class BuildingPlacer : MonoBehaviour
         //Highlight all options red
         foreach (Building curBuilding in PublicInfo.reference.curBuildingList)
         {
+            if (curBuilding == null) {continue;}
+
             if (curBuilding.CanRemoveInput)
             {
                 curBuilding.SpriteRenderer.color = Color.red;
@@ -207,6 +209,8 @@ public class BuildingPlacer : MonoBehaviour
 
         foreach (Building curBuilding in PublicInfo.reference.constructionList)
         {
+            if (curBuilding == null) {continue;}
+
             if (curBuilding.CanRemoveInput)
             {
                 curBuilding.SpriteRenderer.color = Color.red;
@@ -216,6 +220,8 @@ public class BuildingPlacer : MonoBehaviour
 
         foreach (Obstacle curObstacle in PublicInfo.reference.obstacleList)
         {
+            if (curObstacle == null) {continue;}
+            
             if (curObstacle.CanRemoveInput)
             {
                 curObstacle.SpriteRenderer.color = Color.red;
@@ -225,6 +231,8 @@ public class BuildingPlacer : MonoBehaviour
 
         foreach (Grass curGrass in PublicInfo.reference.grassList)
         {
+            if (curGrass == null) {continue;}
+
             if (curGrass.CanRemoveInput)
             {
                 curGrass.SpriteRenderer.color = Color.red;
@@ -240,24 +248,32 @@ public class BuildingPlacer : MonoBehaviour
         //Unhighlight all buildings
         foreach (Building curBuilding in PublicInfo.reference.curBuildingList)
         {
+            if (curBuilding == null) {continue;}
+
             curBuilding.SpriteRenderer.color = Color.white;
             curBuilding.FoundationSpriteRenderer.color = Color.white;
         }
 
         foreach (Building curBuilding in PublicInfo.reference.constructionList)
         {
+            if (curBuilding == null) {continue;}
+
             curBuilding.SpriteRenderer.color = Color.white;
             curBuilding.FoundationSpriteRenderer.color = Color.white;
         }
 
         foreach (Obstacle curObstacle in PublicInfo.reference.obstacleList)
         {
+            if (curObstacle == null) {continue;}
+
             curObstacle.SpriteRenderer.color = Color.white;
             curObstacle.FoundationSpriteRenderer.color = Color.white;
         }
 
         foreach (Grass curGrass in PublicInfo.reference.grassList)
         {
+            if (curGrass == null) {continue;}
+
             curGrass.SpriteRenderer.color = Color.white;
             curGrass.FoundationSpriteRenderer.color = Color.white;
         }
